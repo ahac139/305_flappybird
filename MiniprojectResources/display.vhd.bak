@@ -5,11 +5,8 @@ use IEEE.numeric_std.all;
 entity display is
 	port(Clk, pb1, pb2 : in std_logic;
 	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0) := "0000";
-	VGA_HS, vert_sync: out std_logic;
-	PS2_DAT, PS2_CLK : inout std_logic;
-	LED: out std_logic_vector(9 downto 0) := "0000000000";
+	VGA_HS, vert_sync : out std_logic;
 	GPIO_0 : out std_logic_vector(35 downto 0)
-	
 	);
 end entity display;
 
@@ -34,20 +31,12 @@ component bouncy_ball IS
 		  red, green, blue 			: OUT std_logic);		
 END component bouncy_ball;
 
-component MOUSE IS
-   PORT( clock_25Mhz, reset 		: IN std_logic;
-         mouse_data					: INOUT std_logic;
-         mouse_clk 					: INOUT std_logic;
-         left_button, right_button	: OUT std_logic;
-		 mouse_cursor_row 			: OUT std_logic_vector(9 DOWNTO 0); 
-		 mouse_cursor_column 		: OUT std_logic_vector(9 DOWNTO 0));       	
-END component MOUSE;
+
 
 
 signal pixel_row : std_logic_vector(9 downto 0);
 signal pixel_column : std_logic_vector(9 downto 0);
 signal clk_div : std_logic;
-
 
 signal v_sync_i : std_logic;
 
@@ -57,24 +46,8 @@ signal green : std_logic;
 
 signal blue : std_logic;
 
-signal ground : std_logic := '0';
 
-signal R1: std_logic;
-
-signal mouse_cursor_row: std_logic_vector(9 DOWNTO 0); 
-signal mouse_cursor_column:std_logic_vector(9 DOWNTO 0);
 begin
-
-	Mouse1: Mouse port map(
-				clock_25Mhz => clk_div,
-				reset => ground,
-				mouse_data => PS2_DAT,
-				mouse_clk => PS2_CLK,
-				left_button => blue, 
-				right_button => LED(1),
-				mouse_cursor_row => mouse_cursor_row,
-				mouse_cursor_column => mouse_cursor_column);
-				
 
 	BBALL : bouncy_ball port map(
 		pb1 => pb1,
@@ -85,7 +58,7 @@ begin
 		vert_sync => v_sync_i,
 		red => red,
 		green => green,
-		blue => R1
+		blue => blue
 	);
 	
 	CDIV : clock_divider port map(
