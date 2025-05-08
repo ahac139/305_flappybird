@@ -30,7 +30,7 @@ end component clock_divider;
 component bouncy_ball IS
 	PORT
 		( pb1, pb2, clk, vert_sync	: IN std_logic;
-          pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+          pixel_row, pixel_column, mouse_x, mouse_y	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic);		
 END component bouncy_ball;
 
@@ -63,6 +63,10 @@ signal R1: std_logic;
 
 signal mouse_cursor_row: std_logic_vector(9 DOWNTO 0); 
 signal mouse_cursor_column:std_logic_vector(9 DOWNTO 0);
+
+signal mouse_x: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
+signal mouse_y:std_logic_vector(9 DOWNTO 0) := "0000000000";
+
 begin
 
 	Mouse1: Mouse port map(
@@ -75,6 +79,9 @@ begin
 				mouse_cursor_row => mouse_cursor_row,
 				mouse_cursor_column => mouse_cursor_column);
 				
+			
+	mouse_x <= mouse_cursor_column;
+	mouse_y <= mouse_cursor_row;
 
 	BBALL : bouncy_ball port map(
 		pb1 => pb1,
@@ -82,6 +89,8 @@ begin
 		clk => clk_div,
 		pixel_row => pixel_row,
 		pixel_column => pixel_column,
+		mouse_x => mouse_x,
+		mouse_y => mouse_y,
 		vert_sync => v_sync_i,
 		red => red,
 		green => green,
