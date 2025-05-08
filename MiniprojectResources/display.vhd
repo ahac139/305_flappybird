@@ -5,11 +5,12 @@ use IEEE.numeric_std.all;
 entity display is
 	port(Clk, pb1, pb2 : in std_logic;
 	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0) := "0000";
+	hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0);
+	SW : in std_logic_vector(9 downto 0);
 	VGA_HS, vert_sync: out std_logic;
 	PS2_DAT, PS2_CLK : inout std_logic;
 	LED: out std_logic_vector(9 downto 0) := "0000000000";
 	GPIO_0 : out std_logic_vector(35 downto 0)
-	
 	);
 end entity display;
 
@@ -43,11 +44,16 @@ component MOUSE IS
 		 mouse_cursor_column 		: OUT std_logic_vector(9 DOWNTO 0));       	
 END component MOUSE;
 
+component seven_seg_display is
+     port (binary_in : in std_logic_vector(9 downto 0);
+			  hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0));
+end component;
 
 signal pixel_row : std_logic_vector(9 downto 0);
 signal pixel_column : std_logic_vector(9 downto 0);
 signal clk_div : std_logic;
 
+signal seven_seg_input : std_logic_vector(9 downto 0) := "0000000001";
 
 signal v_sync_i : std_logic;
 
@@ -67,8 +73,17 @@ signal mouse_cursor_column:std_logic_vector(9 DOWNTO 0);
 signal mouse_x: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
 signal mouse_y:std_logic_vector(9 DOWNTO 0) := "0000000000";
 
-begin
 
+
+begin
+	
+	seg_display: seven_seg_display port map(
+		binary_in => seven_seg_input,
+		hex0 => hex0, 
+		hex1 => hex1, 
+		hex2 => hex2, 
+		hex3 => hex3);
+	
 	Mouse1: Mouse port map(
 				clock_25Mhz => clk_div,
 				reset => ground,
@@ -118,5 +133,9 @@ begin
 	
 	vert_sync <= v_sync_i;
 
-
+	process(sw)
+	begin
+		LED(0) <= '1';
+	end process;
+	
 end behaviour;

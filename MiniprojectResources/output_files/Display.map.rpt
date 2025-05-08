@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Thu May 08 15:01:13 2025
+Thu May 08 16:10:26 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -20,9 +20,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Port Connectivity Checks: "bouncy_ball:BBALL"
  14. Port Connectivity Checks: "MOUSE:Mouse1"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 15. Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:thousands"
+ 16. Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:hundreds"
+ 17. Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:tens"
+ 18. Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:ones"
+ 19. Port Connectivity Checks: "seven_seg_display:seg_display"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +53,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 08 15:01:13 2025           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 08 16:10:26 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 190                                             ;
-; Total pins                      ; 65                                              ;
+; Total pins                      ; 103                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -168,21 +173,24 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-; mouse.vhd                        ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd         ;         ;
-; display.vhd                      ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd       ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/vga_sync.vhd      ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/bouncy_ball.vhd   ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/clock_divider.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; display.vhd                      ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd           ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd             ;         ;
+; seven_seg_display.vhd            ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd       ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/vga_sync.vhd          ;         ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/bouncy_ball.vhd       ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File  ; C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/clock_divider.vhd     ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------+
@@ -201,14 +209,14 @@ refer to the applicable agreement for further details.
 ;                                             ;                               ;
 ; Dedicated logic registers                   ; 190                           ;
 ;                                             ;                               ;
-; I/O pins                                    ; 65                            ;
+; I/O pins                                    ; 103                           ;
 ;                                             ;                               ;
 ; Total DSP Blocks                            ; 0                             ;
 ;                                             ;                               ;
 ; Maximum fan-out node                        ; MOUSE:Mouse1|MOUSE_CLK_FILTER ;
 ; Maximum fan-out                             ; 93                            ;
-; Total fan-out                               ; 1516                          ;
-; Average fan-out                             ; 2.71                          ;
+; Total fan-out                               ; 1554                          ;
+; Average fan-out                             ; 2.44                          ;
 +---------------------------------------------+-------------------------------+
 
 
@@ -217,7 +225,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
-; |display                   ; 238 (1)             ; 190 (0)                   ; 0                 ; 0          ; 65   ; 0            ; |display                    ; display       ; work         ;
+; |display                   ; 238 (1)             ; 190 (0)                   ; 0                 ; 0          ; 103  ; 0            ; |display                    ; display       ; work         ;
 ;    |MOUSE:Mouse1|          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |display|MOUSE:Mouse1       ; MOUSE         ; work         ;
 ;    |VGA_SYNC:VGA|          ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA       ; VGA_SYNC      ; work         ;
 ;    |bouncy_ball:BBALL|     ; 89 (89)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bouncy_ball:BBALL  ; bouncy_ball   ; work         ;
@@ -323,6 +331,52 @@ Encoding Type:  One-Hot
 +-------+-------+----------+---------------+
 
 
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:thousands" ;
++-----------+-------+----------+------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                              ;
++-----------+-------+----------+------------------------------------------------------+
+; bcd_digit ; Input ; Info     ; Stuck at GND                                         ;
++-----------+-------+----------+------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:hundreds" ;
++-----------+-------+----------+-----------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                             ;
++-----------+-------+----------+-----------------------------------------------------+
+; bcd_digit ; Input ; Info     ; Stuck at GND                                        ;
++-----------+-------+----------+-----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:tens" ;
++-----------+-------+----------+-------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                         ;
++-----------+-------+----------+-------------------------------------------------+
+; bcd_digit ; Input ; Info     ; Stuck at GND                                    ;
++-----------+-------+----------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" ;
++-----------+-------+----------+-------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                         ;
++-----------+-------+----------+-------------------------------------------------+
+; bcd_digit ; Input ; Info     ; Stuck at GND                                    ;
++-----------+-------+----------+-------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_display:seg_display" ;
++-----------------+-------+----------+----------------------+
+; Port            ; Type  ; Severity ; Details              ;
++-----------------+-------+----------+----------------------+
+; binary_in[9..1] ; Input ; Info     ; Stuck at GND         ;
+; binary_in[0]    ; Input ; Info     ; Stuck at VCC         ;
++-----------------+-------+----------+----------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -338,15 +392,15 @@ Encoding Type:  One-Hot
 ;     SLD               ; 9                           ;
 ;     plain             ; 37                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 238                         ;
+; arriav_lcell_comb     ; 239                         ;
 ;     arith             ; 70                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 46                          ;
 ;         2 data inputs ; 22                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 157                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 158                         ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 28                          ;
 ;         3 data inputs ; 18                          ;
@@ -356,10 +410,10 @@ Encoding Type:  One-Hot
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
-; boundary_port         ; 65                          ;
+; boundary_port         ; 103                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.60                        ;
-; Average LUT depth     ; 2.29                        ;
+; Average LUT depth     ; 2.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -378,16 +432,22 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu May 08 15:01:07 2025
+    Info: Processing started: Thu May 08 16:10:20 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: display-behaviour File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 18
+    Info (12023): Found entity 1: display File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
     Info (12023): Found entity 1: MOUSE File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-behaviour File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 17
-    Info (12023): Found entity 1: display File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_display.vhd
+    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 10
+    Info (12023): Found entity 1: seven_seg_display File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
     Info (12023): Found entity 1: VGA_SYNC File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
@@ -398,18 +458,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock_d
     Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
     Info (12023): Found entity 1: clock_divider File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12127): Elaborating entity "Display" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at display.vhd(60): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(62): object "R1" assigned a value but never read File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 62
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(11) File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 72
+Warning (10540): VHDL Signal Declaration warning at display.vhd(56): used explicit default value for signal "seven_seg_input" because signal was never assigned a value File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 56
+Warning (10540): VHDL Signal Declaration warning at display.vhd(66): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 66
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(68): object "R1" assigned a value but never read File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 68
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(33): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(34): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(36): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(37): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(39): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(40): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(42): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(43): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(47): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at seven_seg_display.vhd(51): signal "shift_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 51
+Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 56
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 87
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 86
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 100
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 105
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 101
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 115
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 120
 Info (13000): Registers with preset signals will power-up high File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -422,50 +495,78 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 7
     Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 7
     Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "LED[0]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 10
-    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
-    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 11
+    Warning (13410): Pin "hex0[0]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex0[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex0[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex0[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex0[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex0[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex0[6]" is stuck at VCC File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[0]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex1[6]" is stuck at VCC File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[0]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex2[6]" is stuck at VCC File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[0]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "hex3[6]" is stuck at VCC File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "LED[0]" is stuck at VCC File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 12
+    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
@@ -650,6 +751,9 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DATA[1] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DATA[2] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DATA[3] -entity DE0_CV_Default was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity DE0_CV_Default was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity DE0_CV_Default was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity DE0_CV_Default was ignored
@@ -667,12 +771,9 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to blue_out -entity DE0_CV_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to blue_sw -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to green_out -entity DE0_CV_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to green_sw -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to horiz_sync_out -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to red_out -entity DE0_CV_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to red_sw -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vert_sync_out -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -700,16 +801,26 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 374 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 60 output pins
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/ahac139/Downloads/flappy bird/305_flappybird/MiniprojectResources/display.vhd Line: 9
+Info (21057): Implemented 412 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 88 output pins
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 309 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 296 warnings
-    Info: Peak virtual memory: 4937 megabytes
-    Info: Processing ended: Thu May 08 15:01:13 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 345 warnings
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Thu May 08 16:10:26 2025
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:12
 

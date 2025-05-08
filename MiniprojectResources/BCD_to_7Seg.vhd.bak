@@ -3,7 +3,6 @@
 -- In this case, LED is on when it is '0'   
 library IEEE;
 use IEEE.std_logic_1164.all;   
-use IEEE.numeric_std.all;
 
 entity BCD_to_SevenSeg is
      port (BCD_digit : in std_logic_vector(3 downto 0);
