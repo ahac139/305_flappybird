@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity display is
 	port(Clk, pb1, pb2 : in std_logic;
 	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0) := "0000";
-	hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0);
+	hex0, hex1, hex2 : out std_logic_vector(6 downto 0);
 	SW : in std_logic_vector(9 downto 0);
 	VGA_HS, vert_sync: out std_logic;
 	PS2_DAT, PS2_CLK : inout std_logic;
@@ -46,7 +46,7 @@ END component MOUSE;
 
 component seven_seg_display is
      port (binary_in : in std_logic_vector(7 downto 0);
-			  hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0));
+			  hex0, hex1, hex2 : out std_logic_vector(6 downto 0));
 end component;
 
 signal pixel_row : std_logic_vector(9 downto 0);
@@ -84,8 +84,7 @@ begin
 		binary_in => switches,
 		hex0 => hex0, 
 		hex1 => hex1, 
-		hex2 => hex2, 
-		hex3 => hex3);
+		hex2 => hex2);
 	
 	Mouse1: Mouse port map(
 				clock_25Mhz => clk_div,

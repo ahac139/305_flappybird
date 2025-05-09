@@ -7,7 +7,7 @@ use IEEE.numeric_std.all;
 
 entity binary_to_bcd is
      port (binary_in : in std_logic_vector(7 downto 0);
-           bcd_out : out std_logic_vector(15 downto 0));
+           bcd_out : out std_logic_vector(11 downto 0));
 end entity;
 
 architecture Behavioral of binary_to_bcd is
@@ -36,6 +36,6 @@ begin
             binary := binary(6 downto 0) & '0';
         end loop;
         
-        bcd_out(11 downto 0) <= std_logic_vector(bcd);
+        bcd_out <= std_logic_vector(bcd);
     end process;
 end Behavioral;

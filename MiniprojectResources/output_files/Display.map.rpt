@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Fri May 09 14:48:52 2025
+Fri May 09 14:54:37 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -48,14 +48,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 09 14:48:52 2025           ;
+; Analysis & Synthesis Status     ; Successful - Fri May 09 14:54:37 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 188                                             ;
-; Total pins                      ; 103                                             ;
+; Total pins                      ; 96                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -205,14 +205,14 @@ refer to the applicable agreement for further details.
 ;                                             ;                               ;
 ; Dedicated logic registers                   ; 188                           ;
 ;                                             ;                               ;
-; I/O pins                                    ; 103                           ;
+; I/O pins                                    ; 96                            ;
 ;                                             ;                               ;
 ; Total DSP Blocks                            ; 0                             ;
 ;                                             ;                               ;
 ; Maximum fan-out node                        ; MOUSE:Mouse1|MOUSE_CLK_FILTER ;
 ; Maximum fan-out                             ; 91                            ;
-; Total fan-out                               ; 1642                          ;
-; Average fan-out                             ; 2.55                          ;
+; Total fan-out                               ; 1635                          ;
+; Average fan-out                             ; 2.60                          ;
 +---------------------------------------------+-------------------------------+
 
 
@@ -221,7 +221,7 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name       ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------------+--------------+
-; |display                           ; 247 (1)             ; 188 (0)                   ; 0                 ; 0          ; 103  ; 0            ; |display                                                        ; display           ; work         ;
+; |display                           ; 247 (1)             ; 188 (0)                   ; 0                 ; 0          ; 96   ; 0            ; |display                                                        ; display           ; work         ;
 ;    |MOUSE:Mouse1|                  ; 107 (107)           ; 118 (118)                 ; 0                 ; 0          ; 0    ; 0            ; |display|MOUSE:Mouse1                                           ; MOUSE             ; work         ;
 ;    |VGA_SYNC:VGA|                  ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                           ; VGA_SYNC          ; work         ;
 ;    |bouncy_ball:BBALL|             ; 70 (70)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bouncy_ball:BBALL                                      ; bouncy_ball       ; work         ;
@@ -350,15 +350,15 @@ Encoding Type:  One-Hot
 ;     SLD               ; 9                           ;
 ;     plain             ; 38                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 250                         ;
+; arriav_lcell_comb     ; 249                         ;
 ;     arith             ; 70                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 46                          ;
 ;         2 data inputs ; 22                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 169                         ;
-;         0 data inputs ; 2                           ;
+;     normal            ; 168                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
 ;         2 data inputs ; 23                          ;
 ;         3 data inputs ; 18                          ;
@@ -368,7 +368,7 @@ Encoding Type:  One-Hot
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
-; boundary_port         ; 103                         ;
+; boundary_port         ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
 ; Average LUT depth     ; 2.28                        ;
@@ -390,7 +390,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri May 09 14:48:45 2025
+    Info: Processing started: Fri May 09 14:54:18 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -425,17 +425,16 @@ Warning (10036): Verilog HDL or VHDL warning at display.vhd(76): object "mouse_r
 Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
 Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 83
 Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
-Warning (10873): Using initial value X (don't care) for net "bcd_out[15..12]" at binary_to_bcd.vhd(10) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 10
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 90
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 89
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 108
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 122
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 127
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 107
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 121
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 126
 Info (13000): Registers with preset signals will power-up high File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -449,13 +448,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
     Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
     Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[3]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[4]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[5]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "hex3[6]" is stuck at VCC File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
     Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
     Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
     Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
@@ -727,15 +719,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 418 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 411 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 88 output pins
+    Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 315 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 297 warnings
-    Info: Peak virtual memory: 4965 megabytes
-    Info: Processing ended: Fri May 09 14:48:52 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 289 warnings
+    Info: Peak virtual memory: 4964 megabytes
+    Info: Processing ended: Fri May 09 14:54:37 2025
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:16
 
 

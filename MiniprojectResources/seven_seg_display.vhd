@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity seven_seg_display is
      port (
 			  binary_in : in std_logic_vector(7 downto 0);
-			  hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0));
+			  hex0, hex1, hex2 : out std_logic_vector(6 downto 0));
 end entity;
 
 architecture arc1 of seven_seg_display  is
@@ -18,10 +18,10 @@ architecture arc1 of seven_seg_display  is
 
 	component binary_to_bcd is
      port (binary_in : in std_logic_vector(7 downto 0);
-           bcd_out : out std_logic_vector(15 downto 0));
+           bcd_out : out std_logic_vector(11 downto 0));
 	end component;
 	
-	signal bcd : std_logic_vector(15 downto 0);
+	signal bcd : std_logic_vector(11 downto 0);
 begin
 
   converter : binary_to_bcd 
@@ -45,12 +45,6 @@ begin
     port map(
       BCD_digit => bcd(11 downto 8),
       SevenSeg_out => hex2
-  );
-  
-  thousands : BCD_to_SevenSeg
-    port map(
-      BCD_digit => bcd(15 downto 12),
-      SevenSeg_out => hex3
   );
   
 
