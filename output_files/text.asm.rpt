@@ -1,5 +1,5 @@
 Assembler report for text
-Fri May 09 14:58:24 2025
+Fri May 09 15:04:07 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/dvu878/Documents/305_flappybird/output_files/text.sof
+  5. Assembler Device Options: C:/Users/dtie151/Downloads/305_flappybird/output_files/text.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri May 09 14:58:24 2025 ;
+; Assembler Status      ; Successful - Fri May 09 15:04:07 2025 ;
 ; Revision Name         ; text                                  ;
 ; Top-level Entity Name ; text                                  ;
 ; Family                ; Cyclone V                             ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------+
-; Assembler Generated Files                                      ;
-+----------------------------------------------------------------+
-; File Name                                                      ;
-+----------------------------------------------------------------+
-; C:/Users/dvu878/Documents/305_flappybird/output_files/text.sof ;
-+----------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Assembler Generated Files                                       ;
++-----------------------------------------------------------------+
+; File Name                                                       ;
++-----------------------------------------------------------------+
+; C:/Users/dtie151/Downloads/305_flappybird/output_files/text.sof ;
++-----------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/dvu878/Documents/305_flappybird/output_files/text.sof ;
-+----------------+-------------------------------------------------------------------------+
-; Option         ; Setting                                                                 ;
-+----------------+-------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00536AF0                                                              ;
-; Checksum       ; 0x00536AF0                                                              ;
-+----------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/dtie151/Downloads/305_flappybird/output_files/text.sof ;
++----------------+--------------------------------------------------------------------------+
+; Option         ; Setting                                                                  ;
++----------------+--------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00536AF0                                                               ;
+; Checksum       ; 0x00536AF0                                                               ;
++----------------+--------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri May 09 14:58:21 2025
+    Info: Processing started: Fri May 09 15:04:05 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off text_test -c text
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Fri May 09 14:58:24 2025
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Fri May 09 15:04:07 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

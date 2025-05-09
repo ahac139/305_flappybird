@@ -468,6 +468,7 @@ set_location_assignment PIN_V13 -to SW[1]
 set_location_assignment PIN_T13 -to SW[2]
 set_location_assignment PIN_M7 -to pb3
 set_global_assignment -name VHDL_FILE display.vhd
+set_global_assignment -name VHDL_FILE char_rom.vhd
 set_global_assignment -name VHDL_FILE mouse.vhd
 set_global_assignment -name VHDL_FILE seven_seg_display.vhd
 set_global_assignment -name VHDL_FILE binary_to_bcd.vhd

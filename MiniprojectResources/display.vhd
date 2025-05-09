@@ -32,7 +32,7 @@ component bouncy_ball IS
 	PORT
 		( pb1, pb2, clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column, mouse_x, mouse_y	: IN std_logic_vector(9 DOWNTO 0);
-		  red, green, blue 			: OUT std_logic);		
+		  ball_on : out std_logic);		
 END component bouncy_ball;
 
 component MOUSE IS
@@ -48,6 +48,17 @@ component seven_seg_display is
      port (binary_in : in std_logic_vector(7 downto 0);
 			  hex0, hex1, hex2 : out std_logic_vector(6 downto 0));
 end component;
+
+component char_rom IS
+	PORT
+	(
+		character_address	:	IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		clock				: 	IN STD_LOGIC ;
+		rom_mux_output		:	OUT STD_LOGIC
+	);
+END component;
+
 
 signal pixel_row : std_logic_vector(9 downto 0);
 signal pixel_column : std_logic_vector(9 downto 0);
@@ -74,11 +85,24 @@ signal mouse_x: std_logic_vector(9 DOWNTO 0) := "0000000000";
 signal mouse_y:std_logic_vector(9 DOWNTO 0) := "0000000000";
 
 signal mouse_right: std_logic;
+signal mouse_left : std_logic;
 
 signal switches: std_logic_vector(7 DOWNTO 0); 
 
+signal char_on : std_logic;
+signal ball_on : std_logic; 
+
+
+signal char_A : std_logic_vector(5 downto 0) := "000001";
 
 begin
+
+	char_display: char_rom port map(
+		character_address => char_A,
+		font_row => pixel_row(2 downto 0),
+		font_col => pixel_column(2 downto 0),
+		clock => clk_div,
+		rom_mux_output => char_on);
 	
 	seg_display: seven_seg_display port map(
 		binary_in => switches,
@@ -91,7 +115,7 @@ begin
 				reset => ground,
 				mouse_data => PS2_DAT,
 				mouse_clk => PS2_CLK,
-				left_button => blue, 
+				left_button => mouse_left, 
 				right_button => mouse_right,
 				mouse_cursor_row => mouse_cursor_row,
 				mouse_cursor_column => mouse_cursor_column);
@@ -113,10 +137,17 @@ begin
 		mouse_x => mouse_x,
 		mouse_y => mouse_y,
 		vert_sync => v_sync_i,
-		red => red,
-		green => green,
-		blue => R1
+		
+		ball_on => ball_on
 	);
+	
+	-- Colours for pixel data on video signal
+	-- Changing the background and ball colour by pushbuttons
+	Red <=  ball_on or char_on;
+	Green <= char_on;
+	Blue <= char_on;
+	
+	
 	
 	CDIV : clock_divider port map(
 		clk => Clk,

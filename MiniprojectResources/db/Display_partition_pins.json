@@ -196,11 +196,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pb2",
+					"name" : "Clk",
 					"strict" : false
 				},
 				{
-					"name" : "Clk",
+					"name" : "pb2",
 					"strict" : false
 				}
 			]
