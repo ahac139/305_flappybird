@@ -406,7 +406,6 @@ set_location_assignment PIN_P14 -to HEX5[3]
 set_location_assignment PIN_C1 -to HEX5[4]
 set_location_assignment PIN_C2 -to HEX5[5]
 set_location_assignment PIN_W19 -to HEX5[6]
-set_location_assignment PIN_M7 -to KEY[2]
 set_location_assignment PIN_M6 -to KEY[3]
 set_location_assignment PIN_AA2 -to LEDR[0]
 set_location_assignment PIN_AA1 -to LEDR[1]
@@ -467,9 +466,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE0_CV
 set_location_assignment PIN_U13 -to SW[0]
 set_location_assignment PIN_V13 -to SW[1]
 set_location_assignment PIN_T13 -to SW[2]
+set_location_assignment PIN_M7 -to pb3
 set_global_assignment -name VHDL_FILE display.vhd
 set_global_assignment -name VHDL_FILE mouse.vhd
 set_global_assignment -name VHDL_FILE seven_seg_display.vhd
+set_global_assignment -name VHDL_FILE binary_to_bcd.vhd
 set_global_assignment -name VHDL_FILE BCD_to_7Seg.vhd
 set_global_assignment -name VHDL_FILE vga_sync.vhd
 set_global_assignment -name VHDL_FILE bouncy_ball.vhd

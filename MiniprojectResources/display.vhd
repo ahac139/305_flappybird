@@ -9,7 +9,7 @@ entity display is
 	SW : in std_logic_vector(9 downto 0);
 	VGA_HS, vert_sync: out std_logic;
 	PS2_DAT, PS2_CLK : inout std_logic;
-	LED: out std_logic_vector(9 downto 0) := "0000000000";
+	LEDR: out std_logic_vector(9 downto 0) := "0000000000";
 	GPIO_0 : out std_logic_vector(35 downto 0)
 	);
 end entity display;
@@ -45,7 +45,7 @@ component MOUSE IS
 END component MOUSE;
 
 component seven_seg_display is
-     port (binary_in : in std_logic_vector(9 downto 0);
+     port (binary_in : in std_logic_vector(7 downto 0);
 			  hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0));
 end component;
 
@@ -73,12 +73,15 @@ signal mouse_cursor_column:std_logic_vector(9 DOWNTO 0);
 signal mouse_x: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
 signal mouse_y:std_logic_vector(9 DOWNTO 0) := "0000000000";
 
+signal mouse_right: std_logic;
+
+signal switches: std_logic_vector(7 DOWNTO 0); 
 
 
 begin
 	
 	seg_display: seven_seg_display port map(
-		binary_in => seven_seg_input,
+		binary_in => switches,
 		hex0 => hex0, 
 		hex1 => hex1, 
 		hex2 => hex2, 
@@ -90,14 +93,18 @@ begin
 				mouse_data => PS2_DAT,
 				mouse_clk => PS2_CLK,
 				left_button => blue, 
-				right_button => LED(1),
+				right_button => mouse_right,
 				mouse_cursor_row => mouse_cursor_row,
 				mouse_cursor_column => mouse_cursor_column);
 				
 			
 	mouse_x <= mouse_cursor_column;
 	mouse_y <= mouse_cursor_row;
-
+	
+	
+	LEDR <= SW;
+	switches <= SW(7 downto 0);
+	
 	BBALL : bouncy_ball port map(
 		pb1 => pb1,
 		pb2 => pb2,
@@ -133,9 +140,5 @@ begin
 	
 	vert_sync <= v_sync_i;
 
-	process(sw)
-	begin
-		LED(0) <= '1';
-	end process;
-	
+
 end behaviour;
