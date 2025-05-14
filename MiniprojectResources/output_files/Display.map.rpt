@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Wed May 14 13:55:53 2025
+Wed May 14 14:37:28 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -19,14 +19,29 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for text:char_display|char_rom:char_display|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 15. Parameter Settings for User Entity Instance: text:char_display|char_rom:char_display|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "MOUSE:Mouse1"
- 18. Port Connectivity Checks: "text:char_display|char_rom:char_display"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 14. Source assignments for text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 15. Source assignments for text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 16. Source assignments for text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 17. Source assignments for text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 18. Source assignments for text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 19. Source assignments for text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 20. Parameter Settings for User Entity Instance: text:char_display|char_rom:H|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: text:char_display|char_rom:E|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: text:char_display|char_rom:L1|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: text:char_display|char_rom:L2|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: text:char_display|char_rom:O|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: text:char_display|char_rom:EX|altsyncram:altsyncram_component
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "MOUSE:Mouse1"
+ 28. Port Connectivity Checks: "text:char_display|char_rom:EX"
+ 29. Port Connectivity Checks: "text:char_display|char_rom:O"
+ 30. Port Connectivity Checks: "text:char_display|char_rom:L2"
+ 31. Port Connectivity Checks: "text:char_display|char_rom:L1"
+ 32. Port Connectivity Checks: "text:char_display|char_rom:E"
+ 33. Port Connectivity Checks: "text:char_display|char_rom:H"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -52,7 +67,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 14 13:55:53 2025           ;
+; Analysis & Synthesis Status     ; Successful - Wed May 14 14:37:28 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
@@ -61,7 +76,7 @@ refer to the applicable agreement for further details.
 ; Total registers                 ; 186                                             ;
 ; Total pins                      ; 96                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 64                                              ;
+; Total block memory bits         ; 384                                             ;
 ; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -172,8 +187,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -182,16 +196,16 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                         ; Library ;
 +----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
-; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd            ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd           ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd              ;         ;
-; seven_seg_display.vhd            ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd  ;         ;
-; binary_to_bcd.vhd                ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd      ;         ;
-; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd        ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd           ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/bouncy_ball.vhd        ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd      ;         ;
-; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd               ;         ;
+; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd            ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd           ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd              ;         ;
+; seven_seg_display.vhd            ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd  ;         ;
+; binary_to_bcd.vhd                ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd      ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd        ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd           ;         ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/bouncy_ball.vhd        ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd      ;         ;
+; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd               ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                     ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc              ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                        ;         ;
@@ -201,70 +215,90 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                         ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                         ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                       ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/tcgrom.mif             ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/tcgrom.mif             ;         ;
 +----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                 ;
-+---------------------------------------------+-------------------------------+
-; Resource                                    ; Usage                         ;
-+---------------------------------------------+-------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 151                           ;
-;                                             ;                               ;
-; Combinational ALUT usage for logic          ; 251                           ;
-;     -- 7 input functions                    ; 3                             ;
-;     -- 6 input functions                    ; 39                            ;
-;     -- 5 input functions                    ; 47                            ;
-;     -- 4 input functions                    ; 33                            ;
-;     -- <=3 input functions                  ; 129                           ;
-;                                             ;                               ;
-; Dedicated logic registers                   ; 186                           ;
-;                                             ;                               ;
-; I/O pins                                    ; 96                            ;
-; Total MLAB memory bits                      ; 0                             ;
-; Total block memory bits                     ; 64                            ;
-;                                             ;                               ;
-; Total DSP Blocks                            ; 0                             ;
-;                                             ;                               ;
-; Maximum fan-out node                        ; MOUSE:Mouse1|MOUSE_CLK_FILTER ;
-; Maximum fan-out                             ; 89                            ;
-; Total fan-out                               ; 1677                          ;
-; Average fan-out                             ; 2.62                          ;
-+---------------------------------------------+-------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 166                         ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 267                         ;
+;     -- 7 input functions                    ; 4                           ;
+;     -- 6 input functions                    ; 53                          ;
+;     -- 5 input functions                    ; 50                          ;
+;     -- 4 input functions                    ; 30                          ;
+;     -- <=3 input functions                  ; 130                         ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 186                         ;
+;                                             ;                             ;
+; I/O pins                                    ; 96                          ;
+; Total MLAB memory bits                      ; 0                           ;
+; Total block memory bits                     ; 384                         ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
+; Maximum fan-out                             ; 126                         ;
+; Total fan-out                               ; 1935                        ;
+; Average fan-out                             ; 2.78                        ;
++---------------------------------------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name       ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |display                                     ; 251 (1)             ; 186 (0)                   ; 64                ; 0          ; 96   ; 0            ; |display                                                                                                        ; display           ; work         ;
-;    |MOUSE:Mouse1|                            ; 105 (105)           ; 116 (116)                 ; 0                 ; 0          ; 0    ; 0            ; |display|MOUSE:Mouse1                                                                                           ; MOUSE             ; work         ;
-;    |VGA_SYNC:VGA|                            ; 44 (44)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                                                                           ; VGA_SYNC          ; work         ;
-;    |bouncy_ball:BBALL|                       ; 67 (67)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bouncy_ball:BBALL                                                                                      ; bouncy_ball       ; work         ;
-;    |clock_divider:CDIV|                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV                                                                                     ; clock_divider     ; work         ;
-;    |seven_seg_display:seg_display|           ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display                                                                          ; seven_seg_display ; work         ;
-;       |BCD_to_SevenSeg:hundreds|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:hundreds                                                 ; BCD_to_SevenSeg   ; work         ;
-;       |BCD_to_SevenSeg:ones|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones                                                     ; BCD_to_SevenSeg   ; work         ;
-;       |BCD_to_SevenSeg:tens|                 ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens                                                     ; BCD_to_SevenSeg   ; work         ;
-;       |binary_to_bcd:converter|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|binary_to_bcd:converter                                                  ; binary_to_bcd     ; work         ;
-;    |text:char_display|                       ; 6 (4)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display                                                                                      ; text              ; work         ;
-;       |char_rom:char_display|                ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:char_display                                                                ; char_rom          ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:char_display|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:char_display|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1   ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Entity Name       ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |display                                     ; 267 (1)             ; 186 (0)                   ; 384               ; 0          ; 96   ; 0            ; |display                                                                                              ; display           ; work         ;
+;    |MOUSE:Mouse1|                            ; 105 (105)           ; 116 (116)                 ; 0                 ; 0          ; 0    ; 0            ; |display|MOUSE:Mouse1                                                                                 ; MOUSE             ; work         ;
+;    |VGA_SYNC:VGA|                            ; 44 (44)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                                                                 ; VGA_SYNC          ; work         ;
+;    |bouncy_ball:BBALL|                       ; 67 (67)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bouncy_ball:BBALL                                                                            ; bouncy_ball       ; work         ;
+;    |clock_divider:CDIV|                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV                                                                           ; clock_divider     ; work         ;
+;    |seven_seg_display:seg_display|           ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display                                                                ; seven_seg_display ; work         ;
+;       |BCD_to_SevenSeg:hundreds|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:hundreds                                       ; BCD_to_SevenSeg   ; work         ;
+;       |BCD_to_SevenSeg:ones|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones                                           ; BCD_to_SevenSeg   ; work         ;
+;       |BCD_to_SevenSeg:tens|                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens                                           ; BCD_to_SevenSeg   ; work         ;
+;       |binary_to_bcd:converter|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|binary_to_bcd:converter                                        ; binary_to_bcd     ; work         ;
+;    |text:char_display|                       ; 23 (7)              ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |display|text:char_display                                                                            ; text              ; work         ;
+;       |char_rom:EX|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX                                                                ; char_rom          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1   ; work         ;
+;       |char_rom:E|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E                                                                 ; char_rom          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E|altsyncram:altsyncram_component                                 ; altsyncram        ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1   ; work         ;
+;       |char_rom:H|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H                                                                 ; char_rom          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H|altsyncram:altsyncram_component                                 ; altsyncram        ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1   ; work         ;
+;       |char_rom:L1|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1                                                                ; char_rom          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1   ; work         ;
+;       |char_rom:L2|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2                                                                ; char_rom          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1   ; work         ;
+;       |char_rom:O|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:O                                                                 ; char_rom          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:O|altsyncram:altsyncram_component                                 ; altsyncram        ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1   ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                ;
-+-------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
-; Name                                                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
-+-------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
-; text:char_display|char_rom:char_display|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
-+-------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                      ;
++---------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+; Name                                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
++---------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+; text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
+; text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM  ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
+; text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM  ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
+; text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
+; text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
+; text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM  ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
++---------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
 
 
 Encoding Type:  One-Hot
@@ -336,106 +370,512 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |display|MOUSE:Mouse1|new_cursor_column[5]                                  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[3]                                            ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |display|MOUSE:Mouse1|new_cursor_column[2]                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[4]                                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|bouncy_ball:BBALL|ball_y_motion[2]                                 ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |display|MOUSE:Mouse1|cursor_column[9]                                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |display|MOUSE:Mouse1|cursor_column[8]                                      ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |display|MOUSE:Mouse1|cursor_row[9]                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |display|MOUSE:Mouse1|cursor_row[7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |display|MOUSE:Mouse1|cursor_column[3]                                      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |display|MOUSE:Mouse1|cursor_column[6]                                      ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |display|MOUSE:Mouse1|cursor_row[3]                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |display|MOUSE:Mouse1|cursor_row[4]                                         ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |display|text:char_display|char_rom:H|Mux0                                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones|SevenSeg_out[0] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens|SevenSeg_out[5] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens|SevenSeg_out[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for text:char_display|char_rom:char_display|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                              ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: text:char_display|char_rom:char_display|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                                     ;
-+------------------------------------+----------------------+----------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                  ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                               ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                             ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                             ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                           ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                  ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                                  ;
-; WIDTH_A                            ; 8                    ; Signed Integer                                           ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer                                           ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer                                           ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                  ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                  ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                  ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                  ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
-; WIDTH_B                            ; 1                    ; Untyped                                                  ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                                  ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                                  ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                  ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                  ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                  ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                  ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                  ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                  ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                  ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                  ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                           ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                  ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                  ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                                  ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                  ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
-; INIT_FILE                          ; tcgrom.mif           ; Untyped                                                  ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                  ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                  ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                  ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                  ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                  ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                  ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                                  ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                  ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                  ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                  ;
-; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                                  ;
-+------------------------------------+----------------------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                    ;
-+-------------------------------------------+-------------------------------------------------------------------------+
-; Name                                      ; Value                                                                   ;
-+-------------------------------------------+-------------------------------------------------------------------------+
-; Number of entity instances                ; 1                                                                       ;
-; Entity Instance                           ; text:char_display|char_rom:char_display|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                                     ;
-;     -- WIDTH_A                            ; 8                                                                       ;
-;     -- NUMWORDS_A                         ; 512                                                                     ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
-;     -- WIDTH_B                            ; 1                                                                       ;
-;     -- NUMWORDS_B                         ; 1                                                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ;
-+-------------------------------------------+-------------------------------------------------------------------------+
+; Source assignments for text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text:char_display|char_rom:H|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                          ;
++------------------------------------+----------------------+-----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                       ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                       ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WIDTH_B                            ; 1                    ; Untyped                                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                       ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                       ;
+; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                       ;
++------------------------------------+----------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text:char_display|char_rom:E|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                          ;
++------------------------------------+----------------------+-----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                       ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                       ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WIDTH_B                            ; 1                    ; Untyped                                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                       ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                       ;
+; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                       ;
++------------------------------------+----------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text:char_display|char_rom:L1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                        ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                 ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                 ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 1                    ; Untyped                                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text:char_display|char_rom:L2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                        ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                 ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                 ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 1                    ; Untyped                                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text:char_display|char_rom:O|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                          ;
++------------------------------------+----------------------+-----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                       ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                       ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WIDTH_B                            ; 1                    ; Untyped                                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                       ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                       ;
+; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                       ;
++------------------------------------+----------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text:char_display|char_rom:EX|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                        ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                 ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                 ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 1                    ; Untyped                                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_d5g1      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                          ;
++-------------------------------------------+---------------------------------------------------------------+
+; Name                                      ; Value                                                         ;
++-------------------------------------------+---------------------------------------------------------------+
+; Number of entity instances                ; 6                                                             ;
+; Entity Instance                           ; text:char_display|char_rom:H|altsyncram:altsyncram_component  ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 8                                                             ;
+;     -- NUMWORDS_A                         ; 512                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; text:char_display|char_rom:E|altsyncram:altsyncram_component  ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 8                                                             ;
+;     -- NUMWORDS_A                         ; 512                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; text:char_display|char_rom:L1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 8                                                             ;
+;     -- NUMWORDS_A                         ; 512                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; text:char_display|char_rom:L2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 8                                                             ;
+;     -- NUMWORDS_A                         ; 512                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; text:char_display|char_rom:O|altsyncram:altsyncram_component  ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 8                                                             ;
+;     -- NUMWORDS_A                         ; 512                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; text:char_display|char_rom:EX|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 8                                                             ;
+;     -- NUMWORDS_A                         ; 512                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
++-------------------------------------------+---------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -449,14 +889,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "text:char_display|char_rom:char_display" ;
-+-------------------------+-------+----------+------------------------+
-; Port                    ; Type  ; Severity ; Details                ;
-+-------------------------+-------+----------+------------------------+
-; character_address[5..1] ; Input ; Info     ; Stuck at GND           ;
-; character_address[0]    ; Input ; Info     ; Stuck at VCC           ;
-+-------------------------+-------+----------+------------------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display|char_rom:EX" ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; character_address[4..1] ; Input ; Info     ; Stuck at GND ;
+; character_address[5]    ; Input ; Info     ; Stuck at VCC ;
+; character_address[0]    ; Input ; Info     ; Stuck at VCC ;
++-------------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display|char_rom:O"  ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; character_address[3..0] ; Input ; Info     ; Stuck at VCC ;
+; character_address[5..4] ; Input ; Info     ; Stuck at GND ;
++-------------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display|char_rom:L2" ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; character_address[3..2] ; Input ; Info     ; Stuck at VCC ;
+; character_address[5..4] ; Input ; Info     ; Stuck at GND ;
+; character_address[1..0] ; Input ; Info     ; Stuck at GND ;
++-------------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display|char_rom:L1" ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; character_address[3..2] ; Input ; Info     ; Stuck at VCC ;
+; character_address[5..4] ; Input ; Info     ; Stuck at GND ;
+; character_address[1..0] ; Input ; Info     ; Stuck at GND ;
++-------------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display|char_rom:E"  ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; character_address[5..3] ; Input ; Info     ; Stuck at GND ;
+; character_address[2]    ; Input ; Info     ; Stuck at VCC ;
+; character_address[1]    ; Input ; Info     ; Stuck at GND ;
+; character_address[0]    ; Input ; Info     ; Stuck at VCC ;
++-------------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display|char_rom:H"  ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; character_address[5..4] ; Input ; Info     ; Stuck at GND ;
+; character_address[2..0] ; Input ; Info     ; Stuck at GND ;
+; character_address[3]    ; Input ; Info     ; Stuck at VCC ;
++-------------------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -474,29 +970,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 9                           ;
 ;     plain             ; 37                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 253                         ;
+; arriav_lcell_comb     ; 269                         ;
 ;     arith             ; 70                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 46                          ;
 ;         2 data inputs ; 22                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 170                         ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 185                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 47                          ;
-;         6 data inputs ; 39                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 30                          ;
+;         5 data inputs ; 50                          ;
+;         6 data inputs ; 53                          ;
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
 ; boundary_port         ; 96                          ;
-; stratixv_ram_block    ; 8                           ;
+; stratixv_ram_block    ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.30                        ;
+; Average LUT depth     ; 2.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -515,54 +1011,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed May 14 13:55:34 2025
+    Info: Processing started: Wed May 14 14:37:21 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-behaviour File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 18
-    Info (12023): Found entity 1: display File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 5
+    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 18
+    Info (12023): Found entity 1: display File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_display.vhd
-    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 11
-    Info (12023): Found entity 1: seven_seg_display File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
+    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 11
+    Info (12023): Found entity 1: seven_seg_display File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file binary_to_bcd.vhd
-    Info (12022): Found design unit 1: binary_to_bcd-Behavioral File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 13
-    Info (12023): Found entity 1: binary_to_bcd File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 8
+    Info (12022): Found design unit 1: binary_to_bcd-Behavioral File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 13
+    Info (12023): Found entity 1: binary_to_bcd File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/bouncy_ball.vhd Line: 14
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/bouncy_ball.vhd Line: 14
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: text-behavior File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 14
-    Info (12023): Found entity 1: text File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 7
+    Info (12022): Found design unit 1: text-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 14
+    Info (12023): Found entity 1: text File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 7
 Info (12127): Elaborating entity "Display" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at display.vhd(74): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 74
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(84): object "mouse_right" assigned a value but never read File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 84
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(85): object "mouse_left" assigned a value but never read File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 85
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 95
-Warning (10540): VHDL Signal Declaration warning at text.vhd(17): used explicit default value for signal "size" because signal was never assigned a value File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 17
-Warning (10540): VHDL Signal Declaration warning at text.vhd(18): used explicit default value for signal "y_pos" because signal was never assigned a value File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 18
-Warning (10540): VHDL Signal Declaration warning at text.vhd(19): used explicit default value for signal "x_pos" because signal was never assigned a value File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 19
-Warning (10540): VHDL Signal Declaration warning at text.vhd(20): used explicit default value for signal "char_A" because signal was never assigned a value File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 20
-Info (12128): Elaborating entity "char_rom" for hierarchy "text:char_display|char_rom:char_display" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 36
-Info (12128): Elaborating entity "altsyncram" for hierarchy "text:char_display|char_rom:char_display|altsyncram:altsyncram_component" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "text:char_display|char_rom:char_display|altsyncram:altsyncram_component" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "text:char_display|char_rom:char_display|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Warning (10540): VHDL Signal Declaration warning at display.vhd(74): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 74
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(84): object "mouse_right" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 84
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(85): object "mouse_left" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 85
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 95
+Warning (10540): VHDL Signal Declaration warning at text.vhd(17): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 17
+Warning (10540): VHDL Signal Declaration warning at text.vhd(18): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 18
+Warning (10540): VHDL Signal Declaration warning at text.vhd(19): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 19
+Warning (10540): VHDL Signal Declaration warning at text.vhd(20): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 20
+Warning (10540): VHDL Signal Declaration warning at text.vhd(24): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at text.vhd(25): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at text.vhd(26): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at text.vhd(30): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 30
+Warning (10540): VHDL Signal Declaration warning at text.vhd(31): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 31
+Warning (10540): VHDL Signal Declaration warning at text.vhd(32): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at text.vhd(36): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at text.vhd(37): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at text.vhd(41): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 41
+Warning (10540): VHDL Signal Declaration warning at text.vhd(42): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 42
+Warning (10540): VHDL Signal Declaration warning at text.vhd(43): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 43
+Warning (10540): VHDL Signal Declaration warning at text.vhd(47): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at text.vhd(48): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at text.vhd(49): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 49
+Warning (10540): VHDL Signal Declaration warning at text.vhd(50): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 50
+Info (12128): Elaborating entity "char_rom" for hierarchy "text:char_display|char_rom:H" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 66
+Info (12128): Elaborating entity "altsyncram" for hierarchy "text:char_display|char_rom:H|altsyncram:altsyncram_component" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "text:char_display|char_rom:H|altsyncram:altsyncram_component" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "text:char_display|char_rom:H|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -578,70 +1089,75 @@ Info (12133): Instantiated megafunction "text:char_display|char_rom:char_display
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "text:char_display|char_rom:char_display|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 101
-Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
-Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 107
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 125
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 148
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 153
-Info (13000): Registers with preset signals will power-up high File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 101
+Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
+Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 107
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 125
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 148
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 153
+Info (13000): Registers with preset signals will power-up high File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:char_display|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE0_CV_Default was ignored
@@ -876,17 +1392,17 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "pb1" File: C:/Users/DVU878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 423 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 6
+Info (21057): Implemented 479 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 319 logic cells
-    Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 293 warnings
-    Info: Peak virtual memory: 4975 megabytes
-    Info: Processing ended: Wed May 14 13:55:53 2025
-    Info: Elapsed time: 00:00:19
+    Info (21061): Implemented 335 logic cells
+    Info (21064): Implemented 48 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 308 warnings
+    Info: Peak virtual memory: 4945 megabytes
+    Info: Processing ended: Wed May 14 14:37:28 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:13
 
 
