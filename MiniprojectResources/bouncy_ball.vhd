@@ -8,6 +8,7 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, pb2, clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column, mouse_x, mouse_y	: IN std_logic_vector(9 DOWNTO 0);
+			 mouse_clk : in std_logic;
 		  ball_on : out std_logic);		
 END bouncy_ball;
 
@@ -15,7 +16,7 @@ architecture behavior of bouncy_ball is
 
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
-SiGNAL ball_x_pos				: std_logic_vector(9 DOWNTO 0);
+SiGNAL ball_x_pos				: std_logic_vector(9 DOWNTO 0) := "1001001110";
 SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
@@ -33,13 +34,11 @@ begin
 	-- Move ball once every vertical sync
 	if (rising_edge(vert_sync)) then			
 		-- Bounce off top or bottom of the screen
-		if (pb2 = '0') then
-			ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,10);
-			
+		if (mouse_clk = '0') then
 			if ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
 				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
 			elsif (ball_y_pos <= size) then 
-				ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
 			-- Compute next ball Y position
 			ball_y_pos <= ball_y_pos + ball_y_motion;

@@ -156,10 +156,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[1]",
 					"strict" : false
 				},
@@ -188,6 +184,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[8]",
 					"strict" : false
 				},
@@ -197,10 +197,6 @@
 				},
 				{
 					"name" : "Clk",
-					"strict" : false
-				},
-				{
-					"name" : "pb2",
 					"strict" : false
 				}
 			]

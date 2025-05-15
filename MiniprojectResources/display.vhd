@@ -32,6 +32,7 @@ component bouncy_ball IS
 	PORT
 		( 	pb1, pb2, clk, vert_sync						: IN std_logic;
 			pixel_row, pixel_column, mouse_x, mouse_y	: IN std_logic_vector(9 DOWNTO 0);
+			mouse_clk : in std_logic;
 			ball_on 												: out std_logic);		
 END component bouncy_ball;
 
@@ -130,6 +131,7 @@ begin
 		pixel_column => pixel_column,
 		mouse_x => mouse_x,
 		mouse_y => mouse_y,
+		mouse_clk => mouse_left,
 		vert_sync => v_sync_i,
 		
 		ball_on => ball_on
