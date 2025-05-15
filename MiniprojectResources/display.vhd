@@ -30,7 +30,7 @@ end component clock_divider;
 
 component bouncy_ball IS
 	PORT
-		( 	pb1, pb2, clk, vert_sync						: IN std_logic;
+		( 	clk, vert_sync						: IN std_logic;
 			pixel_row, pixel_column, mouse_x, mouse_y	: IN std_logic_vector(9 DOWNTO 0);
 			mouse_clk : in std_logic;
 			ball_on 												: out std_logic);		
@@ -124,8 +124,6 @@ begin
 	switches <= SW(7 downto 0);
 	
 	BBALL : bouncy_ball port map(
-		pb1 => pb1,
-		pb2 => pb2,
 		clk => clk_div,
 		pixel_row => pixel_row,
 		pixel_column => pixel_column,
@@ -140,10 +138,14 @@ begin
 	-- Colours for pixel data on video signal
 	-- Changing the background and ball colour by pushbuttons
 	Red 	<= '1' when (char_on = '1') else
-				'1' when (ball_on = '1') else
+				'1' when (ball_on = '1') and (pb1 = '1') and (pb2 = '1') else
 				'0';
-	Green <= char_on;
-	Blue 	<= char_on;
+	Green <= '1' when (char_on = '1') else
+				'1' when (ball_on = '1') and (pb1 = '0') else
+				'0';
+	Blue 	<= '1' when (char_on = '1') else
+				'1' when (ball_on = '1') and (pb2 = '0') else
+				'0';
 	
 	
 	

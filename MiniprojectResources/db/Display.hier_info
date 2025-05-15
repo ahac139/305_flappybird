@@ -1,7 +1,9 @@
 |Display
 Clk => clock_divider:CDIV.Clk
-pb1 => bouncy_ball:BBALL.pb1
-pb2 => bouncy_ball:BBALL.pb2
+pb1 => red.IN1
+pb1 => green.IN1
+pb2 => red.IN1
+pb2 => blue.IN1
 VGA_R[0] << <GND>
 VGA_R[1] << <GND>
 VGA_R[2] << <GND>
@@ -1638,8 +1640,6 @@ mouse_cursor_column[9] <= cursor_column[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Display|bouncy_ball:BBALL
-pb1 => ~NO_FANOUT~
-pb2 => ~NO_FANOUT~
 clk => ~NO_FANOUT~
 vert_sync => ball_x_pos[0].CLK
 vert_sync => ball_x_pos[1].CLK
@@ -1741,10 +1741,10 @@ mouse_clk => ball_y_pos.OUTPUTSELECT
 mouse_clk => ball_y_pos.OUTPUTSELECT
 mouse_clk => ball_y_pos.OUTPUTSELECT
 mouse_clk => ball_y_pos.OUTPUTSELECT
-mouse_clk => ball_x_pos[3].ENA
 mouse_clk => ball_x_pos[2].ENA
 mouse_clk => ball_x_pos[1].ENA
 mouse_clk => ball_x_pos[0].ENA
+mouse_clk => ball_x_pos[3].ENA
 mouse_clk => ball_x_pos[4].ENA
 mouse_clk => ball_x_pos[5].ENA
 mouse_clk => ball_x_pos[6].ENA
