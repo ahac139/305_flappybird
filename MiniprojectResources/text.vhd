@@ -1,15 +1,22 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.all;
-USE  IEEE.STD_LOGIC_ARITH.all;
-USE  IEEE.STD_LOGIC_SIGNED.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity text is
+	port(Clk						: in std_logic;
+	
+	--Inputs from Sytem
+	state, mode					: in std_logic_vector(1 downto 0);
+	score							: in std_logic_vector(3 downto 0);
+	pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
+	
+	--Outputs to System
+	char_on						: out std_logic
+	
+	);
+end entity text;
 
 
-ENTITY text IS
-	PORT
-		( clk								: IN std_logic;
-        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  char_on						: out std_logic);		
-END text;
 
 architecture behavior of text is
 
