@@ -1,5 +1,5 @@
 Fitter report for Display
-Tue May 20 18:28:37 2025
+Tue May 20 18:31:49 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Tue May 20 18:28:37 2025           ;
+; Fitter Status                   ; Successful - Tue May 20 18:31:49 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
@@ -152,15 +152,15 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.4%      ;
+;     Processor 3            ;   0.3%      ;
 ;     Processor 4            ;   0.3%      ;
-;     Processor 5            ;   0.2%      ;
+;     Processor 5            ;   0.3%      ;
 ;     Processor 6            ;   0.2%      ;
 ;     Processor 7            ;   0.2%      ;
 ;     Processors 8-16        ;   0.2%      ;
@@ -1730,7 +1730,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "blue_sw" is assigned to location or region, but does not exist in design
     Warning (15706): Node "green_sw" is assigned to location or region, but does not exist in design
     Warning (15706): Node "red_sw" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
@@ -1743,19 +1743,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.38 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/output_files/Display.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 158 warnings
-    Info: Peak virtual memory: 7635 megabytes
-    Info: Processing ended: Tue May 20 18:28:38 2025
+    Info: Peak virtual memory: 7633 megabytes
+    Info: Processing ended: Tue May 20 18:31:49 2025
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:02:04
+    Info: Total CPU time (on all processors): 00:02:05
 
 
 +----------------------------+
