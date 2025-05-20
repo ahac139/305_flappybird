@@ -24,15 +24,9 @@ component clock_divider is
 	Clk_out : out std_logic);
 end component clock_divider;
 
-component bouncy_ball IS
-	PORT
-		( pb1, pb2, clk, vert_sync	: IN std_logic;
-          pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  red, green, blue 			: OUT std_logic);		
-END component bouncy_ball;
 
 component Pipes is
-	port(clk: in std_logic;
+	port(clk, vert_sync: in std_logic;
 		  pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		  red, green, blue: out std_logic);
 end component Pipes;
@@ -56,6 +50,7 @@ begin
 
 	pipe : Pipes port map(
 		clk => clk_div,
+		vert_sync => v_sync_i,
 		pixel_row => pixel_row,
 		pixel_col => pixel_column,
 		red => red,
@@ -67,7 +62,9 @@ begin
 		clk => Clk,
 		clk_out => clk_div
 	);
+	
 	GPIO_0(0) <=  clk_div;
+	
 	VGA : VGA_SYNC port map(
 		clock_25Mhz => clk_div,
 		red => red,

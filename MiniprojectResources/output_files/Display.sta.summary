@@ -3,99 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -3.343
-TNS   : -156.788
+Slack : -3.901
+TNS   : -174.396
+
+Type  : Slow 1100mV 85C Model Setup 'VGA_SYNC:VGA|vert_sync_out'
+Slack : -3.366
+TNS   : -33.286
 
 Type  : Slow 1100mV 85C Model Setup 'Clk'
-Slack : -2.740
-TNS   : -2.740
+Slack : -2.642
+TNS   : -2.642
 
 Type  : Slow 1100mV 85C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.703
+Slack : 0.516
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'Clk'
-Slack : 0.710
+Slack : 0.862
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA_SYNC:VGA|vert_sync_out'
+Slack : 1.077
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
 Slack : -0.538
-TNS   : -44.300
+TNS   : -49.547
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_SYNC:VGA|vert_sync_out'
+Slack : -0.538
+TNS   : -7.690
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clk'
 Slack : -0.538
-TNS   : -1.053
+TNS   : -1.048
 
 Type  : Slow 1100mV 0C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -3.356
-TNS   : -152.762
+Slack : -3.908
+TNS   : -169.934
+
+Type  : Slow 1100mV 0C Model Setup 'VGA_SYNC:VGA|vert_sync_out'
+Slack : -3.380
+TNS   : -33.615
 
 Type  : Slow 1100mV 0C Model Setup 'Clk'
-Slack : -2.622
-TNS   : -2.622
-
-Type  : Slow 1100mV 0C Model Hold 'Clk'
-Slack : 0.649
-TNS   : 0.000
+Slack : -2.563
+TNS   : -2.563
 
 Type  : Slow 1100mV 0C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.684
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Clk'
+Slack : 0.814
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA_SYNC:VGA|vert_sync_out'
+Slack : 1.041
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clk'
-Slack : -0.567
-TNS   : -1.105
+Slack : -0.551
+TNS   : -1.089
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
 Slack : -0.538
-TNS   : -43.993
+TNS   : -49.575
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_SYNC:VGA|vert_sync_out'
+Slack : -0.538
+TNS   : -7.699
 
 Type  : Fast 1100mV 85C Model Setup 'Clk'
-Slack : -2.064
-TNS   : -2.064
+Slack : -1.816
+TNS   : -1.816
 
 Type  : Fast 1100mV 85C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -1.358
-TNS   : -58.645
+Slack : -1.660
+TNS   : -65.795
+
+Type  : Fast 1100mV 85C Model Setup 'VGA_SYNC:VGA|vert_sync_out'
+Slack : -1.210
+TNS   : -11.925
 
 Type  : Fast 1100mV 85C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.272
+Slack : -0.016
+TNS   : -0.016
+
+Type  : Fast 1100mV 85C Model Hold 'VGA_SYNC:VGA|vert_sync_out'
+Slack : 0.468
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'Clk'
-Slack : 0.837
+Slack : 0.816
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clk'
-Slack : -0.474
-TNS   : -0.600
+Slack : -0.466
+TNS   : -0.584
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
-Slack : 0.061
+Slack : 0.064
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_SYNC:VGA|vert_sync_out'
+Slack : 0.144
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'Clk'
-Slack : -1.736
-TNS   : -1.736
+Slack : -1.573
+TNS   : -1.573
 
 Type  : Fast 1100mV 0C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -1.200
-TNS   : -50.614
+Slack : -1.481
+TNS   : -56.452
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_SYNC:VGA|vert_sync_out'
+Slack : -1.073
+TNS   : -10.665
 
 Type  : Fast 1100mV 0C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.239
+Slack : -0.052
+TNS   : -0.052
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_SYNC:VGA|vert_sync_out'
+Slack : 0.418
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'Clk'
-Slack : 0.641
+Slack : 0.660
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clk'
-Slack : -0.471
-TNS   : -0.600
+Slack : -0.466
+TNS   : -0.592
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
-Slack : 0.079
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_SYNC:VGA|vert_sync_out'
+Slack : 0.143
 TNS   : 0.000
 
 ------------------------------------------------------------

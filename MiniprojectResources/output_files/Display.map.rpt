@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Tue May 20 15:46:39 2025
+Tue May 20 18:28:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 20 15:46:39 2025           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 20 18:28:19 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 49                                              ;
+; Total registers                 ; 58                                              ;
 ; Total pins                      ; 53                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -186,16 +186,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 30                          ;
+; Estimate of Logic utilization (ALMs needed) ; 48                          ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 44                          ;
-;     -- 7 input functions                    ; 0                           ;
-;     -- 6 input functions                    ; 8                           ;
-;     -- 5 input functions                    ; 4                           ;
-;     -- 4 input functions                    ; 4                           ;
-;     -- <=3 input functions                  ; 28                          ;
+; Combinational ALUT usage for logic          ; 80                          ;
+;     -- 7 input functions                    ; 1                           ;
+;     -- 6 input functions                    ; 11                          ;
+;     -- 5 input functions                    ; 9                           ;
+;     -- 4 input functions                    ; 13                          ;
+;     -- <=3 input functions                  ; 46                          ;
 ;                                             ;                             ;
-; Dedicated logic registers                   ; 49                          ;
+; Dedicated logic registers                   ; 58                          ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 53                          ;
 ;                                             ;                             ;
@@ -203,8 +203,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
 ; Maximum fan-out                             ; 50                          ;
-; Total fan-out                               ; 346                         ;
-; Average fan-out                             ; 1.74                        ;
+; Total fan-out                               ; 496                         ;
+; Average fan-out                             ; 2.03                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -213,8 +213,9 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
-; |display                   ; 44 (0)              ; 49 (0)                    ; 0                 ; 0          ; 53   ; 0            ; |display                    ; display       ; work         ;
-;    |VGA_SYNC:VGA|          ; 43 (43)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA       ; VGA_SYNC      ; work         ;
+; |display                   ; 80 (0)              ; 58 (0)                    ; 0                 ; 0          ; 53   ; 0            ; |display                    ; display       ; work         ;
+;    |Pipes:pipe|            ; 33 (33)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |display|Pipes:pipe         ; Pipes         ; work         ;
+;    |VGA_SYNC:VGA|          ; 46 (46)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA       ; VGA_SYNC      ; work         ;
 ;    |clock_divider:CDIV|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV ; clock_divider ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -225,8 +226,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
+; Pipes:pipe|pipe_x_pos[0]              ; Stuck at GND due to stuck port data_in ;
 ; VGA_SYNC:VGA|pixel_row[9]             ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
+; Total Number of Removed Registers = 2 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -235,8 +237,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 29    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -259,26 +261,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 49                          ;
+; arriav_ff             ; 58                          ;
 ;     ENA               ; 19                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
+;     SCLR              ; 19                          ;
 ;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 45                          ;
-;     arith             ; 20                          ;
-;         1 data inputs ; 20                          ;
-;     normal            ; 25                          ;
+; arriav_lcell_comb     ; 81                          ;
+;     arith             ; 36                          ;
+;         1 data inputs ; 36                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 44                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 8                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 11                          ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.91                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.62                        ;
 +-----------------------+-----------------------------+
 
 
@@ -297,13 +301,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 20 15:46:33 2025
+    Info: Processing started: Tue May 20 18:28:13 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pipes.vhd
     Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 13
-    Info (12023): Found entity 1: Pipes File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 7
+    Info (12023): Found entity 1: Pipes File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
     Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 14
     Info (12023): Found entity 1: display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 5
@@ -318,9 +322,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock_d
     Info (12023): Found entity 1: clock_divider File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12127): Elaborating entity "Display" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(9) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
-Info (12128): Elaborating entity "Pipes" for hierarchy "Pipes:pipe" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 57
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 66
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 71
+Info (12128): Elaborating entity "Pipes" for hierarchy "Pipes:pipe" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 51
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 61
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 68
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
     Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
@@ -603,13 +607,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
     Warning (15610): No output dependent on input pin "pb2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 70 logic cells
+    Info (21061): Implemented 109 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 281 warnings
-    Info: Peak virtual memory: 4937 megabytes
-    Info: Processing ended: Tue May 20 15:46:39 2025
+    Info: Peak virtual memory: 4963 megabytes
+    Info: Processing ended: Tue May 20 18:28:19 2025
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:12
 
