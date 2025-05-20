@@ -31,11 +31,7 @@ component bouncy_ball IS
 		  red, green, blue 			: OUT std_logic);		
 END component bouncy_ball;
 
-component Pipes is
-	port(clk: in std_logic;
-		  pixel_row, pixel_col: in std_logic_vector(9 downto 0);
-		  red, green, blue: out std_logic);
-end component Pipes;
+
 
 
 signal pixel_row : std_logic_vector(9 downto 0);
@@ -53,11 +49,13 @@ signal blue : std_logic;
 
 begin
 
-
-	pipe : Pipes port map(
+	BBALL : bouncy_ball port map(
+		pb1 => pb1,
+		pb2 => pb2,
 		clk => clk_div,
 		pixel_row => pixel_row,
-		pixel_col => pixel_column,
+		pixel_column => pixel_column,
+		vert_sync => v_sync_i,
 		red => red,
 		green => green,
 		blue => blue

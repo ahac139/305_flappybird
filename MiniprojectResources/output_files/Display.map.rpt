@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Fri May 02 15:36:59 2025
+Tue May 20 15:46:39 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -14,12 +14,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +44,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 02 15:36:59 2025           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 20 15:46:39 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 59                                              ;
+; Total registers                 ; 49                                              ;
 ; Total pins                      ; 53                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -165,20 +164,21 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; display.vhd                      ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd       ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/New folder/MiniprojectResources/vga_sync.vhd      ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/New folder/MiniprojectResources/bouncy_ball.vhd   ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/New folder/MiniprojectResources/clock_divider.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; Pipes.vhd                        ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd         ;         ;
+; display.vhd                      ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd       ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd      ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File  ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------+
@@ -186,16 +186,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 53                          ;
+; Estimate of Logic utilization (ALMs needed) ; 30                          ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 90                          ;
-;     -- 7 input functions                    ; 1                           ;
-;     -- 6 input functions                    ; 11                          ;
-;     -- 5 input functions                    ; 16                          ;
-;     -- 4 input functions                    ; 8                           ;
-;     -- <=3 input functions                  ; 54                          ;
+; Combinational ALUT usage for logic          ; 44                          ;
+;     -- 7 input functions                    ; 0                           ;
+;     -- 6 input functions                    ; 8                           ;
+;     -- 5 input functions                    ; 4                           ;
+;     -- 4 input functions                    ; 4                           ;
+;     -- <=3 input functions                  ; 28                          ;
 ;                                             ;                             ;
-; Dedicated logic registers                   ; 59                          ;
+; Dedicated logic registers                   ; 49                          ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 53                          ;
 ;                                             ;                             ;
@@ -203,8 +203,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
 ; Maximum fan-out                             ; 50                          ;
-; Total fan-out                               ; 532                         ;
-; Average fan-out                             ; 2.09                        ;
+; Total fan-out                               ; 346                         ;
+; Average fan-out                             ; 1.74                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -213,36 +213,21 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
-; |display                   ; 90 (0)              ; 59 (0)                    ; 0                 ; 0          ; 53   ; 0            ; |display                    ; display       ; work         ;
-;    |VGA_SYNC:VGA|          ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA       ; VGA_SYNC      ; work         ;
-;    |bouncy_ball:BBALL|     ; 48 (48)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bouncy_ball:BBALL  ; bouncy_ball   ; work         ;
+; |display                   ; 44 (0)              ; 49 (0)                    ; 0                 ; 0          ; 53   ; 0            ; |display                    ; display       ; work         ;
+;    |VGA_SYNC:VGA|          ; 43 (43)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA       ; VGA_SYNC      ; work         ;
 ;    |clock_divider:CDIV|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV ; clock_divider ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+----------------------------------------+------------------------------------------------+
-; Register name                          ; Reason for Removal                             ;
-+----------------------------------------+------------------------------------------------+
-; bouncy_ball:BBALL|ball_y_motion[3..9]  ; Merged with bouncy_ball:BBALL|ball_y_motion[2] ;
-; bouncy_ball:BBALL|ball_y_motion[0]     ; Stuck at GND due to stuck port data_in         ;
-; bouncy_ball:BBALL|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in         ;
-; bouncy_ball:BBALL|ball_y_motion[1]     ; Stuck at VCC due to stuck port data_in         ;
-; VGA_SYNC:VGA|pixel_row[9]              ; Stuck at GND due to stuck port data_in         ;
-; Total Number of Removed Registers = 11 ;                                                ;
-+----------------------------------------+------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                          ;
-+---------------------------------+---------------------------+----------------------------------------+
-; Register name                   ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------------------------+---------------------------+----------------------------------------+
-; bouncy_ball:BBALL|ball_y_pos[0] ; Stuck at GND              ; bouncy_ball:BBALL|ball_y_motion[1]     ;
-;                                 ; due to stuck port data_in ;                                        ;
-+---------------------------------+---------------------------+----------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; VGA_SYNC:VGA|pixel_row[9]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -250,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 59    ;
+; Total registers                              ; 49    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -260,14 +245,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[9]            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|bouncy_ball:BBALL|ball_y_motion[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -275,30 +259,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 59                          ;
+; arriav_ff             ; 49                          ;
 ;     ENA               ; 19                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 20                          ;
-; arriav_lcell_comb     ; 91                          ;
-;     arith             ; 42                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 31                          ;
-;         2 data inputs ; 10                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 48                          ;
+;     plain             ; 10                          ;
+; arriav_lcell_comb     ; 45                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 25                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 11                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 8                           ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.60                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -317,72 +297,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri May 02 15:36:40 2025
+    Info: Processing started: Tue May 20 15:46:33 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pipes.vhd
+    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 13
+    Info (12023): Found entity 1: Pipes File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 14
-    Info (12023): Found entity 1: display File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 5
+    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 14
+    Info (12023): Found entity 1: display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/bouncy_ball.vhd Line: 14
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bouncy_ball.vhd Line: 14
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/clock_divider.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/clock_divider.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12127): Elaborating entity "Display" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(9) File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BBALL" File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 52
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 64
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 69
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(9) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+Info (12128): Elaborating entity "Pipes" for hierarchy "Pipes:pipe" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 57
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 66
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 71
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
-    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dtie151/Downloads/New folder/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
+    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
@@ -617,14 +600,17 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
+    Warning (15610): No output dependent on input pin "pb2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 113 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 278 warnings
-    Info: Peak virtual memory: 4928 megabytes
-    Info: Processing ended: Fri May 02 15:36:59 2025
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:13
+    Info (21061): Implemented 70 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 281 warnings
+    Info: Peak virtual memory: 4937 megabytes
+    Info: Processing ended: Tue May 20 15:46:39 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
 
 
