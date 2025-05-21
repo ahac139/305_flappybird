@@ -1,5 +1,5 @@
 Timing Analyzer report for Display
-Tue May 20 18:31:56 2025
+Wed May 21 18:17:06 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -97,18 +97,20 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.18        ;
+; Average used               ; 1.24        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.2%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.1%      ;
-;     Processor 5            ;   1.8%      ;
-;     Processor 6            ;   1.8%      ;
-;     Processor 7            ;   1.8%      ;
-;     Processors 8-16        ;   0.7%      ;
+;     Processor 2            ;   2.6%      ;
+;     Processor 3            ;   2.5%      ;
+;     Processor 4            ;   2.4%      ;
+;     Processor 5            ;   2.2%      ;
+;     Processor 6            ;   2.2%      ;
+;     Processor 7            ;   2.2%      ;
+;     Processor 8            ;   2.2%      ;
+;     Processor 9            ;   2.1%      ;
+;     Processors 10-16       ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -128,8 +130,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
 +------------+-----------------+-----------------------------+------+
-; 204.04 MHz ; 204.04 MHz      ; clock_divider:CDIV|temp_clk ;      ;
-; 229.04 MHz ; 229.04 MHz      ; VGA_SYNC:VGA|vert_sync_out  ;      ;
+; 204.75 MHz ; 204.75 MHz      ; VGA_SYNC:VGA|vert_sync_out  ;      ;
+; 211.69 MHz ; 211.69 MHz      ; clock_divider:CDIV|temp_clk ;      ;
 +------------+-----------------+-----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -145,9 +147,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk ; -3.901 ; -174.396      ;
-; VGA_SYNC:VGA|vert_sync_out  ; -3.366 ; -33.286       ;
-; Clk                         ; -2.642 ; -2.642        ;
+; clock_divider:CDIV|temp_clk ; -4.800 ; -150.032      ;
+; VGA_SYNC:VGA|vert_sync_out  ; -3.884 ; -112.186      ;
+; Clk                         ; -2.575 ; -2.575        ;
 +-----------------------------+--------+---------------+
 
 
@@ -156,9 +158,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clock_divider:CDIV|temp_clk ; 0.516 ; 0.000         ;
-; Clk                         ; 0.862 ; 0.000         ;
-; VGA_SYNC:VGA|vert_sync_out  ; 1.077 ; 0.000         ;
+; clock_divider:CDIV|temp_clk ; 0.603 ; 0.000         ;
+; Clk                         ; 0.890 ; 0.000         ;
+; VGA_SYNC:VGA|vert_sync_out  ; 1.048 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -179,9 +181,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk ; -0.538 ; -49.547       ;
-; VGA_SYNC:VGA|vert_sync_out  ; -0.538 ; -7.690        ;
-; Clk                         ; -0.538 ; -1.048        ;
+; clock_divider:CDIV|temp_clk ; -0.538 ; -44.783       ;
+; VGA_SYNC:VGA|vert_sync_out  ; -0.538 ; -24.337       ;
+; Clk                         ; -0.538 ; -1.008        ;
 +-----------------------------+--------+---------------+
 
 
@@ -196,8 +198,8 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
 +------------+-----------------+-----------------------------+------+
-; 205.04 MHz ; 205.04 MHz      ; clock_divider:CDIV|temp_clk ;      ;
-; 228.31 MHz ; 228.31 MHz      ; VGA_SYNC:VGA|vert_sync_out  ;      ;
+; 208.68 MHz ; 208.68 MHz      ; VGA_SYNC:VGA|vert_sync_out  ;      ;
+; 209.03 MHz ; 209.03 MHz      ; clock_divider:CDIV|temp_clk ;      ;
 +------------+-----------------+-----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -207,9 +209,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk ; -3.908 ; -169.934      ;
-; VGA_SYNC:VGA|vert_sync_out  ; -3.380 ; -33.615       ;
-; Clk                         ; -2.563 ; -2.563        ;
+; clock_divider:CDIV|temp_clk ; -4.879 ; -146.918      ;
+; VGA_SYNC:VGA|vert_sync_out  ; -3.792 ; -111.207      ;
+; Clk                         ; -2.488 ; -2.488        ;
 +-----------------------------+--------+---------------+
 
 
@@ -218,9 +220,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clock_divider:CDIV|temp_clk ; 0.497 ; 0.000         ;
-; Clk                         ; 0.814 ; 0.000         ;
-; VGA_SYNC:VGA|vert_sync_out  ; 1.041 ; 0.000         ;
+; clock_divider:CDIV|temp_clk ; 0.570 ; 0.000         ;
+; Clk                         ; 0.820 ; 0.000         ;
+; VGA_SYNC:VGA|vert_sync_out  ; 1.045 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -241,9 +243,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; Clk                         ; -0.551 ; -1.089        ;
-; clock_divider:CDIV|temp_clk ; -0.538 ; -49.575       ;
-; VGA_SYNC:VGA|vert_sync_out  ; -0.538 ; -7.699        ;
+; clock_divider:CDIV|temp_clk ; -0.538 ; -44.579       ;
+; VGA_SYNC:VGA|vert_sync_out  ; -0.538 ; -24.416       ;
+; Clk                         ; -0.538 ; -1.056        ;
 +-----------------------------+--------+---------------+
 
 
@@ -258,21 +260,21 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; Clk                         ; -1.816 ; -1.816        ;
-; clock_divider:CDIV|temp_clk ; -1.660 ; -65.795       ;
-; VGA_SYNC:VGA|vert_sync_out  ; -1.210 ; -11.925       ;
+; clock_divider:CDIV|temp_clk ; -2.013 ; -54.830       ;
+; Clk                         ; -1.875 ; -1.875        ;
+; VGA_SYNC:VGA|vert_sync_out  ; -1.578 ; -42.950       ;
 +-----------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                   ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk ; -0.016 ; -0.016        ;
-; VGA_SYNC:VGA|vert_sync_out  ; 0.468  ; 0.000         ;
-; Clk                         ; 0.816  ; 0.000         ;
-+-----------------------------+--------+---------------+
++-----------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                  ;
++-----------------------------+-------+---------------+
+; Clock                       ; Slack ; End Point TNS ;
++-----------------------------+-------+---------------+
+; clock_divider:CDIV|temp_clk ; 0.248 ; 0.000         ;
+; VGA_SYNC:VGA|vert_sync_out  ; 0.415 ; 0.000         ;
+; Clk                         ; 0.938 ; 0.000         ;
++-----------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -292,9 +294,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; Clk                         ; -0.466 ; -0.584        ;
-; clock_divider:CDIV|temp_clk ; 0.064  ; 0.000         ;
-; VGA_SYNC:VGA|vert_sync_out  ; 0.144  ; 0.000         ;
+; Clk                         ; -0.443 ; -0.535        ;
+; VGA_SYNC:VGA|vert_sync_out  ; 0.035  ; 0.000         ;
+; clock_divider:CDIV|temp_clk ; 0.081  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -309,21 +311,21 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; Clk                         ; -1.573 ; -1.573        ;
-; clock_divider:CDIV|temp_clk ; -1.481 ; -56.452       ;
-; VGA_SYNC:VGA|vert_sync_out  ; -1.073 ; -10.665       ;
+; clock_divider:CDIV|temp_clk ; -1.850 ; -47.404       ;
+; Clk                         ; -1.621 ; -1.621        ;
+; VGA_SYNC:VGA|vert_sync_out  ; -1.379 ; -37.847       ;
 +-----------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                    ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk ; -0.052 ; -0.052        ;
-; VGA_SYNC:VGA|vert_sync_out  ; 0.418  ; 0.000         ;
-; Clk                         ; 0.660  ; 0.000         ;
-+-----------------------------+--------+---------------+
++-----------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                   ;
++-----------------------------+-------+---------------+
+; Clock                       ; Slack ; End Point TNS ;
++-----------------------------+-------+---------------+
+; clock_divider:CDIV|temp_clk ; 0.195 ; 0.000         ;
+; VGA_SYNC:VGA|vert_sync_out  ; 0.380 ; 0.000         ;
+; Clk                         ; 0.734 ; 0.000         ;
++-----------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -343,9 +345,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; Clk                         ; -0.466 ; -0.592        ;
-; clock_divider:CDIV|temp_clk ; 0.082  ; 0.000         ;
-; VGA_SYNC:VGA|vert_sync_out  ; 0.143  ; 0.000         ;
+; Clk                         ; -0.446 ; -0.550        ;
+; VGA_SYNC:VGA|vert_sync_out  ; 0.055  ; 0.000         ;
+; clock_divider:CDIV|temp_clk ; 0.096  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -355,20 +357,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                         ;
-+------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                        ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack             ; -3.908   ; -0.052 ; N/A      ; N/A     ; -0.551              ;
-;  Clk                         ; -2.642   ; 0.660  ; N/A      ; N/A     ; -0.551              ;
-;  VGA_SYNC:VGA|vert_sync_out  ; -3.380   ; 0.418  ; N/A      ; N/A     ; -0.538              ;
-;  clock_divider:CDIV|temp_clk ; -3.908   ; -0.052 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS              ; -210.324 ; -0.052 ; 0.0      ; 0.0     ; -58.363             ;
-;  Clk                         ; -2.642   ; 0.000  ; N/A      ; N/A     ; -1.089              ;
-;  VGA_SYNC:VGA|vert_sync_out  ; -33.615  ; 0.000  ; N/A      ; N/A     ; -7.699              ;
-;  clock_divider:CDIV|temp_clk ; -174.396 ; -0.052 ; N/A      ; N/A     ; -49.575             ;
-+------------------------------+----------+--------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                        ;
++------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack             ; -4.879   ; 0.195 ; N/A      ; N/A     ; -0.538              ;
+;  Clk                         ; -2.575   ; 0.734 ; N/A      ; N/A     ; -0.538              ;
+;  VGA_SYNC:VGA|vert_sync_out  ; -3.884   ; 0.380 ; N/A      ; N/A     ; -0.538              ;
+;  clock_divider:CDIV|temp_clk ; -4.879   ; 0.195 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS              ; -264.793 ; 0.0   ; 0.0      ; 0.0     ; -70.128             ;
+;  Clk                         ; -2.575   ; 0.000 ; N/A      ; N/A     ; -1.056              ;
+;  VGA_SYNC:VGA|vert_sync_out  ; -112.186 ; 0.000 ; N/A      ; N/A     ; -24.416             ;
+;  clock_divider:CDIV|temp_clk ; -150.032 ; 0.000 ; N/A      ; N/A     ; -44.783             ;
++------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -678,9 +680,9 @@ No synchronizer chains to report.
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; clock_divider:CDIV|temp_clk ; Clk                         ; 1        ; 1        ; 0        ; 0        ;
-; clock_divider:CDIV|temp_clk ; clock_divider:CDIV|temp_clk ; 1302     ; 0        ; 0        ; 0        ;
-; VGA_SYNC:VGA|vert_sync_out  ; clock_divider:CDIV|temp_clk ; 164      ; 0        ; 0        ; 0        ;
-; VGA_SYNC:VGA|vert_sync_out  ; VGA_SYNC:VGA|vert_sync_out  ; 288      ; 0        ; 0        ; 0        ;
+; clock_divider:CDIV|temp_clk ; clock_divider:CDIV|temp_clk ; 963      ; 0        ; 0        ; 0        ;
+; VGA_SYNC:VGA|vert_sync_out  ; clock_divider:CDIV|temp_clk ; 466      ; 0        ; 0        ; 0        ;
+; VGA_SYNC:VGA|vert_sync_out  ; VGA_SYNC:VGA|vert_sync_out  ; 2641     ; 0        ; 0        ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -691,9 +693,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; clock_divider:CDIV|temp_clk ; Clk                         ; 1        ; 1        ; 0        ; 0        ;
-; clock_divider:CDIV|temp_clk ; clock_divider:CDIV|temp_clk ; 1302     ; 0        ; 0        ; 0        ;
-; VGA_SYNC:VGA|vert_sync_out  ; clock_divider:CDIV|temp_clk ; 164      ; 0        ; 0        ; 0        ;
-; VGA_SYNC:VGA|vert_sync_out  ; VGA_SYNC:VGA|vert_sync_out  ; 288      ; 0        ; 0        ; 0        ;
+; clock_divider:CDIV|temp_clk ; clock_divider:CDIV|temp_clk ; 963      ; 0        ; 0        ; 0        ;
+; VGA_SYNC:VGA|vert_sync_out  ; clock_divider:CDIV|temp_clk ; 466      ; 0        ; 0        ; 0        ;
+; VGA_SYNC:VGA|vert_sync_out  ; VGA_SYNC:VGA|vert_sync_out  ; 2641     ; 0        ; 0        ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -769,7 +771,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 20 18:31:53 2025
+    Info: Processing started: Wed May 21 18:17:03 2025
 Info: Command: quartus_sta Display -c Display
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -1019,107 +1021,107 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.901
+Info (332146): Worst-case setup slack is -4.800
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.901            -174.396 clock_divider:CDIV|temp_clk 
-    Info (332119):    -3.366             -33.286 VGA_SYNC:VGA|vert_sync_out 
-    Info (332119):    -2.642              -2.642 Clk 
-Info (332146): Worst-case hold slack is 0.516
+    Info (332119):    -4.800            -150.032 clock_divider:CDIV|temp_clk 
+    Info (332119):    -3.884            -112.186 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -2.575              -2.575 Clk 
+Info (332146): Worst-case hold slack is 0.603
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.516               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.862               0.000 Clk 
-    Info (332119):     1.077               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):     0.603               0.000 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.890               0.000 Clk 
+    Info (332119):     1.048               0.000 VGA_SYNC:VGA|vert_sync_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -49.547 clock_divider:CDIV|temp_clk 
-    Info (332119):    -0.538              -7.690 VGA_SYNC:VGA|vert_sync_out 
-    Info (332119):    -0.538              -1.048 Clk 
+    Info (332119):    -0.538             -44.783 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.538             -24.337 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -0.538              -1.008 Clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.908
+Info (332146): Worst-case setup slack is -4.879
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.908            -169.934 clock_divider:CDIV|temp_clk 
-    Info (332119):    -3.380             -33.615 VGA_SYNC:VGA|vert_sync_out 
-    Info (332119):    -2.563              -2.563 Clk 
-Info (332146): Worst-case hold slack is 0.497
+    Info (332119):    -4.879            -146.918 clock_divider:CDIV|temp_clk 
+    Info (332119):    -3.792            -111.207 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -2.488              -2.488 Clk 
+Info (332146): Worst-case hold slack is 0.570
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.497               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.814               0.000 Clk 
-    Info (332119):     1.041               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):     0.570               0.000 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.820               0.000 Clk 
+    Info (332119):     1.045               0.000 VGA_SYNC:VGA|vert_sync_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.551
+Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.551              -1.089 Clk 
-    Info (332119):    -0.538             -49.575 clock_divider:CDIV|temp_clk 
-    Info (332119):    -0.538              -7.699 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -0.538             -44.579 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.538             -24.416 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -0.538              -1.056 Clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.816
+Info (332146): Worst-case setup slack is -2.013
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.816              -1.816 Clk 
-    Info (332119):    -1.660             -65.795 clock_divider:CDIV|temp_clk 
-    Info (332119):    -1.210             -11.925 VGA_SYNC:VGA|vert_sync_out 
-Info (332146): Worst-case hold slack is -0.016
+    Info (332119):    -2.013             -54.830 clock_divider:CDIV|temp_clk 
+    Info (332119):    -1.875              -1.875 Clk 
+    Info (332119):    -1.578             -42.950 VGA_SYNC:VGA|vert_sync_out 
+Info (332146): Worst-case hold slack is 0.248
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.016              -0.016 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.468               0.000 VGA_SYNC:VGA|vert_sync_out 
-    Info (332119):     0.816               0.000 Clk 
+    Info (332119):     0.248               0.000 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.415               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):     0.938               0.000 Clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.466
+Info (332146): Worst-case minimum pulse width slack is -0.443
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.466              -0.584 Clk 
-    Info (332119):     0.064               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.144               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -0.443              -0.535 Clk 
+    Info (332119):     0.035               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):     0.081               0.000 clock_divider:CDIV|temp_clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.573
+Info (332146): Worst-case setup slack is -1.850
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.573              -1.573 Clk 
-    Info (332119):    -1.481             -56.452 clock_divider:CDIV|temp_clk 
-    Info (332119):    -1.073             -10.665 VGA_SYNC:VGA|vert_sync_out 
-Info (332146): Worst-case hold slack is -0.052
+    Info (332119):    -1.850             -47.404 clock_divider:CDIV|temp_clk 
+    Info (332119):    -1.621              -1.621 Clk 
+    Info (332119):    -1.379             -37.847 VGA_SYNC:VGA|vert_sync_out 
+Info (332146): Worst-case hold slack is 0.195
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.052              -0.052 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.418               0.000 VGA_SYNC:VGA|vert_sync_out 
-    Info (332119):     0.660               0.000 Clk 
+    Info (332119):     0.195               0.000 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.380               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):     0.734               0.000 Clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.466
+Info (332146): Worst-case minimum pulse width slack is -0.446
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.466              -0.592 Clk 
-    Info (332119):     0.082               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.143               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):    -0.446              -0.550 Clk 
+    Info (332119):     0.055               0.000 VGA_SYNC:VGA|vert_sync_out 
+    Info (332119):     0.096               0.000 clock_divider:CDIV|temp_clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 237 warnings
     Info: Peak virtual memory: 5217 megabytes
-    Info: Processing ended: Tue May 20 18:31:56 2025
+    Info: Processing ended: Wed May 21 18:17:06 2025
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
