@@ -25,12 +25,12 @@ component clock_divider is
 end component clock_divider;
 
 
-component Pipes is
-	port(clk, vert_sync: in std_logic;
-		  pixel_row, pixel_col: in std_logic_vector(9 downto 0);
-		  red, green, blue: out std_logic);
-end component Pipes;
-
+component Pipe_Controller is
+	port(Clk, vert_sync: in std_logic;
+		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
+		red, green, blue: out std_logic
+	);
+end component Pipe_Controller;
 
 signal pixel_row : std_logic_vector(9 downto 0);
 signal pixel_column : std_logic_vector(9 downto 0);
@@ -48,7 +48,7 @@ signal blue : std_logic;
 begin
 
 
-	pipe : Pipes port map(
+	pipe : Pipe_Controller port map(
 		clk => clk_div,
 		vert_sync => v_sync_i,
 		pixel_row => pixel_row,

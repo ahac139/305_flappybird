@@ -1,0 +1,97 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+
+entity Pipe_Controller is
+	port(Clk, vert_sync: in std_logic;
+		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
+		red, green, blue: out std_logic
+	);
+end entity Pipe_Controller;
+
+architecture behaviour of Pipe_Controller is
+
+	component Pipes is
+		port(
+			clk, vert_sync, enable: in std_logic;
+			pixel_row, pixel_col: in std_logic_vector(9 downto 0);
+			gap_y: in unsigned(9 downto 0);
+			pipe_on: out std_logic
+		);
+	end component Pipes;
+	
+	signal gap1 : unsigned(9 downto 0) := to_unsigned(10,10);
+	signal gap2 : unsigned(9 downto 0) := to_unsigned(20,10);
+	signal gap3 : unsigned(9 downto 0) := to_unsigned(30,10);
+	signal pipe_on1 : std_logic;
+	signal pipe_on2 : std_logic;
+	signal pipe_on3 : std_logic;
+	signal enable1 : std_logic := '0';
+	signal enable2 : std_logic := '0';
+	signal enable3 : std_logic := '0';
+	
+	
+	signal pipe_on : std_logic;
+	
+	begin
+		
+		gap1 <= to_unsigned(200,10);
+		gap2 <= to_unsigned(100,10);
+		gap3 <= to_unsigned(150,10);
+		
+		P0: Pipes port map(
+			clk => Clk,
+			vert_sync => vert_sync,
+			enable => enable1,
+			pixel_row => pixel_row,
+			pixel_col => pixel_col,
+			gap_y => gap1,
+			pipe_on =>pipe_on1);
+			
+		P1: Pipes port map(
+			clk => Clk,
+			vert_sync => vert_sync,
+			enable => enable2,
+			pixel_row => pixel_row,
+			pixel_col => pixel_col,
+			gap_y => gap2,
+			pipe_on =>pipe_on2);
+
+		P2: Pipes port map(
+			clk => Clk,
+			vert_sync => vert_sync,
+			enable => enable3,
+			pixel_row => pixel_row,
+			pixel_col => pixel_col,
+			gap_y => gap3,
+			pipe_on => pipe_on3);
+			
+			pipe_on <= pipe_on1 or pipe_on2 or pipe_on3;
+			
+			red <= not pipe_on;
+			green <= '1';
+			blue <= not pipe_on;
+
+			process(vert_sync)
+				 variable count  : integer := 0;
+			begin
+				 if rising_edge(vert_sync) then
+					enable1 <= '1';
+					
+					if count = 400 then
+						enable2 <= '1';
+						count := count + 1;
+						
+					elsif count > 800 then
+						enable3 <= '1';
+						
+					else
+						count := count + 1;
+					end if;
+					
+			end if;
+		 end process;
+				
+
+end behaviour;
