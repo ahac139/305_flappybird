@@ -1,5 +1,5 @@
 Flow report for Display
-Thu May 15 15:26:37 2025
+Thu May 22 17:35:20 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu May 15 15:26:31 2025           ;
+; Flow Status                     ; Successful - Thu May 22 17:35:14 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CEBA4F23C7                                     ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 167 / 18,480 ( < 1 % )                          ;
-; Total registers                 ; 199                                             ;
+; Logic utilization (in ALMs)     ; 339 / 18,480 ( 2 % )                            ;
+; Total registers                 ; 348                                             ;
 ; Total pins                      ; 96 / 224 ( 43 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 384 / 3,153,920 ( < 1 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/15/2025 15:25:15 ;
+; Start date & time ; 05/22/2025 17:33:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Display             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948461340134.174727951508204        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948461116964.174789200209080        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default ; Top        ;
@@ -98,11 +98,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4979 MB             ; 00:00:12                           ;
-; Fitter               ; 00:01:02     ; 1.0                     ; 7695 MB             ; 00:08:06                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4826 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.4                     ; 5252 MB             ; 00:00:05                           ;
-; Total                ; 00:01:18     ; --                      ; --                  ; 00:08:25                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4948 MB             ; 00:00:13                           ;
+; Fitter               ; 00:01:31     ; 1.0                     ; 7645 MB             ; 00:11:58                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4823 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.5                     ; 5257 MB             ; 00:00:06                           ;
+; Total                ; 00:01:56     ; --                      ; --                  ; 00:12:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +111,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EN433586         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; EN433586         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; EN433586         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; EN433586         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EN433575         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; EN433575         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; EN433575         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; EN433575         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

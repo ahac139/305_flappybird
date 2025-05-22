@@ -28,14 +28,6 @@ component clock_divider is
 	Clk_out 	: out std_logic);
 end component clock_divider;
 
-component bouncy_ball IS
-	PORT
-		( 	clk, vert_sync						: IN std_logic;
-			pixel_row, pixel_column, mouse_x, mouse_y	: IN std_logic_vector(9 DOWNTO 0);
-			mouse_clk : in std_logic;
-			ball_on 												: out std_logic);		
-END component bouncy_ball;
-
 component MOUSE IS
    PORT( clock_25Mhz, reset	 		: IN std_logic;
          mouse_data						: INOUT std_logic;
@@ -56,6 +48,22 @@ component text IS
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  char_on						: out std_logic);		
 END component text;
+
+component Pipe_Controller is
+	port(Clk, vert_sync: in std_logic;
+		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
+		pipe_x_motion: in unsigned(9 downto 0);
+		pipe_on: out std_logic
+	);
+end component Pipe_Controller;
+
+component bird_controller IS
+	PORT
+		( clk, vert_sync, mouse_click	: IN std_logic;
+		  pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
+		  -- state/mode after restructure
+		  bird_on 							: OUT std_logic);		
+END component bird_controller;
 
 
 
@@ -88,32 +96,58 @@ signal mouse_left 	: std_logic;
 signal switches		: std_logic_vector(7 DOWNTO 0); 
 
 signal char_on 		: std_logic;
-signal ball_on 		: std_logic; 
+signal bird_on 		: std_logic; 
+signal pipe_on 		: std_logic; 
+signal pipe_x_motion : unsigned(9 downto 0) := to_unsigned(1,10);
 
+signal collision : std_logic;
 
 begin
 
 	char_display: text port map(
-			clk				=> clk_div,				
-			pixel_row 		=> pixel_row,
-			pixel_column	=> pixel_column,
-			char_on			=> char_on);
+		clk				=> clk_div,				
+		pixel_row 		=> pixel_row,
+		pixel_column	=> pixel_column,
+		char_on			=> char_on
+	);
 	
 	seg_display: seven_seg_display port map(
 		binary_in => switches,
 		hex0 => hex0, 
 		hex1 => hex1, 
-		hex2 => hex2);
+		hex2 => hex2
+	);
+	
+	Pipes : Pipe_controller port map(
+		Clk => clk_div,
+		vert_sync => v_sync_i,
+		pixel_col => pixel_column,
+		pixel_row => pixel_row,
+		pipe_x_motion => pipe_x_motion,
+		pipe_on => pipe_on
+	);
+	
+	Bird : Bird_controller port map(
+		Clk => clk_div,
+		vert_sync => v_sync_i,
+		pixel_column => pixel_column,
+		pixel_row => pixel_row,
+		
+		mouse_click => mouse_left,
+		bird_on => bird_on
+	);
+		
 	
 	Mouse1: Mouse port map(
-				clock_25Mhz => clk_div,
-				reset => ground,
-				mouse_data => PS2_DAT,
-				mouse_clk => PS2_CLK,
-				left_button => mouse_left, 
-				right_button => mouse_right,
-				mouse_cursor_row => mouse_cursor_row,
-				mouse_cursor_column => mouse_cursor_column);
+		clock_25Mhz => clk_div,
+		reset => ground,
+		mouse_data => PS2_DAT,
+		mouse_clk => PS2_CLK,
+		left_button => mouse_left, 
+		right_button => mouse_right,
+		mouse_cursor_row => mouse_cursor_row,
+		mouse_cursor_column => mouse_cursor_column
+	);
 				
 			
 	mouse_x <= mouse_cursor_column;
@@ -123,30 +157,24 @@ begin
 	LEDR <= SW;
 	switches <= SW(7 downto 0);
 	
-	BBALL : bouncy_ball port map(
-		clk => clk_div,
-		pixel_row => pixel_row,
-		pixel_column => pixel_column,
-		mouse_x => mouse_x,
-		mouse_y => mouse_y,
-		mouse_clk => mouse_left,
-		vert_sync => v_sync_i,
-		
-		ball_on => ball_on
-	);
 	
 	-- Colours for pixel data on video signal
 	-- Changing the background and ball colour by pushbuttons
 	Red 	<= '1' when (char_on = '1') else
-				'1' when (ball_on = '1') and (pb1 = '1') and (pb2 = '1') else
+				'1' when (bird_on = '1') and (pb1 = '1') and (pb2 = '1') else
+				'1' when (collision = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
-				'1' when (ball_on = '1') and (pb1 = '0') else
+				'1' when (bird_on = '1') and (pb1 = '0') else
+				'1' when (pipe_on = '1') else
+				'1' when (collision = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
-				'1' when (ball_on = '1') and (pb2 = '0') else
+				'1' when (bird_on = '1') and (pb2 = '0') else
+				'1' when (collision = '1') else
 				'0';
 	
+	collision <= bird_on and pipe_on;
 	
 	
 	CDIV : clock_divider port map(
