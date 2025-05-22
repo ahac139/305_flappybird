@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Wed May 21 19:09:03 2025
+Thu May 22 14:35:44 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 21 19:09:03 2025           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 22 14:35:44 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
@@ -191,13 +191,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 188                        ;
+; Estimate of Logic utilization (ALMs needed) ; 189                        ;
 ;                                             ;                            ;
-; Combinational ALUT usage for logic          ; 310                        ;
+; Combinational ALUT usage for logic          ; 312                        ;
 ;     -- 7 input functions                    ; 1                          ;
-;     -- 6 input functions                    ; 61                         ;
-;     -- 5 input functions                    ; 47                         ;
-;     -- 4 input functions                    ; 38                         ;
+;     -- 6 input functions                    ; 60                         ;
+;     -- 5 input functions                    ; 46                         ;
+;     -- 4 input functions                    ; 42                         ;
 ;     -- <=3 input functions                  ; 163                        ;
 ;                                             ;                            ;
 ; Dedicated logic registers                   ; 144                        ;
@@ -208,7 +208,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; VGA_SYNC:VGA|vert_sync_out ;
 ; Maximum fan-out                             ; 96                         ;
-; Total fan-out                               ; 1615                       ;
+; Total fan-out                               ; 1620                       ;
 ; Average fan-out                             ; 2.88                       ;
 +---------------------------------------------+----------------------------+
 
@@ -218,8 +218,8 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+-----------------+--------------+
-; |display                   ; 310 (0)             ; 144 (0)                   ; 0                 ; 0          ; 53   ; 0            ; |display                               ; display         ; work         ;
-;    |Pipe_Controller:pipe|  ; 268 (42)            ; 95 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe          ; Pipe_Controller ; work         ;
+; |display                   ; 312 (0)             ; 144 (0)                   ; 0                 ; 0          ; 53   ; 0            ; |display                               ; display         ; work         ;
+;    |Pipe_Controller:pipe|  ; 270 (44)            ; 95 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe          ; Pipe_Controller ; work         ;
 ;       |Pipes:P0|           ; 76 (76)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P0 ; Pipes           ; work         ;
 ;       |Pipes:P1|           ; 75 (75)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P1 ; Pipes           ; work         ;
 ;       |Pipes:P2|           ; 75 (75)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P2 ; Pipes           ; work         ;
@@ -254,25 +254,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; Pipe_Controller:pipe|Pipes:P0|size_x[5] ; 9       ;
-; Pipe_Controller:pipe|Pipes:P0|size_x[4] ; 9       ;
-; Pipe_Controller:pipe|Pipes:P0|size_x[3] ; 3       ;
-; Pipe_Controller:pipe|Pipes:P0|size_x[6] ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|size_x[5] ; 9       ;
-; Pipe_Controller:pipe|Pipes:P1|size_x[4] ; 9       ;
-; Pipe_Controller:pipe|Pipes:P1|size_x[3] ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|size_x[6] ; 3       ;
-; Pipe_Controller:pipe|Pipes:P2|size_x[5] ; 9       ;
-; Pipe_Controller:pipe|Pipes:P2|size_x[4] ; 9       ;
-; Pipe_Controller:pipe|Pipes:P2|size_x[3] ; 3       ;
-; Pipe_Controller:pipe|Pipes:P2|size_x[6] ; 3       ;
-; Total number of inverted registers = 12 ;         ;
-+-----------------------------------------+---------+
++-------------------------------------------------------+
+; Inverted Register Statistics                          ;
++---------------------------------------------+---------+
+; Inverted Register                           ; Fan out ;
++---------------------------------------------+---------+
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[9] ; 5       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[3] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[2] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[1] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[0] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[5] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[4] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[6] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[9] ; 5       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[3] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[2] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[1] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[0] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[5] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[4] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9] ; 5       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[3] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[2] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[1] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0] ; 3       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[5] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[4] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[6] ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|size_x[5]     ; 9       ;
+; Pipe_Controller:pipe|Pipes:P0|size_x[4]     ; 9       ;
+; Pipe_Controller:pipe|Pipes:P0|size_x[3]     ; 3       ;
+; Pipe_Controller:pipe|Pipes:P0|size_x[2]     ; 3       ;
+; Pipe_Controller:pipe|Pipes:P1|size_x[5]     ; 9       ;
+; Pipe_Controller:pipe|Pipes:P1|size_x[4]     ; 9       ;
+; Pipe_Controller:pipe|Pipes:P1|size_x[3]     ; 3       ;
+; Pipe_Controller:pipe|Pipes:P1|size_x[2]     ; 3       ;
+; Pipe_Controller:pipe|Pipes:P2|size_x[5]     ; 9       ;
+; Pipe_Controller:pipe|Pipes:P2|size_x[4]     ; 9       ;
+; Pipe_Controller:pipe|Pipes:P2|size_x[3]     ; 3       ;
+; Pipe_Controller:pipe|Pipes:P2|size_x[2]     ; 3       ;
+; Total number of inverted registers = 36     ;         ;
++---------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -280,10 +304,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[7] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[8] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[8] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[9]                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -339,24 +366,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     SCLR              ; 10                          ;
 ;     SLD               ; 33                          ;
 ;     plain             ; 12                          ;
-; arriav_lcell_comb     ; 311                         ;
+; arriav_lcell_comb     ; 313                         ;
 ;     arith             ; 142                         ;
 ;         1 data inputs ; 112                         ;
 ;         2 data inputs ; 30                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 168                         ;
+;     normal            ; 170                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 13                          ;
 ;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 4                           ;
-;         4 data inputs ; 38                          ;
-;         5 data inputs ; 47                          ;
-;         6 data inputs ; 61                          ;
+;         4 data inputs ; 42                          ;
+;         5 data inputs ; 46                          ;
+;         6 data inputs ; 60                          ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.70                        ;
-; Average LUT depth     ; 3.55                        ;
+; Average LUT depth     ; 3.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -375,7 +402,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed May 21 19:08:48 2025
+    Info: Processing started: Thu May 22 14:35:37 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -401,7 +428,6 @@ Info (12127): Elaborating entity "Display" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(9) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
 Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:pipe" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 51
 Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:pipe|Pipes:P0" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 43
-Warning (10036): Verilog HDL or VHDL warning at Pipes.vhd(17): object "pipe_y_pos" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 17
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 61
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 68
 Warning (13024): Output pins are stuck at VCC or GND
@@ -686,14 +712,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
     Warning (15610): No output dependent on input pin "pb2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 397 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 399 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 344 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 282 warnings
-    Info: Peak virtual memory: 4964 megabytes
-    Info: Processing ended: Wed May 21 19:09:03 2025
-    Info: Elapsed time: 00:00:15
+    Info (21061): Implemented 346 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 281 warnings
+    Info: Peak virtual memory: 4963 megabytes
+    Info: Processing ended: Thu May 22 14:35:44 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:12
 
 

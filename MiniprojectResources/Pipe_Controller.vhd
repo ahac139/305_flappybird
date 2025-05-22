@@ -79,11 +79,11 @@ architecture behaviour of Pipe_Controller is
 				 if rising_edge(vert_sync) then
 					enable1 <= '1';
 					
-					if count = 400 then
+					if count = 233 then
 						enable2 <= '1';
 						count := count + 1;
 						
-					elsif count > 800 then
+					elsif count > 466 then
 						enable3 <= '1';
 						
 					else
