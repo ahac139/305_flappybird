@@ -16,14 +16,22 @@ architecture behaviour of Pipe_Controller is
 		port(
 			clk, vert_sync, enable: in std_logic;
 			pixel_row, pixel_col: in std_logic_vector(9 downto 0);
-			gap_y: in unsigned(9 downto 0);
+			random_number: in unsigned(9 downto 0);
 			pipe_on: out std_logic
 		);
 	end component Pipes;
 	
-	signal gap1 : unsigned(9 downto 0) := to_unsigned(10,10);
-	signal gap2 : unsigned(9 downto 0) := to_unsigned(20,10);
-	signal gap3 : unsigned(9 downto 0) := to_unsigned(30,10);
+	component random_number_generator is
+    port (
+        clk : in std_logic;
+        random_number : out unsigned(9 downto 0)
+    );
+	end component;
+	
+	--signal gap1 : unsigned(9 downto 0) := to_unsigned(10,10);
+	--signal gap2 : unsigned(9 downto 0) := to_unsigned(20,10);
+	--signal gap3 : unsigned(9 downto 0) := to_unsigned(30,10);
+	signal gap: unsigned(9 downto 0);
 	signal pipe_on1 : std_logic;
 	signal pipe_on2 : std_logic;
 	signal pipe_on3 : std_logic;
@@ -36,9 +44,9 @@ architecture behaviour of Pipe_Controller is
 	
 	begin
 		
-		gap1 <= to_unsigned(200,10);
-		gap2 <= to_unsigned(100,10);
-		gap3 <= to_unsigned(150,10);
+		--gap1 <= to_unsigned(200,10);
+		--gap2 <= to_unsigned(100,10);
+		--gap3 <= to_unsigned(150,10);
 		
 		P0: Pipes port map(
 			clk => Clk,
@@ -46,7 +54,7 @@ architecture behaviour of Pipe_Controller is
 			enable => enable1,
 			pixel_row => pixel_row,
 			pixel_col => pixel_col,
-			gap_y => gap1,
+			random_number => gap,
 			pipe_on =>pipe_on1);
 			
 		P1: Pipes port map(
@@ -55,7 +63,7 @@ architecture behaviour of Pipe_Controller is
 			enable => enable2,
 			pixel_row => pixel_row,
 			pixel_col => pixel_col,
-			gap_y => gap2,
+			random_number => gap,
 			pipe_on =>pipe_on2);
 
 		P2: Pipes port map(
@@ -64,15 +72,20 @@ architecture behaviour of Pipe_Controller is
 			enable => enable3,
 			pixel_row => pixel_row,
 			pixel_col => pixel_col,
-			gap_y => gap3,
+			random_number => gap,
 			pipe_on => pipe_on3);
 			
+		RNG: random_number_generator port map(
+				clk => vert_sync,
+				random_number => gap);
+		
+		
 			pipe_on <= pipe_on1 or pipe_on2 or pipe_on3;
 			
 			red <= not pipe_on;
 			green <= '1';
 			blue <= not pipe_on;
-
+		
 			process(vert_sync)
 				 variable count  : integer := 0;
 			begin

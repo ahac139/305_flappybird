@@ -6,7 +6,7 @@ entity Pipes is
 	port(
 		clk, vert_sync, enable: in std_logic;
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
-		gap_y: in unsigned(9 downto 0);
+		random_number: in unsigned(9 downto 0);
 		pipe_on: out std_logic
 	);
 end Pipes;
@@ -18,7 +18,8 @@ architecture behaviour of Pipes is
 	signal pipe_x_motion: unsigned(9 downto 0);
 	signal max_x, min_x: unsigned(9 downto 0);
 	signal gap_size_y: unsigned(9 downto 0);
-
+	signal gap_y: unsigned(9 downto 0) := to_unsigned(250,10);
+	signal prev_enable: std_logic;
 begin
 
 	-- Set constants
@@ -41,18 +42,30 @@ begin
 	-- Pipe movement
 	Move_pipe: process (enable, vert_sync)
 	begin
-		if (rising_edge(vert_sync) and enable = '1') then
-			if (pipe_x_pos - pipe_x_motion = min_x) then
-				if (size_x = MIN_X) then
-					size_x <= to_unsigned(60, 10);
-					pipe_x_pos <= max_x;
-				else				
-					size_x <= size_x - pipe_x_motion;
-				end if;
-			else
-				pipe_x_pos <= pipe_x_pos - pipe_x_motion;
+		if (rising_edge(vert_sync)) then
+		
+			if prev_enable = '0' and enable = '1' then
+				gap_y <= random_number;
 			end if;
+			prev_enable <= enable;
+			
+			if (enable = '1') then
+				if (pipe_x_pos - pipe_x_motion = min_x) then
+					if (size_x = MIN_X) then
+						size_x <= to_unsigned(60, 10);
+						pipe_x_pos <= max_x;
+						gap_y <= random_number;
+					else				
+						size_x <= size_x - pipe_x_motion;
+					end if;
+				else
+					pipe_x_pos <= pipe_x_pos - pipe_x_motion;
+				end if;
+			end if;
+		
 		end if;
 	end process Move_pipe;
+	
+	
 
 end behaviour;
