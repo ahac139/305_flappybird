@@ -53,7 +53,7 @@ component Pipe_Controller is
 	port(Clk, vert_sync: in std_logic;
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		pipe_x_motion: in unsigned(9 downto 0);
-		pipe_on: out std_logic
+		pipe_on, increase: out std_logic
 	);
 end component Pipe_Controller;
 
@@ -65,7 +65,12 @@ component bird_controller IS
 		  bird_on 							: OUT std_logic);		
 END component bird_controller;
 
-
+component score IS
+	PORT
+		( clk, increase_score		: IN std_logic;
+        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  score_on						: out std_logic);		
+END component score;
 
 signal pixel_row 		: std_logic_vector(9 downto 0);
 signal pixel_column 	: std_logic_vector(9 downto 0);
@@ -102,7 +107,20 @@ signal pipe_x_motion : unsigned(9 downto 0) := to_unsigned(1,10);
 
 signal collision : std_logic;
 
+signal score_on: std_logic;
+
+signal increase1: std_logic;
+
+
 begin
+
+	score_display: score port map(
+		clk				=> clk_div,
+		increase_score => increase1,
+		pixel_row 		=> pixel_row,
+		pixel_column	=> pixel_column,
+		score_on			=> score_on
+	);
 
 	char_display: text port map(
 		clk				=> clk_div,				
@@ -124,7 +142,8 @@ begin
 		pixel_col => pixel_column,
 		pixel_row => pixel_row,
 		pipe_x_motion => pipe_x_motion,
-		pipe_on => pipe_on
+		pipe_on => pipe_on,
+		increase => increase1
 	);
 	
 	Bird : Bird_controller port map(
@@ -163,15 +182,18 @@ begin
 	Red 	<= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') and (pb1 = '1') and (pb2 = '1') else
 				'1' when (collision = '1') else
+				'1' when (score_on = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') and (pb1 = '0') else
 				'1' when (pipe_on = '1') else
 				'1' when (collision = '1') else
+				'1' when (score_on = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') and (pb2 = '0') else
 				'1' when (collision = '1') else
+				'1' when (score_on = '1') else
 				'0';
 	
 	collision <= bird_on and pipe_on;

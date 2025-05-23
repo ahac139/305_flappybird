@@ -8,7 +8,7 @@ entity Pipes is
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		random_number: in unsigned(9 downto 0);
 		pipe_x_motion: in unsigned(9 downto 0);
-		pipe_on: out std_logic
+		pipe_on, increase: out std_logic
 	);
 end Pipes;
 
@@ -56,6 +56,7 @@ begin
 						size_x <= to_unsigned(60, 10);
 						pipe_x_pos <= max_x;
 						gap_y <= random_number;
+						increase <= '1';
 					else				
 						size_x <= size_x - pipe_x_motion;
 					end if;

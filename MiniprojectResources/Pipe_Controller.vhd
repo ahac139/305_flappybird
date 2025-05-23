@@ -7,7 +7,9 @@ entity Pipe_Controller is
 	port(Clk, vert_sync: in std_logic;
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		pipe_x_motion: in unsigned(9 downto 0);
-		pipe_on: out std_logic
+		pipe_on, increase: out std_logic
+
+	
 	);
 end entity Pipe_Controller;
 
@@ -40,7 +42,9 @@ architecture behaviour of Pipe_Controller is
 	signal enable1 : std_logic := '0';
 	signal enable2 : std_logic := '0';
 	signal enable3 : std_logic := '0';
-	
+	signal increase1 : std_logic := '0';
+	signal increase2 : std_logic := '0';
+	signal increase3 : std_logic := '0';
 	
 	begin
 		
@@ -56,7 +60,8 @@ architecture behaviour of Pipe_Controller is
 			pixel_col => pixel_col,
 			random_number => gap,
 			pipe_x_motion => pipe_x_motion,
-			pipe_on =>pipe_on1);
+			pipe_on =>pipe_on1,
+			increase => increase1);
 			
 		P1: Pipes port map(
 			clk => Clk,
@@ -66,7 +71,8 @@ architecture behaviour of Pipe_Controller is
 			pixel_col => pixel_col,
 			random_number => gap,
 			pipe_x_motion => pipe_x_motion,
-			pipe_on =>pipe_on2);
+			pipe_on =>pipe_on2,
+			increase => increase2);
 
 		P2: Pipes port map(
 			clk => Clk,
@@ -76,14 +82,16 @@ architecture behaviour of Pipe_Controller is
 			pixel_col => pixel_col,
 			random_number => gap,
 			pipe_x_motion => pipe_x_motion,
-			pipe_on => pipe_on3);
+			pipe_on => pipe_on3,
+			increase => increase3);
 			
 		RNG: random_number_generator port map(
 				clk => vert_sync,
 				random_number => gap);
 		
-		
+			
 			pipe_on <= pipe_on1 or pipe_on2 or pipe_on3;
+			increase <= increase1 or increase2 or increase3;
 		
 			process(vert_sync)
 				 variable count  : integer := 0;
@@ -97,7 +105,6 @@ architecture behaviour of Pipe_Controller is
 						
 					elsif count > 466 then
 						enable3 <= '1';
-						
 					else
 						count := count + 1;
 					end if;
