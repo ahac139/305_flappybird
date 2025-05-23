@@ -11,7 +11,7 @@ entity game_state is
 	PS2_DAT, PS2_CLK 		: inout std_logic;
 	
 	--Inputs from Sytem
-	obj_on					: in std_logic_vetor(9 downto 0);
+	pixel_row, pixel_col	: in std_logic_vetor(9 downto 0);
 	
 	--Outputs to Board
 	hex0, hex1, hex2 		: out std_logic_vector(6 downto 0);
@@ -39,39 +39,75 @@ architecture behaviour of game_state is
 
 --Gameplay signals
 signal s_state					: std_logic_vector(1 downto 0) := "00";
-signal s_mode					: std_logic_vector(1 downto 0) := "00"c;
-signal s_score, lives 		: integer;
+signal s_mode					: std_logic_vector(1 downto 0) := "00";
+signal s_score, lives 		: integer := 0;
+signal collision				: std_logic;
+
+--Input signals
+signal start_prev, pause_prev	 	: std_logic := "0";
+signal start_pulse, pause_pulse	: std_logic;
 
 begin
 	
-	--clock rising edge
+	--Signal assignment
+	collision <= bird_on and pipe_on;
+
+	--Edge detection and pulse generation
+	process(clk)
+	begin 
+		if rising_edge(clk) then
+			start_prev <= pb1;
+			pause_prev <= pb2;
+		end if;
+	end process;
 	
-		--switch case main menu state
-			-- switch case
-				-- training when DIP = 1
-				-- normal when DIP = 0
-			--if rising edge start = 1
-				--state = gameplay
-				
-		--case gameplay
-			-- if pause = 1
-				--change state to paused
-			--if collision
-				--if life = 1
-					--state = game_over
-				-- minus life
-				-- 
-			--if pipe pass
-				--score++
-				
-		--case pause
-			-- rising edge pause
-				--state = gameplay
+	start_pulse <= '1' when (pb1 = '1' and start_prev = '0') else '0';
+	pause_pulse <= '1' when (pb2 = '1' and pause_prev = '0') else '0';
+	
+	
+	--State controller
+	process(clk)
+	begin
+	if (rising_edge(clk)) then
+		case s_state is
+		
+			when "00" =>-- Main Menu
 			
-		--case game_over
-			--rising edge start
-				--state = main menu
-			--rising edge pause
-				--set state to gameplay
+			case SW(0) is
+				when '1' => s_mode <= "00";
+				when '0' => s_mode <= "01";
+				
+			if (start_pulse = '1') then
+				s_state <= "01";
+			end if;
+			
+				
+			when "01" =>-- Gameplay
+			if (pause_pulse = '0') then
+				s_state <= "10";
+			elsif (collision = '1') then --Currently will take more than one life per pipe
+				if (lives = 1) then
+					s_state = "11";
+				end if;
+				lives = lives - 1;
+			end if;
+			
+			--if N_clear
+				-- if H_clear
+						--mode <= "11"
+				-- else
+					--mode <= "10"
+			
+			when "10" =>-- Paused
+			if (pause_pulse = '1') then
+				s_state <= "01";
+			end if;
+			
+			
+			when "11" =>-- Game_over
+			if (start_pulse = '1') then
+				s_state <= "00";
+			end if;
+			
 
 end behaviour;
