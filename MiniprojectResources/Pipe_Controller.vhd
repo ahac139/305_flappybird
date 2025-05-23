@@ -21,7 +21,7 @@ architecture behaviour of Pipe_Controller is
 			pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 			random_number: in unsigned(9 downto 0);
 			pipe_x_motion: in unsigned(9 downto 0);
-			pipe_on: out std_logic
+			pipe_on, increase: out std_logic
 		);
 	end component Pipes;
 	

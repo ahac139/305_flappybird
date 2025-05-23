@@ -69,8 +69,15 @@ component score IS
 	PORT
 		( clk, increase_score		: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  score_on						: out std_logic);		
+		  score_on, carry				: out std_logic);		
 END component score;
+
+component score_digit_2 IS
+	PORT
+		( clk, increase_score	: IN std_logic;
+        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  score_on			: out std_logic);		
+END component score_digit_2;
 
 signal pixel_row 		: std_logic_vector(9 downto 0);
 signal pixel_column 	: std_logic_vector(9 downto 0);
@@ -111,6 +118,11 @@ signal score_on: std_logic;
 
 signal increase1: std_logic;
 
+signal score_on2: std_logic;
+
+signal increase2: std_logic;
+
+
 
 begin
 
@@ -119,7 +131,16 @@ begin
 		increase_score => increase1,
 		pixel_row 		=> pixel_row,
 		pixel_column	=> pixel_column,
-		score_on			=> score_on
+		score_on			=> score_on,
+		carry => increase2
+	);
+	
+	score_display2: score_digit_2 port map(
+		clk				=> clk_div,
+		increase_score => increase2,
+		pixel_row 		=> pixel_row,
+		pixel_column	=> pixel_column,
+		score_on			=> score_on2
 	);
 
 	char_display: text port map(
@@ -183,17 +204,20 @@ begin
 				'1' when (bird_on = '1') and (pb1 = '1') and (pb2 = '1') else
 				'1' when (collision = '1') else
 				'1' when (score_on = '1') else
+				'1' when (score_on2 = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') and (pb1 = '0') else
 				'1' when (pipe_on = '1') else
 				'1' when (collision = '1') else
 				'1' when (score_on = '1') else
+				'1' when (score_on2 = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') and (pb2 = '0') else
 				'1' when (collision = '1') else
 				'1' when (score_on = '1') else
+				'1' when (score_on2 = '1') else
 				'0';
 	
 	collision <= bird_on and pipe_on;

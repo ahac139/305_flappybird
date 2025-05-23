@@ -63,6 +63,7 @@ begin
 					
 				else
 					pipe_x_pos <= pipe_x_pos - pipe_x_motion;
+					increase <= '0';
 				end if;
 			end if;
 		

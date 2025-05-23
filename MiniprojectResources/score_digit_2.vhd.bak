@@ -1,0 +1,59 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+
+ENTITY score_digit_2 IS
+	PORT
+		( clk, increase_score	: IN std_logic;
+        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  score_on			: out std_logic);		
+END score;
+
+architecture behaviour of score is 
+
+	component char_rom IS
+	PORT
+	(
+		character_address		:	IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		clock						: 	IN STD_LOGIC ;
+		rom_mux_output			:	OUT STD_LOGIC
+	);
+	END component;
+	SIGNAL size_2: std_logic_vector(9 DOWNTO 0) := "0000001111";  
+	signal score_x_pos: std_logic_vector(9 downto 0) := "0000110001" ;
+	signal score_y_pos: std_logic_vector(9 downto 0) := "0001000000" ;
+	signal score_address: std_logic_vector(5 downto 0) := "110000";
+	signal score_on1: std_logic;
+	signal prev_increase: std_logic;
+	begin
+		
+		score: char_rom port map(
+				character_address => score_address,
+				font_row => pixel_row(3 downto 1),
+				font_col => pixel_column(3 downto 1),
+				clock => clk,
+				rom_mux_output => score_on1);
+				
+		score_on <= '1' when ( ('0' & score_x_pos <= '0' & pixel_column) and ('0' & pixel_column <= '0' & score_x_pos + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & score_y_pos <= pixel_row ) and ('0' & pixel_row <= score_y_pos + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (score_on1 = '1')) else
+						'0';
+		process(clk)
+		begin
+			if(rising_edge(clk)) then
+				prev_increase <= increase_score;
+				if (prev_increase = '0' and increase_score = '1') then
+					if (score_address /= "111001") then
+						score_address <= score_address + "000001";
+						carry <= '0';
+					else 
+						score_address <= "110000";
+						carry <= '1';
+					end if;
+			
+				end if;
+			end if;
+		end process;
+end behaviour;

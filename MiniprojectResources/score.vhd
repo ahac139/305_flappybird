@@ -7,7 +7,7 @@ ENTITY score IS
 	PORT
 		( clk, increase_score	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  score_on						: out std_logic);		
+		  score_on, carry				: out std_logic);		
 END score;
 
 architecture behaviour of score is 
@@ -47,9 +47,12 @@ architecture behaviour of score is
 				if (prev_increase = '0' and increase_score = '1') then
 					if (score_address /= "111001") then
 						score_address <= score_address + "000001";
+						carry <= '0';
 					else 
 						score_address <= "110000";
+						carry <= '1';
 					end if;
+			
 				end if;
 			end if;
 		end process;
