@@ -11,7 +11,7 @@ entity game_state is
 	PS2_DAT, PS2_CLK 		: inout std_logic;
 	
 	--Inputs from Sytem
-	pixel_row, pixel_col	: in std_logic_vetor(9 downto 0);
+	pixel_row, pixel_col	: in std_logic_vector(9 downto 0);
 	
 	--Outputs to Board
 	hex0, hex1, hex2 		: out std_logic_vector(6 downto 0);
