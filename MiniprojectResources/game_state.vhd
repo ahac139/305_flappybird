@@ -18,13 +18,60 @@ entity game_state is
 	LEDR						: out std_logic_vector(9 downto 0) := "0000000000";
 	
 	--Outputs to System
-	state, mode				: out std_logic_vector(1 downto 0);
+	state, mode, lives	: out std_logic_vector(1 downto 0);
 	score						: out std_logic_vector(3 downto 0);
 	);
-end entity display;
+end entity game_state;
 
 architecture behaviour of game_state is
 
+--Components
+	--Bird
+		--state in
+		--row, col in
+		-- bird_n out
+		
+	--Pipe
+		--state in
+		--mode in
+		--row, col in
+		--pipe_on out
 
+--Gameplay signals
+signal s_state					: std_logic_vector(1 downto 0) := "00";
+signal s_mode					: std_logic_vector(1 downto 0) := "00"c;
+signal s_score, lives 		: integer;
+
+begin
+	
+	--clock rising edge
+	
+		--switch case main menu state
+			-- switch case
+				-- training when DIP = 1
+				-- normal when DIP = 0
+			--if rising edge start = 1
+				--state = gameplay
+				
+		--case gameplay
+			-- if pause = 1
+				--change state to paused
+			--if collision
+				--if life = 1
+					--state = game_over
+				-- minus life
+				-- 
+			--if pipe pass
+				--score++
+				
+		--case pause
+			-- rising edge pause
+				--state = gameplay
+			
+		--case game_over
+			--rising edge start
+				--state = main menu
+			--rising edge pause
+				--set state to gameplay
 
 end behaviour;
