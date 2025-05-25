@@ -381,7 +381,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 912 312 1096 456)
+	(rect 904 312 1088 456)
 	(text "video_render" (rect 5 0 68 12)(font "Arial" ))
 	(text "VREN" (rect 8 128 38 140)(font "Arial" ))
 	(port
@@ -668,18 +668,8 @@ refer to the applicable agreement for further details.
 	(pt 472 152)
 )
 (connector
-	(pt 1280 344)
-	(pt 1096 344)
-	(bus)
-)
-(connector
-	(pt 1280 360)
-	(pt 1096 360)
-	(bus)
-)
-(connector
-	(pt 1280 376)
-	(pt 1096 376)
+	(pt 448 424)
+	(pt 512 424)
 	(bus)
 )
 (connector
@@ -700,29 +690,39 @@ refer to the applicable agreement for further details.
 	(pt 832 408)
 )
 (connector
-	(text "CLK_25" (rect 866 328 903 345)(font "Intel Clear" ))
-	(pt 856 344)
-	(pt 912 344)
+	(text "CLK_25" (rect 858 328 895 345)(font "Intel Clear" ))
+	(pt 848 344)
+	(pt 904 344)
 )
 (connector
 	(pt 792 360)
-	(pt 912 360)
+	(pt 904 360)
 	(bus)
 )
 (connector
 	(pt 800 376)
-	(pt 912 376)
+	(pt 904 376)
 )
 (connector
 	(pt 816 392)
-	(pt 912 392)
+	(pt 904 392)
 )
 (connector
 	(pt 832 408)
-	(pt 912 408)
+	(pt 904 408)
 )
 (connector
-	(pt 448 424)
-	(pt 512 424)
+	(pt 1088 344)
+	(pt 1280 344)
+	(bus)
+)
+(connector
+	(pt 1088 360)
+	(pt 1280 360)
+	(bus)
+)
+(connector
+	(pt 1088 376)
+	(pt 1280 376)
 	(bus)
 )
