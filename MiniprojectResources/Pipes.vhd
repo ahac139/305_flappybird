@@ -20,6 +20,10 @@ architecture behaviour of Pipes is
 	signal gap_size_y: unsigned(9 downto 0);
 	signal gap_y: unsigned(9 downto 0) := to_unsigned(250,10);
 	signal prev_enable: std_logic;
+	
+	signal score_x: unsigned(9 downto 0);
+	
+	
 begin
 
 	-- Set constants
@@ -46,6 +50,7 @@ begin
 			if prev_enable = '0' and enable = '1' then
 				gap_y <= random_number;
 			end if;
+			
 			prev_enable <= enable;
 			
 			if (enable = '1') then
@@ -56,17 +61,20 @@ begin
 						size_x <= to_unsigned(60, 10);
 						pipe_x_pos <= max_x;
 						gap_y <= random_number;
-						increase <= '1';
 					else				
 						size_x <= size_x - pipe_x_motion;
 					end if;
-					
+
 				else
 					pipe_x_pos <= pipe_x_pos - pipe_x_motion;
-					increase <= '0';
+				end if;
+				
+				if (pipe_x_pos + size_x = to_unsigned(100,10)) then
+						increase <= '1';
+				else
+						increase <= '0';
 				end if;
 			end if;
-		
 		end if;
 	end process Move_pipe;
 	
