@@ -79,6 +79,19 @@ component score_digit_2 IS
 		  score_on			: out std_logic);		
 END component score_digit_2;
 
+component life is 
+	PORT
+		( clk, decrease_life	      : IN std_logic;
+        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  life_on, zero_life		   : OUT std_logic);	
+end component life;
+
+component collision_controller IS
+	PORT
+		(clk,	c1: IN std_logic;
+		decrease_life:out std_logic);		
+END component collision_controller;
+
 signal pixel_row 		: std_logic_vector(9 downto 0);
 signal pixel_column 	: std_logic_vector(9 downto 0);
 
@@ -122,10 +135,34 @@ signal score_on2: std_logic;
 
 signal increase2: std_logic;
 
-
+-- Life signals
+signal decrease_life: std_logic;
+signal life_on: std_logic;
+signal zero_life: std_logic;
+signal prev_collision: std_logic;
 
 begin
 
+	collision_detector: collision_controller port map(
+		clk				=> clk_div,
+		c1 => collision,
+		decrease_life => decrease_life
+	);
+	
+	life_display: life port map(
+		clk				=> clk_div,
+		decrease_life	=> decrease_life,
+		pixel_row 		=> pixel_row,
+		pixel_column	=> pixel_column,
+		life_on			=>	life_on,
+		zero_life		=> zero_life
+	);
+	
+	collision <= bird_on and pipe_on;
+	
+
+		
+								
 	score_display: score port map(
 		clk				=> clk_div,
 		increase_score => increase1,
@@ -205,6 +242,7 @@ begin
 				'1' when (collision = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
+				'1' when (life_on = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') and (pb1 = '0') else
@@ -220,7 +258,8 @@ begin
 				'1' when (score_on2 = '1') else
 				'0';
 	
-	collision <= bird_on and pipe_on;
+	
+	
 	
 	
 	CDIV : clock_divider port map(

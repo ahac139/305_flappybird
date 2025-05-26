@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+ENTITY collision_controller IS
+	PORT
+		(clk,	c1: IN std_logic;
+		decrease_life:out std_logic);		
+END score;
+
+architecture behaviour of collison_dectector is 
+
+signal collision: std_logic;
+signal prev_collision: std_logic;
+
+begin
+	process(clk)
+	begin
+		if (rising_edge(clk)) then
+			prev_collision <= c1;
+			if	(prev_collision = '0' and c1 = '1') then
+				decrease_life <= '1';
+			else
+				decrease_life <= '0';
+			end if;
+		end if;
+	end process;
+
+end behaviour;
