@@ -13,6 +13,9 @@ entity game_logic is
 	HEX0, HEX1, HEX2 				: out std_logic_vector(6 downto 0) := "0000000";
 	LEDR								: out std_logic_vector(9 downto 0) := "0000000000";
 	
+	--Inputs from System
+	p_row, p_col					: in std_logic_vector(9 DOWNTO 0);
+	
 	--Outputs to System
 	state								: out std_logic_vector(1 downto 0) := "00";
 	char_on, bird_on, pipe_on	: out std_logic := '0';
@@ -24,12 +27,27 @@ end entity game_logic;
 architecture behaviour of game_logic is
 
 --Game state signals
-signal s_state, s_mode			: std_logic_vector(1 downto 0) := "00";
-
+signal s_state, s_mode				: std_logic_vector(1 downto 0) := "00";
 --Input management signals
 signal start_prev, pause_prev	 	: std_logic := '0';
 signal start_pulse, pause_pulse	: std_logic;
 
+--Component Signals
+signal ground							: std_logic := '0';
+signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
+signal mouse_right, mouse_left	: std_logic;
+
+--Components
+
+
+component MOUSE IS
+   PORT( clock_25Mhz, reset	 		: IN std_logic;
+         mouse_data						: INOUT std_logic;
+         mouse_clk 						: INOUT std_logic;
+         left_button, right_button	: OUT std_logic;
+		 mouse_cursor_row 				: OUT std_logic_vector(9 DOWNTO 0); 
+		 mouse_cursor_column 			: OUT std_logic_vector(9 DOWNTO 0));       	
+END component MOUSE;
 
 begin
 	--Signal assignments
@@ -46,6 +64,19 @@ begin
 	
 	start_pulse <= '1' when (PB(0) = '1' and start_prev = '0') else '0';
 	pause_pulse <= '1' when (PB(1) = '1' and pause_prev = '0') else '0';
+	
+	--Components
+	
+	Mouse1: Mouse port map(
+		clock_25Mhz => clk,
+		reset => ground,
+		mouse_data => PS2_DAT,
+		mouse_clk => PS2_CLK,
+		left_button => mouse_left, 
+		right_button => mouse_right,
+		mouse_cursor_row => mouse_x,
+		mouse_cursor_column => mouse_y
+	);
 	
 	
 	--State controller
