@@ -465,9 +465,16 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "Clk" (rect 0 0 16 12)(font "Arial" ))
-		(text "Clk" (rect 21 91 37 103)(font "Arial" ))
+		(text "v_sync" (rect 0 0 37 12)(font "Arial" ))
+		(text "v_sync" (rect 21 91 58 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Clk" (rect 0 0 16 12)(font "Arial" ))
+		(text "Clk" (rect 21 107 37 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
 	)
 	(port
 		(pt 192 64)
@@ -574,10 +581,6 @@ refer to the applicable agreement for further details.
 	(pt 1576 376)
 )
 (connector
-	(pt 1504 392)
-	(pt 1576 392)
-)
-(connector
 	(pt 792 464)
 	(pt 512 464)
 	(bus)
@@ -680,96 +683,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 448 328)
-	(pt 456 328)
-)
-(connector
-	(pt 456 328)
-	(pt 512 328)
-)
-(connector
-	(pt 448 360)
-	(pt 456 360)
-	(bus)
-)
-(connector
-	(pt 456 360)
-	(pt 512 360)
-	(bus)
-)
-(connector
-	(pt 448 392)
-	(pt 456 392)
-	(bus)
-)
-(connector
-	(pt 456 392)
-	(pt 512 392)
-	(bus)
-)
-(connector
-	(pt 448 408)
-	(pt 456 408)
-	(bus)
-)
-(connector
-	(pt 456 408)
-	(pt 512 408)
-	(bus)
-)
-(connector
-	(pt 448 344)
-	(pt 456 344)
-)
-(connector
-	(pt 456 344)
-	(pt 512 344)
-)
-(connector
-	(pt 448 376)
-	(pt 456 376)
-	(bus)
-)
-(connector
-	(pt 456 376)
-	(pt 512 376)
-	(bus)
-)
-(connector
-	(pt 496 440)
-	(pt 456 440)
-)
-(connector
-	(pt 456 440)
-	(pt 448 440)
-)
-(connector
-	(pt 448 456)
-	(pt 456 456)
-)
-(connector
-	(pt 456 456)
-	(pt 488 456)
-)
-(connector
-	(pt 448 472)
-	(pt 456 472)
-)
-(connector
-	(pt 456 472)
-	(pt 472 472)
-)
-(connector
-	(pt 448 424)
-	(pt 456 424)
-	(bus)
-)
-(connector
-	(pt 456 424)
-	(pt 512 424)
-	(bus)
-)
-(connector
 	(text "pixel_col[9..0]" (rect 1514 408 1580 425)(font "Intel Clear" ))
 	(pt 1504 424)
 	(pt 1576 424)
@@ -793,7 +706,107 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "CLK_25" (rect 210 376 247 393)(font "Intel Clear" ))
+	(pt 448 360)
+	(pt 456 360)
+	(bus)
+)
+(connector
+	(pt 456 360)
+	(pt 512 360)
+	(bus)
+)
+(connector
+	(pt 448 376)
+	(pt 456 376)
+	(bus)
+)
+(connector
+	(pt 456 376)
+	(pt 512 376)
+	(bus)
+)
+(connector
+	(pt 448 392)
+	(pt 456 392)
+	(bus)
+)
+(connector
+	(pt 456 392)
+	(pt 512 392)
+	(bus)
+)
+(connector
+	(pt 448 408)
+	(pt 456 408)
+	(bus)
+)
+(connector
+	(pt 456 408)
+	(pt 512 408)
+	(bus)
+)
+(connector
+	(pt 448 424)
+	(pt 456 424)
+	(bus)
+)
+(connector
+	(pt 456 424)
+	(pt 512 424)
+	(bus)
+)
+(connector
+	(pt 448 440)
+	(pt 456 440)
+)
+(connector
+	(pt 456 440)
+	(pt 496 440)
+)
+(connector
+	(pt 448 456)
+	(pt 456 456)
+)
+(connector
+	(pt 456 456)
+	(pt 488 456)
+)
+(connector
+	(pt 448 472)
+	(pt 456 472)
+)
+(connector
+	(pt 456 472)
+	(pt 472 472)
+)
+(connector
+	(pt 448 328)
+	(pt 456 328)
+)
+(connector
+	(pt 456 328)
+	(pt 512 328)
+)
+(connector
+	(pt 448 344)
+	(pt 456 344)
+)
+(connector
+	(pt 456 344)
+	(pt 512 344)
+)
+(connector
+	(text "v_sync" (rect 1514 376 1547 393)(font "Intel Clear" ))
+	(pt 1504 392)
+	(pt 1576 392)
+)
+(connector
+	(text "CLK_25" (rect 210 392 247 409)(font "Intel Clear" ))
+	(pt 200 408)
+	(pt 264 408)
+)
+(connector
+	(text "v_sync" (rect 210 376 243 393)(font "Intel Clear" ))
 	(pt 264 392)
 	(pt 200 392)
 )

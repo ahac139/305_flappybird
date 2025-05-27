@@ -15,6 +15,7 @@ entity game_logic is
 	
 	--Inputs from System
 	p_row, p_col					: in std_logic_vector(9 DOWNTO 0);
+	v_sync							: in std_logic;
 	
 	--Outputs to System
 	state								: out std_logic_vector(1 downto 0) := "00";
@@ -38,7 +39,13 @@ signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000";
 signal mouse_right, mouse_left	: std_logic;
 
 --Components
-
+component bird_controller IS
+	PORT
+		( clk, vert_sync, mouse_click	: IN std_logic;
+		  pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
+		  -- state/mode after restructure
+		  bird_on 							: OUT std_logic);		
+END component bird_controller;
 
 component MOUSE IS
    PORT( clock_25Mhz, reset	 		: IN std_logic;
@@ -66,6 +73,14 @@ begin
 	pause_pulse <= '1' when (PB(1) = '1' and pause_prev = '0') else '0';
 	
 	--Components
+	Bird : Bird_controller port map(
+		Clk => clk,
+		vert_sync => v_sync,
+		pixel_column => p_col,
+		pixel_row => p_row,
+		mouse_click => mouse_left,
+		bird_on => bird_on
+	);
 	
 	Mouse1: Mouse port map(
 		clock_25Mhz => clk,
