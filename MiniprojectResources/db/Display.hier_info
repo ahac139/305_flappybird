@@ -108,10 +108,10 @@ GPIO_0[35] << <GND>
 
 
 |Display|collision_controller:collision_detector
-clk => prev_collision.CLK
+clk => collision_prev.CLK
 clk => decrease_life~reg0.CLK
 c1 => process_0.IN1
-c1 => prev_collision.DATAIN
+c1 => collision_prev.DATAIN
 decrease_life <= decrease_life~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -124,9 +124,13 @@ clk => life_address[2].CLK
 clk => life_address[3].CLK
 clk => life_address[4].CLK
 clk => life_address[5].CLK
-clk => prev_decrease_life.CLK
-decrease_life => process_0.IN1
-decrease_life => prev_decrease_life.DATAIN
+decrease_life => zero_life~reg0.ENA
+decrease_life => life_address[0].ENA
+decrease_life => life_address[1].ENA
+decrease_life => life_address[2].ENA
+decrease_life => life_address[3].ENA
+decrease_life => life_address[4].ENA
+decrease_life => life_address[5].ENA
 pixel_row[0] => LessThan2.IN22
 pixel_row[0] => LessThan3.IN20
 pixel_row[1] => LessThan2.IN21

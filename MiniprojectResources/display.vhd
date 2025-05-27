@@ -145,8 +145,8 @@ begin
 
 	collision_detector: collision_controller port map(
 		clk				=> clk_div,
-		c1 => collision,
-		decrease_life => decrease_life
+		c1 				=> collision,
+		decrease_life 	=> decrease_life
 	);
 	
 	life_display: life port map(
