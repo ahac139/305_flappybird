@@ -66,6 +66,9 @@ END component MOUSE;
 begin
 	--Signal assignments
 	state <= s_state;
+	
+	LEDR(1 DOWNTO 0) <= s_state;
+	LEDR(3 DOWNTO 2) <= s_mode;
 
 	--Edge detection and pulse generation
 	process(clk)
@@ -76,8 +79,8 @@ begin
 		end if;
 	end process;
 	
-	start_pulse <= '1' when (PB(0) = '1' and start_prev = '0') else '0';
-	pause_pulse <= '1' when (PB(1) = '1' and pause_prev = '0') else '0';
+	start_pulse <= '1' when (PB(0) = '0' and start_prev = '1') else '0';
+	pause_pulse <= '1' when (PB(1) = '0' and pause_prev = '1') else '0';
 	
 	--Components
 	char_display: text port map(

@@ -1,5 +1,5 @@
 Timing Analyzer report for Flappy_Bird
-Wed May 28 12:56:35 2025
+Wed May 28 13:08:12 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -101,26 +101,26 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.34        ;
+; Average used               ; 1.37        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.9%      ;
-;     Processor 3            ;   2.8%      ;
-;     Processor 4            ;   2.6%      ;
-;     Processor 5            ;   2.2%      ;
-;     Processor 6            ;   2.2%      ;
-;     Processor 7            ;   2.2%      ;
-;     Processor 8            ;   2.2%      ;
-;     Processor 9            ;   2.2%      ;
-;     Processor 10           ;   2.1%      ;
-;     Processor 11           ;   2.1%      ;
-;     Processor 12           ;   2.1%      ;
-;     Processor 13           ;   2.1%      ;
-;     Processor 14           ;   2.1%      ;
-;     Processor 15           ;   2.1%      ;
-;     Processor 16           ;   2.1%      ;
+;     Processor 2            ;   3.1%      ;
+;     Processor 3            ;   2.9%      ;
+;     Processor 4            ;   2.8%      ;
+;     Processor 5            ;   2.4%      ;
+;     Processor 6            ;   2.4%      ;
+;     Processor 7            ;   2.3%      ;
+;     Processor 8            ;   2.3%      ;
+;     Processor 9            ;   2.3%      ;
+;     Processor 10           ;   2.3%      ;
+;     Processor 11           ;   2.3%      ;
+;     Processor 12           ;   2.3%      ;
+;     Processor 13           ;   2.3%      ;
+;     Processor 14           ;   2.3%      ;
+;     Processor 15           ;   2.3%      ;
+;     Processor 16           ;   2.3%      ;
 +----------------------------+-------------+
 
 
@@ -141,9 +141,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                    ; Note ;
 +------------+-----------------+-----------------------------------------------+------+
-; 160.44 MHz ; 160.44 MHz      ; clock_divider:CDIV|temp_clk                   ;      ;
-; 199.8 MHz  ; 199.8 MHz       ; vga_sync:VSYN|vert_sync_out                   ;      ;
-; 264.27 MHz ; 264.27 MHz      ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ;      ;
+; 162.5 MHz  ; 162.5 MHz       ; clock_divider:CDIV|temp_clk                   ;      ;
+; 175.72 MHz ; 175.72 MHz      ; vga_sync:VSYN|vert_sync_out                   ;      ;
+; 237.47 MHz ; 237.47 MHz      ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ;      ;
 +------------+-----------------+-----------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -159,23 +159,23 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -5.233 ; -277.275      ;
-; vga_sync:VSYN|vert_sync_out                   ; -4.005 ; -86.812       ;
-; CLOCK_50                                      ; -2.798 ; -2.798        ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -2.784 ; -86.264       ;
+; clock_divider:CDIV|temp_clk                   ; -5.154 ; -279.883      ;
+; vga_sync:VSYN|vert_sync_out                   ; -4.691 ; -95.203       ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -3.211 ; -92.525       ;
+; CLOCK_50                                      ; -2.592 ; -2.592        ;
 +-----------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                    ;
-+-----------------------------------------------+-------+---------------+
-; Clock                                         ; Slack ; End Point TNS ;
-+-----------------------------------------------+-------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.410 ; 0.000         ;
-; clock_divider:CDIV|temp_clk                   ; 0.429 ; 0.000         ;
-; vga_sync:VSYN|vert_sync_out                   ; 0.519 ; 0.000         ;
-; CLOCK_50                                      ; 0.815 ; 0.000         ;
-+-----------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                     ;
++-----------------------------------------------+--------+---------------+
+; Clock                                         ; Slack  ; End Point TNS ;
++-----------------------------------------------+--------+---------------+
+; vga_sync:VSYN|vert_sync_out                   ; -0.134 ; -0.594        ;
+; clock_divider:CDIV|temp_clk                   ; 0.243  ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.567  ; 0.000         ;
+; CLOCK_50                                      ; 0.792  ; 0.000         ;
++-----------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------+
@@ -183,7 +183,7 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.815 ; -28.943       ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.663 ; -24.136       ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -192,7 +192,7 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------+-------+---------------+
 ; Clock                                         ; Slack ; End Point TNS ;
 +-----------------------------------------------+-------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.893 ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.599 ; 0.000         ;
 +-----------------------------------------------+-------+---------------+
 
 
@@ -201,10 +201,10 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -2.636 ; -126.900      ;
-; CLOCK_50                                      ; -0.548 ; -1.086        ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.538 ; -27.844       ;
-; vga_sync:VSYN|vert_sync_out                   ; -0.538 ; -19.798       ;
+; clock_divider:CDIV|temp_clk                   ; -2.636 ; -128.039      ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.538 ; -27.875       ;
+; vga_sync:VSYN|vert_sync_out                   ; -0.538 ; -21.587       ;
+; CLOCK_50                                      ; -0.538 ; -1.035        ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -219,9 +219,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                    ; Note ;
 +------------+-----------------+-----------------------------------------------+------+
-; 159.69 MHz ; 159.69 MHz      ; clock_divider:CDIV|temp_clk                   ;      ;
-; 196.93 MHz ; 196.93 MHz      ; vga_sync:VSYN|vert_sync_out                   ;      ;
-; 262.47 MHz ; 262.47 MHz      ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ;      ;
+; 157.33 MHz ; 157.33 MHz      ; clock_divider:CDIV|temp_clk                   ;      ;
+; 172.38 MHz ; 172.38 MHz      ; vga_sync:VSYN|vert_sync_out                   ;      ;
+; 240.44 MHz ; 240.44 MHz      ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ;      ;
 +------------+-----------------+-----------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -231,23 +231,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -5.262 ; -274.270      ;
-; vga_sync:VSYN|vert_sync_out                   ; -4.078 ; -89.026       ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -2.810 ; -80.390       ;
-; CLOCK_50                                      ; -2.633 ; -2.633        ;
+; clock_divider:CDIV|temp_clk                   ; -5.356 ; -272.985      ;
+; vga_sync:VSYN|vert_sync_out                   ; -4.801 ; -96.252       ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -3.159 ; -85.467       ;
+; CLOCK_50                                      ; -2.513 ; -2.513        ;
 +-----------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                     ;
-+-----------------------------------------------+-------+---------------+
-; Clock                                         ; Slack ; End Point TNS ;
-+-----------------------------------------------+-------+---------------+
-; clock_divider:CDIV|temp_clk                   ; 0.378 ; 0.000         ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.421 ; 0.000         ;
-; vga_sync:VSYN|vert_sync_out                   ; 0.585 ; 0.000         ;
-; CLOCK_50                                      ; 0.682 ; 0.000         ;
-+-----------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                      ;
++-----------------------------------------------+--------+---------------+
+; Clock                                         ; Slack  ; End Point TNS ;
++-----------------------------------------------+--------+---------------+
+; vga_sync:VSYN|vert_sync_out                   ; -0.006 ; -0.006        ;
+; clock_divider:CDIV|temp_clk                   ; 0.274  ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.610  ; 0.000         ;
+; CLOCK_50                                      ; 0.799  ; 0.000         ;
++-----------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------+
@@ -255,7 +255,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.620 ; -25.811       ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.505 ; -22.252       ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -264,7 +264,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------+-------+---------------+
 ; Clock                                         ; Slack ; End Point TNS ;
 +-----------------------------------------------+-------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.825 ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.598 ; 0.000         ;
 +-----------------------------------------------+-------+---------------+
 
 
@@ -273,10 +273,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -2.636 ; -125.511      ;
-; CLOCK_50                                      ; -0.590 ; -1.128        ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.538 ; -27.429       ;
-; vga_sync:VSYN|vert_sync_out                   ; -0.538 ; -19.618       ;
+; clock_divider:CDIV|temp_clk                   ; -2.636 ; -126.075      ;
+; CLOCK_50                                      ; -0.549 ; -1.087        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.538 ; -27.444       ;
+; vga_sync:VSYN|vert_sync_out                   ; -0.538 ; -21.220       ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -291,23 +291,23 @@ No synchronizer chains to report.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -2.429 ; -105.833      ;
-; CLOCK_50                                      ; -1.961 ; -1.961        ;
-; vga_sync:VSYN|vert_sync_out                   ; -1.693 ; -35.204       ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.242 ; -37.147       ;
+; clock_divider:CDIV|temp_clk                   ; -2.346 ; -113.654      ;
+; vga_sync:VSYN|vert_sync_out                   ; -1.959 ; -39.915       ;
+; CLOCK_50                                      ; -1.751 ; -1.751        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.417 ; -39.488       ;
 +-----------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                    ;
-+-----------------------------------------------+-------+---------------+
-; Clock                                         ; Slack ; End Point TNS ;
-+-----------------------------------------------+-------+---------------+
-; clock_divider:CDIV|temp_clk                   ; 0.107 ; 0.000         ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.278 ; 0.000         ;
-; vga_sync:VSYN|vert_sync_out                   ; 0.362 ; 0.000         ;
-; CLOCK_50                                      ; 0.805 ; 0.000         ;
-+-----------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                     ;
++-----------------------------------------------+--------+---------------+
+; Clock                                         ; Slack  ; End Point TNS ;
++-----------------------------------------------+--------+---------------+
+; clock_divider:CDIV|temp_clk                   ; -0.091 ; -0.091        ;
+; vga_sync:VSYN|vert_sync_out                   ; -0.016 ; -0.021        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.330  ; 0.000         ;
+; CLOCK_50                                      ; 0.788  ; 0.000         ;
++-----------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------+
@@ -315,7 +315,7 @@ No synchronizer chains to report.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.713 ; -11.360       ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.663 ; -9.713        ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -324,7 +324,7 @@ No synchronizer chains to report.
 +-----------------------------------------------+-------+---------------+
 ; Clock                                         ; Slack ; End Point TNS ;
 +-----------------------------------------------+-------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.390 ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.321 ; 0.000         ;
 +-----------------------------------------------+-------+---------------+
 
 
@@ -333,10 +333,10 @@ No synchronizer chains to report.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -2.174 ; -31.475       ;
-; CLOCK_50                                      ; -0.506 ; -0.661        ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.077  ; 0.000         ;
-; vga_sync:VSYN|vert_sync_out                   ; 0.118  ; 0.000         ;
+; clock_divider:CDIV|temp_clk                   ; -2.174 ; -31.488       ;
+; CLOCK_50                                      ; -0.476 ; -0.604        ;
+; vga_sync:VSYN|vert_sync_out                   ; -0.054 ; -0.585        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.114  ; 0.000         ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -351,23 +351,23 @@ No synchronizer chains to report.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -2.256 ; -91.064       ;
-; CLOCK_50                                      ; -1.636 ; -1.636        ;
-; vga_sync:VSYN|vert_sync_out                   ; -1.513 ; -31.384       ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.112 ; -32.892       ;
+; clock_divider:CDIV|temp_clk                   ; -2.218 ; -96.271       ;
+; vga_sync:VSYN|vert_sync_out                   ; -1.761 ; -35.479       ;
+; CLOCK_50                                      ; -1.484 ; -1.484        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -1.278 ; -35.197       ;
 +-----------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                     ;
-+-----------------------------------------------+-------+---------------+
-; Clock                                         ; Slack ; End Point TNS ;
-+-----------------------------------------------+-------+---------------+
-; clock_divider:CDIV|temp_clk                   ; 0.041 ; 0.000         ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.280 ; 0.000         ;
-; vga_sync:VSYN|vert_sync_out                   ; 0.345 ; 0.000         ;
-; CLOCK_50                                      ; 0.595 ; 0.000         ;
-+-----------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                      ;
++-----------------------------------------------+--------+---------------+
+; Clock                                         ; Slack  ; End Point TNS ;
++-----------------------------------------------+--------+---------------+
+; clock_divider:CDIV|temp_clk                   ; -0.114 ; -0.114        ;
+; vga_sync:VSYN|vert_sync_out                   ; 0.005  ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.304  ; 0.000         ;
+; CLOCK_50                                      ; 0.608  ; 0.000         ;
++-----------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------+
@@ -375,7 +375,7 @@ No synchronizer chains to report.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.622 ; -9.915        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -0.593 ; -8.776        ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -384,7 +384,7 @@ No synchronizer chains to report.
 +-----------------------------------------------+-------+---------------+
 ; Clock                                         ; Slack ; End Point TNS ;
 +-----------------------------------------------+-------+---------------+
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.351 ; 0.000         ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.303 ; 0.000         ;
 +-----------------------------------------------+-------+---------------+
 
 
@@ -393,10 +393,10 @@ No synchronizer chains to report.
 +-----------------------------------------------+--------+---------------+
 ; Clock                                         ; Slack  ; End Point TNS ;
 +-----------------------------------------------+--------+---------------+
-; clock_divider:CDIV|temp_clk                   ; -2.174 ; -31.075       ;
-; CLOCK_50                                      ; -0.492 ; -0.641        ;
-; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.081  ; 0.000         ;
-; vga_sync:VSYN|vert_sync_out                   ; 0.134  ; 0.000         ;
+; clock_divider:CDIV|temp_clk                   ; -2.174 ; -31.015       ;
+; CLOCK_50                                      ; -0.472 ; -0.603        ;
+; vga_sync:VSYN|vert_sync_out                   ; -0.007 ; -0.053        ;
+; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0.112  ; 0.000         ;
 +-----------------------------------------------+--------+---------------+
 
 
@@ -406,22 +406,22 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                          ;
-+------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                                          ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                               ; -5.262   ; 0.041 ; -1.815   ; 0.351   ; -2.636              ;
-;  CLOCK_50                                      ; -2.798   ; 0.595 ; N/A      ; N/A     ; -0.590              ;
-;  clock_divider:CDIV|temp_clk                   ; -5.262   ; 0.041 ; N/A      ; N/A     ; -2.636              ;
-;  game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -2.810   ; 0.278 ; -1.815   ; 0.351   ; -0.538              ;
-;  vga_sync:VSYN|vert_sync_out                   ; -4.078   ; 0.345 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                                ; -453.149 ; 0.0   ; -28.943  ; 0.0     ; -175.628            ;
-;  CLOCK_50                                      ; -2.798   ; 0.000 ; N/A      ; N/A     ; -1.128              ;
-;  clock_divider:CDIV|temp_clk                   ; -277.275 ; 0.000 ; N/A      ; N/A     ; -126.900            ;
-;  game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -86.264  ; 0.000 ; -28.943  ; 0.000   ; -27.844             ;
-;  vga_sync:VSYN|vert_sync_out                   ; -89.026  ; 0.000 ; N/A      ; N/A     ; -19.798             ;
-+------------------------------------------------+----------+-------+----------+---------+---------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                           ;
++------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                          ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                               ; -5.356   ; -0.134 ; -1.663   ; 0.303   ; -2.636              ;
+;  CLOCK_50                                      ; -2.592   ; 0.608  ; N/A      ; N/A     ; -0.549              ;
+;  clock_divider:CDIV|temp_clk                   ; -5.356   ; -0.114 ; N/A      ; N/A     ; -2.636              ;
+;  game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -3.211   ; 0.304  ; -1.663   ; 0.303   ; -0.538              ;
+;  vga_sync:VSYN|vert_sync_out                   ; -4.801   ; -0.134 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                                ; -470.203 ; -0.594 ; -24.136  ; 0.0     ; -178.536            ;
+;  CLOCK_50                                      ; -2.592   ; 0.000  ; N/A      ; N/A     ; -1.087              ;
+;  clock_divider:CDIV|temp_clk                   ; -279.883 ; -0.114 ; N/A      ; N/A     ; -128.039            ;
+;  game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; -92.525  ; 0.000  ; -24.136  ; 0.000   ; -27.875             ;
+;  vga_sync:VSYN|vert_sync_out                   ; -96.252  ; -0.594 ; N/A      ; N/A     ; -21.587             ;
++------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -486,8 +486,6 @@ No synchronizer chains to report.
 +----------+--------------+-----------------+-----------------+
 ; KEY[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[9]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -497,9 +495,11 @@ No synchronizer chains to report.
 ; SW[3]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[2]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[0]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_DAT  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_CLK  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[0]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
@@ -730,13 +730,13 @@ No synchronizer chains to report.
 ; From Clock                                    ; To Clock                                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------+-----------------------------------------------+----------+----------+----------+----------+
 ; clock_divider:CDIV|temp_clk                   ; CLOCK_50                                      ; 1        ; 1        ; 0        ; 0        ;
-; clock_divider:CDIV|temp_clk                   ; clock_divider:CDIV|temp_clk                   ; 1765     ; 0        ; 0        ; 0        ;
+; clock_divider:CDIV|temp_clk                   ; clock_divider:CDIV|temp_clk                   ; 1662     ; 0        ; 0        ; 0        ;
 ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; clock_divider:CDIV|temp_clk                   ; 1        ; 5        ; 0        ; 0        ;
 ; vga_sync:VSYN|vert_sync_out                   ; clock_divider:CDIV|temp_clk                   ; 252      ; 0        ; 0        ; 0        ;
 ; clock_divider:CDIV|temp_clk                   ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0        ; 0        ; 35       ; 0        ;
 ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0        ; 0        ; 0        ; 196      ;
 ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; vga_sync:VSYN|vert_sync_out                   ; 0        ; 19       ; 0        ; 0        ;
-; vga_sync:VSYN|vert_sync_out                   ; vga_sync:VSYN|vert_sync_out                   ; 2202     ; 0        ; 0        ; 0        ;
+; vga_sync:VSYN|vert_sync_out                   ; vga_sync:VSYN|vert_sync_out                   ; 2190     ; 0        ; 0        ; 0        ;
 +-----------------------------------------------+-----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -747,13 +747,13 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                    ; To Clock                                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------+-----------------------------------------------+----------+----------+----------+----------+
 ; clock_divider:CDIV|temp_clk                   ; CLOCK_50                                      ; 1        ; 1        ; 0        ; 0        ;
-; clock_divider:CDIV|temp_clk                   ; clock_divider:CDIV|temp_clk                   ; 1765     ; 0        ; 0        ; 0        ;
+; clock_divider:CDIV|temp_clk                   ; clock_divider:CDIV|temp_clk                   ; 1662     ; 0        ; 0        ; 0        ;
 ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; clock_divider:CDIV|temp_clk                   ; 1        ; 5        ; 0        ; 0        ;
 ; vga_sync:VSYN|vert_sync_out                   ; clock_divider:CDIV|temp_clk                   ; 252      ; 0        ; 0        ; 0        ;
 ; clock_divider:CDIV|temp_clk                   ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0        ; 0        ; 35       ; 0        ;
 ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; 0        ; 0        ; 0        ; 196      ;
 ; game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER ; vga_sync:VSYN|vert_sync_out                   ; 0        ; 19       ; 0        ; 0        ;
-; vga_sync:VSYN|vert_sync_out                   ; vga_sync:VSYN|vert_sync_out                   ; 2202     ; 0        ; 0        ; 0        ;
+; vga_sync:VSYN|vert_sync_out                   ; vga_sync:VSYN|vert_sync_out                   ; 2190     ; 0        ; 0        ; 0        ;
 +-----------------------------------------------+-----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -797,10 +797,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 6     ; 6    ;
-; Unconstrained Output Ports      ; 16    ; 16   ;
-; Unconstrained Output Port Paths ; 19    ; 19   ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 13    ; 13   ;
+; Unconstrained Output Ports      ; 19    ; 19   ;
+; Unconstrained Output Port Paths ; 22    ; 22   ;
 +---------------------------------+-------+------+
 
 
@@ -821,8 +821,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -831,6 +834,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -855,8 +861,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -865,6 +874,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -890,7 +902,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed May 28 12:56:32 2025
+    Info: Processing started: Wed May 28 13:08:08 2025
 Info: Command: quartus_sta Flappy_Bird -c Flappy_Bird
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -935,144 +947,144 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.233
+Info (332146): Worst-case setup slack is -5.154
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.233            -277.275 clock_divider:CDIV|temp_clk 
-    Info (332119):    -4.005             -86.812 vga_sync:VSYN|vert_sync_out 
-    Info (332119):    -2.798              -2.798 CLOCK_50 
-    Info (332119):    -2.784             -86.264 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is 0.410
+    Info (332119):    -5.154            -279.883 clock_divider:CDIV|temp_clk 
+    Info (332119):    -4.691             -95.203 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -3.211             -92.525 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):    -2.592              -2.592 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.134
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.410               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):     0.429               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.519               0.000 vga_sync:VSYN|vert_sync_out 
-    Info (332119):     0.815               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -1.815
+    Info (332119):    -0.134              -0.594 vga_sync:VSYN|vert_sync_out 
+    Info (332119):     0.243               0.000 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.567               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.792               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -1.663
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.815             -28.943 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.893
+    Info (332119):    -1.663             -24.136 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.599
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.893               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.599               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -126.900 clock_divider:CDIV|temp_clk 
-    Info (332119):    -0.548              -1.086 CLOCK_50 
-    Info (332119):    -0.538             -27.844 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):    -0.538             -19.798 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -2.636            -128.039 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.538             -27.875 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):    -0.538             -21.587 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -0.538              -1.035 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.262
+Info (332146): Worst-case setup slack is -5.356
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.262            -274.270 clock_divider:CDIV|temp_clk 
-    Info (332119):    -4.078             -89.026 vga_sync:VSYN|vert_sync_out 
-    Info (332119):    -2.810             -80.390 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):    -2.633              -2.633 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.378
+    Info (332119):    -5.356            -272.985 clock_divider:CDIV|temp_clk 
+    Info (332119):    -4.801             -96.252 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -3.159             -85.467 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):    -2.513              -2.513 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.006
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.378               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.421               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):     0.585               0.000 vga_sync:VSYN|vert_sync_out 
-    Info (332119):     0.682               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -1.620
+    Info (332119):    -0.006              -0.006 vga_sync:VSYN|vert_sync_out 
+    Info (332119):     0.274               0.000 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.610               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.799               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -1.505
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.620             -25.811 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.825
+    Info (332119):    -1.505             -22.252 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.598
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.825               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.598               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -125.511 clock_divider:CDIV|temp_clk 
-    Info (332119):    -0.590              -1.128 CLOCK_50 
-    Info (332119):    -0.538             -27.429 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):    -0.538             -19.618 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -2.636            -126.075 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.549              -1.087 CLOCK_50 
+    Info (332119):    -0.538             -27.444 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):    -0.538             -21.220 vga_sync:VSYN|vert_sync_out 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.429
+Info (332146): Worst-case setup slack is -2.346
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.429            -105.833 clock_divider:CDIV|temp_clk 
-    Info (332119):    -1.961              -1.961 CLOCK_50 
-    Info (332119):    -1.693             -35.204 vga_sync:VSYN|vert_sync_out 
-    Info (332119):    -1.242             -37.147 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is 0.107
+    Info (332119):    -2.346            -113.654 clock_divider:CDIV|temp_clk 
+    Info (332119):    -1.959             -39.915 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -1.751              -1.751 CLOCK_50 
+    Info (332119):    -1.417             -39.488 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is -0.091
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.107               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.278               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):     0.362               0.000 vga_sync:VSYN|vert_sync_out 
-    Info (332119):     0.805               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -0.713
+    Info (332119):    -0.091              -0.091 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.016              -0.021 vga_sync:VSYN|vert_sync_out 
+    Info (332119):     0.330               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.788               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -0.663
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.713             -11.360 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.390
+    Info (332119):    -0.663              -9.713 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.321
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.390               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.321               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -31.475 clock_divider:CDIV|temp_clk 
-    Info (332119):    -0.506              -0.661 CLOCK_50 
-    Info (332119):     0.077               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):     0.118               0.000 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -2.174             -31.488 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.476              -0.604 CLOCK_50 
+    Info (332119):    -0.054              -0.585 vga_sync:VSYN|vert_sync_out 
+    Info (332119):     0.114               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.256
+Info (332146): Worst-case setup slack is -2.218
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.256             -91.064 clock_divider:CDIV|temp_clk 
-    Info (332119):    -1.636              -1.636 CLOCK_50 
-    Info (332119):    -1.513             -31.384 vga_sync:VSYN|vert_sync_out 
-    Info (332119):    -1.112             -32.892 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is 0.041
+    Info (332119):    -2.218             -96.271 clock_divider:CDIV|temp_clk 
+    Info (332119):    -1.761             -35.479 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -1.484              -1.484 CLOCK_50 
+    Info (332119):    -1.278             -35.197 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is -0.114
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.041               0.000 clock_divider:CDIV|temp_clk 
-    Info (332119):     0.280               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):     0.345               0.000 vga_sync:VSYN|vert_sync_out 
-    Info (332119):     0.595               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -0.622
+    Info (332119):    -0.114              -0.114 clock_divider:CDIV|temp_clk 
+    Info (332119):     0.005               0.000 vga_sync:VSYN|vert_sync_out 
+    Info (332119):     0.304               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.608               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -0.593
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.622              -9.915 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.351
+    Info (332119):    -0.593              -8.776 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.303
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.351               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
+    Info (332119):     0.303               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -31.075 clock_divider:CDIV|temp_clk 
-    Info (332119):    -0.492              -0.641 CLOCK_50 
-    Info (332119):     0.081               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
-    Info (332119):     0.134               0.000 vga_sync:VSYN|vert_sync_out 
+    Info (332119):    -2.174             -31.015 clock_divider:CDIV|temp_clk 
+    Info (332119):    -0.472              -0.603 CLOCK_50 
+    Info (332119):    -0.007              -0.053 vga_sync:VSYN|vert_sync_out 
+    Info (332119):     0.112               0.000 game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 5248 megabytes
-    Info: Processing ended: Wed May 28 12:56:35 2025
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 5246 megabytes
+    Info: Processing ended: Wed May 28 13:08:12 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -12,6 +12,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_B[3]",
 					"strict" : false
 				},
@@ -65,6 +77,18 @@
 				},
 				{
 					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{
