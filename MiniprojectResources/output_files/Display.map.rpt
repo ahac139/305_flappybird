@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Thu May 22 17:33:38 2025
+Wed May 28 11:36:33 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,9 +40,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  32. Port Connectivity Checks: "text:char_display|char_rom:L1"
  33. Port Connectivity Checks: "text:char_display|char_rom:E"
  34. Port Connectivity Checks: "text:char_display|char_rom:H"
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 35. Port Connectivity Checks: "text:char_display"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -68,7 +69,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 22 17:33:38 2025           ;
+; Analysis & Synthesis Status     ; Successful - Wed May 28 11:36:33 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
@@ -193,36 +194,36 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; random_number_generator.vhd      ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd ;         ;
-; Pipe_Controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd         ;         ;
-; Pipes.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd                   ;         ;
-; bird_controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bird_controller.vhd         ;         ;
-; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd                 ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd                ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd                   ;         ;
-; seven_seg_display.vhd            ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd       ;         ;
-; binary_to_bcd.vhd                ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd           ;         ;
-; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd             ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd                ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd           ;         ;
-; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd                    ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                           ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                    ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                              ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                           ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                           ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                            ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                               ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                               ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                             ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf      ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/tcgrom.mif                  ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; random_number_generator.vhd      ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/random_number_generator.vhd ;         ;
+; Pipe_Controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipe_Controller.vhd         ;         ;
+; Pipes.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipes.vhd                   ;         ;
+; bird_controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/bird_controller.vhd         ;         ;
+; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd                 ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd                ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd                   ;         ;
+; seven_seg_display.vhd            ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd       ;         ;
+; binary_to_bcd.vhd                ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd           ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd             ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd                ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd           ;         ;
+; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd                    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                            ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf      ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/tcgrom.mif                  ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------+
@@ -230,13 +231,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 350                        ;
+; Estimate of Logic utilization (ALMs needed) ; 351                        ;
 ;                                             ;                            ;
 ; Combinational ALUT usage for logic          ; 542                        ;
 ;     -- 7 input functions                    ; 3                          ;
-;     -- 6 input functions                    ; 145                        ;
+;     -- 6 input functions                    ; 146                        ;
 ;     -- 5 input functions                    ; 80                         ;
-;     -- 4 input functions                    ; 65                         ;
+;     -- 4 input functions                    ; 64                         ;
 ;     -- <=3 input functions                  ; 249                        ;
 ;                                             ;                            ;
 ; Dedicated logic registers                   ; 266                        ;
@@ -249,7 +250,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; VGA_SYNC:VGA|vert_sync_out ;
 ; Maximum fan-out                             ; 155                        ;
-; Total fan-out                               ; 3201                       ;
+; Total fan-out                               ; 3203                       ;
 ; Average fan-out                             ; 3.05                       ;
 +---------------------------------------------+----------------------------+
 
@@ -1046,6 +1047,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------+-------+----------+--------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "text:char_display"                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; state ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; mode  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; score ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -1071,9 +1083,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         1 data inputs ; 23                          ;
 ;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 20                          ;
-;         4 data inputs ; 65                          ;
+;         4 data inputs ; 64                          ;
 ;         5 data inputs ; 80                          ;
-;         6 data inputs ; 145                         ;
+;         6 data inputs ; 146                         ;
 ; boundary_port         ; 96                          ;
 ; stratixv_ram_block    ; 48                          ;
 ;                       ;                             ;
@@ -1097,80 +1109,80 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu May 22 17:33:21 2025
+    Info: Processing started: Wed May 28 11:36:25 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file random_number_generator.vhd
-    Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 12
-    Info (12023): Found entity 1: random_number_generator File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 5
+    Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 12
+    Info (12023): Found entity 1: random_number_generator File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipe_controller.vhd
-    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 14
-    Info (12023): Found entity 1: Pipe_Controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 6
+    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 14
+    Info (12023): Found entity 1: Pipe_Controller File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pipes.vhd
-    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 15
-    Info (12023): Found entity 1: Pipes File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 5
+    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipes.vhd Line: 15
+    Info (12023): Found entity 1: Pipes File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipes.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bird_controller.vhd
-    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 15
-    Info (12023): Found entity 1: bird_controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 7
+    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 15
+    Info (12023): Found entity 1: bird_controller File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 18
-    Info (12023): Found entity 1: display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 5
+    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 18
+    Info (12023): Found entity 1: display File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_display.vhd
-    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 11
-    Info (12023): Found entity 1: seven_seg_display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
+    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 11
+    Info (12023): Found entity 1: seven_seg_display File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file binary_to_bcd.vhd
-    Info (12022): Found design unit 1: binary_to_bcd-Behavioral File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 13
-    Info (12023): Found entity 1: binary_to_bcd File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 8
+    Info (12022): Found design unit 1: binary_to_bcd-Behavioral File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 13
+    Info (12023): Found entity 1: binary_to_bcd File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: text-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 14
-    Info (12023): Found entity 1: text File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 7
+    Info (12022): Found design unit 1: text-behavior File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 22
+    Info (12023): Found entity 1: text File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 6
 Info (12127): Elaborating entity "Display" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at display.vhd(83): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 83
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(90): object "mouse_x" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 90
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(91): object "mouse_y" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 91
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(93): object "mouse_right" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 93
-Warning (10540): VHDL Signal Declaration warning at display.vhd(101): used explicit default value for signal "pipe_x_motion" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 101
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 107
-Warning (10540): VHDL Signal Declaration warning at text.vhd(17): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 17
-Warning (10540): VHDL Signal Declaration warning at text.vhd(18): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 18
-Warning (10540): VHDL Signal Declaration warning at text.vhd(19): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 19
-Warning (10540): VHDL Signal Declaration warning at text.vhd(20): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 20
-Warning (10540): VHDL Signal Declaration warning at text.vhd(24): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at text.vhd(25): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at text.vhd(26): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at text.vhd(30): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 30
-Warning (10540): VHDL Signal Declaration warning at text.vhd(31): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 31
-Warning (10540): VHDL Signal Declaration warning at text.vhd(32): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at text.vhd(36): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at text.vhd(37): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 37
-Warning (10540): VHDL Signal Declaration warning at text.vhd(41): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 41
-Warning (10540): VHDL Signal Declaration warning at text.vhd(42): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 42
-Warning (10540): VHDL Signal Declaration warning at text.vhd(43): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 43
-Warning (10540): VHDL Signal Declaration warning at text.vhd(47): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 47
-Warning (10540): VHDL Signal Declaration warning at text.vhd(48): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at text.vhd(49): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 49
-Warning (10540): VHDL Signal Declaration warning at text.vhd(50): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 50
-Info (12128): Elaborating entity "char_rom" for hierarchy "text:char_display|char_rom:H" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 66
-Info (12128): Elaborating entity "altsyncram" for hierarchy "text:char_display|char_rom:H|altsyncram:altsyncram_component" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "text:char_display|char_rom:H|altsyncram:altsyncram_component" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "text:char_display|char_rom:H|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Warning (10540): VHDL Signal Declaration warning at display.vhd(83): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 83
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(90): object "mouse_x" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 90
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(91): object "mouse_y" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 91
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(93): object "mouse_right" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 93
+Warning (10540): VHDL Signal Declaration warning at display.vhd(101): used explicit default value for signal "pipe_x_motion" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 101
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 107
+Warning (10540): VHDL Signal Declaration warning at text.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at text.vhd(26): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at text.vhd(27): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 27
+Warning (10540): VHDL Signal Declaration warning at text.vhd(28): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at text.vhd(32): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at text.vhd(33): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 33
+Warning (10540): VHDL Signal Declaration warning at text.vhd(34): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at text.vhd(38): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 38
+Warning (10540): VHDL Signal Declaration warning at text.vhd(39): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 39
+Warning (10540): VHDL Signal Declaration warning at text.vhd(40): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 40
+Warning (10540): VHDL Signal Declaration warning at text.vhd(44): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 44
+Warning (10540): VHDL Signal Declaration warning at text.vhd(45): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 45
+Warning (10540): VHDL Signal Declaration warning at text.vhd(49): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 49
+Warning (10540): VHDL Signal Declaration warning at text.vhd(50): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 50
+Warning (10540): VHDL Signal Declaration warning at text.vhd(51): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 51
+Warning (10540): VHDL Signal Declaration warning at text.vhd(55): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 55
+Warning (10540): VHDL Signal Declaration warning at text.vhd(56): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 56
+Warning (10540): VHDL Signal Declaration warning at text.vhd(57): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 57
+Warning (10540): VHDL Signal Declaration warning at text.vhd(58): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 58
+Info (12128): Elaborating entity "char_rom" for hierarchy "text:char_display|char_rom:H" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/text.vhd Line: 74
+Info (12128): Elaborating entity "altsyncram" for hierarchy "text:char_display|char_rom:H|altsyncram:altsyncram_component" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "text:char_display|char_rom:H|altsyncram:altsyncram_component" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "text:char_display|char_rom:H|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1186,78 +1198,79 @@ Info (12133): Instantiated megafunction "text:char_display|char_rom:H|altsyncram
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 114
-Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
-Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
-Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:Pipes" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 121
-Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:Pipes|Pipes:P0" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 51
-Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:Pipes|random_number_generator:RNG" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 81
-Info (12128): Elaborating entity "bird_controller" for hierarchy "bird_controller:Bird" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 130
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 141
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 180
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 185
-Info (13000): Registers with preset signals will power-up high File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
+Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 114
+Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
+Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
+Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:Pipes" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 121
+Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:Pipes|Pipes:P0" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 51
+Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:Pipes|random_number_generator:RNG" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 81
+Info (12128): Elaborating entity "bird_controller" for hierarchy "bird_controller:Bird" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 130
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 141
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 180
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 185
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/display.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dvu878/Documents/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE0_CV_Default was ignored
@@ -1497,10 +1510,10 @@ Info (21057): Implemented 783 device resources after synthesis - the final resou
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 639 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 308 warnings
-    Info: Peak virtual memory: 4948 megabytes
-    Info: Processing ended: Thu May 22 17:33:38 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 309 warnings
+    Info: Peak virtual memory: 4979 megabytes
+    Info: Processing ended: Wed May 28 11:36:33 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:13
 
 

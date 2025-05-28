@@ -431,7 +431,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 264 296 456 504)
+	(rect 256 296 448 504)
 	(text "game_logic" (rect 5 0 60 12)(font "Arial" ))
 	(text "GLOG" (rect 8 192 38 204)(font "Arial" ))
 	(port
@@ -551,11 +551,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (connector
-	(pt 264 344)
-	(pt 200 344)
-	(bus)
-)
-(connector
 	(text "pixel_row[9..0]" (rect 1514 392 1583 409)(font "Intel Clear" ))
 	(pt 1504 408)
 	(pt 1576 408)
@@ -586,11 +581,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 512 464)
-	(pt 512 424)
-	(bus)
-)
-(connector
 	(text "CLK_25" (rect 1234 312 1271 329)(font "Intel Clear" ))
 	(pt 1280 328)
 	(pt 1224 328)
@@ -600,20 +590,8 @@ refer to the applicable agreement for further details.
 	(pt 496 472)
 )
 (connector
-	(pt 496 472)
-	(pt 496 440)
-)
-(connector
-	(pt 488 456)
-	(pt 488 480)
-)
-(connector
 	(pt 488 480)
 	(pt 816 480)
-)
-(connector
-	(pt 472 472)
-	(pt 472 488)
 )
 (connector
 	(pt 472 488)
@@ -689,134 +667,101 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 264 328)
-	(pt 208 328)
-	(bus)
-)
-(connector
-	(text "pixel_row[9..0]" (rect 210 344 279 361)(font "Intel Clear" ))
-	(pt 264 360)
-	(pt 200 360)
-	(bus)
-)
-(connector
-	(text "pixel_col[9..0]" (rect 210 360 276 377)(font "Intel Clear" ))
-	(pt 264 376)
-	(pt 200 376)
-	(bus)
-)
-(connector
-	(pt 448 360)
-	(pt 456 360)
-	(bus)
-)
-(connector
-	(pt 456 360)
-	(pt 512 360)
-	(bus)
-)
-(connector
-	(pt 448 376)
-	(pt 456 376)
-	(bus)
-)
-(connector
-	(pt 456 376)
-	(pt 512 376)
-	(bus)
-)
-(connector
-	(pt 448 392)
-	(pt 456 392)
-	(bus)
-)
-(connector
-	(pt 456 392)
-	(pt 512 392)
-	(bus)
-)
-(connector
-	(pt 448 408)
-	(pt 456 408)
-	(bus)
-)
-(connector
-	(pt 456 408)
-	(pt 512 408)
-	(bus)
-)
-(connector
-	(pt 448 424)
-	(pt 456 424)
-	(bus)
-)
-(connector
-	(pt 456 424)
-	(pt 512 424)
-	(bus)
-)
-(connector
-	(pt 448 440)
-	(pt 456 440)
-)
-(connector
-	(pt 456 440)
-	(pt 496 440)
-)
-(connector
-	(pt 448 456)
-	(pt 456 456)
-)
-(connector
-	(pt 456 456)
-	(pt 488 456)
-)
-(connector
-	(pt 448 472)
-	(pt 456 472)
-)
-(connector
-	(pt 456 472)
-	(pt 472 472)
-)
-(connector
-	(pt 448 328)
-	(pt 456 328)
-)
-(connector
-	(pt 456 328)
-	(pt 512 328)
-)
-(connector
-	(pt 448 344)
-	(pt 456 344)
-)
-(connector
-	(pt 456 344)
-	(pt 512 344)
-)
-(connector
 	(text "v_sync" (rect 1514 376 1547 393)(font "Intel Clear" ))
 	(pt 1504 392)
 	(pt 1576 392)
 )
 (connector
-	(text "CLK_25" (rect 210 392 247 409)(font "Intel Clear" ))
-	(pt 200 408)
-	(pt 264 408)
+	(pt 200 344)
+	(pt 256 344)
+	(bus)
 )
 (connector
-	(text "v_sync" (rect 210 376 243 393)(font "Intel Clear" ))
-	(pt 264 392)
-	(pt 200 392)
+	(pt 512 464)
+	(pt 512 424)
+	(bus)
 )
-(junction (pt 456 328))
-(junction (pt 456 360))
-(junction (pt 456 392))
-(junction (pt 456 408))
-(junction (pt 456 344))
-(junction (pt 456 376))
-(junction (pt 456 440))
-(junction (pt 456 456))
-(junction (pt 456 472))
-(junction (pt 456 424))
+(connector
+	(pt 496 472)
+	(pt 496 440)
+)
+(connector
+	(pt 488 480)
+	(pt 488 456)
+)
+(connector
+	(pt 472 488)
+	(pt 472 472)
+)
+(connector
+	(pt 208 328)
+	(pt 256 328)
+	(bus)
+)
+(connector
+	(text "pixel_row[9..0]" (rect 202 344 271 361)(font "Intel Clear" ))
+	(pt 256 360)
+	(pt 192 360)
+	(bus)
+)
+(connector
+	(text "pixel_col[9..0]" (rect 202 360 268 377)(font "Intel Clear" ))
+	(pt 256 376)
+	(pt 192 376)
+	(bus)
+)
+(connector
+	(text "CLK_25" (rect 202 392 239 409)(font "Intel Clear" ))
+	(pt 192 408)
+	(pt 256 408)
+)
+(connector
+	(text "v_sync" (rect 202 376 235 393)(font "Intel Clear" ))
+	(pt 256 392)
+	(pt 192 392)
+)
+(connector
+	(pt 448 360)
+	(pt 512 360)
+	(bus)
+)
+(connector
+	(pt 448 376)
+	(pt 512 376)
+	(bus)
+)
+(connector
+	(pt 448 392)
+	(pt 512 392)
+	(bus)
+)
+(connector
+	(pt 448 424)
+	(pt 512 424)
+	(bus)
+)
+(connector
+	(pt 448 456)
+	(pt 488 456)
+)
+(connector
+	(pt 448 472)
+	(pt 472 472)
+)
+(connector
+	(pt 448 328)
+	(pt 512 328)
+)
+(connector
+	(pt 448 344)
+	(pt 512 344)
+)
+(connector
+	(pt 448 408)
+	(pt 512 408)
+	(bus)
+)
+(connector
+	(pt 448 440)
+	(pt 496 440)
+)
