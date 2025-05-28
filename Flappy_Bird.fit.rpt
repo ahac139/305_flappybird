@@ -1,5 +1,5 @@
 Fitter report for Flappy_Bird
-Wed May 28 13:44:19 2025
+Wed May 28 14:05:58 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Wed May 28 13:44:18 2025           ;
+; Fitter Status                   ; Successful - Wed May 28 14:05:58 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Flappy_Bird                                     ;
 ; Top-level Entity Name           ; Flappy_Bird                                     ;
@@ -159,9 +159,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
+;     Processor 2            ;   0.8%      ;
 ;     Processor 3            ;   0.6%      ;
-;     Processor 4            ;   0.5%      ;
+;     Processor 4            ;   0.6%      ;
 ;     Processor 5            ;   0.4%      ;
 ;     Processor 6            ;   0.4%      ;
 ;     Processor 7            ;   0.4%      ;
@@ -172,8 +172,8 @@ refer to the applicable agreement for further details.
 ;     Processor 12           ;   0.4%      ;
 ;     Processor 13           ;   0.4%      ;
 ;     Processor 14           ;   0.4%      ;
-;     Processor 15           ;   0.4%      ;
-;     Processor 16           ;   0.4%      ;
+;     Processor 15           ;   0.3%      ;
+;     Processor 16           ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -1890,7 +1890,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:07
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:06
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
@@ -1900,7 +1900,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.74 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.75 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1910,7 +1910,7 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/dvu878/Documents/305_flappybird/Flappy_Bird.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 149 warnings
     Info: Peak virtual memory: 7665 megabytes
-    Info: Processing ended: Wed May 28 13:44:19 2025
+    Info: Processing ended: Wed May 28 14:05:58 2025
     Info: Elapsed time: 00:00:29
     Info: Total CPU time (on all processors): 00:03:04
 

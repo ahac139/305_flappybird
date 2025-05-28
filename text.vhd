@@ -37,10 +37,17 @@ menu : menu_text port map(
 		pixel_column => pixel_column,
 		char_on => menu_text_on);
 
---char_on conditional assignment
-char_on <= 	'1'	when (menu_text_on = '1') else
-				'0';
-
-
+--
+process(state, menu_text_on)
+begin
+	case state is
+		when "00" =>
+			char_on <= menu_text_on;
+			
+		when others =>	
+			char_on <= '0';
+			
+	end case;
+end process;
 END behavior;
 

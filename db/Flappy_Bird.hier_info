@@ -322,8 +322,8 @@ Clk => MOUSE:Mouse1.clock_25Mhz
 
 |Flappy_Bird|game_logic:GLOG|text:char_display
 Clk => menu_text:menu.Clk
-state[0] => ~NO_FANOUT~
-state[1] => ~NO_FANOUT~
+state[0] => Mux0.IN4
+state[1] => Mux0.IN3
 mode[0] => ~NO_FANOUT~
 mode[1] => ~NO_FANOUT~
 score[0] => ~NO_FANOUT~
@@ -350,7 +350,7 @@ pixel_column[6] => menu_text:menu.pixel_column[6]
 pixel_column[7] => menu_text:menu.pixel_column[7]
 pixel_column[8] => menu_text:menu.pixel_column[8]
 pixel_column[9] => menu_text:menu.pixel_column[9]
-char_on <= menu_text:menu.char_on
+char_on <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu
