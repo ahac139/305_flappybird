@@ -1,0 +1,508 @@
+Analysis & Synthesis report for Flappy_Bird
+Wed May 28 12:15:27 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Flappy_Bird|game_logic:GLOG|MOUSE:Mouse1|mouse_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "game_logic:GLOG|MOUSE:Mouse1"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed May 28 12:15:27 2025           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; Flappy_Bird                                     ;
+; Top-level Entity Name           ; Flappy_Bird                                     ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 137                                             ;
+; Total pins                      ; 62                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Flappy_Bird        ; Flappy_Bird        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------+---------+
+; video_render.vhd                 ; yes             ; User VHDL File                     ; C:/Users/dvu878/Documents/305_flappybird/video_render.vhd    ;         ;
+; VGA_SYNC.vhd                     ; yes             ; User VHDL File                     ; C:/Users/dvu878/Documents/305_flappybird/VGA_SYNC.vhd        ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                     ; C:/Users/dvu878/Documents/305_flappybird/mouse.vhd           ;         ;
+; game_logic.vhd                   ; yes             ; User VHDL File                     ; C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd      ;         ;
+; Flappy_Bird.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/dvu878/Documents/305_flappybird/Flappy_Bird.bdf     ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File                     ; C:/Users/dvu878/Documents/305_flappybird/clock_divider.vhd   ;         ;
+; bird_controller.vhd              ; yes             ; User VHDL File                     ; C:/Users/dvu878/Documents/305_flappybird/bird_controller.vhd ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 99                          ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 159                         ;
+;     -- 7 input functions                    ; 1                           ;
+;     -- 6 input functions                    ; 29                          ;
+;     -- 5 input functions                    ; 25                          ;
+;     -- 4 input functions                    ; 18                          ;
+;     -- <=3 input functions                  ; 86                          ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 137                         ;
+;                                             ;                             ;
+; I/O pins                                    ; 62                          ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
+; Maximum fan-out                             ; 82                          ;
+; Total fan-out                               ; 1030                        ;
+; Average fan-out                             ; 2.44                        ;
++---------------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name     ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-----------------+--------------+
+; |Flappy_Bird                 ; 159 (0)             ; 137 (0)                   ; 0                 ; 0          ; 62   ; 0            ; |Flappy_Bird                                      ; Flappy_Bird     ; work         ;
+;    |clock_divider:CDIV|      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|clock_divider:CDIV                   ; clock_divider   ; work         ;
+;    |game_logic:GLOG|         ; 113 (0)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG                      ; game_logic      ; work         ;
+;       |MOUSE:Mouse1|         ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|MOUSE:Mouse1         ; MOUSE           ; work         ;
+;       |bird_controller:Bird| ; 63 (63)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird ; bird_controller ; work         ;
+;    |vga_sync:VSYN|           ; 45 (45)             ; 53 (53)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|vga_sync:VSYN                        ; vga_sync        ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Flappy_Bird|game_logic:GLOG|MOUSE:Mouse1|mouse_state                                                                                                                                   ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+; mouse_state.INHIBIT_TRANS     ; 0                         ; 0                        ; 0                             ; 0                         ; 0                        ; 0                         ;
+; mouse_state.LOAD_COMMAND      ; 0                         ; 0                        ; 0                             ; 0                         ; 1                        ; 1                         ;
+; mouse_state.LOAD_COMMAND2     ; 0                         ; 0                        ; 0                             ; 1                         ; 0                        ; 1                         ;
+; mouse_state.WAIT_OUTPUT_READY ; 0                         ; 0                        ; 1                             ; 0                         ; 0                        ; 1                         ;
+; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
+; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; vga_sync:VSYN|green_out[0..3]              ; Stuck at GND due to stuck port data_in ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[4..7] ; Stuck at VCC due to stuck port data_in ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[3]    ; Stuck at GND due to stuck port data_in ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[2]    ; Stuck at VCC due to stuck port data_in ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[0,1]  ; Stuck at GND due to stuck port data_in ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[10]  ; Stuck at VCC due to stuck port data_in ;
+; vga_sync:VSYN|pixel_row[9]                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 14     ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 137   ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 80    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; game_logic:GLOG|MOUSE:Mouse1|send_char   ; 3       ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[3] ; 1       ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[5] ; 1       ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[6] ; 1       ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[7] ; 1       ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[8] ; 1       ;
+; Total number of inverted registers = 6   ;         ;
++------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Flappy_Bird|vga_sync:VSYN|v_count[4]                              ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird|bird_y_motion[7] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird|bird_y_motion[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "game_logic:GLOG|MOUSE:Mouse1"                                                                      ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; reset               ; Input  ; Info     ; Stuck at GND                                                                        ;
+; right_button        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mouse_cursor_row    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mouse_cursor_column ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 137                         ;
+;     CLR               ; 1                           ;
+;     ENA               ; 55                          ;
+;     ENA CLR           ; 15                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 46                          ;
+; arriav_io_obuf        ; 2                           ;
+; arriav_lcell_comb     ; 160                         ;
+;     arith             ; 63                          ;
+;         1 data inputs ; 50                          ;
+;         2 data inputs ; 13                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 96                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 25                          ;
+;         6 data inputs ; 29                          ;
+; boundary_port         ; 62                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.30                        ;
+; Average LUT depth     ; 2.26                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Wed May 28 12:15:21 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Flappy_Bird -c Flappy_Bird
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file video_render.vhd
+    Info (12022): Found design unit 1: video_render-behaviour File: C:/Users/dvu878/Documents/305_flappybird/video_render.vhd Line: 14
+    Info (12023): Found entity 1: video_render File: C:/Users/dvu878/Documents/305_flappybird/video_render.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
+    Info (12022): Found design unit 1: vga_sync-a File: C:/Users/dvu878/Documents/305_flappybird/VGA_SYNC.vhd Line: 15
+    Info (12023): Found entity 1: vga_sync File: C:/Users/dvu878/Documents/305_flappybird/VGA_SYNC.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file game_logic.vhd
+    Info (12022): Found design unit 1: game_logic-behaviour File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 28
+    Info (12023): Found entity 1: game_logic File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file flappy_bird.bdf
+    Info (12023): Found entity 1: Flappy_Bird
+Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
+    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dvu878/Documents/305_flappybird/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: C:/Users/dvu878/Documents/305_flappybird/clock_divider.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bird_controller.vhd
+    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/dvu878/Documents/305_flappybird/bird_controller.vhd Line: 15
+    Info (12023): Found entity 1: bird_controller File: C:/Users/dvu878/Documents/305_flappybird/bird_controller.vhd Line: 7
+Info (12127): Elaborating entity "Flappy_Bird" for the top level hierarchy
+Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:VSYN"
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV"
+Info (12128): Elaborating entity "video_render" for hierarchy "video_render:VREN"
+Info (10041): Inferred latch for "Blue[0]" at video_render.vhd(27) File: C:/Users/dvu878/Documents/305_flappybird/video_render.vhd Line: 27
+Info (10041): Inferred latch for "Blue[1]" at video_render.vhd(27) File: C:/Users/dvu878/Documents/305_flappybird/video_render.vhd Line: 27
+Info (10041): Inferred latch for "Blue[2]" at video_render.vhd(27) File: C:/Users/dvu878/Documents/305_flappybird/video_render.vhd Line: 27
+Info (10041): Inferred latch for "Blue[3]" at video_render.vhd(27) File: C:/Users/dvu878/Documents/305_flappybird/video_render.vhd Line: 27
+Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:GLOG"
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX0" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX1" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX2" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(14): used explicit default value for signal "LEDR" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 14
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(22): used explicit default value for signal "char_on" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(22): used explicit default value for signal "pipe_on" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 22
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(31): object "s_mode" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 31
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(37): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(38): object "mouse_x" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(38): object "mouse_y" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(39): object "mouse_right" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 39
+Info (12128): Elaborating entity "bird_controller" for hierarchy "game_logic:GLOG|bird_controller:Bird" File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 76
+Info (12128): Elaborating entity "MOUSE" for hierarchy "game_logic:GLOG|MOUSE:Mouse1" File: C:/Users/dvu878/Documents/305_flappybird/game_logic.vhd Line: 85
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 157
+Info (13000): Registers with preset signals will power-up high File: C:/Users/dvu878/Documents/305_flappybird/mouse.vhd Line: 146
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[0]"
+Info (21057): Implemented 283 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 45 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 221 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 93 warnings
+    Info: Peak virtual memory: 4956 megabytes
+    Info: Processing ended: Wed May 28 12:15:27 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
+
+
