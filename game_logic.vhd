@@ -128,13 +128,13 @@ begin
                 end if;
                 
             when "01" => -- Gameplay
-                if (pause_pulse = '0') then
+                if (pause_pulse = '1') then
                     s_state <= "10";
                 end if;
                 
             when "10" => -- Paused
                 if (pause_pulse = '1') then
-                    s_state <= "01";
+                    s_state <= "11";
                 end if;
                 
             when "11" => -- Game_over
