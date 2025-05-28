@@ -1,5 +1,5 @@
 Flow report for Flappy_Bird
-Wed May 28 12:16:00 2025
+Wed May 28 12:56:35 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed May 28 12:15:56 2025           ;
+; Flow Status                     ; Successful - Wed May 28 12:56:31 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Flappy_Bird                                     ;
 ; Top-level Entity Name           ; Flappy_Bird                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CEBA4F23C7                                     ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 92 / 18,480 ( < 1 % )                           ;
-; Total registers                 ; 159                                             ;
+; Logic utilization (in ALMs)     ; 117 / 18,480 ( < 1 % )                          ;
+; Total registers                 ; 167                                             ;
 ; Total pins                      ; 62 / 224 ( 28 % )                               ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                           ;
+; Total block memory bits         ; 384 / 3,153,920 ( < 1 % )                       ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                                  ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/28/2025 12:15:22 ;
+; Start date & time ; 05/28/2025 12:55:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Flappy_Bird         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948461338758.174839132121912        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948461338758.174839374818848        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default ; Top        ;
@@ -97,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4956 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:25     ; 1.1                     ; 7645 MB             ; 00:02:36                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4821 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 5223 MB             ; 00:00:04                           ;
-; Total                ; 00:00:36     ; --                      ; --                  ; 00:02:54                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4975 MB             ; 00:00:12                           ;
+; Fitter               ; 00:00:32     ; 1.1                     ; 7660 MB             ; 00:03:31                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4823 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.3                     ; 5248 MB             ; 00:00:04                           ;
+; Total                ; 00:00:44     ; --                      ; --                  ; 00:03:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

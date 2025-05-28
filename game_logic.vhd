@@ -39,6 +39,13 @@ signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000";
 signal mouse_right, mouse_left	: std_logic;
 
 --Components
+component text IS
+	PORT
+		( clk								: IN std_logic;
+        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  char_on						: out std_logic);		
+END component text;
+
 component bird_controller IS
 	PORT
 		( clk, vert_sync, mouse_click	: IN std_logic;
@@ -73,6 +80,13 @@ begin
 	pause_pulse <= '1' when (PB(1) = '1' and pause_prev = '0') else '0';
 	
 	--Components
+	char_display: text port map(
+		clk				=> clk,				
+		pixel_row 		=> p_row,
+		pixel_column	=> p_col,
+		char_on			=> char_on
+	);
+	
 	Bird : Bird_controller port map(
 		Clk => clk,
 		vert_sync => v_sync,
