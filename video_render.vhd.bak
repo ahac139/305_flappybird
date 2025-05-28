@@ -24,8 +24,7 @@ begin
 				"1111" when (pipe_on = '1') else
 				"0000";
 				
-	Blue 	<= "1111" when (char_on = '1') else
-				"0000";
+	Blue 	<= "1111" when (char_on = '1');
 
 
 end behaviour;
