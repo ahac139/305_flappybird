@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity invincibiity_timer is
+    port (
+        clk    : in  std_logic;  -- 25 Hz clock input
+        reset  : in  std_logic;  -- synchronous reset
+        start  : in  std_logic;  -- start counting pulse (one clock cycle)
+        done   : out std_logic   -- goes high after 3 seconds
+    );
+end entity invincibiity_timer;
+
+architecture behavioral of invincibiity_timer is
+    signal count    : unsigned(6 downto 0) := (others => '0');
+    signal counting : std_logic := '0';  -- internal enable
+begin
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            count <= (others => '0');
+            counting <= '0';
+            done <= '0';
+        elsif rising_edge(clk) then
+            if counting = '0' then
+                done <= '0';
+                if start = '1' then
+                    counting <= '1';  -- start counting
+                    count <= (others => '0');
+                end if;
+            else
+                -- counting = '1'
+                if count = 74 then
+                    done <= '1';      -- done signal high for one clock
+                    counting <= '0';  -- stop counting automatically
+                    count <= (others => '0');
+                else
+                    count <= count + 1;
+                    done <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
+end architecture behavioral;

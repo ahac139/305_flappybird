@@ -4,9 +4,11 @@ use IEEE.numeric_std.all;
 
 ENTITY collision_controller IS
     PORT (
-        clk           : IN std_logic;
-        c1            : IN std_logic; 
-        decrease_life : OUT std_logic  
+        clk, vert_sync : IN std_logic;
+        collision	    : IN std_logic; 
+        collision_detected : OUT std_logic  
+		  
+		  --- RESET
     );		
 END collision_controller;
 
@@ -17,12 +19,14 @@ begin
     process(clk)
     begin
         if rising_edge(clk) then
-            if (c1 = '1' and collision_prev = '0') then
-                decrease_life <= '1';
+            if (collision = '1' and collision_prev = '0') then
+                collision_detected <= '1';
             else
-                decrease_life <= '0';
-            end if;
-            collision_prev <= c1;
+					collision_detected <= '0';
+				end if;
+				
+				
+            collision_prev <= collision;
         end if;
     end process;
 

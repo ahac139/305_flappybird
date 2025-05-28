@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Tue May 27 16:32:44 2025
+Wed May 28 14:34:32 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -16,40 +16,42 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |display|MOUSE:Mouse1|mouse_state
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 15. Source assignments for score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 16. Source assignments for score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 17. Source assignments for text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 18. Source assignments for text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 19. Source assignments for text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 20. Source assignments for text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 21. Source assignments for text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 22. Source assignments for text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 23. Parameter Settings for User Entity Instance: life:life_display|char_rom:life|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: score:score_display|char_rom:score|altsyncram:altsyncram_component
- 25. Parameter Settings for User Entity Instance: score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: text:char_display|char_rom:H|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: text:char_display|char_rom:E|altsyncram:altsyncram_component
- 28. Parameter Settings for User Entity Instance: text:char_display|char_rom:L1|altsyncram:altsyncram_component
- 29. Parameter Settings for User Entity Instance: text:char_display|char_rom:L2|altsyncram:altsyncram_component
- 30. Parameter Settings for User Entity Instance: text:char_display|char_rom:O|altsyncram:altsyncram_component
- 31. Parameter Settings for User Entity Instance: text:char_display|char_rom:EX|altsyncram:altsyncram_component
- 32. altsyncram Parameter Settings by Entity Instance
- 33. Port Connectivity Checks: "MOUSE:Mouse1"
- 34. Port Connectivity Checks: "Pipe_Controller:Pipes"
- 35. Port Connectivity Checks: "text:char_display|char_rom:EX"
- 36. Port Connectivity Checks: "text:char_display|char_rom:O"
- 37. Port Connectivity Checks: "text:char_display|char_rom:L2"
- 38. Port Connectivity Checks: "text:char_display|char_rom:L1"
- 39. Port Connectivity Checks: "text:char_display|char_rom:E"
- 40. Port Connectivity Checks: "text:char_display|char_rom:H"
- 41. Port Connectivity Checks: "life:life_display"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 16. Source assignments for score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 17. Source assignments for score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 18. Source assignments for text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 19. Source assignments for text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 20. Source assignments for text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 21. Source assignments for text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 22. Source assignments for text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 23. Source assignments for text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 24. Parameter Settings for User Entity Instance: life:life_display|char_rom:life|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: score:score_display|char_rom:score|altsyncram:altsyncram_component
+ 26. Parameter Settings for User Entity Instance: score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: text:char_display|char_rom:H|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: text:char_display|char_rom:E|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: text:char_display|char_rom:L1|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: text:char_display|char_rom:L2|altsyncram:altsyncram_component
+ 31. Parameter Settings for User Entity Instance: text:char_display|char_rom:O|altsyncram:altsyncram_component
+ 32. Parameter Settings for User Entity Instance: text:char_display|char_rom:EX|altsyncram:altsyncram_component
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "MOUSE:Mouse1"
+ 35. Port Connectivity Checks: "Pipe_Controller:Pipes"
+ 36. Port Connectivity Checks: "text:char_display|char_rom:EX"
+ 37. Port Connectivity Checks: "text:char_display|char_rom:O"
+ 38. Port Connectivity Checks: "text:char_display|char_rom:L2"
+ 39. Port Connectivity Checks: "text:char_display|char_rom:L1"
+ 40. Port Connectivity Checks: "text:char_display|char_rom:E"
+ 41. Port Connectivity Checks: "text:char_display|char_rom:H"
+ 42. Port Connectivity Checks: "life:life_display"
+ 43. Port Connectivity Checks: "collision_controller:collision_detector"
+ 44. Post-Synthesis Netlist Statistics for Top Partition
+ 45. Elapsed Time Per Partition
+ 46. Analysis & Synthesis Messages
 
 
 
@@ -75,13 +77,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 27 16:32:44 2025           ;
+; Analysis & Synthesis Status     ; Successful - Wed May 28 14:34:32 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 292                                             ;
+; Total registers                 ; 302                                             ;
 ; Total pins                      ; 96                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 12,672                                          ;
@@ -222,6 +224,7 @@ refer to the applicable agreement for further details.
 ; score_digit_2.vhd                ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd           ;         ;
 ; life.vhd                         ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd                    ;         ;
 ; collision_controller.vhd         ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/collision_controller.vhd    ;         ;
+; invincibility_timer.vhd          ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/invincibility_timer.vhd     ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                           ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                    ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                              ;         ;
@@ -241,16 +244,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 399                         ;
+; Estimate of Logic utilization (ALMs needed) ; 417                         ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 625                         ;
-;     -- 7 input functions                    ; 4                           ;
-;     -- 6 input functions                    ; 158                         ;
-;     -- 5 input functions                    ; 88                          ;
-;     -- 4 input functions                    ; 97                          ;
-;     -- <=3 input functions                  ; 278                         ;
+; Combinational ALUT usage for logic          ; 641                         ;
+;     -- 7 input functions                    ; 3                           ;
+;     -- 6 input functions                    ; 179                         ;
+;     -- 5 input functions                    ; 81                          ;
+;     -- 4 input functions                    ; 83                          ;
+;     -- <=3 input functions                  ; 295                         ;
 ;                                             ;                             ;
-; Dedicated logic registers                   ; 292                         ;
+; Dedicated logic registers                   ; 302                         ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 96                          ;
 ; Total MLAB memory bits                      ; 0                           ;
@@ -259,8 +262,8 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
-; Maximum fan-out                             ; 173                         ;
-; Total fan-out                               ; 3818                        ;
+; Maximum fan-out                             ; 171                         ;
+; Total fan-out                               ; 3901                        ;
 ; Average fan-out                             ; 3.23                        ;
 +---------------------------------------------+-----------------------------+
 
@@ -270,17 +273,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name             ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |display                                     ; 625 (1)             ; 292 (0)                   ; 12672             ; 0          ; 96   ; 0            ; |display                                                                                                            ; display                 ; work         ;
+; |display                                     ; 641 (0)             ; 302 (0)                   ; 12672             ; 0          ; 96   ; 0            ; |display                                                                                                            ; display                 ; work         ;
 ;    |MOUSE:Mouse1|                            ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |display|MOUSE:Mouse1                                                                                               ; MOUSE                   ; work         ;
-;    |Pipe_Controller:Pipes|                   ; 358 (56)            ; 137 (35)                  ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes                                                                                      ; Pipe_Controller         ; work         ;
-;       |Pipes:P0|                             ; 98 (98)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P0                                                                             ; Pipes                   ; work         ;
-;       |Pipes:P1|                             ; 94 (94)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P1                                                                             ; Pipes                   ; work         ;
+;    |Pipe_Controller:Pipes|                   ; 362 (57)            ; 137 (35)                  ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes                                                                                      ; Pipe_Controller         ; work         ;
+;       |Pipes:P0|                             ; 100 (100)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P0                                                                             ; Pipes                   ; work         ;
+;       |Pipes:P1|                             ; 95 (95)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P1                                                                             ; Pipes                   ; work         ;
 ;       |Pipes:P2|                             ; 94 (94)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P2                                                                             ; Pipes                   ; work         ;
 ;       |random_number_generator:RNG|          ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|random_number_generator:RNG                                                          ; random_number_generator ; work         ;
-;    |VGA_SYNC:VGA|                            ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                                                                               ; VGA_SYNC                ; work         ;
-;    |bird_controller:Bird|                    ; 73 (73)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bird_controller:Bird                                                                                       ; bird_controller         ; work         ;
+;    |VGA_SYNC:VGA|                            ; 48 (48)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                                                                               ; VGA_SYNC                ; work         ;
+;    |bird_controller:Bird|                    ; 72 (72)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bird_controller:Bird                                                                                       ; bird_controller         ; work         ;
 ;    |clock_divider:CDIV|                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV                                                                                         ; clock_divider           ; work         ;
-;    |collision_controller:collision_detector| ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |display|collision_controller:collision_detector                                                                    ; collision_controller    ; work         ;
+;    |invincibity_timer:timer1|                ; 14 (14)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |display|invincibity_timer:timer1                                                                                   ; invincibity_timer       ; work         ;
 ;    |life:life_display|                       ; 13 (11)             ; 6 (6)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display                                                                                          ; life                    ; work         ;
 ;       |char_rom:life|                        ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life                                                                            ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life|altsyncram:altsyncram_component                                            ; altsyncram              ; work         ;
@@ -296,22 +299,22 @@ refer to the applicable agreement for further details.
 ;    |seven_seg_display:seg_display|           ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display                                                                              ; seven_seg_display       ; work         ;
 ;       |BCD_to_SevenSeg:hundreds|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:hundreds                                                     ; BCD_to_SevenSeg         ; work         ;
 ;       |BCD_to_SevenSeg:ones|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones                                                         ; BCD_to_SevenSeg         ; work         ;
-;       |BCD_to_SevenSeg:tens|                 ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens                                                         ; BCD_to_SevenSeg         ; work         ;
-;       |binary_to_bcd:converter|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|binary_to_bcd:converter                                                      ; binary_to_bcd           ; work         ;
-;    |text:char_display|                       ; 22 (6)              ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |display|text:char_display                                                                                          ; text                    ; work         ;
+;       |BCD_to_SevenSeg:tens|                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens                                                         ; BCD_to_SevenSeg         ; work         ;
+;       |binary_to_bcd:converter|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|binary_to_bcd:converter                                                      ; binary_to_bcd           ; work         ;
+;    |text:char_display|                       ; 22 (10)             ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |display|text:char_display                                                                                          ; text                    ; work         ;
 ;       |char_rom:EX|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX                                                                              ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX|altsyncram:altsyncram_component                                              ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1         ; work         ;
-;       |char_rom:E|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E                                                                               ; char_rom                ; work         ;
+;       |char_rom:E|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E                                                                               ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E|altsyncram:altsyncram_component                                               ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1         ; work         ;
-;       |char_rom:H|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H                                                                               ; char_rom                ; work         ;
+;       |char_rom:H|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H                                                                               ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H|altsyncram:altsyncram_component                                               ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1         ; work         ;
-;       |char_rom:L1|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1                                                                              ; char_rom                ; work         ;
+;       |char_rom:L1|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1                                                                              ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1|altsyncram:altsyncram_component                                              ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1         ; work         ;
-;       |char_rom:L2|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2                                                                              ; char_rom                ; work         ;
+;       |char_rom:L2|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2                                                                              ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2|altsyncram:altsyncram_component                                              ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1         ; work         ;
 ;       |char_rom:O|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:O                                                                               ; char_rom                ; work         ;
@@ -353,22 +356,34 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; MOUSE:Mouse1|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:Mouse1|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in ;
-; MOUSE:Mouse1|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:Mouse1|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in ;
-; MOUSE:Mouse1|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[9] ; Stuck at GND due to stuck port data_in ;
-; Pipe_Controller:Pipes|Pipes:P1|gap_y[9] ; Stuck at GND due to stuck port data_in ;
-; Pipe_Controller:Pipes|Pipes:P0|gap_y[9] ; Stuck at GND due to stuck port data_in ;
-; VGA_SYNC:VGA|pixel_row[9]               ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 13  ;                                        ;
-+-----------------------------------------+----------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++------------------------------------------------------------+----------------------------------------+
+; Register name                                              ; Reason for Removal                     ;
++------------------------------------------------------------+----------------------------------------+
+; MOUSE:Mouse1|CHAROUT[4..7]                                 ; Stuck at VCC due to stuck port data_in ;
+; MOUSE:Mouse1|CHAROUT[3]                                    ; Stuck at GND due to stuck port data_in ;
+; MOUSE:Mouse1|CHAROUT[2]                                    ; Stuck at VCC due to stuck port data_in ;
+; MOUSE:Mouse1|CHAROUT[0,1]                                  ; Stuck at GND due to stuck port data_in ;
+; MOUSE:Mouse1|SHIFTOUT[10]                                  ; Stuck at VCC due to stuck port data_in ;
+; collision_controller:collision_detector|collision_detected ; Stuck at VCC due to stuck port data_in ;
+; collision_controller:collision_detector|collision_prev     ; Lost fanout                            ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[9]                    ; Stuck at GND due to stuck port data_in ;
+; Pipe_Controller:Pipes|Pipes:P1|gap_y[9]                    ; Stuck at GND due to stuck port data_in ;
+; Pipe_Controller:Pipes|Pipes:P0|gap_y[9]                    ; Stuck at GND due to stuck port data_in ;
+; VGA_SYNC:VGA|pixel_row[9]                                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 15                     ;                                        ;
++------------------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++------------------------------------------------------------+---------------------------+--------------------------------------------------------+
+; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                 ;
++------------------------------------------------------------+---------------------------+--------------------------------------------------------+
+; collision_controller:collision_detector|collision_detected ; Stuck at VCC              ; collision_controller:collision_detector|collision_prev ;
+;                                                            ; due to stuck port data_in ;                                                        ;
++------------------------------------------------------------+---------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -376,12 +391,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 292   ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 302   ;
+; Number of registers using Synchronous Clear  ; 30    ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 180   ;
+; Number of registers using Clock Enable       ; 174   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -391,6 +406,20 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------+---------+
 ; Inverted Register                                         ; Fan out ;
 +-----------------------------------------------------------+---------+
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[3]                   ; 6       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[1]                   ; 2       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[5]                   ; 6       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[4]                   ; 7       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[7]                   ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[6]                   ; 5       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[9]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[4]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[3]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[6]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[5]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[2]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[1]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[0]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[3]                   ; 6       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[1]                   ; 2       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[5]                   ; 5       ;
@@ -412,27 +441,21 @@ Encoding Type:  One-Hot
 ; Pipe_Controller:Pipes|Pipes:P1|gap_y[7]                   ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P1|gap_y[6]                   ; 5       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[9]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[4]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[3]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[6]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[5]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[2]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[1]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[0]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[5]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[4]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[6]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[3]                   ; 6       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[1]                   ; 2       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[5]                   ; 6       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[4]                   ; 7       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[7]                   ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[6]                   ; 5       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[9]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[3]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[2]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[1]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[0]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[5]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[4]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[6]              ; 4       ;
+; life:life_display|life_address[0]                         ; 6       ;
+; life:life_display|life_address[1]                         ; 5       ;
+; life:life_display|life_address[4]                         ; 5       ;
+; life:life_display|life_address[5]                         ; 5       ;
+; score_digit_2:score_display2|score_address[4]             ; 5       ;
+; score_digit_2:score_display2|score_address[5]             ; 4       ;
+; score:score_display|score_address[4]                      ; 4       ;
+; score:score_display|score_address[5]                      ; 3       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[8] ; 10      ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[7] ; 9       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[6] ; 9       ;
@@ -442,26 +465,18 @@ Encoding Type:  One-Hot
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[2] ; 4       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[1] ; 5       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[0] ; 5       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[5]                  ; 9       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[4]                  ; 9       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[3]                  ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[2]                  ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|size_x[5]                  ; 9       ;
 ; Pipe_Controller:Pipes|Pipes:P0|size_x[4]                  ; 9       ;
 ; Pipe_Controller:Pipes|Pipes:P0|size_x[3]                  ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|size_x[2]                  ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P1|size_x[5]                  ; 9       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[4]                  ; 9       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[3]                  ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[2]                  ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P1|size_x[5]                  ; 9       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[4]                  ; 9       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[3]                  ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[2]                  ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[5]                  ; 9       ;
-; score_digit_2:score_display2|score_address[4]             ; 5       ;
-; score_digit_2:score_display2|score_address[5]             ; 4       ;
-; score:score_display|score_address[4]                      ; 4       ;
-; score:score_display|score_address[5]                      ; 3       ;
-; life:life_display|life_address[0]                         ; 6       ;
-; life:life_display|life_address[1]                         ; 5       ;
-; life:life_display|life_address[4]                         ; 5       ;
-; life:life_display|life_address[5]                         ; 5       ;
 ; MOUSE:Mouse1|send_char                                    ; 3       ;
 ; MOUSE:Mouse1|SHIFTOUT[3]                                  ; 1       ;
 ; MOUSE:Mouse1|SHIFTOUT[5]                                  ; 1       ;
@@ -478,23 +493,24 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[8]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[8]                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[8]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|gap_y[8]                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[0]                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[7]                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|gap_y[0]                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[7]                       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|gap_y[8]                            ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[6]                                            ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[6]                              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[1]                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[4]                       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|invincibity_timer:timer1|count[9]                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[0]                                            ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[7]                              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[3]                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[6]                       ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[4]                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[9]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[4]                       ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|gap_y[5]                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[9]                       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|gap_y[1]                            ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |display|score:score_display|char_rom:score|Mux0                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[3]                       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|gap_y[6]                            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |display|text:char_display|char_rom:E|Mux0                                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones|SevenSeg_out[0] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens|SevenSeg_out[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens|SevenSeg_out[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
@@ -1333,39 +1349,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "collision_controller:collision_detector"                                                                                                         ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                      ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; vert_sync ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 292                         ;
+; arriav_ff             ; 302                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 155                         ;
+;     ENA               ; 149                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
+;     SCLR              ; 20                          ;
 ;     SLD               ; 33                          ;
-;     plain             ; 68                          ;
+;     plain             ; 74                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 628                         ;
-;     arith             ; 192                         ;
-;         1 data inputs ; 149                         ;
+; arriav_lcell_comb     ; 644                         ;
+;     arith             ; 202                         ;
+;         1 data inputs ; 159                         ;
 ;         2 data inputs ; 43                          ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 432                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 439                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 34                          ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 97                          ;
-;         5 data inputs ; 88                          ;
-;         6 data inputs ; 158                         ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 83                          ;
+;         5 data inputs ; 81                          ;
+;         6 data inputs ; 179                         ;
 ; boundary_port         ; 96                          ;
 ; stratixv_ram_block    ; 72                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.50                        ;
+; Max LUT depth         ; 6.20                        ;
+; Average LUT depth     ; 3.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1384,7 +1409,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 27 16:32:27 2025
+    Info: Processing started: Wed May 28 14:34:25 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1439,16 +1464,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file life.vh
 Info (12021): Found 2 design units, including 1 entities, in source file collision_controller.vhd
     Info (12022): Found design unit 1: collision_controller-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/collision_controller.vhd Line: 13
     Info (12023): Found entity 1: collision_controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/collision_controller.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file invincibility_timer.vhd
+    Info (12022): Found design unit 1: invincibity_timer-behavioral File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/invincibility_timer.vhd Line: 13
+    Info (12023): Found entity 1: invincibity_timer File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/invincibility_timer.vhd Line: 5
 Info (12127): Elaborating entity "Display" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at display.vhd(108): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 108
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(115): object "mouse_x" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 115
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(116): object "mouse_y" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 116
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(118): object "mouse_right" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 118
-Warning (10540): VHDL Signal Declaration warning at display.vhd(126): used explicit default value for signal "pipe_x_motion" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 126
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(141): object "zero_life" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 141
+Warning (10540): VHDL Signal Declaration warning at display.vhd(116): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 116
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(123): object "mouse_x" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 123
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(124): object "mouse_y" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 124
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(126): object "mouse_right" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 126
+Warning (10540): VHDL Signal Declaration warning at display.vhd(134): used explicit default value for signal "pipe_x_motion" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 134
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(151): object "zero_life" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 151
 Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-Info (12128): Elaborating entity "collision_controller" for hierarchy "collision_controller:collision_detector" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 146
-Info (12128): Elaborating entity "life" for hierarchy "life:life_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 152
+Info (12128): Elaborating entity "invincibity_timer" for hierarchy "invincibity_timer:timer1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 156
+Info (12128): Elaborating entity "collision_controller" for hierarchy "collision_controller:collision_detector" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 163
+Info (12128): Elaborating entity "life" for hierarchy "life:life_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 169
 Warning (10540): VHDL Signal Declaration warning at life.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 25
 Warning (10540): VHDL Signal Declaration warning at life.vhd(26): used explicit default value for signal "life_x_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 26
 Warning (10540): VHDL Signal Declaration warning at life.vhd(27): used explicit default value for signal "life_y_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 27
@@ -1473,15 +1502,15 @@ Info (12133): Instantiated megafunction "life:life_display|char_rom:life|altsync
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
     Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "score" for hierarchy "score:score_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 166
+Info (12128): Elaborating entity "score" for hierarchy "score:score_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 183
 Warning (10540): VHDL Signal Declaration warning at score.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 24
 Warning (10540): VHDL Signal Declaration warning at score.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 25
 Warning (10540): VHDL Signal Declaration warning at score.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 26
-Info (12128): Elaborating entity "score_digit_2" for hierarchy "score_digit_2:score_display2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 175
+Info (12128): Elaborating entity "score_digit_2" for hierarchy "score_digit_2:score_display2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 192
 Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 24
 Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 25
 Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 26
-Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 183
+Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 200
 Warning (10540): VHDL Signal Declaration warning at text.vhd(17): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 17
 Warning (10540): VHDL Signal Declaration warning at text.vhd(18): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 18
 Warning (10540): VHDL Signal Declaration warning at text.vhd(19): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 19
@@ -1501,21 +1530,22 @@ Warning (10540): VHDL Signal Declaration warning at text.vhd(47): used explicit 
 Warning (10540): VHDL Signal Declaration warning at text.vhd(48): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 48
 Warning (10540): VHDL Signal Declaration warning at text.vhd(49): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 49
 Warning (10540): VHDL Signal Declaration warning at text.vhd(50): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 50
-Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 190
+Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 207
 Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
-Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:Pipes" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 197
+Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:Pipes" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 214
 Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:Pipes|Pipes:P0" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 55
 Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:Pipes|random_number_generator:RNG" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 88
-Info (12128): Elaborating entity "bird_controller" for hierarchy "bird_controller:Bird" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 207
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 218
+Info (12128): Elaborating entity "bird_controller" for hierarchy "bird_controller:Bird" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 224
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 235
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 265
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 270
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 280
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 285
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -1565,9 +1595,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
     Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
@@ -1804,16 +1835,19 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 892 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
+    Warning (15610): No output dependent on input pin "pb2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
+Info (21057): Implemented 909 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 724 logic cells
+    Info (21061): Implemented 741 logic cells
     Info (21064): Implemented 72 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 318 warnings
-    Info: Peak virtual memory: 4945 megabytes
-    Info: Processing ended: Tue May 27 16:32:44 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 322 warnings
+    Info: Peak virtual memory: 4982 megabytes
+    Info: Processing ended: Wed May 28 14:34:32 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
 
 

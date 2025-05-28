@@ -88,9 +88,17 @@ end component life;
 
 component collision_controller IS
 	PORT
-		(clk,	c1: IN std_logic;
-		decrease_life:out std_logic);		
+		(clk,	collision: IN std_logic;
+		collision_detected:out std_logic);		
 END component collision_controller;
+
+component invincibity_timer is
+    port (
+        clk, vert_sync    : in  std_logic;  -- 25 Hz clock input
+        start  : in  std_logic;  -- start counting pulse (one clock cycle)
+        invincibity   : out std_logic   -- goes high after 3 seconds
+    );
+end component invincibity_timer;
 
 signal pixel_row 		: std_logic_vector(9 downto 0);
 signal pixel_column 	: std_logic_vector(9 downto 0);
@@ -135,30 +143,39 @@ signal score_on2: std_logic;
 
 signal increase2: std_logic;
 
+signal invincible: std_logic;
+
 -- Life signals
-signal decrease_life: std_logic;
+signal collision_detected: std_logic;
 signal life_on: std_logic;
 signal zero_life: std_logic;
 signal prev_collision: std_logic;
 
 begin
 
+	timer1: invincibity_timer port map(
+		clk => clk_div,
+		vert_sync => v_sync_i,
+		start => collision_detected,
+		invincibity => invincible
+	);
+
 	collision_detector: collision_controller port map(
 		clk				=> clk_div,
-		c1 				=> collision,
-		decrease_life 	=> decrease_life
+		collision 		=> collision,
+		collision_detected 	=> collision_detected
 	);
 	
 	life_display: life port map(
 		clk				=> clk_div,
-		decrease_life	=> decrease_life,
+		decrease_life	=> collision_detected,
 		pixel_row 		=> pixel_row,
 		pixel_column	=> pixel_column,
 		life_on			=>	life_on,
 		zero_life		=> zero_life
 	);
 	
-	collision <= bird_on and pipe_on;
+	collision <= (bird_on and pipe_on) and (not invincible);
 	
 
 		
@@ -236,24 +253,21 @@ begin
 	
 	
 	-- Colours for pixel data on video signal
-	-- Changing the background and ball colour by pushbuttons
+	-- Changing the background and ball colour by pushbuttons 
 	Red 	<= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (pb1 = '1') and (pb2 = '1') else
-				'1' when (collision = '1') else
+				'1' when (bird_on = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'1' when (life_on = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (pb1 = '0') else
+				'1' when (bird_on = '1') and (invincible = '1') else
 				'1' when (pipe_on = '1') else
-				'1' when (collision = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (pb2 = '0') else
-				'1' when (collision = '1') else
+				'1' when (bird_on = '1') and (invincible = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'0';
