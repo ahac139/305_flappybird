@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
-USE  IEEE.STD_LOGIC_SIGNED.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
 USE IEEE.NUMERIC_STD.ALL;
 
 entity pause_text is
@@ -31,6 +31,7 @@ SIGNAL in_y_range 					: std_logic := '0';
 --Char address signals
 SIGNAL active_char 		: std_logic_vector(5 downto 0) := "000000";
 SIGNAL char_space 		: std_logic_vector(5 downto 0) := "000000";
+
 SIGNAL char_H				: std_logic_vector(5 downto 0) := "001000";
 SIGNAL char_I				: std_logic_vector(5 downto 0) := "001001";
 SIGNAL char_J 				: std_logic_vector(5 downto 0) := "001010";
@@ -48,10 +49,10 @@ END component;
 BEGIN
 	
 	--Signal assignments
-	s_y	 	<= std_logic_vector(to_signed(y_pos, 10));
-	s_size 	<= std_logic_vector(to_signed(size, 10));
+	s_y	 	<= std_logic_vector(to_unsigned(y_pos, 10));
+	s_size 	<= std_logic_vector(to_unsigned(size, 10));
 	
-	s_x_1		<= std_logic_vector(to_signed(x_pos, 10));
+	s_x_1		<= std_logic_vector(to_unsigned(x_pos, 10));
 	s_x_2		<= s_x_1 + s_size;
 	s_x_3		<= s_x_2 + s_size;
 	s_x_4		<= s_x_3 + s_size;

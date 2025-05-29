@@ -2336,7 +2336,7 @@ q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
 |Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over
-Clk => char_rom:PAUSE_CHAR_ROM.clock
+Clk => char_rom:G_OVER_CHAR_ROM.clock
 pixel_row[0] => LessThan2.IN10
 pixel_row[0] => LessThan3.IN10
 pixel_row[0] => LessThan4.IN10
@@ -2349,21 +2349,21 @@ pixel_row[1] => LessThan4.IN9
 pixel_row[1] => LessThan5.IN9
 pixel_row[1] => LessThan6.IN19
 pixel_row[1] => LessThan7.IN9
-pixel_row[1] => char_rom:PAUSE_CHAR_ROM.font_row[0]
+pixel_row[1] => char_rom:G_OVER_CHAR_ROM.font_row[0]
 pixel_row[2] => LessThan2.IN8
 pixel_row[2] => LessThan3.IN8
 pixel_row[2] => LessThan4.IN8
 pixel_row[2] => LessThan5.IN8
 pixel_row[2] => LessThan6.IN18
 pixel_row[2] => LessThan7.IN8
-pixel_row[2] => char_rom:PAUSE_CHAR_ROM.font_row[1]
+pixel_row[2] => char_rom:G_OVER_CHAR_ROM.font_row[1]
 pixel_row[3] => LessThan2.IN7
 pixel_row[3] => LessThan3.IN7
 pixel_row[3] => LessThan4.IN7
 pixel_row[3] => LessThan5.IN7
 pixel_row[3] => LessThan6.IN17
 pixel_row[3] => LessThan7.IN7
-pixel_row[3] => char_rom:PAUSE_CHAR_ROM.font_row[2]
+pixel_row[3] => char_rom:G_OVER_CHAR_ROM.font_row[2]
 pixel_row[4] => LessThan2.IN6
 pixel_row[4] => LessThan3.IN6
 pixel_row[4] => LessThan4.IN6
@@ -2404,13 +2404,13 @@ pixel_column[0] => LessThan0.IN20
 pixel_column[0] => LessThan1.IN20
 pixel_column[1] => LessThan0.IN19
 pixel_column[1] => LessThan1.IN19
-pixel_column[1] => char_rom:PAUSE_CHAR_ROM.font_col[0]
+pixel_column[1] => char_rom:G_OVER_CHAR_ROM.font_col[0]
 pixel_column[2] => LessThan0.IN18
 pixel_column[2] => LessThan1.IN18
-pixel_column[2] => char_rom:PAUSE_CHAR_ROM.font_col[1]
+pixel_column[2] => char_rom:G_OVER_CHAR_ROM.font_col[1]
 pixel_column[3] => LessThan0.IN17
 pixel_column[3] => LessThan1.IN17
-pixel_column[3] => char_rom:PAUSE_CHAR_ROM.font_col[2]
+pixel_column[3] => char_rom:G_OVER_CHAR_ROM.font_col[2]
 pixel_column[4] => LessThan0.IN16
 pixel_column[4] => LessThan1.IN16
 pixel_column[5] => LessThan0.IN15
@@ -2423,10 +2423,10 @@ pixel_column[8] => LessThan0.IN12
 pixel_column[8] => LessThan1.IN12
 pixel_column[9] => LessThan0.IN11
 pixel_column[9] => LessThan1.IN11
-char_on <= char_rom:PAUSE_CHAR_ROM.rom_mux_output
+char_on <= char_rom:G_OVER_CHAR_ROM.rom_mux_output
 
 
-|Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:PAUSE_CHAR_ROM
+|Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -2443,7 +2443,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:PAUSE_CHAR_ROM|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -2493,7 +2493,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:PAUSE_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR

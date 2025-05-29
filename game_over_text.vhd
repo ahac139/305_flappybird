@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
-USE  IEEE.STD_LOGIC_SIGNED.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
 USE IEEE.NUMERIC_STD.ALL;
 
 entity game_over_text is
@@ -48,10 +48,10 @@ END component;
 BEGIN
 	
 	--Signal assignments
-	s_y	 	<= std_logic_vector(to_signed(y_pos, 10));
-	s_size 	<= std_logic_vector(to_signed(size, 10));
+	s_y	 	<= std_logic_vector(to_unsigned(y_pos, 10));
+	s_size 	<= std_logic_vector(to_unsigned(size, 10));
 	
-	s_x_1		<= std_logic_vector(to_signed(x_pos, 10));
+	s_x_1		<= std_logic_vector(to_unsigned(x_pos, 10));
 	s_x_2		<= s_x_1 + s_size;
 	s_x_3		<= s_x_2 + s_size;
 	s_x_4		<= s_x_3 + s_size;

@@ -64,8 +64,6 @@ game_over : game_over_text port map(
 		char_on 		=> game_over_text_on);
 		
 		
-
---
 process(state, menu_text_on)
 begin
 	case state is
