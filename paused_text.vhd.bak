@@ -1,0 +1,92 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+USE IEEE.NUMERIC_STD.ALL;
+
+entity pause_text is
+	port(Clk						: in std_logic;
+	
+	--Inputs from Sytem
+	pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
+	
+	--Outputs to System
+	char_on						: out std_logic
+	);
+end entity pause_text;
+
+
+architecture behavior of pause_text is
+
+--CONSTANTS
+SIGNAL x_pos 	: integer := 3; --out of 80
+SIGNAL y_pos	: integer := 3; --out of 60
+SIGNAL size		: integer := 2; --each character is SIZE*8 by SIZE*8 (font_row/font_col assignment matches)
+
+--SIGNALS
+SIGNAL s_x, s_y, s_size	: std_logic_vector(9 DOWNTO 0);  
+SIGNAL char_H					: std_logic_vector(5 downto 0) := "001000";
+
+component char_rom IS
+	PORT
+	(
+		character_address		:	IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		clock						: 	IN STD_LOGIC ;
+		rom_mux_output			:	OUT STD_LOGIC
+	);
+END component;
+
+BEGIN
+	
+	--Signal assignments
+	s_x 	 <= std_logic_vector(to_signed(x_pos*8, 10));
+	s_y	 <= std_logic_vector(to_signed(y_pos*8, 10));
+	s_size <= std_logic_vector(to_signed(s_size*8, 10));
+	
+--Component for character 1
+H : char_rom port map(
+		character_address => char_H,
+		font_row => pixel_row(3 downto 1),
+		font_col => pixel_column(3 downto 1),
+		clock => clk,
+		rom_mux_output => char_H_on);
+		
+		
+--in_y_range <= '1' when in y_start * 8 < pixel < y_start * 8 + size else '0'
+
+--active char addr <= h_addr when in x start < pixel < x_range + 1 and y_range
+						--<= e_addr when in x_start + 1 < pixel < x_range + 2 and y_range
+						--else <= space addr
+
+
+--char_on when rom mux		
+		
+char_on <= 	'1'	when ( ('0' & x_pos_1 <= '0' & pixel_column) and ('0' & pixel_column <= '0' & x_pos_1 + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & y_pos_1 <= pixel_row ) and ('0' & pixel_row <= y_pos_1 + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (char_H_on = '1')) else
+						
+				'1'	when ( ('0' & x_pos_2 <= '0' & pixel_column) and ('0' & pixel_column <= '0' & x_pos_2 + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & y_pos_2 <= pixel_row ) and ('0' & pixel_row <= y_pos_2 + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (char_E_on = '1')) else
+						
+				'1'	when ( ('0' & x_pos_3 <= '0' & pixel_column) and ('0' & pixel_column <= '0' & x_pos_3 + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & y_pos_3 <= pixel_row ) and ('0' & pixel_row <= y_pos_3 + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (char_L_on = '1')) else
+						
+				'1'	when ( ('0' & x_pos_4 <= '0' & pixel_column) and ('0' & pixel_column <= '0' & x_pos_4 + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & y_pos_4 <= pixel_row ) and ('0' & pixel_row <= y_pos_4 + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (char_L_on_2 = '1')) else
+						
+				'1'	when ( ('0' & x_pos_5 <= '0' & pixel_column) and ('0' & pixel_column <= '0' & x_pos_5 + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & y_pos_5 <= pixel_row ) and ('0' & pixel_row <= y_pos_5 + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (char_O_on = '1')) else
+						
+				'1'	when ( ('0' & x_pos_6 <= '0' & pixel_column) and ('0' & pixel_column <= '0' & x_pos_6 + size_4) 	-- x_pos - size <= pixel_column <= x_pos + size
+						and ('0' & y_pos_6 <= pixel_row ) and ('0' & pixel_row <= y_pos_6 + size_4)	-- y_pos - size <= pixel_row <= y_pos + size
+						and (char_EX_on = '1')) else
+				'0';
+
+
+END behavior;
+

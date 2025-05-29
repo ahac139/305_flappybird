@@ -1,5 +1,5 @@
 Fitter report for Flappy_Bird
-Thu May 29 22:09:18 2025
+Fri May 30 00:04:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu May 29 22:09:18 2025       ;
+; Fitter Status                   ; Successful - Fri May 30 00:04:19 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Flappy_Bird                                 ;
 ; Top-level Entity Name           ; Flappy_Bird                                 ;
@@ -155,7 +155,7 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -163,8 +163,8 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   1.6%      ;
 ;     Processor 3            ;   1.4%      ;
 ;     Processor 4            ;   1.4%      ;
-;     Processor 5            ;   1.0%      ;
-;     Processor 6            ;   1.0%      ;
+;     Processor 5            ;   1.1%      ;
+;     Processor 6            ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -1972,8 +1972,8 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
 Info (188005): Design requires adding a large amount of routing delay for some signals to meet hold time requirements, and there is an excessive demand for the available routing resources. The Fitter is reducing the routing delays of some signals to help the routing algorithm converge, but doing so may cause hold time failures. For more information, refer to the "Estimated Delay Added for Hold Timing" section in the Fitter report.
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:26
-Info (11888): Total time spent on timing analysis during the Fitter is 2.44 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:25
+Info (11888): Total time spent on timing analysis during the Fitter is 2.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1982,10 +1982,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/GGPC/Documents/GitHub/305_flappybird/Flappy_Bird.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 150 warnings
-    Info: Peak virtual memory: 6570 megabytes
-    Info: Processing ended: Thu May 29 22:09:19 2025
-    Info: Elapsed time: 00:01:09
-    Info: Total CPU time (on all processors): 00:02:53
+    Info: Peak virtual memory: 6600 megabytes
+    Info: Processing ended: Fri May 30 00:04:20 2025
+    Info: Elapsed time: 00:01:06
+    Info: Total CPU time (on all processors): 00:02:48
 
 
 +----------------------------+
