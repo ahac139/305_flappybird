@@ -259,6 +259,8 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE Pipes.vhd
+set_global_assignment -name VHDL_FILE Pipe_Controller.vhd
 set_global_assignment -name VHDL_FILE collision_controller.vhd
 set_global_assignment -name VHDL_FILE life.vhd
 set_global_assignment -name VHDL_FILE invincibility_timer.vhd

@@ -6,10 +6,10 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bird_controller IS
 	PORT
-		( clk, vert_sync, mouse_click	: IN std_logic;
-		  pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
-		  state								: IN std_logic_vector(2 DOWNTO 0);
-		  bird_on 							: OUT std_logic);		
+		( clk, vert_sync, mouse_click, reset: IN std_logic;
+		  pixel_row, pixel_column				: IN std_logic_vector(9 DOWNTO 0);
+		  state										: IN std_logic_vector(1 DOWNTO 0);
+		  bird_on 									: OUT std_logic);		
 END bird_controller;
 
 architecture behavior of bird_controller is
@@ -27,9 +27,10 @@ bird_x_pos <= CONV_STD_LOGIC_VECTOR(100,10);
 
 
 bird_on <= '1' when ( ('0' & bird_x_pos <= pixel_column + size) and ('0' & pixel_column <= bird_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & bird_y_pos <= pixel_row + size) and ('0' & pixel_row <= bird_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+					and ('0' & bird_y_pos <= pixel_row + size) and ('0' & pixel_row <= bird_y_pos + size) )  
+					and (state = "01")
+					else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
-
 
 Bird_Physics : process (vert_sync)  	
 begin
@@ -50,13 +51,12 @@ begin
 					bird_y_motion <= - CONV_STD_LOGIC_VECTOR(12,10);
 				end if;
 				
+				-- Compute next bird Y position
+				bird_y_pos <= bird_y_pos + bird_y_motion;
+				
 			when others =>
-				bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-			
-		
-		-- Compute next bird Y position
-		bird_y_pos <= bird_y_pos + bird_y_motion;
-		
+				bird_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+		end case;
 	end if;
 end process Bird_Physics;
 

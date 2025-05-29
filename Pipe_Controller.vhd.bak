@@ -43,6 +43,8 @@ architecture behaviour of Pipe_Controller is
 	signal increase2 : std_logic := '0';
 	signal increase3 : std_logic := '0';
 	
+	signal pipe_on : std_logic;
+	
 	begin
 		
 		

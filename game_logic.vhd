@@ -92,8 +92,8 @@ END component text;
 component bird_controller IS
 	PORT
 		( clk, vert_sync, mouse_click	: IN std_logic;
+		  state								: IN std_logic_vector(1 DOWNTO 0);
 		  pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
-		  -- state/mode after restructure
 		  bird_on 							: OUT std_logic);		
 END component bird_controller;
 
@@ -136,6 +136,7 @@ begin
 	Bird : Bird_controller port map(
 		Clk => clk,
 		vert_sync => v_sync,
+		state => s_state,
 		pixel_column => p_col,
 		pixel_row => p_row,
 		mouse_click => mouse_left,
