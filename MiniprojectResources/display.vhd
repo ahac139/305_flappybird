@@ -10,7 +10,6 @@ entity display is
 	);
 end entity display;
 
-
 architecture behaviour of display is 
 
 component VGA_SYNC IS
@@ -24,9 +23,9 @@ component clock_divider is
 	Clk_out : out std_logic);
 end component clock_divider;
 
-
 component Pipe_Controller is
 	port(Clk, vert_sync: in std_logic;
+		state, mode: in std_logic_vector(1 downto 0); 
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		red, green, blue: out std_logic
 	);
@@ -44,6 +43,9 @@ signal green : std_logic;
 
 signal blue : std_logic;
 
+signal state: std_logic_vector(1 downto 0) := "00";
+
+signal mode: std_logic_vector(1 downto 0) := "01";
 
 begin
 
@@ -51,6 +53,8 @@ begin
 	pipe : Pipe_Controller port map(
 		clk => clk_div,
 		vert_sync => v_sync_i,
+		state => state,
+		mode => mode,
 		pixel_row => pixel_row,
 		pixel_col => pixel_column,
 		red => red,
@@ -80,6 +84,30 @@ begin
 	);
 	
 	vert_sync <= v_sync_i;
+	
 
+	process(v_sync_i)
+	  variable count : integer range 0 to 599 := 0;
+	begin
+	  if rising_edge(v_sync_i) then
+			if count = 599 then
+				 count := 0;
+
+				 -- Cycle state: 01 -> 10 -> 11 -> 01 ...
+				 case mode is
+					  when "01" =>
+							mode <= "10";
+					  when "10" =>
+							mode <= "11";
+					  when others =>
+							mode <= "01";
+				 end case;
+			else
+				 count := count + 1;
+			end if;
+	  end if;
+	end process;
+
+		
 
 end behaviour;

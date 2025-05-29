@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Thu May 22 17:11:51 2025
+Thu May 29 15:45:09 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -17,9 +17,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "Pipe_Controller:pipe"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +46,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 22 17:11:51 2025           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 29 15:45:09 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 183                                             ;
+; Total registers                 ; 198                                             ;
 ; Total pins                      ; 53                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -188,25 +189,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 251                        ;
+; Estimate of Logic utilization (ALMs needed) ; 267                        ;
 ;                                             ;                            ;
-; Combinational ALUT usage for logic          ; 395                        ;
+; Combinational ALUT usage for logic          ; 427                        ;
 ;     -- 7 input functions                    ; 4                          ;
-;     -- 6 input functions                    ; 95                         ;
-;     -- 5 input functions                    ; 47                         ;
-;     -- 4 input functions                    ; 47                         ;
+;     -- 6 input functions                    ; 96                         ;
+;     -- 5 input functions                    ; 68                         ;
+;     -- 4 input functions                    ; 57                         ;
 ;     -- <=3 input functions                  ; 202                        ;
 ;                                             ;                            ;
-; Dedicated logic registers                   ; 183                        ;
+; Dedicated logic registers                   ; 198                        ;
 ;                                             ;                            ;
 ; I/O pins                                    ; 53                         ;
 ;                                             ;                            ;
 ; Total DSP Blocks                            ; 0                          ;
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; VGA_SYNC:VGA|vert_sync_out ;
-; Maximum fan-out                             ; 135                        ;
-; Total fan-out                               ; 2050                       ;
-; Average fan-out                             ; 3.00                       ;
+; Maximum fan-out                             ; 147                        ;
+; Total fan-out                               ; 2272                       ;
+; Average fan-out                             ; 3.11                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -215,11 +216,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name             ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------------------+--------------+
-; |display                            ; 395 (0)             ; 183 (0)                   ; 0                 ; 0          ; 53   ; 0            ; |display                                                  ; display                 ; work         ;
-;    |Pipe_Controller:pipe|           ; 355 (44)            ; 134 (35)                  ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe                             ; Pipe_Controller         ; work         ;
-;       |Pipes:P0|                    ; 97 (97)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P0                    ; Pipes                   ; work         ;
-;       |Pipes:P1|                    ; 98 (98)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P1                    ; Pipes                   ; work         ;
-;       |Pipes:P2|                    ; 100 (100)           ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P2                    ; Pipes                   ; work         ;
+; |display                            ; 427 (15)            ; 198 (12)                  ; 0                 ; 0          ; 53   ; 0            ; |display                                                  ; display                 ; work         ;
+;    |Pipe_Controller:pipe|           ; 372 (48)            ; 137 (38)                  ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe                             ; Pipe_Controller         ; work         ;
+;       |Pipes:P0|                    ; 101 (101)           ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P0                    ; Pipes                   ; work         ;
+;       |Pipes:P1|                    ; 102 (102)           ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P1                    ; Pipes                   ; work         ;
+;       |Pipes:P2|                    ; 105 (105)           ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|Pipes:P2                    ; Pipes                   ; work         ;
 ;       |random_number_generator:RNG| ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:pipe|random_number_generator:RNG ; random_number_generator ; work         ;
 ;    |VGA_SYNC:VGA|                   ; 39 (39)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                     ; VGA_SYNC                ; work         ;
 ;    |clock_divider:CDIV|             ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV                               ; clock_divider           ; work         ;
@@ -227,17 +228,19 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; Pipe_Controller:pipe|Pipes:P2|gap_y[9] ; Stuck at GND due to stuck port data_in ;
-; Pipe_Controller:pipe|Pipes:P1|gap_y[9] ; Stuck at GND due to stuck port data_in ;
-; Pipe_Controller:pipe|Pipes:P0|gap_y[9] ; Stuck at GND due to stuck port data_in ;
-; VGA_SYNC:VGA|pixel_row[9]              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4  ;                                        ;
-+----------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++------------------------------------------+---------------------------------------------------+
+; Register name                            ; Reason for Removal                                ;
++------------------------------------------+---------------------------------------------------+
+; Pipe_Controller:pipe|pipe_x_motion[4..9] ; Merged with Pipe_Controller:pipe|pipe_x_motion[3] ;
+; Pipe_Controller:pipe|pipe_x_motion[3]    ; Stuck at GND due to stuck port data_in            ;
+; Pipe_Controller:pipe|Pipes:P2|gap_y[9]   ; Stuck at GND due to stuck port data_in            ;
+; Pipe_Controller:pipe|Pipes:P1|gap_y[9]   ; Stuck at GND due to stuck port data_in            ;
+; Pipe_Controller:pipe|Pipes:P0|gap_y[9]   ; Stuck at GND due to stuck port data_in            ;
+; VGA_SYNC:VGA|pixel_row[9]                ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 11   ;                                                   ;
++------------------------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -245,12 +248,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 183   ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 198   ;
+; Number of registers using Synchronous Clear  ; 30    ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 116   ;
+; Number of registers using Clock Enable       ; 119   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -260,28 +263,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+---------+
 ; Inverted Register                                        ; Fan out ;
 +----------------------------------------------------------+---------+
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[9]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[3]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[2]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[1]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[0]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[5]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[4]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[6]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[9]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[3]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[2]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[1]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[0]              ; 6       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[5]              ; 7       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[4]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[6]              ; 5       ;
 ; Pipe_Controller:pipe|Pipes:P0|gap_y[1]                   ; 2       ;
 ; Pipe_Controller:pipe|Pipes:P0|gap_y[4]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P0|gap_y[7]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P0|gap_y[6]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P0|gap_y[5]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P0|gap_y[3]                   ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[9]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[3]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[2]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[1]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[0]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[5]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[4]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[9]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[3]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[2]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[1]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[0]              ; 6       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[5]              ; 7       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[4]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6]              ; 5       ;
 ; Pipe_Controller:pipe|Pipes:P1|gap_y[1]                   ; 2       ;
 ; Pipe_Controller:pipe|Pipes:P1|gap_y[4]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P1|gap_y[7]                   ; 3       ;
@@ -294,18 +297,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Pipe_Controller:pipe|Pipes:P2|gap_y[6]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P2|gap_y[5]                   ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P2|gap_y[3]                   ; 3       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[6]              ; 5       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[5]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[4]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[1]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0]              ; 3       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[3]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[2]              ; 4       ;
-; Pipe_Controller:pipe|Pipes:P0|size_x[4]                  ; 10      ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[6]              ; 6       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[5]              ; 7       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[4]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[1]              ; 4       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0]              ; 6       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[3]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[2]              ; 5       ;
+; Pipe_Controller:pipe|Pipes:P0|size_x[4]                  ; 14      ;
 ; Pipe_Controller:pipe|Pipes:P0|size_x[3]                  ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P0|size_x[2]                  ; 3       ;
-; Pipe_Controller:pipe|Pipes:P0|size_x[5]                  ; 10      ;
+; Pipe_Controller:pipe|Pipes:P0|size_x[5]                  ; 14      ;
 ; Pipe_Controller:pipe|random_number_generator:RNG|lfsr[8] ; 10      ;
 ; Pipe_Controller:pipe|random_number_generator:RNG|lfsr[7] ; 9       ;
 ; Pipe_Controller:pipe|random_number_generator:RNG|lfsr[6] ; 9       ;
@@ -315,37 +318,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Pipe_Controller:pipe|random_number_generator:RNG|lfsr[3] ; 4       ;
 ; Pipe_Controller:pipe|random_number_generator:RNG|lfsr[1] ; 5       ;
 ; Pipe_Controller:pipe|random_number_generator:RNG|lfsr[0] ; 5       ;
-; Pipe_Controller:pipe|Pipes:P1|size_x[4]                  ; 10      ;
+; Pipe_Controller:pipe|Pipes:P1|size_x[4]                  ; 14      ;
 ; Pipe_Controller:pipe|Pipes:P1|size_x[3]                  ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P1|size_x[2]                  ; 3       ;
-; Pipe_Controller:pipe|Pipes:P1|size_x[5]                  ; 10      ;
-; Pipe_Controller:pipe|Pipes:P2|size_x[5]                  ; 9       ;
-; Pipe_Controller:pipe|Pipes:P2|size_x[4]                  ; 9       ;
+; Pipe_Controller:pipe|Pipes:P1|size_x[5]                  ; 14      ;
+; Pipe_Controller:pipe|Pipes:P2|size_x[5]                  ; 13      ;
+; Pipe_Controller:pipe|Pipes:P2|size_x[4]                  ; 13      ;
 ; Pipe_Controller:pipe|Pipes:P2|size_x[3]                  ; 3       ;
 ; Pipe_Controller:pipe|Pipes:P2|size_x[2]                  ; 3       ;
-; Total number of inverted registers = 63                  ;         ;
+; mode[0]                                                  ; 5       ;
+; Total number of inverted registers = 64                  ;         ;
 +----------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[7] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|gap_y[2]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[7] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|gap_y[8]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[8] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|gap_y[8]      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[9]                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[2] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|gap_y[3]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[3] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|gap_y[5]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|gap_y[3]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|gap_y[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|gap_y[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|gap_y[8] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |display|Pipe_Controller:pipe|pipe_x_motion[0]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[5]                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P0|gap_y[5] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P1|gap_y[6] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:pipe|Pipes:P2|gap_y[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "Pipe_Controller:pipe" ;
++-------+-------+----------+-----------------------+
+; Port  ; Type  ; Severity ; Details               ;
++-------+-------+----------+-----------------------+
+; state ; Input ; Info     ; Stuck at GND          ;
++-------+-------+----------+-----------------------+
 
 
 +-----------------------------------------------------+
@@ -353,31 +361,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 183                         ;
-;     ENA               ; 106                         ;
+; arriav_ff             ; 198                         ;
+;     ENA               ; 109                         ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
+;     SCLR              ; 20                          ;
 ;     SLD               ; 33                          ;
-;     plain             ; 24                          ;
-; arriav_lcell_comb     ; 396                         ;
-;     arith             ; 173                         ;
+;     plain             ; 26                          ;
+; arriav_lcell_comb     ; 428                         ;
+;     arith             ; 123                         ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 140                         ;
+;         1 data inputs ; 90                          ;
 ;         2 data inputs ; 30                          ;
 ;     extend            ; 4                           ;
 ;         7 data inputs ; 4                           ;
-;     normal            ; 219                         ;
+;     normal            ; 241                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 8                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 5                           ;
-;         4 data inputs ; 47                          ;
-;         5 data inputs ; 47                          ;
-;         6 data inputs ; 95                          ;
+;         4 data inputs ; 57                          ;
+;         5 data inputs ; 68                          ;
+;         6 data inputs ; 96                          ;
+;     shared            ; 60                          ;
+;         1 data inputs ; 42                          ;
+;         2 data inputs ; 18                          ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.90                        ;
-; Average LUT depth     ; 3.66                        ;
+; Average LUT depth     ; 3.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -396,15 +407,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu May 22 17:11:34 2025
+    Info: Processing started: Thu May 29 15:45:02 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pipes.vhd
-    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 14
+    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 15
     Info (12023): Found entity 1: Pipes File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 14
+    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
     Info (12023): Found entity 1: display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
@@ -416,18 +427,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock_d
     Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
     Info (12023): Found entity 1: clock_divider File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipe_controller.vhd
-    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 13
+    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 14
     Info (12023): Found entity 1: Pipe_Controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file random_number_generator.vhd
     Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 12
     Info (12023): Found entity 1: random_number_generator File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 5
 Info (12127): Elaborating entity "Display" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at display.vhd(46): used explicit default value for signal "state" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 46
 Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(9) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 9
-Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:pipe" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 51
-Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:pipe|Pipes:P0" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 51
-Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:pipe|random_number_generator:RNG" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 78
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 61
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 68
+Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:pipe" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 53
+Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:pipe|Pipes:P0" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 49
+Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:pipe|random_number_generator:RNG" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 79
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 65
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 72
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
     Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
@@ -710,14 +722,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
     Warning (15610): No output dependent on input pin "pb2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 517 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 543 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 464 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 281 warnings
-    Info: Peak virtual memory: 4931 megabytes
-    Info: Processing ended: Thu May 22 17:11:51 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:13
+    Info (21061): Implemented 490 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 282 warnings
+    Info: Peak virtual memory: 4934 megabytes
+    Info: Processing ended: Thu May 29 15:45:09 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:12
 
 
