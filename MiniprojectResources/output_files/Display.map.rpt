@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display
-Wed May 28 14:34:32 2025
+Thu May 29 13:55:25 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -48,10 +48,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  40. Port Connectivity Checks: "text:char_display|char_rom:E"
  41. Port Connectivity Checks: "text:char_display|char_rom:H"
  42. Port Connectivity Checks: "life:life_display"
- 43. Port Connectivity Checks: "collision_controller:collision_detector"
- 44. Post-Synthesis Netlist Statistics for Top Partition
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
+ 43. Post-Synthesis Netlist Statistics for Top Partition
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -77,16 +76,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 28 14:34:32 2025           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 29 13:55:25 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Display                                         ;
 ; Top-level Entity Name           ; display                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 302                                             ;
+; Total registers                 ; 284                                             ;
 ; Total pins                      ; 96                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 12,672                                          ;
+; Total block memory bits         ; 8,640                                           ;
 ; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -202,41 +201,41 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; random_number_generator.vhd      ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd ;         ;
-; Pipe_Controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd         ;         ;
-; Pipes.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd                   ;         ;
-; bird_controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bird_controller.vhd         ;         ;
-; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd                 ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd                ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd                   ;         ;
-; seven_seg_display.vhd            ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd       ;         ;
-; binary_to_bcd.vhd                ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd           ;         ;
-; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd             ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd                ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd           ;         ;
-; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd                    ;         ;
-; score.vhd                        ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd                   ;         ;
-; score_digit_2.vhd                ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd           ;         ;
-; life.vhd                         ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd                    ;         ;
-; collision_controller.vhd         ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/collision_controller.vhd    ;         ;
-; invincibility_timer.vhd          ; yes             ; User VHDL File                         ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/invincibility_timer.vhd     ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                           ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                    ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                              ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                           ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                           ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                            ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                               ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                               ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                             ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf      ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/tcgrom.mif                  ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; random_number_generator.vhd      ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/random_number_generator.vhd ;         ;
+; Pipe_Controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipe_Controller.vhd         ;         ;
+; Pipes.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipes.vhd                   ;         ;
+; bird_controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/bird_controller.vhd         ;         ;
+; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd                 ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/char_rom.vhd                ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd                   ;         ;
+; seven_seg_display.vhd            ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/seven_seg_display.vhd       ;         ;
+; binary_to_bcd.vhd                ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/binary_to_bcd.vhd           ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd             ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/vga_sync.vhd                ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/clock_divider.vhd           ;         ;
+; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd                    ;         ;
+; score.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score.vhd                   ;         ;
+; score_digit_2.vhd                ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score_digit_2.vhd           ;         ;
+; life.vhd                         ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd                    ;         ;
+; collision_controller.vhd         ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/collision_controller.vhd    ;         ;
+; invincibility_timer.vhd          ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/invincibility_timer.vhd     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                               ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf      ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/tcgrom.mif                  ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------+
@@ -244,27 +243,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 417                         ;
+; Estimate of Logic utilization (ALMs needed) ; 384                         ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 641                         ;
-;     -- 7 input functions                    ; 3                           ;
-;     -- 6 input functions                    ; 179                         ;
-;     -- 5 input functions                    ; 81                          ;
+; Combinational ALUT usage for logic          ; 594                         ;
+;     -- 7 input functions                    ; 4                           ;
+;     -- 6 input functions                    ; 159                         ;
+;     -- 5 input functions                    ; 75                          ;
 ;     -- 4 input functions                    ; 83                          ;
-;     -- <=3 input functions                  ; 295                         ;
+;     -- <=3 input functions                  ; 273                         ;
 ;                                             ;                             ;
-; Dedicated logic registers                   ; 302                         ;
+; Dedicated logic registers                   ; 284                         ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 96                          ;
 ; Total MLAB memory bits                      ; 0                           ;
-; Total block memory bits                     ; 12672                       ;
+; Total block memory bits                     ; 8640                        ;
 ;                                             ;                             ;
 ; Total DSP Blocks                            ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
-; Maximum fan-out                             ; 171                         ;
-; Total fan-out                               ; 3901                        ;
-; Average fan-out                             ; 3.23                        ;
+; Maximum fan-out                             ; 165                         ;
+; Total fan-out                               ; 3625                        ;
+; Average fan-out                             ; 3.17                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -273,21 +272,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name             ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |display                                     ; 641 (0)             ; 302 (0)                   ; 12672             ; 0          ; 96   ; 0            ; |display                                                                                                            ; display                 ; work         ;
+; |display                                     ; 594 (0)             ; 284 (0)                   ; 8640              ; 0          ; 96   ; 0            ; |display                                                                                                            ; display                 ; work         ;
 ;    |MOUSE:Mouse1|                            ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |display|MOUSE:Mouse1                                                                                               ; MOUSE                   ; work         ;
-;    |Pipe_Controller:Pipes|                   ; 362 (57)            ; 137 (35)                  ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes                                                                                      ; Pipe_Controller         ; work         ;
-;       |Pipes:P0|                             ; 100 (100)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P0                                                                             ; Pipes                   ; work         ;
-;       |Pipes:P1|                             ; 95 (95)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P1                                                                             ; Pipes                   ; work         ;
+;    |Pipe_Controller:Pipes|                   ; 341 (45)            ; 137 (35)                  ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes                                                                                      ; Pipe_Controller         ; work         ;
+;       |Pipes:P0|                             ; 92 (92)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P0                                                                             ; Pipes                   ; work         ;
+;       |Pipes:P1|                             ; 94 (94)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P1                                                                             ; Pipes                   ; work         ;
 ;       |Pipes:P2|                             ; 94 (94)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|Pipes:P2                                                                             ; Pipes                   ; work         ;
 ;       |random_number_generator:RNG|          ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |display|Pipe_Controller:Pipes|random_number_generator:RNG                                                          ; random_number_generator ; work         ;
-;    |VGA_SYNC:VGA|                            ; 48 (48)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                                                                               ; VGA_SYNC                ; work         ;
-;    |bird_controller:Bird|                    ; 72 (72)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bird_controller:Bird                                                                                       ; bird_controller         ; work         ;
+;    |VGA_SYNC:VGA|                            ; 59 (59)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |display|VGA_SYNC:VGA                                                                                               ; VGA_SYNC                ; work         ;
+;    |bird_controller:Bird|                    ; 60 (60)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |display|bird_controller:Bird                                                                                       ; bird_controller         ; work         ;
 ;    |clock_divider:CDIV|                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |display|clock_divider:CDIV                                                                                         ; clock_divider           ; work         ;
-;    |invincibity_timer:timer1|                ; 14 (14)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |display|invincibity_timer:timer1                                                                                   ; invincibity_timer       ; work         ;
-;    |life:life_display|                       ; 13 (11)             ; 6 (6)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display                                                                                          ; life                    ; work         ;
-;       |char_rom:life|                        ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life                                                                            ; char_rom                ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life|altsyncram:altsyncram_component                                            ; altsyncram              ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated             ; altsyncram_d5g1         ; work         ;
+;    |life:life_display|                       ; 2 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|life:life_display                                                                                          ; life                    ; work         ;
+;       |char_rom:life|                        ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life                                                                            ; char_rom                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life|altsyncram:altsyncram_component                                            ; altsyncram              ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated             ; altsyncram_d5g1         ; work         ;
 ;    |score:score_display|                     ; 17 (15)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |display|score:score_display                                                                                        ; score                   ; work         ;
 ;       |char_rom:score|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|score:score_display|char_rom:score                                                                         ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |display|score:score_display|char_rom:score|altsyncram:altsyncram_component                                         ; altsyncram              ; work         ;
@@ -301,20 +299,20 @@ refer to the applicable agreement for further details.
 ;       |BCD_to_SevenSeg:ones|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones                                                         ; BCD_to_SevenSeg         ; work         ;
 ;       |BCD_to_SevenSeg:tens|                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens                                                         ; BCD_to_SevenSeg         ; work         ;
 ;       |binary_to_bcd:converter|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |display|seven_seg_display:seg_display|binary_to_bcd:converter                                                      ; binary_to_bcd           ; work         ;
-;    |text:char_display|                       ; 22 (10)             ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |display|text:char_display                                                                                          ; text                    ; work         ;
+;    |text:char_display|                       ; 22 (6)              ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |display|text:char_display                                                                                          ; text                    ; work         ;
 ;       |char_rom:EX|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX                                                                              ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX|altsyncram:altsyncram_component                                              ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1         ; work         ;
-;       |char_rom:E|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E                                                                               ; char_rom                ; work         ;
+;       |char_rom:E|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E                                                                               ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E|altsyncram:altsyncram_component                                               ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1         ; work         ;
-;       |char_rom:H|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H                                                                               ; char_rom                ; work         ;
+;       |char_rom:H|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H                                                                               ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H|altsyncram:altsyncram_component                                               ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1         ; work         ;
-;       |char_rom:L1|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1                                                                              ; char_rom                ; work         ;
+;       |char_rom:L1|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1                                                                              ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1|altsyncram:altsyncram_component                                              ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1         ; work         ;
-;       |char_rom:L2|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2                                                                              ; char_rom                ; work         ;
+;       |char_rom:L2|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2                                                                              ; char_rom                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2|altsyncram:altsyncram_component                                              ; altsyncram              ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1         ; work         ;
 ;       |char_rom:O|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |display|text:char_display|char_rom:O                                                                               ; char_rom                ; work         ;
@@ -356,34 +354,47 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+------------------------------------------------------------+----------------------------------------+
-; Register name                                              ; Reason for Removal                     ;
-+------------------------------------------------------------+----------------------------------------+
-; MOUSE:Mouse1|CHAROUT[4..7]                                 ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:Mouse1|CHAROUT[3]                                    ; Stuck at GND due to stuck port data_in ;
-; MOUSE:Mouse1|CHAROUT[2]                                    ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:Mouse1|CHAROUT[0,1]                                  ; Stuck at GND due to stuck port data_in ;
-; MOUSE:Mouse1|SHIFTOUT[10]                                  ; Stuck at VCC due to stuck port data_in ;
-; collision_controller:collision_detector|collision_detected ; Stuck at VCC due to stuck port data_in ;
-; collision_controller:collision_detector|collision_prev     ; Lost fanout                            ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[9]                    ; Stuck at GND due to stuck port data_in ;
-; Pipe_Controller:Pipes|Pipes:P1|gap_y[9]                    ; Stuck at GND due to stuck port data_in ;
-; Pipe_Controller:Pipes|Pipes:P0|gap_y[9]                    ; Stuck at GND due to stuck port data_in ;
-; VGA_SYNC:VGA|pixel_row[9]                                  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 15                     ;                                        ;
-+------------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++------------------------------------------------------------+---------------------------------------------+
+; Register name                                              ; Reason for Removal                          ;
++------------------------------------------------------------+---------------------------------------------+
+; MOUSE:Mouse1|CHAROUT[4..7]                                 ; Stuck at VCC due to stuck port data_in      ;
+; MOUSE:Mouse1|CHAROUT[3]                                    ; Stuck at GND due to stuck port data_in      ;
+; MOUSE:Mouse1|CHAROUT[2]                                    ; Stuck at VCC due to stuck port data_in      ;
+; MOUSE:Mouse1|CHAROUT[0,1]                                  ; Stuck at GND due to stuck port data_in      ;
+; MOUSE:Mouse1|SHIFTOUT[10]                                  ; Stuck at VCC due to stuck port data_in      ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[9]                    ; Stuck at GND due to stuck port data_in      ;
+; Pipe_Controller:Pipes|Pipes:P1|gap_y[9]                    ; Stuck at GND due to stuck port data_in      ;
+; Pipe_Controller:Pipes|Pipes:P0|gap_y[9]                    ; Stuck at GND due to stuck port data_in      ;
+; invincibity_timer:timer1|counting                          ; Stuck at GND due to stuck port data_in      ;
+; invincibity_timer:timer1|count[0..9]                       ; Lost fanout                                 ;
+; invincibity_timer:timer1|invincibity                       ; Stuck at GND due to stuck port data_in      ;
+; collision_controller:collision_detector|collision_prev     ; Lost fanout                                 ;
+; collision_controller:collision_detector|collision_detected ; Stuck at GND due to stuck port data_in      ;
+; life:life_display|life_address[0,1]                        ; Stuck at VCC due to stuck port clock_enable ;
+; life:life_display|life_address[2,3]                        ; Stuck at GND due to stuck port clock_enable ;
+; life:life_display|life_address[4,5]                        ; Stuck at VCC due to stuck port clock_enable ;
+; VGA_SYNC:VGA|pixel_row[9]                                  ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 33                     ;                                             ;
++------------------------------------------------------------+---------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                     ;
-+------------------------------------------------------------+---------------------------+--------------------------------------------------------+
-; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                 ;
-+------------------------------------------------------------+---------------------------+--------------------------------------------------------+
-; collision_controller:collision_detector|collision_detected ; Stuck at VCC              ; collision_controller:collision_detector|collision_prev ;
-;                                                            ; due to stuck port data_in ;                                                        ;
-+------------------------------------------------------------+---------------------------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++-----------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                                ;
++-----------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[9] ; Stuck at GND              ; collision_controller:collision_detector|collision_prev,               ;
+;                                         ; due to stuck port data_in ; collision_controller:collision_detector|collision_detected,           ;
+;                                         ;                           ; life:life_display|life_address[0], life:life_display|life_address[1], ;
+;                                         ;                           ; life:life_display|life_address[2], life:life_display|life_address[3], ;
+;                                         ;                           ; life:life_display|life_address[4], life:life_display|life_address[5]  ;
+; invincibity_timer:timer1|counting       ; Stuck at GND              ; invincibity_timer:timer1|count[0], invincibity_timer:timer1|count[1], ;
+;                                         ; due to stuck port data_in ; invincibity_timer:timer1|count[2], invincibity_timer:timer1|count[3], ;
+;                                         ;                           ; invincibity_timer:timer1|count[4], invincibity_timer:timer1|count[5], ;
+;                                         ;                           ; invincibity_timer:timer1|invincibity                                  ;
++-----------------------------------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -391,8 +402,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 302   ;
-; Number of registers using Synchronous Clear  ; 30    ;
+; Total registers                              ; 284   ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -406,56 +417,56 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------+---------+
 ; Inverted Register                                         ; Fan out ;
 +-----------------------------------------------------------+---------+
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[3]                   ; 6       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[1]                   ; 2       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[5]                   ; 6       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[4]                   ; 7       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[7]                   ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|gap_y[6]                   ; 5       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[9]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[4]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[3]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[6]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[5]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[2]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[1]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[0]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[9]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[3]                   ; 6       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[1]                   ; 2       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[5]                   ; 5       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[4]                   ; 7       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[7]                   ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|gap_y[6]                   ; 5       ;
-; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[9]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[3]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[2]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[1]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[0]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[3]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[2]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[5]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[4]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[6]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P1|gap_y[3]                   ; 6       ;
 ; Pipe_Controller:Pipes|Pipes:P1|gap_y[1]                   ; 2       ;
-; Pipe_Controller:Pipes|Pipes:P1|gap_y[5]                   ; 6       ;
+; Pipe_Controller:Pipes|Pipes:P1|gap_y[5]                   ; 5       ;
 ; Pipe_Controller:Pipes|Pipes:P1|gap_y[4]                   ; 7       ;
-; Pipe_Controller:Pipes|Pipes:P1|gap_y[7]                   ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P1|gap_y[7]                   ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|gap_y[6]                   ; 5       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[9]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[4]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[3]              ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[6]              ; 4       ;
-; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[5]              ; 4       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[2]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[1]              ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[0]              ; 3       ;
-; life:life_display|life_address[0]                         ; 6       ;
-; life:life_display|life_address[1]                         ; 5       ;
-; life:life_display|life_address[4]                         ; 5       ;
-; life:life_display|life_address[5]                         ; 5       ;
+; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[5]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[4]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[6]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[3]                   ; 6       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[1]                   ; 2       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[5]                   ; 5       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[4]                   ; 7       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[7]                   ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|gap_y[6]                   ; 5       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[9]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[3]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[2]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[1]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[0]              ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[5]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[4]              ; 4       ;
+; Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[6]              ; 4       ;
 ; score_digit_2:score_display2|score_address[4]             ; 5       ;
 ; score_digit_2:score_display2|score_address[5]             ; 4       ;
 ; score:score_display|score_address[4]                      ; 4       ;
 ; score:score_display|score_address[5]                      ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P0|size_x[4]                  ; 9       ;
+; Pipe_Controller:Pipes|Pipes:P0|size_x[3]                  ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P0|size_x[2]                  ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P0|size_x[5]                  ; 9       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[8] ; 10      ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[7] ; 9       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[6] ; 9       ;
@@ -465,25 +476,21 @@ Encoding Type:  One-Hot
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[2] ; 4       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[1] ; 5       ;
 ; Pipe_Controller:Pipes|random_number_generator:RNG|lfsr[0] ; 5       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[5]                  ; 9       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[4]                  ; 9       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[3]                  ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P2|size_x[2]                  ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P0|size_x[5]                  ; 9       ;
-; Pipe_Controller:Pipes|Pipes:P0|size_x[4]                  ; 9       ;
-; Pipe_Controller:Pipes|Pipes:P0|size_x[3]                  ; 3       ;
-; Pipe_Controller:Pipes|Pipes:P0|size_x[2]                  ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[5]                  ; 9       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[4]                  ; 9       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[3]                  ; 3       ;
 ; Pipe_Controller:Pipes|Pipes:P1|size_x[2]                  ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[5]                  ; 9       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[4]                  ; 9       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[3]                  ; 3       ;
+; Pipe_Controller:Pipes|Pipes:P2|size_x[2]                  ; 3       ;
 ; MOUSE:Mouse1|send_char                                    ; 3       ;
 ; MOUSE:Mouse1|SHIFTOUT[3]                                  ; 1       ;
 ; MOUSE:Mouse1|SHIFTOUT[5]                                  ; 1       ;
 ; MOUSE:Mouse1|SHIFTOUT[6]                                  ; 1       ;
 ; MOUSE:Mouse1|SHIFTOUT[7]                                  ; 1       ;
 ; MOUSE:Mouse1|SHIFTOUT[8]                                  ; 1       ;
-; Total number of inverted registers = 77                   ;         ;
+; Total number of inverted registers = 73                   ;         ;
 +-----------------------------------------------------------+---------+
 
 
@@ -493,24 +500,23 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[8]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[0]                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[7]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|gap_y[0]                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[8]                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[8]                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|gap_y[2]                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[7]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|gap_y[8]                            ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|invincibity_timer:timer1|count[9]                                  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[0]                                            ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[7]                              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[3]                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[6]                       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[4]                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[4]                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|gap_y[0]                            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|VGA_SYNC:VGA|v_count[1]                                            ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[4]                              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |display|bird_controller:Bird|bird_y_motion[0]                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|pipe_x_pos[5]                       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P0|gap_y[1]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|pipe_x_pos[0]                       ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P1|gap_y[5]                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[3]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|pipe_x_pos[9]                       ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |display|Pipe_Controller:Pipes|Pipes:P2|gap_y[6]                            ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |display|text:char_display|char_rom:E|Mux0                                  ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |display|text:char_display|char_rom:O|Mux0                                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:ones|SevenSeg_out[0] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens|SevenSeg_out[5] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |display|seven_seg_display:seg_display|BCD_to_SevenSeg:tens|SevenSeg_out[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
@@ -1349,48 +1355,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "collision_controller:collision_detector"                                                                                                         ;
-+-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                      ;
-+-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; vert_sync ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 302                         ;
+; arriav_ff             ; 284                         ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 149                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 20                          ;
+;     SCLR              ; 10                          ;
 ;     SLD               ; 33                          ;
-;     plain             ; 74                          ;
+;     plain             ; 66                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 644                         ;
-;     arith             ; 202                         ;
-;         1 data inputs ; 159                         ;
+; arriav_lcell_comb     ; 597                         ;
+;     arith             ; 192                         ;
+;         1 data inputs ; 149                         ;
 ;         2 data inputs ; 43                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 439                         ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 401                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 34                          ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 30                          ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 29                          ;
 ;         4 data inputs ; 83                          ;
-;         5 data inputs ; 81                          ;
-;         6 data inputs ; 179                         ;
+;         5 data inputs ; 75                          ;
+;         6 data inputs ; 159                         ;
 ; boundary_port         ; 96                          ;
 ; stratixv_ram_block    ; 72                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.20                        ;
-; Average LUT depth     ; 3.47                        ;
+; Max LUT depth         ; 5.90                        ;
+; Average LUT depth     ; 3.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1409,82 +1406,82 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed May 28 14:34:25 2025
+    Info: Processing started: Thu May 29 13:55:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display -c Display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file random_number_generator.vhd
-    Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 12
-    Info (12023): Found entity 1: random_number_generator File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 5
+    Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 12
+    Info (12023): Found entity 1: random_number_generator File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/random_number_generator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipe_controller.vhd
-    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 16
-    Info (12023): Found entity 1: Pipe_Controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 6
+    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 16
+    Info (12023): Found entity 1: Pipe_Controller File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pipes.vhd
-    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 15
-    Info (12023): Found entity 1: Pipes File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipes.vhd Line: 5
+    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipes.vhd Line: 15
+    Info (12023): Found entity 1: Pipes File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipes.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bird_controller.vhd
-    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 15
-    Info (12023): Found entity 1: bird_controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 7
+    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 15
+    Info (12023): Found entity 1: bird_controller File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/bird_controller.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 18
-    Info (12023): Found entity 1: display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 5
+    Info (12022): Found design unit 1: display-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 18
+    Info (12023): Found entity 1: display File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_display.vhd
-    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 11
-    Info (12023): Found entity 1: seven_seg_display File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
+    Info (12022): Found design unit 1: seven_seg_display-arc1 File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 11
+    Info (12023): Found entity 1: seven_seg_display File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file binary_to_bcd.vhd
-    Info (12022): Found design unit 1: binary_to_bcd-Behavioral File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 13
-    Info (12023): Found entity 1: binary_to_bcd File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 8
+    Info (12022): Found design unit 1: binary_to_bcd-Behavioral File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 13
+    Info (12023): Found entity 1: binary_to_bcd File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/binary_to_bcd.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 13
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/BCD_to_7Seg.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/clock_divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: text-behavior File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 14
-    Info (12023): Found entity 1: text File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 7
+    Info (12022): Found design unit 1: text-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 14
+    Info (12023): Found entity 1: text File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file score.vhd
-    Info (12022): Found design unit 1: score-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 13
-    Info (12023): Found entity 1: score File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 6
+    Info (12022): Found design unit 1: score-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score.vhd Line: 13
+    Info (12023): Found entity 1: score File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file score_digit_2.vhd
-    Info (12022): Found design unit 1: score_digit_2-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 13
-    Info (12023): Found entity 1: score_digit_2 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 6
+    Info (12022): Found design unit 1: score_digit_2-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 13
+    Info (12023): Found entity 1: score_digit_2 File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file life.vhd
-    Info (12022): Found design unit 1: life-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 13
-    Info (12023): Found entity 1: life File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 6
+    Info (12022): Found design unit 1: life-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd Line: 13
+    Info (12023): Found entity 1: life File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file collision_controller.vhd
-    Info (12022): Found design unit 1: collision_controller-behaviour File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/collision_controller.vhd Line: 13
-    Info (12023): Found entity 1: collision_controller File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/collision_controller.vhd Line: 5
+    Info (12022): Found design unit 1: collision_controller-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/collision_controller.vhd Line: 14
+    Info (12023): Found entity 1: collision_controller File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/collision_controller.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file invincibility_timer.vhd
-    Info (12022): Found design unit 1: invincibity_timer-behavioral File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/invincibility_timer.vhd Line: 13
-    Info (12023): Found entity 1: invincibity_timer File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/invincibility_timer.vhd Line: 5
+    Info (12022): Found design unit 1: invincibity_timer-behavioral File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/invincibility_timer.vhd Line: 13
+    Info (12023): Found entity 1: invincibity_timer File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/invincibility_timer.vhd Line: 5
 Info (12127): Elaborating entity "Display" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at display.vhd(116): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 116
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(123): object "mouse_x" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 123
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(124): object "mouse_y" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 124
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(126): object "mouse_right" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 126
-Warning (10540): VHDL Signal Declaration warning at display.vhd(134): used explicit default value for signal "pipe_x_motion" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 134
-Warning (10036): Verilog HDL or VHDL warning at display.vhd(151): object "zero_life" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 151
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-Info (12128): Elaborating entity "invincibity_timer" for hierarchy "invincibity_timer:timer1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 156
-Info (12128): Elaborating entity "collision_controller" for hierarchy "collision_controller:collision_detector" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 163
-Info (12128): Elaborating entity "life" for hierarchy "life:life_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 169
-Warning (10540): VHDL Signal Declaration warning at life.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at life.vhd(26): used explicit default value for signal "life_x_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at life.vhd(27): used explicit default value for signal "life_y_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 27
-Info (12128): Elaborating entity "char_rom" for hierarchy "life:life_display|char_rom:life" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/life.vhd Line: 33
-Info (12128): Elaborating entity "altsyncram" for hierarchy "life:life_display|char_rom:life|altsyncram:altsyncram_component" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "life:life_display|char_rom:life|altsyncram:altsyncram_component" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "life:life_display|char_rom:life|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Warning (10540): VHDL Signal Declaration warning at display.vhd(118): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 118
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(125): object "mouse_x" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 125
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(126): object "mouse_y" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 126
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(128): object "mouse_right" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 128
+Warning (10540): VHDL Signal Declaration warning at display.vhd(136): used explicit default value for signal "pipe_x_motion" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 136
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(153): object "zero_life" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 153
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[35..1]" at display.vhd(13) File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+Info (12128): Elaborating entity "invincibity_timer" for hierarchy "invincibity_timer:timer1" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 159
+Info (12128): Elaborating entity "collision_controller" for hierarchy "collision_controller:collision_detector" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 166
+Info (12128): Elaborating entity "life" for hierarchy "life:life_display" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 173
+Warning (10540): VHDL Signal Declaration warning at life.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at life.vhd(26): used explicit default value for signal "life_x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at life.vhd(27): used explicit default value for signal "life_y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd Line: 27
+Info (12128): Elaborating entity "char_rom" for hierarchy "life:life_display|char_rom:life" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/life.vhd Line: 33
+Info (12128): Elaborating entity "altsyncram" for hierarchy "life:life_display|char_rom:life|altsyncram:altsyncram_component" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "life:life_display|char_rom:life|altsyncram:altsyncram_component" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "life:life_display|char_rom:life|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1500,108 +1497,108 @@ Info (12133): Instantiated megafunction "life:life_display|char_rom:life|altsync
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "score" for hierarchy "score:score_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 183
-Warning (10540): VHDL Signal Declaration warning at score.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at score.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at score.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score.vhd Line: 26
-Info (12128): Elaborating entity "score_digit_2" for hierarchy "score_digit_2:score_display2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 192
-Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 26
-Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 200
-Warning (10540): VHDL Signal Declaration warning at text.vhd(17): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 17
-Warning (10540): VHDL Signal Declaration warning at text.vhd(18): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 18
-Warning (10540): VHDL Signal Declaration warning at text.vhd(19): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 19
-Warning (10540): VHDL Signal Declaration warning at text.vhd(20): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 20
-Warning (10540): VHDL Signal Declaration warning at text.vhd(24): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at text.vhd(25): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at text.vhd(26): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at text.vhd(30): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 30
-Warning (10540): VHDL Signal Declaration warning at text.vhd(31): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 31
-Warning (10540): VHDL Signal Declaration warning at text.vhd(32): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at text.vhd(36): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at text.vhd(37): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 37
-Warning (10540): VHDL Signal Declaration warning at text.vhd(41): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 41
-Warning (10540): VHDL Signal Declaration warning at text.vhd(42): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 42
-Warning (10540): VHDL Signal Declaration warning at text.vhd(43): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 43
-Warning (10540): VHDL Signal Declaration warning at text.vhd(47): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 47
-Warning (10540): VHDL Signal Declaration warning at text.vhd(48): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at text.vhd(49): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 49
-Warning (10540): VHDL Signal Declaration warning at text.vhd(50): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/text.vhd Line: 50
-Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 207
-Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
-Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
-Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:Pipes" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 214
-Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:Pipes|Pipes:P0" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 55
-Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:Pipes|random_number_generator:RNG" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 88
-Info (12128): Elaborating entity "bird_controller" for hierarchy "bird_controller:Bird" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 224
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 235
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 280
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 285
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
+Info (12128): Elaborating entity "score" for hierarchy "score:score_display" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 187
+Warning (10540): VHDL Signal Declaration warning at score.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at score.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at score.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score.vhd Line: 26
+Info (12128): Elaborating entity "score_digit_2" for hierarchy "score_digit_2:score_display2" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 196
+Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/score_digit_2.vhd Line: 26
+Info (12128): Elaborating entity "text" for hierarchy "text:char_display" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 204
+Warning (10540): VHDL Signal Declaration warning at text.vhd(17): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 17
+Warning (10540): VHDL Signal Declaration warning at text.vhd(18): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 18
+Warning (10540): VHDL Signal Declaration warning at text.vhd(19): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 19
+Warning (10540): VHDL Signal Declaration warning at text.vhd(20): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 20
+Warning (10540): VHDL Signal Declaration warning at text.vhd(24): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at text.vhd(25): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at text.vhd(26): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at text.vhd(30): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 30
+Warning (10540): VHDL Signal Declaration warning at text.vhd(31): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 31
+Warning (10540): VHDL Signal Declaration warning at text.vhd(32): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at text.vhd(36): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at text.vhd(37): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at text.vhd(41): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 41
+Warning (10540): VHDL Signal Declaration warning at text.vhd(42): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 42
+Warning (10540): VHDL Signal Declaration warning at text.vhd(43): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 43
+Warning (10540): VHDL Signal Declaration warning at text.vhd(47): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at text.vhd(48): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at text.vhd(49): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 49
+Warning (10540): VHDL Signal Declaration warning at text.vhd(50): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/text.vhd Line: 50
+Info (12128): Elaborating entity "seven_seg_display" for hierarchy "seven_seg_display:seg_display" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 211
+Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "seven_seg_display:seg_display|binary_to_bcd:converter" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 27
+Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "seven_seg_display:seg_display|BCD_to_SevenSeg:ones" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/seven_seg_display.vhd Line: 33
+Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "Pipe_Controller:Pipes" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 218
+Info (12128): Elaborating entity "Pipes" for hierarchy "Pipe_Controller:Pipes|Pipes:P0" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 55
+Info (12128): Elaborating entity "random_number_generator" for hierarchy "Pipe_Controller:Pipes|random_number_generator:RNG" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/Pipe_Controller.vhd Line: 88
+Info (12128): Elaborating entity "bird_controller" for hierarchy "bird_controller:Bird" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 228
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:Mouse1" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 239
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 157
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 284
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 289
+Info (13000): Registers with preset signals will power-up high File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 7
-    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 8
-    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
-    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 7
+    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 8
+    Warning (13410): Pin "GPIO_0[1]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[3]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[5]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[7]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[8]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[9]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[10]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[11]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[12]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[13]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[14]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[15]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[16]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[17]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[18]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[19]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[20]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[21]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[22]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[23]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[24]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[25]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[26]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[27]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[28]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[29]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[30]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[31]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[32]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[33]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[34]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
+    Warning (13410): Pin "GPIO_0[35]" is stuck at GND File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "text:char_display|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE0_CV_Default was ignored
@@ -1836,18 +1833,18 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "pb1" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
-    Warning (15610): No output dependent on input pin "pb2" File: C:/Users/dtie151/Downloads/305_flappybird/MiniprojectResources/display.vhd Line: 6
-Info (21057): Implemented 909 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "pb1" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 6
+    Warning (15610): No output dependent on input pin "pb2" File: C:/Users/ahac139/Downloads/305/305_flappybird/MiniprojectResources/display.vhd Line: 6
+Info (21057): Implemented 861 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 741 logic cells
+    Info (21061): Implemented 693 logic cells
     Info (21064): Implemented 72 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 322 warnings
-    Info: Peak virtual memory: 4982 megabytes
-    Info: Processing ended: Wed May 28 14:34:32 2025
-    Info: Elapsed time: 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 321 warnings
+    Info: Peak virtual memory: 4980 megabytes
+    Info: Processing ended: Thu May 29 13:55:25 2025
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:13
 
 

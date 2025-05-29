@@ -87,9 +87,11 @@ component life is
 end component life;
 
 component collision_controller IS
-	PORT
-		(clk,	collision: IN std_logic;
-		collision_detected:out std_logic);		
+    PORT (
+        clk, reset : IN std_logic;
+        collision	    : IN std_logic; 
+        collision_detected : OUT std_logic  
+    );		
 END component collision_controller;
 
 component invincibity_timer is
@@ -150,6 +152,7 @@ signal collision_detected: std_logic;
 signal life_on: std_logic;
 signal zero_life: std_logic;
 signal prev_collision: std_logic;
+signal reset_collisions : std_logic;
 
 begin
 
@@ -163,7 +166,8 @@ begin
 	collision_detector: collision_controller port map(
 		clk				=> clk_div,
 		collision 		=> collision,
-		collision_detected 	=> collision_detected
+		collision_detected 	=> collision_detected,
+		reset						=> reset_collisions
 	);
 	
 	life_display: life port map(
@@ -175,9 +179,9 @@ begin
 		zero_life		=> zero_life
 	);
 	
-	collision <= (bird_on and pipe_on) and (not invincible);
+	collision <= (bird_on and pipe_on);
 	
-
+	reset_collisions <= not invincible;
 		
 								
 	score_display: score port map(
@@ -261,15 +265,16 @@ begin
 				'1' when (life_on = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (invincible = '1') else
+				'1' when (bird_on = '1') and (collision_detected = '1') else
 				'1' when (pipe_on = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (invincible = '1') else
+				'1' when (bird_on = '1') and (collision_detected = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
+				'1' when (reset_collisions = '1') and (signed(pixel_row) < to_signed(40, 10)) else
 				'0';
 	
 	

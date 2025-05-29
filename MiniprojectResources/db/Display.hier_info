@@ -107,6 +107,7 @@ GPIO_0[35] <= <GND>
 
 |Display|invincibity_timer:timer1
 clk => ~NO_FANOUT~
+vert_sync => counting.CLK
 vert_sync => count[0].CLK
 vert_sync => count[1].CLK
 vert_sync => count[2].CLK
@@ -118,15 +119,14 @@ vert_sync => count[7].CLK
 vert_sync => count[8].CLK
 vert_sync => count[9].CLK
 vert_sync => invincibity~reg0.CLK
-vert_sync => counting.CLK
-start => counting.OUTPUTSELECT
+start => ~NO_FANOUT~
 invincibity <= invincibity~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Display|collision_controller:collision_detector
 clk => collision_prev.CLK
 clk => collision_detected~reg0.CLK
-vert_sync => collision_detected.OUTPUTSELECT
+reset => collision_detected.OUTPUTSELECT
 collision => process_0.IN1
 collision => collision_prev.DATAIN
 collision_detected <= collision_detected~reg0.DB_MAX_OUTPUT_PORT_TYPE
