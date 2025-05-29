@@ -12,19 +12,23 @@ END collision_controller;
 
 
 architecture behaviour of collision_controller is
-    signal collision_prev : std_logic := '0';
+   signal collision_prev : std_logic := '0';
+	signal reset_prev : std_logic := '0';
+
 begin
 
     process(clk)
     begin
         if rising_edge(clk) then
-				if (reset = '1') then
-					collision_detected <= '0';
-            elsif (collision = '1' and collision_prev = '0') then
+            if (collision = '1' and collision_prev = '0') then
                 collision_detected <= '1';
+				end if;
+				if (reset = '1' and reset_prev = '0') then
+                collision_detected <= '0';
 				end if;
 				
             collision_prev <= collision;
+				reset_prev <= reset;
         end if;
     end process;
 

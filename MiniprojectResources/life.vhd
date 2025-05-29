@@ -44,34 +44,20 @@ architecture behaviour of life is
 					'0';
 					
 					
+	
 	process(clk)
-	begin
-		if(rising_edge(clk)) then
-			if (decrease_life = '1') then
-				if (life_address /= "110000") then 
-					life_address <= life_address - "000001";
-				else 
-					life_address <= "110011";
-					zero_life <= '1';
+		begin
+		
+			if(rising_edge(clk)) then
+				prev_decrease_life <= decrease_life;
+				if (prev_decrease_life = '0' and decrease_life = '1') then
+					if (life_address /= "110000") then 
+						life_address <= life_address - "000001";
+					else 
+						life_address <= "110011";
+						zero_life <= '1';
+					end if;
 				end if;
 			end if;
-		end if;
-	end process;
-
-	
-	--process(clk)
-		--begin
-		
-			--if(rising_edge(clk)) then
-				--prev_decrease_life <= decrease_life;
-				--if (prev_decrease_life = '0' and decrease_life = '1') then
-					--if (life_address /= "110000") then 
-						--life_address <= life_address - "000001";
-					--else 
-						--life_address <= "110011";
-						--zero_life <= '1';
-					--end if;
-				--end if;
-			--end if;
-		--end process;
+		end process;
 end behaviour;

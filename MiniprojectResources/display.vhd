@@ -255,9 +255,7 @@ begin
 	LEDR <= SW;
 	switches <= SW(7 downto 0);
 	
-	
-	-- Colours for pixel data on video signal
-	-- Changing the background and ball colour by pushbuttons 
+
 	Red 	<= '1' when (char_on = '1') else
 				'1' when (bird_on = '1') else
 				'1' when (score_on = '1') else
@@ -265,16 +263,15 @@ begin
 				'1' when (life_on = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (collision_detected = '1') else
+				'1' when (bird_on = '1') and (invincible = '1') else
 				'1' when (pipe_on = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (collision_detected = '1') else
+				'1' when (bird_on = '1') and (invincible = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
-				'1' when (reset_collisions = '1') and (signed(pixel_row) < to_signed(40, 10)) else
 				'0';
 	
 	
