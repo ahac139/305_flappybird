@@ -4,11 +4,11 @@ use IEEE.numeric_std.all;
 
 entity Pipes is
 	port(
-		clk, vert_sync, enable: in std_logic;
+		clk, vert_sync, enable, power_up_enable, pu_collected: in std_logic;
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		random_number: in unsigned(9 downto 0);
 		pipe_x_motion: in unsigned(9 downto 0);
-		pipe_on, increase: out std_logic
+		pipe_on, increase, power_up_on: out std_logic
 	);
 end Pipes;
 
@@ -23,26 +23,39 @@ architecture behaviour of Pipes is
 	
 	signal score_x: unsigned(9 downto 0);
 	
+	signal s_power_up_enable : std_logic;
+	
+	component life_power_up IS
+	PORT
+		( clk, enable, pu_collected: IN std_logic;
+        pixel_row, pixel_col	: IN std_logic_vector(9 DOWNTO 0);
+		  y_pos, x_pos 				: IN unsigned (9 downto 0);
+		  power_up_on					: out std_logic);		
+	END component life_power_up;
 	
 begin
 
-	-- Set constants
-	--pipe_y_pos <= to_unsigned(0, 10);
+
 	max_x <= to_unsigned(639, 10);
 	min_x <= to_unsigned(0, 10);
 	gap_size_y <= to_unsigned(200,10);
 
-	-- Draw pipe
+
 	pipe_on <= '1' when (pipe_x_pos <= unsigned(pixel_col)) and (unsigned(pixel_col) <= pipe_x_pos + size_x) and 
 					   (not((unsigned(pixel_row) > gap_y) and (unsigned(pixel_row) < gap_y + gap_size_y)))
 			  else '0';
 
-	-- Color output
-	--red <= not pipe_on;
-	--green <= '1';
-	--blue <= not pipe_on;
+	powerUp : life_power_up port map(
+		clk => clk,
+		pu_collected => pu_collected,
+		pixel_row => pixel_row,
+		pixel_col => pixel_col,
+		y_pos => gap_y,
+		x_pos => pipe_x_pos,
+		enable => s_power_up_enable,
+		power_up_on => power_up_on);
+			  
 
-	-- Pipe movement
 	Move_pipe: process (enable, vert_sync)
 	begin
 		if (rising_edge(vert_sync)) then
@@ -61,6 +74,7 @@ begin
 						size_x <= to_unsigned(60, 10);
 						pipe_x_pos <= max_x;
 						gap_y <= random_number;
+						s_power_up_enable <= power_up_enable;
 					else				
 						size_x <= size_x - pipe_x_motion;
 					end if;
@@ -69,6 +83,7 @@ begin
 					pipe_x_pos <= pipe_x_pos - pipe_x_motion;
 				end if;
 				
+				-- score
 				if (pipe_x_pos + size_x = to_unsigned(100,10)) then
 						increase <= '1';
 				else

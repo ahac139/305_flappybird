@@ -5,7 +5,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 entity life is 
 	PORT
-		( clk, decrease_life	      : IN std_logic;
+		( clk, decrease_life, increase_life	      : IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  life_on, zero_life		   : OUT std_logic);	
 end life;
@@ -27,7 +27,7 @@ architecture behaviour of life is
 	signal life_y_pos: std_logic_vector(9 downto 0) := "0001000000" ;
 	signal life_address: std_logic_vector(5 downto 0) := "110011";
 	signal life_on_1: std_logic;
-	signal prev_decrease_life: std_logic;
+	signal prev_decrease_life, prev_increase_life: std_logic;
 	begin 
 	
 	life: char_rom port map(
@@ -49,7 +49,10 @@ architecture behaviour of life is
 		begin
 		
 			if(rising_edge(clk)) then
+			
 				prev_decrease_life <= decrease_life;
+				prev_increase_life <= increase_life;
+				
 				if (prev_decrease_life = '0' and decrease_life = '1') then
 					if (life_address /= "110000") then 
 						life_address <= life_address - "000001";
@@ -58,6 +61,14 @@ architecture behaviour of life is
 						zero_life <= '1';
 					end if;
 				end if;
+				
+				if (prev_increase_life = '0' and increase_life = '1') then
+					
+					life_address <= life_address + "000001";
+
+				end if;
 			end if;
+			
+			
 		end process;
 end behaviour;

@@ -50,10 +50,10 @@ component text IS
 END component text;
 
 component Pipe_Controller is
-	port(Clk, vert_sync: in std_logic;
+	port(Clk, vert_sync, pu_collected: in std_logic;
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		pipe_x_motion: in unsigned(9 downto 0);
-		pipe_on, increase: out std_logic
+		pipe_on, increase, power_up_on: out std_logic
 	);
 end component Pipe_Controller;
 
@@ -81,7 +81,7 @@ END component score_digit_2;
 
 component life is 
 	PORT
-		( clk, decrease_life	      : IN std_logic;
+		( clk, decrease_life, increase_life : IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  life_on, zero_life		   : OUT std_logic);	
 end component life;
@@ -130,6 +130,7 @@ signal mouse_left 	: std_logic;
 
 signal switches		: std_logic_vector(7 DOWNTO 0); 
 
+signal power_up_on	: std_logic;
 signal char_on 		: std_logic;
 signal bird_on 		: std_logic; 
 signal pipe_on 		: std_logic; 
@@ -155,6 +156,7 @@ signal prev_collision: std_logic;
 signal reset_collisions : std_logic;
 signal inv_on :std_logic;
 
+signal pu_collected : std_logic;
 begin
 
 	timer1: invincibity_timer port map(
@@ -175,6 +177,7 @@ begin
 	life_display: life port map(
 		clk				=> clk_div,
 		decrease_life	=> collision_detected,
+		increase_life  => pu_collected,
 		pixel_row 		=> pixel_row,
 		pixel_column	=> pixel_column,
 		life_on			=>	life_on,
@@ -185,6 +188,7 @@ begin
 	
 	reset_collisions <= not invincible;
 		
+	pu_collected <= power_up_on and bird_on;
 								
 	score_display: score port map(
 		clk				=> clk_div,
@@ -224,7 +228,9 @@ begin
 		pixel_row => pixel_row,
 		pipe_x_motion => pipe_x_motion,
 		pipe_on => pipe_on,
-		increase => increase1
+		increase => increase1,
+		power_up_on => power_up_on,
+		pu_collected => pu_collected
 	);
 	
 	Bird : Bird_controller port map(
@@ -274,6 +280,7 @@ begin
 				'1' when (bird_on = '1') and (inv_on = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
+				'1' when (power_up_on = '1') else
 				'0';
 	
 	
