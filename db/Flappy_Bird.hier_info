@@ -263,53 +263,74 @@ LEDR[6] <= <GND>
 LEDR[7] <= <GND>
 LEDR[8] <= <GND>
 LEDR[9] <= <GND>
-p_row[0] => text:char_display.pixel_row[0]
+p_row[0] => text:state_text.pixel_row[0]
 p_row[0] => bird_controller:Bird.pixel_row[0]
-p_row[1] => text:char_display.pixel_row[1]
+p_row[0] => life:life_display.pixel_row[0]
+p_row[1] => text:state_text.pixel_row[1]
 p_row[1] => bird_controller:Bird.pixel_row[1]
-p_row[2] => text:char_display.pixel_row[2]
+p_row[1] => life:life_display.pixel_row[1]
+p_row[2] => text:state_text.pixel_row[2]
 p_row[2] => bird_controller:Bird.pixel_row[2]
-p_row[3] => text:char_display.pixel_row[3]
+p_row[2] => life:life_display.pixel_row[2]
+p_row[3] => text:state_text.pixel_row[3]
 p_row[3] => bird_controller:Bird.pixel_row[3]
-p_row[4] => text:char_display.pixel_row[4]
+p_row[3] => life:life_display.pixel_row[3]
+p_row[4] => text:state_text.pixel_row[4]
 p_row[4] => bird_controller:Bird.pixel_row[4]
-p_row[5] => text:char_display.pixel_row[5]
+p_row[4] => life:life_display.pixel_row[4]
+p_row[5] => text:state_text.pixel_row[5]
 p_row[5] => bird_controller:Bird.pixel_row[5]
-p_row[6] => text:char_display.pixel_row[6]
+p_row[5] => life:life_display.pixel_row[5]
+p_row[6] => text:state_text.pixel_row[6]
 p_row[6] => bird_controller:Bird.pixel_row[6]
-p_row[7] => text:char_display.pixel_row[7]
+p_row[6] => life:life_display.pixel_row[6]
+p_row[7] => text:state_text.pixel_row[7]
 p_row[7] => bird_controller:Bird.pixel_row[7]
-p_row[8] => text:char_display.pixel_row[8]
+p_row[7] => life:life_display.pixel_row[7]
+p_row[8] => text:state_text.pixel_row[8]
 p_row[8] => bird_controller:Bird.pixel_row[8]
-p_row[9] => text:char_display.pixel_row[9]
+p_row[8] => life:life_display.pixel_row[8]
+p_row[9] => text:state_text.pixel_row[9]
 p_row[9] => bird_controller:Bird.pixel_row[9]
-p_col[0] => text:char_display.pixel_column[0]
+p_row[9] => life:life_display.pixel_row[9]
+p_col[0] => text:state_text.pixel_column[0]
 p_col[0] => bird_controller:Bird.pixel_column[0]
-p_col[1] => text:char_display.pixel_column[1]
+p_col[0] => life:life_display.pixel_column[0]
+p_col[1] => text:state_text.pixel_column[1]
 p_col[1] => bird_controller:Bird.pixel_column[1]
-p_col[2] => text:char_display.pixel_column[2]
+p_col[1] => life:life_display.pixel_column[1]
+p_col[2] => text:state_text.pixel_column[2]
 p_col[2] => bird_controller:Bird.pixel_column[2]
-p_col[3] => text:char_display.pixel_column[3]
+p_col[2] => life:life_display.pixel_column[2]
+p_col[3] => text:state_text.pixel_column[3]
 p_col[3] => bird_controller:Bird.pixel_column[3]
-p_col[4] => text:char_display.pixel_column[4]
+p_col[3] => life:life_display.pixel_column[3]
+p_col[4] => text:state_text.pixel_column[4]
 p_col[4] => bird_controller:Bird.pixel_column[4]
-p_col[5] => text:char_display.pixel_column[5]
+p_col[4] => life:life_display.pixel_column[4]
+p_col[5] => text:state_text.pixel_column[5]
 p_col[5] => bird_controller:Bird.pixel_column[5]
-p_col[6] => text:char_display.pixel_column[6]
+p_col[5] => life:life_display.pixel_column[5]
+p_col[6] => text:state_text.pixel_column[6]
 p_col[6] => bird_controller:Bird.pixel_column[6]
-p_col[7] => text:char_display.pixel_column[7]
+p_col[6] => life:life_display.pixel_column[6]
+p_col[7] => text:state_text.pixel_column[7]
 p_col[7] => bird_controller:Bird.pixel_column[7]
-p_col[8] => text:char_display.pixel_column[8]
+p_col[7] => life:life_display.pixel_column[7]
+p_col[8] => text:state_text.pixel_column[8]
 p_col[8] => bird_controller:Bird.pixel_column[8]
-p_col[9] => text:char_display.pixel_column[9]
+p_col[8] => life:life_display.pixel_column[8]
+p_col[9] => text:state_text.pixel_column[9]
 p_col[9] => bird_controller:Bird.pixel_column[9]
+p_col[9] => life:life_display.pixel_column[9]
 v_sync => bird_controller:Bird.vert_sync
+v_sync => invincibity_timer:timer1.vert_sync
 state[0] <= s_state[0].DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= s_state[1].DB_MAX_OUTPUT_PORT_TYPE
-char_on <= text:char_display.char_on
+char_on <= char_on.DB_MAX_OUTPUT_PORT_TYPE
 bird_on <= bird_controller:Bird.bird_on
-pipe_on <= <GND>
-Clk => text:char_display.clk
+pipe_on <= <VCC>
+Clk => text:state_text.clk
 Clk => s_state[0].CLK
 Clk => s_state[1].CLK
 Clk => s_mode[0].CLK
@@ -318,9 +339,11 @@ Clk => pause_prev.CLK
 Clk => start_prev.CLK
 Clk => bird_controller:Bird.clk
 Clk => MOUSE:Mouse1.clock_25Mhz
+Clk => collision_controller:collision_detector.clk
+Clk => life:life_display.clk
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display
+|Flappy_Bird|game_logic:GLOG|text:state_text
 Clk => menu_text:menu.Clk
 state[0] => Mux0.IN4
 state[1] => Mux0.IN3
@@ -353,7 +376,7 @@ pixel_column[9] => menu_text:menu.pixel_column[9]
 char_on <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu
 Clk => char_rom:H.clock
 Clk => char_rom:E.clock
 Clk => char_rom:L1.clock
@@ -561,7 +584,7 @@ pixel_column[9] => LessThan15.IN11
 char_on <= char_on.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:H
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -578,7 +601,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:H|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -628,7 +651,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -719,7 +742,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:E
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -736,7 +759,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:E|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -786,7 +809,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -877,7 +900,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:L1
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -894,7 +917,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -944,7 +967,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1035,7 +1058,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:L2
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -1052,7 +1075,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1102,7 +1125,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1193,7 +1216,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:O
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -1210,7 +1233,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:O|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1260,7 +1283,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1351,7 +1374,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:EX
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -1368,7 +1391,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1418,7 +1441,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Flappy_Bird|game_logic:GLOG|text:char_display|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+|Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1730,5 +1753,263 @@ mouse_cursor_column[6] <= cursor_column[6].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[7] <= cursor_column[7].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[8] <= cursor_column[8].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[9] <= cursor_column[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Flappy_Bird|game_logic:GLOG|invincibity_timer:timer1
+vert_sync => inv_on~reg0.CLK
+vert_sync => count[0].CLK
+vert_sync => count[1].CLK
+vert_sync => count[2].CLK
+vert_sync => count[3].CLK
+vert_sync => count[4].CLK
+vert_sync => count[5].CLK
+vert_sync => count[6].CLK
+vert_sync => count[7].CLK
+vert_sync => count[8].CLK
+vert_sync => count[9].CLK
+vert_sync => invincibity~reg0.CLK
+vert_sync => counting.CLK
+start => counting.OUTPUTSELECT
+invincibity <= invincibity~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inv_on <= inv_on~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Flappy_Bird|game_logic:GLOG|collision_controller:collision_detector
+clk => reset_prev.CLK
+clk => collision_prev.CLK
+clk => collision_detected~reg0.CLK
+reset => process_0.IN1
+reset => reset_prev.DATAIN
+collision => process_0.IN1
+collision => collision_prev.DATAIN
+collision_detected <= collision_detected~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Flappy_Bird|game_logic:GLOG|life:life_display
+clk => char_rom:life.clock
+clk => zero_life~reg0.CLK
+clk => life_address[0].CLK
+clk => life_address[1].CLK
+clk => life_address[2].CLK
+clk => life_address[3].CLK
+clk => life_address[4].CLK
+clk => life_address[5].CLK
+clk => prev_decrease_life.CLK
+decrease_life => process_0.IN1
+decrease_life => prev_decrease_life.DATAIN
+reset => life_address.OUTPUTSELECT
+reset => life_address.OUTPUTSELECT
+reset => life_address.OUTPUTSELECT
+reset => life_address.OUTPUTSELECT
+reset => life_address.OUTPUTSELECT
+reset => life_address.OUTPUTSELECT
+reset => zero_life~reg0.ENA
+pixel_row[0] => LessThan2.IN22
+pixel_row[0] => LessThan3.IN20
+pixel_row[1] => LessThan2.IN21
+pixel_row[1] => LessThan3.IN19
+pixel_row[1] => char_rom:life.font_row[0]
+pixel_row[2] => LessThan2.IN20
+pixel_row[2] => LessThan3.IN18
+pixel_row[2] => char_rom:life.font_row[1]
+pixel_row[3] => LessThan2.IN19
+pixel_row[3] => LessThan3.IN17
+pixel_row[3] => char_rom:life.font_row[2]
+pixel_row[4] => LessThan2.IN18
+pixel_row[4] => LessThan3.IN16
+pixel_row[5] => LessThan2.IN17
+pixel_row[5] => LessThan3.IN15
+pixel_row[6] => LessThan2.IN16
+pixel_row[6] => LessThan3.IN14
+pixel_row[7] => LessThan2.IN15
+pixel_row[7] => LessThan3.IN13
+pixel_row[8] => LessThan2.IN14
+pixel_row[8] => LessThan3.IN12
+pixel_row[9] => LessThan2.IN12
+pixel_row[9] => LessThan2.IN13
+pixel_row[9] => LessThan3.IN11
+pixel_column[0] => LessThan0.IN20
+pixel_column[0] => LessThan1.IN20
+pixel_column[1] => LessThan0.IN19
+pixel_column[1] => LessThan1.IN19
+pixel_column[1] => char_rom:life.font_col[0]
+pixel_column[2] => LessThan0.IN18
+pixel_column[2] => LessThan1.IN18
+pixel_column[2] => char_rom:life.font_col[1]
+pixel_column[3] => LessThan0.IN17
+pixel_column[3] => LessThan1.IN17
+pixel_column[3] => char_rom:life.font_col[2]
+pixel_column[4] => LessThan0.IN16
+pixel_column[4] => LessThan1.IN16
+pixel_column[5] => LessThan0.IN15
+pixel_column[5] => LessThan1.IN15
+pixel_column[6] => LessThan0.IN14
+pixel_column[6] => LessThan1.IN14
+pixel_column[7] => LessThan0.IN13
+pixel_column[7] => LessThan1.IN13
+pixel_column[8] => LessThan0.IN12
+pixel_column[8] => LessThan1.IN12
+pixel_column[9] => LessThan0.IN11
+pixel_column[9] => LessThan1.IN11
+life_on <= life_on.DB_MAX_OUTPUT_PORT_TYPE
+zero_life <= zero_life~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life
+character_address[0] => altsyncram:altsyncram_component.address_a[3]
+character_address[1] => altsyncram:altsyncram_component.address_a[4]
+character_address[2] => altsyncram:altsyncram_component.address_a[5]
+character_address[3] => altsyncram:altsyncram_component.address_a[6]
+character_address[4] => altsyncram:altsyncram_component.address_a[7]
+character_address[5] => altsyncram:altsyncram_component.address_a[8]
+font_row[0] => altsyncram:altsyncram_component.address_a[0]
+font_row[1] => altsyncram:altsyncram_component.address_a[1]
+font_row[2] => altsyncram:altsyncram_component.address_a[2]
+font_col[0] => Mux0.IN2
+font_col[1] => Mux0.IN1
+font_col[2] => Mux0.IN0
+clock => altsyncram:altsyncram_component.clock0
+rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|altsyncram:altsyncram_component
+wren_a => ~NO_FANOUT~
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => ~NO_FANOUT~
+data_a[1] => ~NO_FANOUT~
+data_a[2] => ~NO_FANOUT~
+data_a[3] => ~NO_FANOUT~
+data_a[4] => ~NO_FANOUT~
+data_a[5] => ~NO_FANOUT~
+data_a[6] => ~NO_FANOUT~
+data_a[7] => ~NO_FANOUT~
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_d5g1:auto_generated.address_a[0]
+address_a[1] => altsyncram_d5g1:auto_generated.address_a[1]
+address_a[2] => altsyncram_d5g1:auto_generated.address_a[2]
+address_a[3] => altsyncram_d5g1:auto_generated.address_a[3]
+address_a[4] => altsyncram_d5g1:auto_generated.address_a[4]
+address_a[5] => altsyncram_d5g1:auto_generated.address_a[5]
+address_a[6] => altsyncram_d5g1:auto_generated.address_a[6]
+address_a[7] => altsyncram_d5g1:auto_generated.address_a[7]
+address_a[8] => altsyncram_d5g1:auto_generated.address_a[8]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_d5g1:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_d5g1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_d5g1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_d5g1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_d5g1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_d5g1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_d5g1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_d5g1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_d5g1:auto_generated.q_a[7]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+address_a[4] => ram_block1a4.PORTAADDR4
+address_a[4] => ram_block1a5.PORTAADDR4
+address_a[4] => ram_block1a6.PORTAADDR4
+address_a[4] => ram_block1a7.PORTAADDR4
+address_a[5] => ram_block1a0.PORTAADDR5
+address_a[5] => ram_block1a1.PORTAADDR5
+address_a[5] => ram_block1a2.PORTAADDR5
+address_a[5] => ram_block1a3.PORTAADDR5
+address_a[5] => ram_block1a4.PORTAADDR5
+address_a[5] => ram_block1a5.PORTAADDR5
+address_a[5] => ram_block1a6.PORTAADDR5
+address_a[5] => ram_block1a7.PORTAADDR5
+address_a[6] => ram_block1a0.PORTAADDR6
+address_a[6] => ram_block1a1.PORTAADDR6
+address_a[6] => ram_block1a2.PORTAADDR6
+address_a[6] => ram_block1a3.PORTAADDR6
+address_a[6] => ram_block1a4.PORTAADDR6
+address_a[6] => ram_block1a5.PORTAADDR6
+address_a[6] => ram_block1a6.PORTAADDR6
+address_a[6] => ram_block1a7.PORTAADDR6
+address_a[7] => ram_block1a0.PORTAADDR7
+address_a[7] => ram_block1a1.PORTAADDR7
+address_a[7] => ram_block1a2.PORTAADDR7
+address_a[7] => ram_block1a3.PORTAADDR7
+address_a[7] => ram_block1a4.PORTAADDR7
+address_a[7] => ram_block1a5.PORTAADDR7
+address_a[7] => ram_block1a6.PORTAADDR7
+address_a[7] => ram_block1a7.PORTAADDR7
+address_a[8] => ram_block1a0.PORTAADDR8
+address_a[8] => ram_block1a1.PORTAADDR8
+address_a[8] => ram_block1a2.PORTAADDR8
+address_a[8] => ram_block1a3.PORTAADDR8
+address_a[8] => ram_block1a4.PORTAADDR8
+address_a[8] => ram_block1a5.PORTAADDR8
+address_a[8] => ram_block1a6.PORTAADDR8
+address_a[8] => ram_block1a7.PORTAADDR8
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a7.CLK0
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+q_a[4] <= ram_block1a4.PORTADATAOUT
+q_a[5] <= ram_block1a5.PORTADATAOUT
+q_a[6] <= ram_block1a6.PORTADATAOUT
+q_a[7] <= ram_block1a7.PORTADATAOUT
 
 

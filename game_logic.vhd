@@ -33,12 +33,55 @@ signal s_state, s_mode				: std_logic_vector(1 downto 0) := "00";
 signal start_prev, pause_prev	 	: std_logic := '0';
 signal start_pulse, pause_pulse	: std_logic;
 
+-- General component reset on game start
+signal reset : std_logic;
+
 --Component Signals
 signal ground							: std_logic := '0';
 signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
 signal mouse_right, mouse_left	: std_logic;
+signal s_bird_on, s_pipe_on : std_logic;
+
+-- LIFE / COLLISIONS
+signal life_on: std_logic;
+signal zero_life: std_logic;
+
+signal collision : std_logic;
+signal collision_detected: std_logic;
+signal reset_collisions : std_logic;
+
+signal invincible: std_logic;
+signal inv_on :std_logic;
+
+
+component life is 
+	PORT
+		( clk, decrease_life, reset: IN std_logic;
+        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  life_on, zero_life		   : OUT std_logic);	
+end component life;
+
+component collision_controller IS
+    PORT (
+        clk, reset : IN std_logic;
+        collision	    : IN std_logic; 
+        collision_detected : OUT std_logic  
+    );		
+END component collision_controller;
+
+component invincibity_timer is
+    port (
+        vert_sync    : in  std_logic;  
+        start  : in  std_logic;
+        invincibity, inv_on : out std_logic 
+    );
+end component invincibity_timer;
+
+
 
 --Components
+signal state_text_on : std_logic;
+
 component text IS
 	PORT
 		( clk								: IN std_logic;
@@ -83,11 +126,11 @@ begin
 	pause_pulse <= '1' when (PB(1) = '0' and pause_prev = '1') else '0';
 	
 	--Components
-	char_display: text port map(
+	state_text : text port map(
 		clk				=> clk,				
 		pixel_row 		=> p_row,
 		pixel_column	=> p_col,
-		char_on			=> char_on
+		char_on			=> state_text_on
 	);
 	
 	Bird : Bird_controller port map(
@@ -96,7 +139,7 @@ begin
 		pixel_column => p_col,
 		pixel_row => p_row,
 		mouse_click => mouse_left,
-		bird_on => bird_on
+		bird_on => s_bird_on
 	);
 	
 	Mouse1: Mouse port map(
@@ -109,6 +152,39 @@ begin
 		mouse_cursor_row => mouse_x,
 		mouse_cursor_column => mouse_y
 	);
+	
+	
+	
+	timer1: invincibity_timer port map(
+		vert_sync => v_sync,
+		start => collision_detected,
+		invincibity => invincible,
+		inv_on => inv_on
+	);
+
+	collision_detector: collision_controller port map(
+		clk				=> clk,
+		collision 		=> collision,
+		collision_detected 	=> collision_detected,
+		reset						=> reset_collisions
+	);
+	
+	life_display: life port map(
+		clk				=> clk,
+		reset				=> reset,
+		decrease_life	=> collision_detected,
+		pixel_row 		=> p_row,
+		pixel_column	=> p_col,
+		life_on			=>	life_on,
+		zero_life		=> zero_life
+	);
+	
+	-- TEMP PIPE
+	s_pipe_on <= '1';
+	
+	collision <= (s_bird_on and s_pipe_on);
+	
+	reset_collisions <= not invincible;
 	
 	
 	--State controller
@@ -142,7 +218,14 @@ begin
                     s_state <= "00";
                 end if;
 					 
-        end case;
-    end if;
-end process;
+			  end case;
+		 end if;
+	end process;
+	
+	-- Display outputs
+	char_on <= state_text_on or life_on;
+	
+	pipe_on <= s_pipe_on;
+	bird_on <= s_bird_on;
+	
 end behaviour;

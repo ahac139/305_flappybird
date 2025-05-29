@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Wed May 28 14:05:28 2025
+Analysis & Synthesis Status : Successful - Thu May 29 15:55:15 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Flappy_Bird
 Top-level Entity Name : Flappy_Bird
@@ -7,7 +7,7 @@ Logic utilization (in ALMs) : N/A
 Total registers : 146
 Total pins : 62
 Total virtual pins : 0
-Total block memory bits : 384
+Total block memory bits : 448
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
