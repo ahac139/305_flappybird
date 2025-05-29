@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity Pipes is
 	port(
 		clk, vert_sync, enable: in std_logic;
-		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
+		pixel_row, pixel_col, pipe_x_motion: in std_logic_vector(9 downto 0);
 		random_number: in unsigned(9 downto 0);
 		pipe_on: out std_logic
 	);
@@ -15,7 +15,7 @@ architecture behaviour of Pipes is
 		
 	signal size_x: unsigned(9 downto 0) := to_unsigned(60, 10);
 	signal pipe_x_pos: unsigned (9 downto 0) := to_unsigned(639, 10);
-	signal pipe_x_motion: unsigned(9 downto 0);
+	--signal pipe_x_motion: unsigned(9 downto 0);
 	signal max_x, min_x: unsigned(9 downto 0);
 	signal gap_size_y: unsigned(9 downto 0);
 	signal gap_y: unsigned(9 downto 0) := to_unsigned(250,10);

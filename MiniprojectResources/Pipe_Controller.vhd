@@ -5,6 +5,7 @@ use IEEE.numeric_std.all;
 
 entity Pipe_Controller is
 	port(Clk, vert_sync: in std_logic;
+		state, mode: in std_logic(1 downto 0); 
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 		red, green, blue: out std_logic
 	);
