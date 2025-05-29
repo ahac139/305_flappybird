@@ -38,8 +38,8 @@ architecture behaviour of life is
 			rom_mux_output => life_on_1);
 				
 				
-	life_on <= '1' when ( ('0' & life_x_pos <= '0' & pixel_column) and ('0' & pixel_column <= '0' & life_x_pos + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & life_y_pos <= pixel_row ) and ('0' & pixel_row <= life_y_pos + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
+	life_on <= '1' when ( ('0' & life_x_pos < '0' & pixel_column) and ('0' & pixel_column < '0' & life_x_pos + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & life_y_pos < pixel_row ) and ('0' & pixel_row < life_y_pos + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
 					and (life_on_1 = '1')) else
 					'0';
 					

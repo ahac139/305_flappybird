@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri May 30 10:43:20 2025
+Analysis & Synthesis Status : Successful - Fri May 30 11:39:38 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Flappy_Bird
 Top-level Entity Name : Flappy_Bird
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 336
-Total pins : 62
+Total registers : 344
+Total pins : 55
 Total virtual pins : 0
 Total block memory bits : 14,720
 Total DSP Blocks : 0

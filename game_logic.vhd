@@ -10,7 +10,7 @@ entity game_logic is
 	PS2_DAT, PS2_CLK 				: inout std_logic;
 	
 	--Outputs to Board
-	HEX0, HEX1, HEX2 				: out std_logic_vector(6 downto 0) := "0000000";
+	HEX0, HEX1 						: out std_logic_vector(6 downto 0) := "0000000";
 	LEDR								: out std_logic_vector(9 downto 0) := "0000000000";
 	
 	--Inputs from System
@@ -72,6 +72,12 @@ component score_digit_2 IS
 		  score_ten_count : out std_logic_vector(3 downto 0);
 		  score_on			: out std_logic);		
 END component score_digit_2;
+
+component highscore is
+	port( clk : in std_logic;
+			tens, ones : in std_logic_vector(3 downto 0);
+			hex0, hex1 : out std_logic_vector(6 downto 0));
+end component highscore;
 
 component life is 
 	PORT
@@ -170,6 +176,15 @@ begin
 		pixel_column	=> p_col,
 		score_on			=> score_on2
 	);
+	
+	highscore_display : highscore port map(
+		clk 	=> clk,
+		tens  => score_ten_count,
+		ones  => score_ones_count,
+		hex0  => HEX0,
+		hex1  => HEX1
+	);
+		
 
 	state_text: text port map(
 		clk				=> clk,	

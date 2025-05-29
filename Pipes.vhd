@@ -47,7 +47,7 @@ begin
 
 	max_x <= to_unsigned(639, 10);
 	min_x <= to_unsigned(0, 10);
-	gap_size_y <= to_unsigned(150,10);
+	gap_size_y <= to_unsigned(130,10);
 
 	pipe_on <= '1' when (pipe_x_pos <= unsigned(pixel_col)) and (unsigned(pixel_col) <= pipe_x_pos + size_x) and 
 					   (not((unsigned(pixel_row) > gap_y) and (unsigned(pixel_row) < gap_y + gap_size_y)))

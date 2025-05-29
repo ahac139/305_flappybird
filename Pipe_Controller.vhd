@@ -151,7 +151,7 @@ architecture behaviour of Pipe_Controller is
 				elsif count = 466 then
 					enable3 <= '1';
 					count := 466;
-				else
+				elsif (state = "01") then
 					count := count + 1;
 				end if;
 			end if;
