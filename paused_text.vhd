@@ -18,14 +18,14 @@ end entity pause_text;
 
 architecture behavior of pause_text is
 
---CONSTANTS
-SIGNAL x_pos 	: integer := 8*3; --3 out of 80
-SIGNAL y_pos	: integer := 8*3; --3 out of 60
-SIGNAL size		: integer := 8*2; --each character is SIZE*8 by SIZE*8 (check font_row/font_col assignment matches)
+--CONSTANTS (CHANGE INTEGER VALUES BY MULTIPLES OF 8 BY CHANGING INTEGER ON THE RIGHT)
+SIGNAL x_pos 	: integer := 8*3; -- CURRENTLY 3 out of 80
+SIGNAL y_pos	: integer := 8*3; -- CURRENTLY 3 out of 60
+SIGNAL size		: integer := 8*2; -- each character is SIZE*8 by SIZE*8 (check font_row/font_col assignment matches)
 
 --LOGIC SIGNALS
 SIGNAL s_x_1, s_y, s_size			: std_logic_vector(9 DOWNTO 0); 
-SIGNAL s_x_2, s_x_3, s_x_4			: std_logic_vector(9 DOWNTO 0); 	
+SIGNAL s_x_2, s_x_3, s_x_4			: std_logic_vector(9 DOWNTO 0); --MAKE SURE THERE ARE N+1 s_x_n
 SIGNAL in_y_range 					: std_logic := '0';
 
 --Char address signals

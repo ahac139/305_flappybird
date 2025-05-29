@@ -28,6 +28,13 @@ port(Clk							:  std_logic;
 	char_on						: out std_logic);
 END component;
 
+SIGNAL pause_text_on : std_logic;
+component pause_text is
+port(Clk							:  std_logic;
+	pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
+	char_on						: out std_logic);
+END component;
+
 BEGIN
 
 --Component creation
@@ -36,12 +43,19 @@ menu : menu_text port map(
 		pixel_row 	=> pixel_row,
 		pixel_column => pixel_column,
 		char_on 		=> menu_text_on);
+		
+pause	: menu_text port map(
+		clk	 		=> clk,
+		pixel_row 	=> pixel_row,
+		pixel_column => pixel_column,
+		char_on 		=> pause_text_on);
 
 --
 process(state, menu_text_on)
 begin
 	case state is
 		when "00" => char_on <= menu_text_on;
+		when "10" => char_on <= pause_text_on;
 		when others => char_on <= '0';
 			
 	end case;
