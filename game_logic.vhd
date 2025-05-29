@@ -40,7 +40,7 @@ signal reset : std_logic := '0';
 signal ground							: std_logic := '0';
 signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
 signal mouse_right, mouse_left	: std_logic;
-signal s_bird_on, s_pipe_on : std_logic;
+signal s_bird_on, s_pipe_on 		: std_logic;
 
 -- LIFE / COLLISIONS
 signal life_on: std_logic;
@@ -55,11 +55,8 @@ signal invincible: std_logic;
 signal state_text_on : std_logic;
 
 signal score_on: std_logic;
-
 signal increase1: std_logic;
-
 signal score_on2: std_logic;
-
 signal increase2: std_logic;
 
 signal pipe_enable: std_logic := '0';

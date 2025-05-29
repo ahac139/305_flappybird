@@ -260,7 +260,7 @@ refer to the applicable agreement for further details.
 	(annotation_block (location)(rect 688 352 744 376))
 )
 (symbol
-	(rect 288 120 432 200)
+	(rect 336 120 480 200)
 	(text "clock_divider" (rect 5 0 69 12)(font "Arial" ))
 	(text "CDIV" (rect 8 64 36 76)(font "Arial" ))
 	(port
@@ -416,63 +416,63 @@ refer to the applicable agreement for further details.
 		(pt 192 64)
 		(output)
 		(text "HEX0[6..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "HEX0[6..0]" (rect 127 59 171 71)(font "Arial" ))
+		(text "HEX0[6..0]" (rect 127 59 180 71)(font "Arial" ))
 		(line (pt 192 64)(pt 176 64)(line_width 3))
 	)
 	(port
 		(pt 192 80)
 		(output)
 		(text "HEX1[6..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "HEX1[6..0]" (rect 127 75 171 87)(font "Arial" ))
+		(text "HEX1[6..0]" (rect 127 75 180 87)(font "Arial" ))
 		(line (pt 192 80)(pt 176 80)(line_width 3))
 	)
 	(port
 		(pt 192 96)
 		(output)
 		(text "HEX2[6..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "HEX2[6..0]" (rect 127 91 171 103)(font "Arial" ))
+		(text "HEX2[6..0]" (rect 127 91 180 103)(font "Arial" ))
 		(line (pt 192 96)(pt 176 96)(line_width 3))
 	)
 	(port
 		(pt 192 112)
 		(output)
 		(text "LEDR[9..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "LEDR[9..0]" (rect 125 107 171 119)(font "Arial" ))
+		(text "LEDR[9..0]" (rect 125 107 180 119)(font "Arial" ))
 		(line (pt 192 112)(pt 176 112)(line_width 3))
 	)
 	(port
 		(pt 192 128)
 		(output)
 		(text "state[1..0]" (rect 0 0 50 12)(font "Arial" ))
-		(text "state[1..0]" (rect 129 123 171 135)(font "Arial" ))
+		(text "state[1..0]" (rect 129 123 179 135)(font "Arial" ))
 		(line (pt 192 128)(pt 176 128)(line_width 3))
 	)
 	(port
 		(pt 192 144)
 		(output)
 		(text "char_on" (rect 0 0 38 12)(font "Arial" ))
-		(text "char_on" (rect 139 139 171 151)(font "Arial" ))
+		(text "char_on" (rect 139 139 177 151)(font "Arial" ))
 		(line (pt 192 144)(pt 176 144))
 	)
 	(port
 		(pt 192 160)
 		(output)
 		(text "bird_on" (rect 0 0 35 12)(font "Arial" ))
-		(text "bird_on" (rect 142 155 171 167)(font "Arial" ))
+		(text "bird_on" (rect 142 155 177 167)(font "Arial" ))
 		(line (pt 192 160)(pt 176 160))
 	)
 	(port
 		(pt 192 176)
 		(output)
 		(text "pipe_on" (rect 0 0 37 12)(font "Arial" ))
-		(text "pipe_on" (rect 140 171 171 183)(font "Arial" ))
+		(text "pipe_on" (rect 140 171 177 183)(font "Arial" ))
 		(line (pt 192 176)(pt 176 176))
 	)
 	(port
 		(pt 192 192)
 		(output)
 		(text "inv_on" (rect 0 0 33 12)(font "Arial" ))
-		(text "inv_on" (rect 144 187 171 199)(font "Arial" ))
+		(text "inv_on" (rect 144 187 177 199)(font "Arial" ))
 		(line (pt 192 192)(pt 176 192))
 	)
 	(port
@@ -543,21 +543,21 @@ refer to the applicable agreement for further details.
 		(pt 184 32)
 		(output)
 		(text "Red[3..0]" (rect 0 0 46 12)(font "Arial" ))
-		(text "Red[3..0]" (rect 125 27 163 39)(font "Arial" ))
+		(text "Red[3..0]" (rect 125 27 171 39)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(port
 		(pt 184 48)
 		(output)
 		(text "Green[3..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "Green[3..0]" (rect 117 43 163 55)(font "Arial" ))
+		(text "Green[3..0]" (rect 117 43 172 55)(font "Arial" ))
 		(line (pt 184 48)(pt 168 48)(line_width 3))
 	)
 	(port
 		(pt 184 64)
 		(output)
 		(text "Blue[3..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "Blue[3..0]" (rect 124 59 163 71)(font "Arial" ))
+		(text "Blue[3..0]" (rect 124 59 171 71)(font "Arial" ))
 		(line (pt 184 64)(pt 168 64)(line_width 3))
 	)
 	(drawing
@@ -612,15 +612,6 @@ refer to the applicable agreement for further details.
 	(pt 832 488)
 )
 (connector
-	(pt 280 152)
-	(pt 288 152)
-)
-(connector
-	(text "CLK_25" (rect 442 136 479 153)(font "Intel Clear" ))
-	(pt 432 152)
-	(pt 472 152)
-)
-(connector
 	(pt 792 464)
 	(pt 792 360)
 	(bus)
@@ -636,11 +627,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 832 488)
 	(pt 832 408)
-)
-(connector
-	(text "CLK_25" (rect 858 328 895 345)(font "Intel Clear" ))
-	(pt 848 344)
-	(pt 904 344)
 )
 (connector
 	(pt 792 360)
@@ -720,11 +706,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "CLK_25" (rect 202 392 239 409)(font "Intel Clear" ))
-	(pt 192 408)
-	(pt 256 408)
-)
-(connector
 	(text "v_sync" (rect 202 376 235 393)(font "Intel Clear" ))
 	(pt 256 392)
 	(pt 192 392)
@@ -798,4 +779,24 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 848 424)
 	(pt 904 424)
+)
+(connector
+	(text "CLK" (rect 298 136 318 153)(font "Intel Clear" ))
+	(pt 280 152)
+	(pt 336 152)
+)
+(connector
+	(text "CLK_25" (rect 490 136 527 153)(font "Intel Clear" ))
+	(pt 480 152)
+	(pt 520 152)
+)
+(connector
+	(text "CLK" (rect 202 392 222 409)(font "Intel Clear" ))
+	(pt 192 408)
+	(pt 256 408)
+)
+(connector
+	(text "CLK" (rect 858 328 878 345)(font "Intel Clear" ))
+	(pt 848 344)
+	(pt 904 344)
 )

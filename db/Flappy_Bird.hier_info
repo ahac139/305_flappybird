@@ -1,6 +1,8 @@
 |Flappy_Bird
 VGA_HS <= vga_sync:VSYN.horiz_sync_out
 CLOCK_50 => clock_divider:CDIV.Clk
+CLOCK_50 => video_render:VREN.Clk
+CLOCK_50 => game_logic:GLOG.Clk
 PS2_DAT <> game_logic:GLOG.PS2_DAT
 PS2_CLK <> game_logic:GLOG.PS2_CLK
 KEY[0] => game_logic:GLOG.PB[0]

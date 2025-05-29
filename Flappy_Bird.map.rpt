@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Flappy_Bird
-Thu May 29 21:48:47 2025
+Thu May 29 22:08:09 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 29 21:48:47 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 29 22:08:09 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Flappy_Bird                                 ;
 ; Top-level Entity Name           ; Flappy_Bird                                 ;
@@ -242,14 +242,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 439                         ;
+; Estimate of Logic utilization (ALMs needed) ; 444                         ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 709                         ;
-;     -- 7 input functions                    ; 4                           ;
-;     -- 6 input functions                    ; 155                         ;
-;     -- 5 input functions                    ; 120                         ;
-;     -- 4 input functions                    ; 100                         ;
-;     -- <=3 input functions                  ; 330                         ;
+; Combinational ALUT usage for logic          ; 706                         ;
+;     -- 7 input functions                    ; 6                           ;
+;     -- 6 input functions                    ; 165                         ;
+;     -- 5 input functions                    ; 99                          ;
+;     -- 4 input functions                    ; 108                         ;
+;     -- <=3 input functions                  ; 328                         ;
 ;                                             ;                             ;
 ; Dedicated logic registers                   ; 327                         ;
 ;                                             ;                             ;
@@ -259,9 +259,9 @@ refer to the applicable agreement for further details.
 ;                                             ;                             ;
 ; Total DSP Blocks                            ; 0                           ;
 ;                                             ;                             ;
-; Maximum fan-out node                        ; clock_divider:CDIV|temp_clk ;
-; Maximum fan-out                             ; 194                         ;
-; Total fan-out                               ; 4207                        ;
+; Maximum fan-out node                        ; vga_sync:VSYN|vert_sync_out ;
+; Maximum fan-out                             ; 171                         ;
+; Total fan-out                               ; 4202                        ;
 ; Average fan-out                             ; 3.41                        ;
 +---------------------------------------------+-----------------------------+
 
@@ -271,48 +271,48 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name             ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |Flappy_Bird                                       ; 709 (1)             ; 327 (0)                   ; 12672             ; 0          ; 62   ; 0            ; |Flappy_Bird                                                                                                                            ; Flappy_Bird             ; work         ;
+; |Flappy_Bird                                       ; 706 (1)             ; 327 (0)                   ; 12672             ; 0          ; 62   ; 0            ; |Flappy_Bird                                                                                                                            ; Flappy_Bird             ; work         ;
 ;    |clock_divider:CDIV|                            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|clock_divider:CDIV                                                                                                         ; clock_divider           ; work         ;
-;    |game_logic:GLOG|                               ; 665 (26)            ; 269 (8)                   ; 12672             ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG                                                                                                            ; game_logic              ; work         ;
+;    |game_logic:GLOG|                               ; 662 (26)            ; 269 (8)                   ; 12672             ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG                                                                                                            ; game_logic              ; work         ;
 ;       |MOUSE:Mouse1|                               ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|MOUSE:Mouse1                                                                                               ; MOUSE                   ; work         ;
-;       |Pipe_Controller:pipe|                       ; 424 (101)           ; 139 (37)                  ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe                                                                                       ; Pipe_Controller         ; work         ;
+;       |Pipe_Controller:pipe|                       ; 424 (99)            ; 139 (37)                  ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe                                                                                       ; Pipe_Controller         ; work         ;
 ;          |Pipes:P0|                                ; 105 (105)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0                                                                              ; Pipes                   ; work         ;
 ;          |Pipes:P1|                                ; 105 (105)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1                                                                              ; Pipes                   ; work         ;
-;          |Pipes:P2|                                ; 97 (97)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2                                                                              ; Pipes                   ; work         ;
+;          |Pipes:P2|                                ; 99 (99)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2                                                                              ; Pipes                   ; work         ;
 ;          |random_number_generator:RNG|             ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG                                                           ; random_number_generator ; work         ;
-;       |bird_controller:Bird|                       ; 81 (81)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird                                                                                       ; bird_controller         ; work         ;
+;       |bird_controller:Bird|                       ; 84 (84)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird                                                                                       ; bird_controller         ; work         ;
 ;       |collision_controller:collision_detector|    ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|collision_controller:collision_detector                                                                    ; collision_controller    ; work         ;
 ;       |invincibity_timer:timer1|                   ; 16 (16)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|invincibity_timer:timer1                                                                                   ; invincibity_timer       ; work         ;
-;       |life:life_display|                          ; 16 (15)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display                                                                                          ; life                    ; work         ;
-;          |char_rom:life|                           ; 1 (1)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life                                                                            ; char_rom                ; work         ;
+;       |life:life_display|                          ; 14 (14)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display                                                                                          ; life                    ; work         ;
+;          |char_rom:life|                           ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life                                                                            ; char_rom                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|altsyncram:altsyncram_component                                            ; altsyncram              ; work         ;
 ;                |altsyncram_d5g1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated             ; altsyncram_d5g1         ; work         ;
-;       |score:score_display|                        ; 13 (11)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display                                                                                        ; score                   ; work         ;
-;          |char_rom:score|                          ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score                                                                         ; char_rom                ; work         ;
+;       |score:score_display|                        ; 11 (11)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display                                                                                        ; score                   ; work         ;
+;          |char_rom:score|                          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score                                                                         ; char_rom                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component                                         ; altsyncram              ; work         ;
 ;                |altsyncram_d5g1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated          ; altsyncram_d5g1         ; work         ;
-;       |score_digit_2:score_display2|               ; 11 (10)             ; 7 (7)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2                                                                               ; score_digit_2           ; work         ;
-;          |char_rom:score|                          ; 1 (1)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score                                                                ; char_rom                ; work         ;
+;       |score_digit_2:score_display2|               ; 10 (10)             ; 7 (7)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2                                                                               ; score_digit_2           ; work         ;
+;          |char_rom:score|                          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score                                                                ; char_rom                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component                                ; altsyncram              ; work         ;
 ;                |altsyncram_d5g1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1         ; work         ;
-;       |text:state_text|                            ; 25 (1)              ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text                                                                                            ; text                    ; work         ;
-;          |menu_text:menu|                          ; 24 (10)             ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu                                                                             ; menu_text               ; work         ;
+;       |text:state_text|                            ; 24 (0)              ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text                                                                                            ; text                    ; work         ;
+;          |menu_text:menu|                          ; 24 (16)             ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu                                                                             ; menu_text               ; work         ;
 ;             |char_rom:EX|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX                                                                 ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component                                 ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1         ; work         ;
 ;             |char_rom:E|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E                                                                  ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component                                  ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated   ; altsyncram_d5g1         ; work         ;
-;             |char_rom:H|                           ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H                                                                  ; char_rom                ; work         ;
+;             |char_rom:H|                           ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H                                                                  ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component                                  ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated   ; altsyncram_d5g1         ; work         ;
-;             |char_rom:L1|                          ; 1 (1)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1                                                                 ; char_rom                ; work         ;
+;             |char_rom:L1|                          ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1                                                                 ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component                                 ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1         ; work         ;
 ;             |char_rom:L2|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2                                                                 ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component                                 ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1         ; work         ;
-;             |char_rom:O|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O                                                                  ; char_rom                ; work         ;
+;             |char_rom:O|                           ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O                                                                  ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component                                  ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated   ; altsyncram_d5g1         ; work         ;
 ;    |vga_sync:VSYN|                                 ; 42 (42)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|vga_sync:VSYN                                                                                                              ; vga_sync                ; work         ;
@@ -1358,20 +1358,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 44                          ;
 ;     plain             ; 77                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 709                         ;
+; arriav_lcell_comb     ; 706                         ;
 ;     arith             ; 142                         ;
 ;         1 data inputs ; 67                          ;
 ;         2 data inputs ; 75                          ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 503                         ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 498                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 22                          ;
 ;         2 data inputs ; 57                          ;
-;         3 data inputs ; 48                          ;
-;         4 data inputs ; 100                         ;
-;         5 data inputs ; 120                         ;
-;         6 data inputs ; 155                         ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 108                         ;
+;         5 data inputs ; 99                          ;
+;         6 data inputs ; 165                         ;
 ;     shared            ; 60                          ;
 ;         1 data inputs ; 48                          ;
 ;         2 data inputs ; 12                          ;
@@ -1388,7 +1388,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1398,7 +1398,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 29 21:48:35 2025
+    Info: Processing started: Thu May 29 22:07:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Flappy_Bird -c Flappy_Bird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1455,6 +1455,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file bird_co
 Info (12021): Found 2 design units, including 1 entities, in source file menu_text.vhd
     Info (12022): Found design unit 1: menu_text-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 19
     Info (12023): Found entity 1: menu_text File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file word.vhd
+    Info (12022): Found design unit 1: word-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/word.vhd Line: 19
+    Info (12023): Found entity 1: word File: C:/Users/GGPC/Documents/GitHub/305_flappybird/word.vhd Line: 6
 Info (12127): Elaborating entity "Flappy_Bird" for the top level hierarchy
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:VSYN"
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV"
@@ -1467,7 +1470,7 @@ Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(40): used exp
 Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(41): object "mouse_x" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 41
 Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(41): object "mouse_y" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 41
 Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(42): object "mouse_right" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 42
-Info (12128): Elaborating entity "score" for hierarchy "game_logic:GLOG|score:score_display" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 166
+Info (12128): Elaborating entity "score" for hierarchy "game_logic:GLOG|score:score_display" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 163
 Warning (10540): VHDL Signal Declaration warning at score.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 24
 Warning (10540): VHDL Signal Declaration warning at score.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 25
 Warning (10540): VHDL Signal Declaration warning at score.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 26
@@ -1492,11 +1495,11 @@ Info (12133): Instantiated megafunction "game_logic:GLOG|score:score_display|cha
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
     Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "score_digit_2" for hierarchy "game_logic:GLOG|score_digit_2:score_display2" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 175
+Info (12128): Elaborating entity "score_digit_2" for hierarchy "game_logic:GLOG|score_digit_2:score_display2" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 172
 Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 25
 Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(26): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 26
 Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(27): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 27
-Info (12128): Elaborating entity "text" for hierarchy "game_logic:GLOG|text:state_text" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 183
+Info (12128): Elaborating entity "text" for hierarchy "game_logic:GLOG|text:state_text" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 180
 Info (12128): Elaborating entity "menu_text" for hierarchy "game_logic:GLOG|text:state_text|menu_text:menu" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 34
 Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(22): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 22
 Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(23): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 23
@@ -1517,19 +1520,19 @@ Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(52): used expl
 Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(53): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 53
 Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(54): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 54
 Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(55): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 55
-Info (12128): Elaborating entity "bird_controller" for hierarchy "game_logic:GLOG|bird_controller:Bird" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 191
-Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 201
+Info (12128): Elaborating entity "bird_controller" for hierarchy "game_logic:GLOG|bird_controller:Bird" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 188
+Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 198
 Info (12128): Elaborating entity "Pipes" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd Line: 53
 Info (12128): Elaborating entity "random_number_generator" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd Line: 89
-Info (12128): Elaborating entity "MOUSE" for hierarchy "game_logic:GLOG|MOUSE:Mouse1" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 214
+Info (12128): Elaborating entity "MOUSE" for hierarchy "game_logic:GLOG|MOUSE:Mouse1" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 211
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 151
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 157
-Info (12128): Elaborating entity "invincibity_timer" for hierarchy "game_logic:GLOG|invincibity_timer:timer1" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 228
-Info (12128): Elaborating entity "collision_controller" for hierarchy "game_logic:GLOG|collision_controller:collision_detector" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 235
-Info (12128): Elaborating entity "life" for hierarchy "game_logic:GLOG|life:life_display" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 242
+Info (12128): Elaborating entity "invincibity_timer" for hierarchy "game_logic:GLOG|invincibity_timer:timer1" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 225
+Info (12128): Elaborating entity "collision_controller" for hierarchy "game_logic:GLOG|collision_controller:collision_detector" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 232
+Info (12128): Elaborating entity "life" for hierarchy "game_logic:GLOG|life:life_display" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 239
 Warning (10540): VHDL Signal Declaration warning at life.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 25
 Warning (10540): VHDL Signal Declaration warning at life.vhd(26): used explicit default value for signal "life_x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 26
 Warning (10540): VHDL Signal Declaration warning at life.vhd(27): used explicit default value for signal "life_y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 27
@@ -1610,16 +1613,16 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[1]"
-Info (21057): Implemented 950 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 947 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 45 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 816 logic cells
+    Info (21061): Implemented 813 logic cells
     Info (21064): Implemented 72 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Thu May 29 21:48:47 2025
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Thu May 29 22:08:09 2025
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:22
 
 
