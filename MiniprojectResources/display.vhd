@@ -98,7 +98,7 @@ component invincibity_timer is
     port (
         clk, vert_sync    : in  std_logic;  -- 25 Hz clock input
         start  : in  std_logic;  -- start counting pulse (one clock cycle)
-        invincibity   : out std_logic   -- goes high after 3 seconds
+        invincibity, inv_on : out std_logic   -- goes high after 3 seconds
     );
 end component invincibity_timer;
 
@@ -153,6 +153,7 @@ signal life_on: std_logic;
 signal zero_life: std_logic;
 signal prev_collision: std_logic;
 signal reset_collisions : std_logic;
+signal inv_on :std_logic;
 
 begin
 
@@ -160,7 +161,8 @@ begin
 		clk => clk_div,
 		vert_sync => v_sync_i,
 		start => collision_detected,
-		invincibity => invincible
+		invincibity => invincible,
+		inv_on => inv_on
 	);
 
 	collision_detector: collision_controller port map(
@@ -263,13 +265,13 @@ begin
 				'1' when (life_on = '1') else
 				'0';
 	Green <= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (invincible = '1') else
+				'1' when (bird_on = '1') and (inv_on = '1') else
 				'1' when (pipe_on = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'0';
 	Blue 	<= '1' when (char_on = '1') else
-				'1' when (bird_on = '1') and (invincible = '1') else
+				'1' when (bird_on = '1') and (inv_on = '1') else
 				'1' when (score_on = '1') else
 				'1' when (score_on2 = '1') else
 				'0';
