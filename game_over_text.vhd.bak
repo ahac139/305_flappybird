@@ -4,7 +4,7 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
 USE IEEE.NUMERIC_STD.ALL;
 
-entity pause_text is
+entity game_over_text is
 	port(Clk						: in std_logic;
 	
 	--Inputs from Sytem
@@ -13,10 +13,10 @@ entity pause_text is
 	--Outputs to System
 	char_on						: out std_logic
 	);
-end entity pause_text;
+end entity game_over_text;
 
 
-architecture behavior of pause_text is
+architecture behavior of game_over_text is
 
 --CONSTANTS (CHANGE INTEGER VALUES BY MULTIPLES OF 8 BY CHANGING INTEGER ON THE RIGHT)
 SIGNAL x_pos 	: integer := 8*3; -- CURRENTLY 3 out of 80
