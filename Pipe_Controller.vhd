@@ -4,10 +4,10 @@ use IEEE.numeric_std.all;
 
 
 entity Pipe_Controller is
-	port(Clk, vert_sync, enable, reset: in std_logic;
+	port(Clk, vert_sync, enable, reset, pu_collected: in std_logic;
 		state, mode: in std_logic_vector(1 downto 0); 
 		pixel_row, pixel_col: in std_logic_vector(9 downto 0);
-		pipe_on, increase: out std_logic
+		pipe_on, increase, power_up_on: out std_logic
 	);
 end entity Pipe_Controller;
 
@@ -15,11 +15,11 @@ architecture behaviour of Pipe_Controller is
 
 	component Pipes is
 		port(
-			clk, vert_sync, enable, reset: in std_logic;
+			clk, vert_sync, enable, reset, power_up_enable, pu_collected: in std_logic;
 			pixel_row, pixel_col: in std_logic_vector(9 downto 0);
 			pipe_x_motion: unsigned(9 downto 0);
 			random_number: in unsigned(9 downto 0);
-			pipe_on, increase: out std_logic
+			pipe_on, increase, power_up_on: out std_logic
 		);
 	end component Pipes;
 		
@@ -45,7 +45,11 @@ architecture behaviour of Pipe_Controller is
 	signal increase2 : std_logic := '0';
 	signal increase3 : std_logic := '0';
 
+	signal power_up_on1, power_up_on2, power_up_on3 : std_logic;
 
+	signal power_up_enable, s_power_up_on, pu_onscreen_flag : std_logic := '0'; 
+	signal stored_random_number : unsigned(9 downto 0);
+	signal prev_vert_sync : std_logic := '0';
 	
 	begin
 		
@@ -60,7 +64,10 @@ architecture behaviour of Pipe_Controller is
 			pipe_x_motion => pipe_x_motion,
 			random_number => gap,
 			pipe_on =>pipe_on1,
-			increase => increase1);
+			increase => increase1,
+			power_up_on => power_up_on1,
+			power_up_enable => power_up_enable,
+			pu_collected => pu_collected);
 			
 		P1: Pipes port map(
 			clk => Clk,
@@ -72,7 +79,10 @@ architecture behaviour of Pipe_Controller is
 			pipe_x_motion => pipe_x_motion,
 			random_number => gap,
 			pipe_on =>pipe_on2,
-			increase => increase2);
+			increase => increase2,
+			power_up_on => power_up_on2,
+			power_up_enable => power_up_enable,
+			pu_collected => pu_collected);
 
 		P2: Pipes port map(
 			clk => Clk,
@@ -84,15 +94,15 @@ architecture behaviour of Pipe_Controller is
 			pipe_x_motion => pipe_x_motion,
 			random_number => gap,
 			pipe_on => pipe_on3,
-			increase => increase3);
+			increase => increase3,
+			power_up_on => power_up_on3,
+			power_up_enable => power_up_enable,
+			pu_collected => pu_collected);
 			
 		RNG: random_number_generator port map(
 				clk => vert_sync,
 				random_number => gap);
-		
-		
-
-								  
+							  
 		process(clk) 
 		begin
 			if(rising_edge(clk)) then
@@ -112,30 +122,66 @@ architecture behaviour of Pipe_Controller is
 		pipe_on <= '1' when ((pipe_on1 = '1') or (pipe_on2 = '1') or (pipe_on3 = '1')) and ((state = "01") or (state = "10")) else '0';
 		increase <= increase1 or increase2 or increase3;
 		
+		s_power_up_on <= power_up_on1 or power_up_on2 or power_up_on3;
+		power_up_on <= s_power_up_on;
+		
 		process(vert_sync)
 		variable count  : integer := 0;
 		begin
-				if rising_edge(vert_sync) then
-					if reset = '1' then 
-						count := 0;
-					end if;
-					if (enable = '1') then
-						
-						enable1 <= '1';
+		if rising_edge(vert_sync) then
+			if reset = '1' then 
+				count := 0;
+			end if;
+			if (enable = '1') then
+				
+				enable1 <= '1';
+			
+				if count = 233 then
+					enable2 <= '1';
+					count := count + 1;
 					
-						if count = 233 then
-							enable2 <= '1';
-							count := count + 1;
-							
-						elsif count > 466 then
-							enable3 <= '1';
-						else
-							count := count + 1;
-						end if;
-					end if;
+				elsif count > 466 then
+					enable3 <= '1';
+				else
+					count := count + 1;
+				end if;
+			end if;
+
+			if (pu_onscreen_flag = '1') then
+				power_up_enable <= '0';
+				
+				stored_random_number <= gap;
+			else
+			-- if no other powerup onscreen, wait random interval and spawn one
+				pu_count := pu_count + 1;
+				if (to_unsigned(pu_count, 10) >= stored_random_number) then 
+					pu_count := 0;
+					power_up_enable <= '1';
+				end if;
+			end if;
+
+		end if;
+		end process;
+		
+		process(clk)
+		begin
+			if rising_edge(clk) then
+				prev_vert_sync <= vert_sync;
+				
+				if (s_power_up_on = '1') then
+				
+					pu_onscreen_flag <= '1';
+					
+				end if;
+				
+				if (prev_vert_sync = '0' and vert_sync = '1') then
+					pu_onscreen_flag <= '0';
+				end if;
+				
 			end if;
 		end process;
-			
+	 
+				
 				
 
 end behaviour;

@@ -19,7 +19,7 @@ entity game_logic is
 	
 	--Outputs to System
 	state								: out std_logic_vector(1 downto 0) := "00";
-	char_on, bird_on, pipe_on, inv_on	: out std_logic := '0';
+	char_on, bird_on, pipe_on, inv_on, power_up_on	: out std_logic := '0';
 	
 	Clk								: in std_logic
 	);
@@ -42,7 +42,7 @@ signal ground					: std_logic := '0';
 signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
 signal mouse_right, mouse_left	: std_logic;
 signal s_bird_on, s_pipe_on 		: std_logic;
-
+signal s_power_up_on, pu_collected	: std_logic;
 
 -- LIFE / COLLISIONS
 signal life_on, zero_life: std_logic;
@@ -73,7 +73,7 @@ END component score_digit_2;
 
 component life is 
 	PORT
-		( clk, decrease_life, reset: IN std_logic;
+		( clk, decrease_life, increase_life, reset: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  life_on, zero_life		   : OUT std_logic);	
 end component life;
@@ -105,10 +105,10 @@ END component text;
 --object components
 
 component Pipe_Controller is
-	port(Clk, vert_sync, enable, reset		: in std_logic;
+	port(Clk, vert_sync, enable, reset, pu_collected: in std_logic;
 		state, mode				: in std_logic_vector(1 downto 0); 
 		pixel_row, pixel_col	: in std_logic_vector(9 downto 0);
-		pipe_on, increase		: out std_logic
+		pipe_on, increase, power_up_on		: out std_logic
 		
 	);
 end component Pipe_Controller;
@@ -194,7 +194,9 @@ begin
 		pixel_row => p_row,
 		pixel_col => p_col,
 		pipe_on => s_pipe_on,
-		increase => increase1
+		increase => increase1,
+		power_up_on => s_power_up_on,
+		pu_collected => pu_collected
 	);
 	
 	Mouse1: Mouse port map(
@@ -227,6 +229,7 @@ begin
 		clk				=> clk,
 		reset				=> reset,
 		decrease_life	=> collision_detected,
+		increase_life  => pu_collected,
 		pixel_row 		=> p_row,
 		pixel_column	=> p_col,
 		life_on			=>	life_on,
@@ -235,7 +238,7 @@ begin
 	
 	collision <= (s_bird_on and s_pipe_on);
 	reset_collisions <= not invincible;
-	
+	pu_collected <= s_power_up_on and bird_on;
 	
 	--State machine
 	process(clk)
@@ -293,5 +296,6 @@ begin
 	char_on <= state_text_on or life_on or score_on or score_on2;
 	pipe_on <= s_pipe_on;
 	bird_on <= s_bird_on;
+	power_up_on <= s_power_up_on;
 	
 end behaviour;
