@@ -74,6 +74,8 @@ begin
 				else
 						increase <= '0';
 				end if;
+				
+				
 			end if;
 		end if;
 	end process Move_pipe;
