@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Flappy_Bird
-Fri May 30 00:39:48 2025
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fri May 30 10:43:20 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -54,9 +54,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  46. Port Connectivity Checks: "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E"
  47. Port Connectivity Checks: "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H"
  48. Port Connectivity Checks: "game_logic:GLOG|text:state_text"
- 49. Post-Synthesis Netlist Statistics for Top Partition
- 50. Elapsed Time Per Partition
- 51. Analysis & Synthesis Messages
+ 49. Port Connectivity Checks: "game_logic:GLOG|score:score_display"
+ 50. Post-Synthesis Netlist Statistics for Top Partition
+ 51. Elapsed Time Per Partition
+ 52. Analysis & Synthesis Messages
 
 
 
@@ -79,27 +80,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 30 00:39:48 2025       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; Flappy_Bird                                 ;
-; Top-level Entity Name           ; Flappy_Bird                                 ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 327                                         ;
-; Total pins                      ; 62                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 14,720                                      ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri May 30 10:43:20 2025           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; Flappy_Bird                                     ;
+; Top-level Entity Name           ; Flappy_Bird                                     ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 336                                             ;
+; Total pins                      ; 62                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 14,720                                          ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -194,11 +195,11 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -206,47 +207,48 @@ refer to the applicable agreement for further details.
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processors 6-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; score_digit_2.vhd                ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd              ;         ;
-; score.vhd                        ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd                      ;         ;
-; random_number_generator.vhd      ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/random_number_generator.vhd    ;         ;
-; Pipes.vhd                        ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipes.vhd                      ;         ;
-; Pipe_Controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd            ;         ;
-; collision_controller.vhd         ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/collision_controller.vhd       ;         ;
-; life.vhd                         ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd                       ;         ;
-; invincibility_timer.vhd          ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/invincibility_timer.vhd        ;         ;
-; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd                       ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/char_rom.vhd                   ;         ;
-; video_render.vhd                 ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/video_render.vhd               ;         ;
-; VGA_SYNC.vhd                     ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/VGA_SYNC.vhd                   ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd                      ;         ;
-; game_logic.vhd                   ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd                 ;         ;
-; Flappy_Bird.bdf                  ; yes             ; User Block Diagram/Schematic File      ; C:/Users/GGPC/Documents/GitHub/305_flappybird/Flappy_Bird.bdf                ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/clock_divider.vhd              ;         ;
-; bird_controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/bird_controller.vhd            ;         ;
-; menu_text.vhd                    ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd                  ;         ;
-; paused_text.vhd                  ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd                ;         ;
-; game_over_text.vhd               ; yes             ; User VHDL File                         ; C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd             ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf         ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/GGPC/Documents/GitHub/305_flappybird/tcgrom.mif                     ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; score_digit_2.vhd                ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/score_digit_2.vhd           ;         ;
+; score.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd                   ;         ;
+; random_number_generator.vhd      ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/random_number_generator.vhd ;         ;
+; Pipes.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/Pipes.vhd                   ;         ;
+; Pipe_Controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/Pipe_Controller.vhd         ;         ;
+; collision_controller.vhd         ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/collision_controller.vhd    ;         ;
+; life.vhd                         ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/life.vhd                    ;         ;
+; invincibility_timer.vhd          ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/invincibility_timer.vhd     ;         ;
+; text.vhd                         ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd                    ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/char_rom.vhd                ;         ;
+; video_render.vhd                 ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/video_render.vhd            ;         ;
+; VGA_SYNC.vhd                     ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/VGA_SYNC.vhd                ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd                   ;         ;
+; game_logic.vhd                   ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd              ;         ;
+; Flappy_Bird.bdf                  ; yes             ; User Block Diagram/Schematic File      ; C:/Users/ahac139/Downloads/305/305_flappybird/Flappy_Bird.bdf             ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/clock_divider.vhd           ;         ;
+; bird_controller.vhd              ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/bird_controller.vhd         ;         ;
+; menu_text.vhd                    ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd               ;         ;
+; paused_text.vhd                  ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd             ;         ;
+; game_over_text.vhd               ; yes             ; User VHDL File                         ; C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf      ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/ahac139/Downloads/305/305_flappybird/tcgrom.mif                  ;         ;
+; life_power_up.vhd                ; yes             ; Auto-Found VHDL File                   ; C:/Users/ahac139/Downloads/305/305_flappybird/life_power_up.vhd           ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------+
@@ -254,16 +256,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 456                         ;
+; Estimate of Logic utilization (ALMs needed) ; 667                         ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 723                         ;
-;     -- 7 input functions                    ; 9                           ;
-;     -- 6 input functions                    ; 170                         ;
-;     -- 5 input functions                    ; 103                         ;
-;     -- 4 input functions                    ; 110                         ;
-;     -- <=3 input functions                  ; 331                         ;
+; Combinational ALUT usage for logic          ; 1036                        ;
+;     -- 7 input functions                    ; 10                          ;
+;     -- 6 input functions                    ; 270                         ;
+;     -- 5 input functions                    ; 78                          ;
+;     -- 4 input functions                    ; 135                         ;
+;     -- <=3 input functions                  ; 543                         ;
 ;                                             ;                             ;
-; Dedicated logic registers                   ; 327                         ;
+; Dedicated logic registers                   ; 336                         ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 62                          ;
 ; Total MLAB memory bits                      ; 0                           ;
@@ -272,9 +274,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; vga_sync:VSYN|vert_sync_out ;
-; Maximum fan-out                             ; 171                         ;
-; Total fan-out                               ; 4418                        ;
-; Average fan-out                             ; 3.50                        ;
+; Maximum fan-out                             ; 172                         ;
+; Total fan-out                               ; 5408                        ;
+; Average fan-out                             ; 3.41                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -283,59 +285,62 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                           ; Entity Name             ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |Flappy_Bird                                       ; 723 (1)             ; 327 (0)                   ; 14720             ; 0          ; 62   ; 0            ; |Flappy_Bird                                                                                                                                                  ; Flappy_Bird             ; work         ;
+; |Flappy_Bird                                       ; 1036 (1)            ; 336 (0)                   ; 14720             ; 0          ; 62   ; 0            ; |Flappy_Bird                                                                                                                                                  ; Flappy_Bird             ; work         ;
 ;    |clock_divider:CDIV|                            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|clock_divider:CDIV                                                                                                                               ; clock_divider           ; work         ;
-;    |game_logic:GLOG|                               ; 679 (27)            ; 269 (8)                   ; 14720             ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG                                                                                                                                  ; game_logic              ; work         ;
+;    |game_logic:GLOG|                               ; 989 (30)            ; 278 (8)                   ; 14720             ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG                                                                                                                                  ; game_logic              ; work         ;
 ;       |MOUSE:Mouse1|                               ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|MOUSE:Mouse1                                                                                                                     ; MOUSE                   ; work         ;
-;       |Pipe_Controller:pipe|                       ; 424 (99)            ; 139 (37)                  ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe                                                                                                             ; Pipe_Controller         ; work         ;
-;          |Pipes:P0|                                ; 105 (105)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0                                                                                                    ; Pipes                   ; work         ;
-;          |Pipes:P1|                                ; 105 (105)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1                                                                                                    ; Pipes                   ; work         ;
-;          |Pipes:P2|                                ; 99 (99)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2                                                                                                    ; Pipes                   ; work         ;
-;          |random_number_generator:RNG|             ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG                                                                                 ; random_number_generator ; work         ;
-;       |bird_controller:Bird|                       ; 84 (84)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird                                                                                                             ; bird_controller         ; work         ;
+;       |Pipe_Controller:pipe|                       ; 712 (65)            ; 148 (36)                  ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe                                                                                                             ; Pipe_Controller         ; work         ;
+;          |Pipes:P0|                                ; 227 (117)           ; 35 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0                                                                                                    ; Pipes                   ; work         ;
+;             |life_power_up:powerUp|                ; 110 (110)           ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|life_power_up:powerUp                                                                              ; life_power_up           ; work         ;
+;          |Pipes:P1|                                ; 199 (109)           ; 34 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1                                                                                                    ; Pipes                   ; work         ;
+;             |life_power_up:powerUp|                ; 90 (90)             ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|life_power_up:powerUp                                                                              ; life_power_up           ; work         ;
+;          |Pipes:P2|                                ; 199 (114)           ; 34 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2                                                                                                    ; Pipes                   ; work         ;
+;             |life_power_up:powerUp|                ; 85 (85)             ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|life_power_up:powerUp                                                                              ; life_power_up           ; work         ;
+;          |random_number_generator:RNG|             ; 22 (22)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG                                                                                 ; random_number_generator ; work         ;
+;       |bird_controller:Bird|                       ; 81 (81)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird                                                                                                             ; bird_controller         ; work         ;
 ;       |collision_controller:collision_detector|    ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|collision_controller:collision_detector                                                                                          ; collision_controller    ; work         ;
 ;       |invincibity_timer:timer1|                   ; 16 (16)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|invincibity_timer:timer1                                                                                                         ; invincibity_timer       ; work         ;
-;       |life:life_display|                          ; 14 (14)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display                                                                                                                ; life                    ; work         ;
-;          |char_rom:life|                           ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life                                                                                                  ; char_rom                ; work         ;
+;       |life:life_display|                          ; 34 (33)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display                                                                                                                ; life                    ; work         ;
+;          |char_rom:life|                           ; 1 (1)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life                                                                                                  ; char_rom                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|altsyncram:altsyncram_component                                                                  ; altsyncram              ; work         ;
 ;                |altsyncram_d5g1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                   ; altsyncram_d5g1         ; work         ;
-;       |score:score_display|                        ; 11 (11)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display                                                                                                              ; score                   ; work         ;
+;       |score:score_display|                        ; 13 (13)             ; 8 (8)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display                                                                                                              ; score                   ; work         ;
 ;          |char_rom:score|                          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score                                                                                               ; char_rom                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component                                                               ; altsyncram              ; work         ;
 ;                |altsyncram_d5g1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                ; altsyncram_d5g1         ; work         ;
-;       |score_digit_2:score_display2|               ; 10 (10)             ; 7 (7)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2                                                                                                     ; score_digit_2           ; work         ;
+;       |score_digit_2:score_display2|               ; 12 (12)             ; 7 (7)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2                                                                                                     ; score_digit_2           ; work         ;
 ;          |char_rom:score|                          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score                                                                                      ; char_rom                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component                                                      ; altsyncram              ; work         ;
 ;                |altsyncram_d5g1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                       ; altsyncram_d5g1         ; work         ;
-;       |text:state_text|                            ; 40 (1)              ; 0 (0)                     ; 2432              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text                                                                                                                  ; text                    ; work         ;
+;       |text:state_text|                            ; 38 (1)              ; 0 (0)                     ; 2432              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text                                                                                                                  ; text                    ; work         ;
 ;          |game_over_text:game_over|                ; 2 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over                                                                                         ; game_over_text          ; work         ;
 ;             |char_rom:G_OVER_CHAR_ROM|             ; 2 (2)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM                                                                ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM|altsyncram:altsyncram_component                                ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1         ; work         ;
-;          |menu_text:menu|                          ; 26 (18)             ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu                                                                                                   ; menu_text               ; work         ;
+;          |menu_text:menu|                          ; 22 (5)              ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu                                                                                                   ; menu_text               ; work         ;
 ;             |char_rom:EX|                          ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX                                                                                       ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component                                                       ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                        ; altsyncram_d5g1         ; work         ;
 ;             |char_rom:E|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E                                                                                        ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component                                                        ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                         ; altsyncram_d5g1         ; work         ;
-;             |char_rom:H|                           ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H                                                                                        ; char_rom                ; work         ;
+;             |char_rom:H|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H                                                                                        ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component                                                        ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                         ; altsyncram_d5g1         ; work         ;
 ;             |char_rom:L1|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1                                                                                       ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component                                                       ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                        ; altsyncram_d5g1         ; work         ;
-;             |char_rom:L2|                          ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2                                                                                       ; char_rom                ; work         ;
+;             |char_rom:L2|                          ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2                                                                                       ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component                                                       ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                        ; altsyncram_d5g1         ; work         ;
-;             |char_rom:O|                           ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O                                                                                        ; char_rom                ; work         ;
+;             |char_rom:O|                           ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O                                                                                        ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component                                                        ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                         ; altsyncram_d5g1         ; work         ;
-;          |pause_text:pause|                        ; 11 (9)              ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|pause_text:pause                                                                                                 ; pause_text              ; work         ;
+;          |pause_text:pause|                        ; 13 (11)             ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|pause_text:pause                                                                                                 ; pause_text              ; work         ;
 ;             |char_rom:PAUSE_CHAR_ROM|              ; 2 (2)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|pause_text:pause|char_rom:PAUSE_CHAR_ROM                                                                         ; char_rom                ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|pause_text:pause|char_rom:PAUSE_CHAR_ROM|altsyncram:altsyncram_component                                         ; altsyncram              ; work         ;
 ;                   |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |Flappy_Bird|game_logic:GLOG|text:state_text|pause_text:pause|char_rom:PAUSE_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated          ; altsyncram_d5g1         ; work         ;
-;    |vga_sync:VSYN|                                 ; 42 (42)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|vga_sync:VSYN                                                                                                                                    ; vga_sync                ; work         ;
+;    |vga_sync:VSYN|                                 ; 45 (45)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |Flappy_Bird|vga_sync:VSYN                                                                                                                                    ; vga_sync                ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -374,23 +379,27 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+------------------------------------------------------------+----------------------------------------+
-; Register name                                              ; Reason for Removal                     ;
-+------------------------------------------------------------+----------------------------------------+
-; game_logic:GLOG|Pipe_Controller:pipe|pipe_x_motion[1,3..9] ; Stuck at GND due to stuck port data_in ;
-; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[4..7]                 ; Stuck at VCC due to stuck port data_in ;
-; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[3]                    ; Stuck at GND due to stuck port data_in ;
-; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[2]                    ; Stuck at VCC due to stuck port data_in ;
-; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[0,1]                  ; Stuck at GND due to stuck port data_in ;
-; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[10]                  ; Stuck at VCC due to stuck port data_in ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[9]     ; Stuck at GND due to stuck port data_in ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[9]     ; Stuck at GND due to stuck port data_in ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[9]     ; Stuck at GND due to stuck port data_in ;
-; vga_sync:VSYN|pixel_row[9]                                 ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 21                     ;                                        ;
-+------------------------------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                        ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+; Register name                                                                         ; Reason for Removal                                                                                ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+; game_logic:GLOG|Pipe_Controller:pipe|stored_random_number[9]                          ; Stuck at GND due to stuck port data_in                                                            ;
+; game_logic:GLOG|Pipe_Controller:pipe|pipe_x_motion[3..9]                              ; Stuck at GND due to stuck port data_in                                                            ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[4..7]                                            ; Stuck at VCC due to stuck port data_in                                                            ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[3]                                               ; Stuck at GND due to stuck port data_in                                                            ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[2]                                               ; Stuck at VCC due to stuck port data_in                                                            ;
+; game_logic:GLOG|MOUSE:Mouse1|CHAROUT[0,1]                                             ; Stuck at GND due to stuck port data_in                                                            ;
+; game_logic:GLOG|MOUSE:Mouse1|SHIFTOUT[10]                                             ; Stuck at VCC due to stuck port data_in                                                            ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|life_power_up:powerUp|prev_pu_collected ; Merged with game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|life_power_up:powerUp|prev_pu_collected ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|life_power_up:powerUp|prev_pu_collected ; Merged with game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|life_power_up:powerUp|prev_pu_collected ;
+; game_logic:GLOG|life:life_display|prev_increase_life                                  ; Merged with game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|life_power_up:powerUp|prev_pu_collected ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[9]                                ; Stuck at GND due to stuck port data_in                                                            ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[9]                                ; Stuck at GND due to stuck port data_in                                                            ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[9]                                ; Stuck at GND due to stuck port data_in                                                            ;
+; vga_sync:VSYN|pixel_row[9]                                                            ; Stuck at GND due to stuck port data_in                                                            ;
+; Total Number of Removed Registers = 24                                                ;                                                                                                   ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -398,7 +407,7 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------+---------------------------+---------------------------------------------------------+
 ; Register name                                         ; Reason for Removal        ; Registers Removed due to This Register                  ;
 +-------------------------------------------------------+---------------------------+---------------------------------------------------------+
-; game_logic:GLOG|Pipe_Controller:pipe|pipe_x_motion[1] ; Stuck at GND              ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[9], ;
+; game_logic:GLOG|Pipe_Controller:pipe|pipe_x_motion[3] ; Stuck at GND              ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[9], ;
 ;                                                       ; due to stuck port data_in ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[9], ;
 ;                                                       ;                           ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[9]  ;
 +-------------------------------------------------------+---------------------------+---------------------------------------------------------+
@@ -409,12 +418,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 327   ;
-; Number of registers using Synchronous Clear  ; 42    ;
-; Number of registers using Synchronous Load   ; 44    ;
+; Total registers                              ; 336   ;
+; Number of registers using Synchronous Clear  ; 61    ;
+; Number of registers using Synchronous Load   ; 35    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 184   ;
+; Number of registers using Clock Enable       ; 171   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -424,75 +433,75 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------------------+---------+
 ; Inverted Register                                                        ; Fan out ;
 +--------------------------------------------------------------------------+---------+
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[3]                   ; 6       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[1]                   ; 2       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[5]                   ; 6       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[7]                   ; 4       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[1]                   ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[1]                   ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[0]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[1]                   ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[0]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9]              ; 7       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[3]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[2]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[1]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[5]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[4]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[6]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[4]                   ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[7]                   ; 5       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[6]                   ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[4]                   ; 7       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[4]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[6]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[5]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[3]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[2]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[1]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[4]                   ; 8       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[7]                   ; 4       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[5]                   ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[3]                   ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[3]                   ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[4]                   ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[7]                   ; 5       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[6]                   ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[5]                   ; 6       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[1]                   ; 2       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[3]                   ; 8       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[3]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[2]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[1]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[0]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[4]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[6]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[5]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[9]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[4]                   ; 8       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[7]                   ; 4       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[5]                   ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[9]              ; 7       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[3]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[2]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[1]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[5]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[4]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[6]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[3]                   ; 4       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[5]                   ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[4]                   ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[7]                   ; 5       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[6]                   ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[5]                   ; 6       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[1]                   ; 2       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[3]                   ; 8       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[3]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[2]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[1]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[0]              ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[4]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[5]              ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[9]              ; 5       ;
-; game_logic:GLOG|score_digit_2:score_display2|score_address[4]            ; 5       ;
-; game_logic:GLOG|score_digit_2:score_display2|score_address[5]            ; 4       ;
-; game_logic:GLOG|life:life_display|life_address[0]                        ; 7       ;
-; game_logic:GLOG|life:life_display|life_address[1]                        ; 6       ;
-; game_logic:GLOG|life:life_display|life_address[4]                        ; 4       ;
-; game_logic:GLOG|life:life_display|life_address[5]                        ; 3       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[9]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[3]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[2]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[1]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[5]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[4]              ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6]              ; 6       ;
+; game_logic:GLOG|score_digit_2:score_display2|score_address[4]            ; 4       ;
+; game_logic:GLOG|score_digit_2:score_display2|score_address[5]            ; 3       ;
+; game_logic:GLOG|life:life_display|life_address[0]                        ; 5       ;
+; game_logic:GLOG|life:life_display|life_address[1]                        ; 5       ;
+; game_logic:GLOG|life:life_display|life_address[4]                        ; 5       ;
+; game_logic:GLOG|life:life_display|life_address[5]                        ; 5       ;
 ; game_logic:GLOG|score:score_display|score_address[4]                     ; 4       ;
 ; game_logic:GLOG|score:score_display|score_address[5]                     ; 3       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[8] ; 10      ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[7] ; 9       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[6] ; 9       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[5] ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[4] ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[3] ; 4       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[2] ; 4       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[1] ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[0] ; 5       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|size_x[5]                  ; 13      ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|size_x[4]                  ; 13      ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[8] ; 7       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[6] ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[7] ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[5] ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[4] ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[3] ; 5       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[1] ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG|lfsr[0] ; 6       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|size_x[5]                  ; 3       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|size_x[4]                  ; 3       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|size_x[3]                  ; 3       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|size_x[2]                  ; 3       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|size_x[5]                  ; 13      ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|size_x[4]                  ; 13      ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|size_x[5]                  ; 3       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|size_x[4]                  ; 3       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|size_x[3]                  ; 3       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|size_x[2]                  ; 3       ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|size_x[5]                  ; 13      ;
-; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|size_x[4]                  ; 13      ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|size_x[5]                  ; 3       ;
+; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|size_x[4]                  ; 3       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|size_x[3]                  ; 3       ;
 ; game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|size_x[2]                  ; 3       ;
 ; game_logic:GLOG|MOUSE:Mouse1|send_char                                   ; 3       ;
@@ -511,24 +520,30 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[8]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[8]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[2]          ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[2]          ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Flappy_Bird|vga_sync:VSYN|v_count[1]                                        ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|invincibity_timer:timer1|count[6]               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[7]     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Flappy_Bird|vga_sync:VSYN|v_count[9]                                        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|count[1]                   ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|invincibity_timer:timer1|count[1]               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|score_address[1]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|score:score_display|score_address[0]            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[8]     ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[8]     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[7]     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|life:life_display|life_address[2]               ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird|bird_y_motion[6]           ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[5]          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[1]          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[3]          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[3]     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[6]     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[9]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|life:life_display|life_address[1]               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[8]     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|life:life_display|life_address[3]               ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|bird_controller:Bird|bird_y_motion[0]           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|gap_y[3]          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|gap_y[6]          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|gap_y[6]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|score_digit_2:score_display2|score_address[5]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|score:score_display|score_address[5]            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|pipe_x_pos[6]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P1|pipe_x_pos[1]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|Pipe_Controller:pipe|Pipes:P2|pipe_x_pos[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Flappy_Bird|game_logic:GLOG|life:life_display|life_address[4]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|video_render:VREN|Blue[3]                                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|game_logic:GLOG|text:state_text|pause_text:pause|active_char[3] ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Flappy_Bird|game_logic:GLOG|life:life_display|char_rom:life|Mux0            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Flappy_Bird|game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|Mux0  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 
 
@@ -1549,42 +1564,55 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "game_logic:GLOG|score:score_display"                                                            ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; score_ones_count ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 327                         ;
+; arriav_ff             ; 336                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 149                         ;
+;     ENA               ; 114                         ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 20                          ;
-;     SCLR              ; 22                          ;
-;     SLD               ; 44                          ;
-;     plain             ; 76                          ;
+;     ENA SCLR          ; 29                          ;
+;     ENA SLD           ; 13                          ;
+;     SCLR              ; 23                          ;
+;     SCLR SLD          ; 9                           ;
+;     SLD               ; 13                          ;
+;     plain             ; 119                         ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 723                         ;
-;     arith             ; 142                         ;
-;         1 data inputs ; 67                          ;
-;         2 data inputs ; 75                          ;
-;     extend            ; 9                           ;
-;         7 data inputs ; 9                           ;
-;     normal            ; 512                         ;
+; arriav_lcell_comb     ; 1036                        ;
+;     arith             ; 316                         ;
+;         0 data inputs ; 13                          ;
+;         1 data inputs ; 243                         ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 14                          ;
+;     extend            ; 10                          ;
+;         7 data inputs ; 10                          ;
+;     normal            ; 650                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 22                          ;
-;         2 data inputs ; 58                          ;
-;         3 data inputs ; 48                          ;
-;         4 data inputs ; 110                         ;
-;         5 data inputs ; 103                         ;
-;         6 data inputs ; 170                         ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 70                          ;
+;         3 data inputs ; 68                          ;
+;         4 data inputs ; 135                         ;
+;         5 data inputs ; 78                          ;
+;         6 data inputs ; 270                         ;
 ;     shared            ; 60                          ;
-;         1 data inputs ; 48                          ;
-;         2 data inputs ; 12                          ;
+;         1 data inputs ; 42                          ;
+;         2 data inputs ; 18                          ;
 ; boundary_port         ; 62                          ;
 ; stratixv_ram_block    ; 88                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.41                        ;
+; Max LUT depth         ; 7.70                        ;
+; Average LUT depth     ; 4.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1593,7 +1621,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1602,91 +1630,92 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 30 00:39:35 2025
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri May 30 10:43:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Flappy_Bird -c Flappy_Bird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file score_digit_2.vhd
-    Info (12022): Found design unit 1: score_digit_2-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 14
-    Info (12023): Found entity 1: score_digit_2 File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 6
+    Info (12022): Found design unit 1: score_digit_2-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/score_digit_2.vhd Line: 14
+    Info (12023): Found entity 1: score_digit_2 File: C:/Users/ahac139/Downloads/305/305_flappybird/score_digit_2.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file score.vhd
-    Info (12022): Found design unit 1: score-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 13
-    Info (12023): Found entity 1: score File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 6
+    Info (12022): Found design unit 1: score-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd Line: 14
+    Info (12023): Found entity 1: score File: C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file random_number_generator.vhd
-    Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/random_number_generator.vhd Line: 12
-    Info (12023): Found entity 1: random_number_generator File: C:/Users/GGPC/Documents/GitHub/305_flappybird/random_number_generator.vhd Line: 5
+    Info (12022): Found design unit 1: random_number_generator-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/random_number_generator.vhd Line: 12
+    Info (12023): Found entity 1: random_number_generator File: C:/Users/ahac139/Downloads/305/305_flappybird/random_number_generator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipes.vhd
-    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipes.vhd Line: 15
-    Info (12023): Found entity 1: Pipes File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipes.vhd Line: 5
+    Info (12022): Found design unit 1: Pipes-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipes.vhd Line: 15
+    Info (12023): Found entity 1: Pipes File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipes.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipe_controller.vhd
-    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd Line: 14
-    Info (12023): Found entity 1: Pipe_Controller File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd Line: 6
+    Info (12022): Found design unit 1: Pipe_Controller-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipe_Controller.vhd Line: 14
+    Info (12023): Found entity 1: Pipe_Controller File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipe_Controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file collision_controller.vhd
-    Info (12022): Found design unit 1: collision_controller-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/collision_controller.vhd Line: 14
-    Info (12023): Found entity 1: collision_controller File: C:/Users/GGPC/Documents/GitHub/305_flappybird/collision_controller.vhd Line: 5
+    Info (12022): Found design unit 1: collision_controller-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/collision_controller.vhd Line: 14
+    Info (12023): Found entity 1: collision_controller File: C:/Users/ahac139/Downloads/305/305_flappybird/collision_controller.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file life.vhd
-    Info (12022): Found design unit 1: life-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 13
-    Info (12023): Found entity 1: life File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 6
+    Info (12022): Found design unit 1: life-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/life.vhd Line: 13
+    Info (12023): Found entity 1: life File: C:/Users/ahac139/Downloads/305/305_flappybird/life.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file invincibility_timer.vhd
-    Info (12022): Found design unit 1: invincibity_timer-behavioral File: C:/Users/GGPC/Documents/GitHub/305_flappybird/invincibility_timer.vhd Line: 13
-    Info (12023): Found entity 1: invincibity_timer File: C:/Users/GGPC/Documents/GitHub/305_flappybird/invincibility_timer.vhd Line: 5
+    Info (12022): Found design unit 1: invincibity_timer-behavioral File: C:/Users/ahac139/Downloads/305/305_flappybird/invincibility_timer.vhd Line: 13
+    Info (12023): Found entity 1: invincibity_timer File: C:/Users/ahac139/Downloads/305/305_flappybird/invincibility_timer.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: text-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 21
-    Info (12023): Found entity 1: text File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 6
+    Info (12022): Found design unit 1: text-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 21
+    Info (12023): Found entity 1: text File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/GGPC/Documents/GitHub/305_flappybird/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/GGPC/Documents/GitHub/305_flappybird/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/ahac139/Downloads/305/305_flappybird/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/ahac139/Downloads/305/305_flappybird/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file video_render.vhd
-    Info (12022): Found design unit 1: video_render-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/video_render.vhd Line: 14
-    Info (12023): Found entity 1: video_render File: C:/Users/GGPC/Documents/GitHub/305_flappybird/video_render.vhd Line: 5
+    Info (12022): Found design unit 1: video_render-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/video_render.vhd Line: 14
+    Info (12023): Found entity 1: video_render File: C:/Users/ahac139/Downloads/305/305_flappybird/video_render.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: vga_sync-a File: C:/Users/GGPC/Documents/GitHub/305_flappybird/VGA_SYNC.vhd Line: 15
-    Info (12023): Found entity 1: vga_sync File: C:/Users/GGPC/Documents/GitHub/305_flappybird/VGA_SYNC.vhd Line: 7
+    Info (12022): Found design unit 1: vga_sync-a File: C:/Users/ahac139/Downloads/305/305_flappybird/VGA_SYNC.vhd Line: 15
+    Info (12023): Found entity 1: vga_sync File: C:/Users/ahac139/Downloads/305/305_flappybird/VGA_SYNC.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file game_logic.vhd
-    Info (12022): Found design unit 1: game_logic-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 28
-    Info (12023): Found entity 1: game_logic File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 5
+    Info (12022): Found design unit 1: game_logic-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 28
+    Info (12023): Found entity 1: game_logic File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file flappy_bird.bdf
     Info (12023): Found entity 1: Flappy_Bird
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/GGPC/Documents/GitHub/305_flappybird/clock_divider.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider File: C:/Users/GGPC/Documents/GitHub/305_flappybird/clock_divider.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: C:/Users/ahac139/Downloads/305/305_flappybird/clock_divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bird_controller.vhd
-    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/bird_controller.vhd Line: 15
-    Info (12023): Found entity 1: bird_controller File: C:/Users/GGPC/Documents/GitHub/305_flappybird/bird_controller.vhd Line: 7
+    Info (12022): Found design unit 1: bird_controller-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/bird_controller.vhd Line: 15
+    Info (12023): Found entity 1: bird_controller File: C:/Users/ahac139/Downloads/305/305_flappybird/bird_controller.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file menu_text.vhd
-    Info (12022): Found design unit 1: menu_text-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 19
-    Info (12023): Found entity 1: menu_text File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 6
+    Info (12022): Found design unit 1: menu_text-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 19
+    Info (12023): Found entity 1: menu_text File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 6
 Warning (12019): Can't analyze file -- file word.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file paused_text.vhd
-    Info (12022): Found design unit 1: pause_text-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 19
-    Info (12023): Found entity 1: pause_text File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 7
+    Info (12022): Found design unit 1: pause_text-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 19
+    Info (12023): Found entity 1: pause_text File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file game_over_text.vhd
-    Info (12022): Found design unit 1: game_over_text-behavior File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 19
-    Info (12023): Found entity 1: game_over_text File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 7
+    Info (12022): Found design unit 1: game_over_text-behavior File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 19
+    Info (12023): Found entity 1: game_over_text File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 7
 Info (12127): Elaborating entity "Flappy_Bird" for the top level hierarchy
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:VSYN"
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CDIV"
 Info (12128): Elaborating entity "video_render" for hierarchy "video_render:VREN"
 Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:GLOG"
-Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX0" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 13
-Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX1" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 13
-Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 13
-Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(40): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 40
-Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(41): object "mouse_x" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 41
-Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(41): object "mouse_y" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 41
-Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(42): object "mouse_right" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 42
-Info (12128): Elaborating entity "score" for hierarchy "game_logic:GLOG|score:score_display" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 163
-Warning (10540): VHDL Signal Declaration warning at score.vhd(24): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at score.vhd(25): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at score.vhd(26): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 26
-Info (12128): Elaborating entity "char_rom" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score.vhd Line: 32
-Info (12128): Elaborating entity "altsyncram" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/GGPC/Documents/GitHub/305_flappybird/char_rom.vhd Line: 51
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX0" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX1" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(13): used explicit default value for signal "HEX2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(39): used explicit default value for signal "ground" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 39
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(42): object "mouse_x" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(42): object "mouse_y" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(43): object "mouse_right" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(58): object "score_ones_count" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 58
+Info (12128): Elaborating entity "score" for hierarchy "game_logic:GLOG|score:score_display" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 153
+Warning (10540): VHDL Signal Declaration warning at score.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at score.vhd(26): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at score.vhd(27): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd Line: 27
+Info (12128): Elaborating entity "char_rom" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score" File: C:/Users/ahac139/Downloads/305/305_flappybird/score.vhd Line: 33
+Info (12128): Elaborating entity "altsyncram" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component" File: C:/Users/ahac139/Downloads/305/305_flappybird/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component" File: C:/Users/ahac139/Downloads/305/305_flappybird/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ahac139/Downloads/305/305_flappybird/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1702,69 +1731,74 @@ Info (12133): Instantiated megafunction "game_logic:GLOG|score:score_display|cha
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "score_digit_2" for hierarchy "game_logic:GLOG|score_digit_2:score_display2" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 172
-Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(26): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(27): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/score_digit_2.vhd Line: 27
-Info (12128): Elaborating entity "text" for hierarchy "game_logic:GLOG|text:state_text" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 180
-Warning (10492): VHDL Process Statement warning at text.vhd(71): signal "pause_text_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at text.vhd(72): signal "game_over_text_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 72
-Info (12128): Elaborating entity "menu_text" for hierarchy "game_logic:GLOG|text:state_text|menu_text:menu" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(22): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 22
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(23): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 23
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(24): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(25): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(29): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 29
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(30): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 30
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(31): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 31
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(35): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 35
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(36): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(37): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 37
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(41): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 41
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(42): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 42
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(46): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 46
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(47): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 47
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(48): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(52): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 52
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(53): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 53
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(54): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 54
-Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(55): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/menu_text.vhd Line: 55
-Info (12128): Elaborating entity "pause_text" for hierarchy "game_logic:GLOG|text:state_text|pause_text:pause" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 54
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(22): used explicit default value for signal "x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 22
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(23): used explicit default value for signal "y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 23
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(24): used explicit default value for signal "size" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(33): used explicit default value for signal "char_space" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(35): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 35
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(36): used explicit default value for signal "char_I" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(37): used explicit default value for signal "char_J" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/paused_text.vhd Line: 37
-Info (12128): Elaborating entity "game_over_text" for hierarchy "game_logic:GLOG|text:state_text|game_over_text:game_over" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/text.vhd Line: 60
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(22): used explicit default value for signal "x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 22
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(23): used explicit default value for signal "y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 23
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(24): used explicit default value for signal "size" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(33): used explicit default value for signal "char_space" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(34): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 34
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(35): used explicit default value for signal "char_I" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 35
-Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(36): used explicit default value for signal "char_J" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_over_text.vhd Line: 36
-Info (12128): Elaborating entity "bird_controller" for hierarchy "game_logic:GLOG|bird_controller:Bird" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 188
-Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 198
-Info (12128): Elaborating entity "Pipes" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd Line: 53
-Info (12128): Elaborating entity "random_number_generator" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/Pipe_Controller.vhd Line: 89
-Info (12128): Elaborating entity "MOUSE" for hierarchy "game_logic:GLOG|MOUSE:Mouse1" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 211
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 157
-Info (12128): Elaborating entity "invincibity_timer" for hierarchy "game_logic:GLOG|invincibity_timer:timer1" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 225
-Info (12128): Elaborating entity "collision_controller" for hierarchy "game_logic:GLOG|collision_controller:collision_detector" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 232
-Info (12128): Elaborating entity "life" for hierarchy "game_logic:GLOG|life:life_display" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/game_logic.vhd Line: 239
-Warning (10540): VHDL Signal Declaration warning at life.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at life.vhd(26): used explicit default value for signal "life_x_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at life.vhd(27): used explicit default value for signal "life_y_pos" because signal was never assigned a value File: C:/Users/GGPC/Documents/GitHub/305_flappybird/life.vhd Line: 27
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "game_logic:GLOG|score:score_display|char_rom:score|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "score_digit_2" for hierarchy "game_logic:GLOG|score_digit_2:score_display2" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 164
+Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/score_digit_2.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(26): used explicit default value for signal "score_x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/score_digit_2.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at score_digit_2.vhd(27): used explicit default value for signal "score_y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/score_digit_2.vhd Line: 27
+Info (12128): Elaborating entity "text" for hierarchy "game_logic:GLOG|text:state_text" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at text.vhd(71): signal "pause_text_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at text.vhd(72): signal "game_over_text_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 72
+Info (12128): Elaborating entity "menu_text" for hierarchy "game_logic:GLOG|text:state_text|menu_text:menu" File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(22): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(23): used explicit default value for signal "y_pos_1" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 23
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(24): used explicit default value for signal "x_pos_1" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(25): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(29): used explicit default value for signal "y_pos_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 29
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(30): used explicit default value for signal "x_pos_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 30
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(31): used explicit default value for signal "char_E" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 31
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(35): used explicit default value for signal "y_pos_3" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(36): used explicit default value for signal "x_pos_3" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(37): used explicit default value for signal "char_L" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(41): used explicit default value for signal "y_pos_4" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 41
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(42): used explicit default value for signal "x_pos_4" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 42
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(46): used explicit default value for signal "y_pos_5" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 46
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(47): used explicit default value for signal "x_pos_5" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(48): used explicit default value for signal "char_O" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(52): used explicit default value for signal "size_4" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 52
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(53): used explicit default value for signal "y_pos_6" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 53
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(54): used explicit default value for signal "x_pos_6" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 54
+Warning (10540): VHDL Signal Declaration warning at menu_text.vhd(55): used explicit default value for signal "char_EX" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/menu_text.vhd Line: 55
+Info (12128): Elaborating entity "pause_text" for hierarchy "game_logic:GLOG|text:state_text|pause_text:pause" File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 54
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(22): used explicit default value for signal "x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(23): used explicit default value for signal "y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 23
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(24): used explicit default value for signal "size" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(33): used explicit default value for signal "char_space" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 33
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(35): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(36): used explicit default value for signal "char_I" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at paused_text.vhd(37): used explicit default value for signal "char_J" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/paused_text.vhd Line: 37
+Info (12128): Elaborating entity "game_over_text" for hierarchy "game_logic:GLOG|text:state_text|game_over_text:game_over" File: C:/Users/ahac139/Downloads/305/305_flappybird/text.vhd Line: 60
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(22): used explicit default value for signal "x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(23): used explicit default value for signal "y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 23
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(24): used explicit default value for signal "size" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(33): used explicit default value for signal "char_space" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 33
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(34): used explicit default value for signal "char_H" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(35): used explicit default value for signal "char_I" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at game_over_text.vhd(36): used explicit default value for signal "char_J" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/game_over_text.vhd Line: 36
+Info (12128): Elaborating entity "bird_controller" for hierarchy "game_logic:GLOG|bird_controller:Bird" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 182
+Info (12128): Elaborating entity "Pipe_Controller" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 192
+Info (12128): Elaborating entity "Pipes" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0" File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipe_Controller.vhd Line: 57
+Warning (12125): Using design file life_power_up.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: life_power_up-behaviour File: C:/Users/ahac139/Downloads/305/305_flappybird/life_power_up.vhd Line: 13
+    Info (12023): Found entity 1: life_power_up File: C:/Users/ahac139/Downloads/305/305_flappybird/life_power_up.vhd Line: 5
+Info (12128): Elaborating entity "life_power_up" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|Pipes:P0|life_power_up:powerUp" File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipes.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at life_power_up.vhd(14): used explicit default value for signal "size" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/life_power_up.vhd Line: 14
+Info (12128): Elaborating entity "random_number_generator" for hierarchy "game_logic:GLOG|Pipe_Controller:pipe|random_number_generator:RNG" File: C:/Users/ahac139/Downloads/305/305_flappybird/Pipe_Controller.vhd Line: 102
+Info (12128): Elaborating entity "MOUSE" for hierarchy "game_logic:GLOG|MOUSE:Mouse1" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 207
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 157
+Info (12128): Elaborating entity "invincibity_timer" for hierarchy "game_logic:GLOG|invincibity_timer:timer1" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 219
+Info (12128): Elaborating entity "collision_controller" for hierarchy "game_logic:GLOG|collision_controller:collision_detector" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 226
+Info (12128): Elaborating entity "life" for hierarchy "game_logic:GLOG|life:life_display" File: C:/Users/ahac139/Downloads/305/305_flappybird/game_logic.vhd Line: 233
+Warning (10540): VHDL Signal Declaration warning at life.vhd(25): used explicit default value for signal "size_2" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/life.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at life.vhd(26): used explicit default value for signal "life_x_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/life.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at life.vhd(27): used explicit default value for signal "life_y_pos" because signal was never assigned a value File: C:/Users/ahac139/Downloads/305/305_flappybird/life.vhd Line: 27
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/GGPC/Documents/GitHub/305_flappybird/mouse.vhd Line: 146
+Info (13000): Registers with preset signals will power-up high File: C:/Users/ahac139/Downloads/305/305_flappybird/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[6]" is stuck at GND
@@ -1795,14 +1829,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[5]" is stuck at GND
     Warning (13410): Pin "LEDR[4]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|pause_text:pause|char_rom:PAUSE_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/GGPC/Documents/GitHub/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:L1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:H|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:O|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:E|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|menu_text:menu|char_rom:EX|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|pause_text:pause|char_rom:PAUSE_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "game_logic:GLOG|text:state_text|game_over_text:game_over|char_rom:G_OVER_CHAR_ROM|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/ahac139/Downloads/305/305_flappybird/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -1842,16 +1876,16 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[1]"
-Info (21057): Implemented 980 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 45 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 830 logic cells
+    Info (21061): Implemented 1162 logic cells
     Info (21064): Implemented 88 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 124 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Fri May 30 00:39:48 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 127 warnings
+    Info: Peak virtual memory: 4985 megabytes
+    Info: Processing ended: Fri May 30 10:43:20 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:14
 
 

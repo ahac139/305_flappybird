@@ -110,8 +110,8 @@ architecture behaviour of Pipe_Controller is
 					case mode is
 						when "00" => pipe_x_motion <= to_unsigned(1,10);
 						when "01" => pipe_x_motion <= to_unsigned(1,10);
-						when "10" => pipe_x_motion <= to_unsigned(0,10);
-						when "11" => pipe_x_motion <= to_unsigned(4,10);
+						when "10" => pipe_x_motion <= to_unsigned(3,10);
+						when "11" => pipe_x_motion <= to_unsigned(6,10);
 					end case;
 				else
 					pipe_x_motion <= to_unsigned(0,10);
@@ -119,19 +119,27 @@ architecture behaviour of Pipe_Controller is
 			end if;
 		end process;
 		
-		pipe_on <= '1' when ((pipe_on1 = '1') or (pipe_on2 = '1') or (pipe_on3 = '1')) and ((state = "01") or (state = "10")) else '0';
+		pipe_on <= '1' when ((pipe_on1 = '1') or (pipe_on2 = '1') or (pipe_on3 = '1')) 
+									and ((state = "01") or (state = "10")) 
+									else '0';
 		increase <= increase1 or increase2 or increase3;
 		
 		s_power_up_on <= power_up_on1 or power_up_on2 or power_up_on3;
 		power_up_on <= s_power_up_on;
 		
 		process(vert_sync)
-		variable count  : integer := 0;
+		variable count  : integer range 0 to 500 := 0;
+		variable pu_count  : integer range 0 to 400 := 0;
 		begin
+		
 		if rising_edge(vert_sync) then
-			if reset = '1' then 
+			if (reset = '1') or (enable = '0') then 
 				count := 0;
+				enable1 <= '0';
+				enable2 <= '0';
+				enable3 <= '0';
 			end if;
+			
 			if (enable = '1') then
 				
 				enable1 <= '1';
@@ -140,8 +148,9 @@ architecture behaviour of Pipe_Controller is
 					enable2 <= '1';
 					count := count + 1;
 					
-				elsif count > 466 then
+				elsif count = 466 then
 					enable3 <= '1';
+					count := 466;
 				else
 					count := count + 1;
 				end if;
@@ -159,6 +168,7 @@ architecture behaviour of Pipe_Controller is
 					power_up_enable <= '1';
 				end if;
 			end if;
+			
 
 		end if;
 		end process;

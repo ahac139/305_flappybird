@@ -5,7 +5,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY score_digit_2 IS
 	PORT
-		( clk, increase_score	: IN std_logic;
+		( clk, increase_score, reset	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  score_ten_count : out std_logic_vector(3 downto 0);
 		  score_on			: out std_logic);		
@@ -47,6 +47,10 @@ architecture behaviour of score_digit_2 is
 		process(clk)
 		begin
 			if(rising_edge(clk)) then
+				if (reset = '1') then
+					score_address <= "110000";
+				end if;
+			
 				prev_increase <= increase_score;
 				if (prev_increase = '0' and increase_score = '1') then
 					if (score_address /= "111001") then

@@ -5,8 +5,9 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY score IS
 	PORT
-		( clk, increase_score	: IN std_logic;
+		( clk, increase_score, reset	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  score_ones_count : out std_logic_vector(3 downto 0);
 		  score_on, carry				: out std_logic);		
 END score;
 
@@ -35,7 +36,9 @@ architecture behaviour of score is
 				font_col => pixel_column(3 downto 1),
 				clock => clk,
 				rom_mux_output => score_on1);
-				
+		
+		score_ones_count <= score_address(3 downto 0);
+		
 		score_on <= '1' when ( ('0' & score_x_pos <= '0' & pixel_column) and ('0' & pixel_column <= '0' & score_x_pos + size_2) 	-- x_pos - size <= pixel_column <= x_pos + size
 						and ('0' & score_y_pos <= pixel_row ) and ('0' & pixel_row <= score_y_pos + size_2)	-- y_pos - size <= pixel_row <= y_pos + size
 						and (score_on1 = '1')) else
@@ -43,6 +46,10 @@ architecture behaviour of score is
 		process(clk)
 		begin
 			if(rising_edge(clk)) then
+				if (reset = '1') then
+					score_address <= "110000";
+				end if;
+			
 				prev_increase <= increase_score;
 				if (prev_increase = '0' and increase_score = '1') then
 					if (score_address /= "111001") then

@@ -68,9 +68,9 @@ architecture behaviour of life is
 			end if;
 			
 		elsif (prev_increase_life = '0' and increase_life = '1') then
-			
-			life_address <= life_address + "000001";
-
+			if (life_address /= "111001") then
+				life_address <= life_address + "000001";
+			end if;
 		end if;
 		
 	end if;

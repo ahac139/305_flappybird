@@ -39,7 +39,7 @@ begin
 		case state is
 			when "01" =>
 				if (bird_y_pos + bird_y_motion <= CONV_STD_LOGIC_VECTOR(479,10) - size)  then 
-					if (bird_y_motion < 5) then
+					if (bird_y_motion < 10) then
 						bird_y_motion <= bird_y_motion + CONV_STD_LOGIC_VECTOR(1,10);
 					end if;
 				else
@@ -48,7 +48,7 @@ begin
 				
 				
 				if (mouse_click = '1') and (bird_y_motion >= CONV_STD_LOGIC_VECTOR(0,10))  then
-					bird_y_motion <= - CONV_STD_LOGIC_VECTOR(12,10);
+					bird_y_motion <= - CONV_STD_LOGIC_VECTOR(10,10);
 				end if;
 				
 				-- Compute next bird Y position

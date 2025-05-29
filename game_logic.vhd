@@ -55,17 +55,19 @@ signal state_text_on : std_logic;
 signal score_on, score_on2: std_logic;
 signal increase1, increase2: std_logic;
 signal score_ten_count: std_logic_vector(3 downto 0);
+signal score_ones_count : std_logic_vector(3 downto 0);
 
 component score IS
 	PORT
-		( clk, increase_score	: IN std_logic;
+		( clk, increase_score, reset	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  score_ones_count : out std_logic_vector(3 downto 0);
 		  score_on, carry				: out std_logic);		
 END component score;
 
 component score_digit_2 IS
 	PORT
-		( clk, increase_score	: IN std_logic;
+		( clk, increase_score, reset	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  score_ten_count : out std_logic_vector(3 downto 0);
 		  score_on			: out std_logic);		
@@ -150,7 +152,9 @@ begin
 	--Components
 	score_display: score port map(
 		clk				=> clk,
+		reset				=> reset,
 		increase_score => increase1,
+		score_ones_count => score_ones_count,
 		pixel_row 		=> p_row,
 		pixel_column	=> p_col,
 		score_on			=> score_on,
@@ -159,6 +163,7 @@ begin
 	
 	score_display2: score_digit_2 port map(
 		clk				=> clk,
+		reset				=> reset,
 		increase_score => increase2,
 		score_ten_count => score_ten_count,
 		pixel_row 		=> p_row,
@@ -168,7 +173,7 @@ begin
 
 	state_text: text port map(
 		clk				=> clk,	
-		state => s_state,
+		state 			=> s_state,
 		pixel_row 		=> p_row,
 		pixel_column	=> p_col,
 		char_on			=> state_text_on
@@ -236,9 +241,11 @@ begin
 		zero_life		=> zero_life
 	);
 	
-	collision <= (s_bird_on and s_pipe_on);
+	collision <= '1' when (s_bird_on = '1' and s_pipe_on = '1') 
+					 or (s_bird_on = '1' and (unsigned(p_row) < to_unsigned(8, 10)) ) else
+					 '0';
 	reset_collisions <= not invincible;
-	pu_collected <= s_power_up_on and bird_on;
+	pu_collected <= s_power_up_on and s_bird_on;
 	
 	--State machine
 	process(clk)
@@ -260,13 +267,12 @@ begin
             when "01" => -- Gameplay
 					reset <= '0';
 					
-					if (s_mode = "01") then
-						if (score_ten_count = "0001") then
-							s_mode <= "10";
-						elsif (score_ten_count = "0010") then
-							s_mode <= "11";
-						end if;
+					if (score_ten_count = "0001") then
+						s_mode <= "10";
+					elsif (score_ten_count = "0010") then
+						s_mode <= "11";
 					end if;
+					
 					
 					if (pause_pulse = '1') then
                     s_state <= "10"; -- go to pause
