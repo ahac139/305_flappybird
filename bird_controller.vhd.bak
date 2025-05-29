@@ -8,7 +8,7 @@ ENTITY bird_controller IS
 	PORT
 		( clk, vert_sync, mouse_click	: IN std_logic;
 		  pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
-		  state								: IN std_logic_vector(2 DOWNTO 0);
+		  -- state/mode after restructure
 		  bird_on 							: OUT std_logic);		
 END bird_controller;
 
@@ -35,24 +35,19 @@ Bird_Physics : process (vert_sync)
 begin
 	-- Move bird once every vertical sync
 	if (rising_edge(vert_sync)) then		
-		case state is
-			when "01" =>
-				if (bird_y_pos + bird_y_motion <= CONV_STD_LOGIC_VECTOR(479,10) - size)  then 
-					if (bird_y_motion < 5) then
-						bird_y_motion <= bird_y_motion + CONV_STD_LOGIC_VECTOR(1,10);
-					end if;
-				else
-					bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-				end if;
-				
-				
-				if (mouse_click = '1') and (bird_y_motion >= CONV_STD_LOGIC_VECTOR(0,10))  then
-					bird_y_motion <= - CONV_STD_LOGIC_VECTOR(12,10);
-				end if;
-				
-			when others =>
-				bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-			
+		
+		if (bird_y_pos + bird_y_motion <= CONV_STD_LOGIC_VECTOR(479,10) - size)  then 
+			if (bird_y_motion < 5) then
+				bird_y_motion <= bird_y_motion + CONV_STD_LOGIC_VECTOR(1,10);
+			end if;
+		else
+			bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+		end if;
+		
+		
+		if (mouse_click = '1') and (bird_y_motion >= CONV_STD_LOGIC_VECTOR(0,10))  then
+			bird_y_motion <= - CONV_STD_LOGIC_VECTOR(12,10);
+		end if;
 		
 		-- Compute next bird Y position
 		bird_y_pos <= bird_y_pos + bird_y_motion;
