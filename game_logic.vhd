@@ -35,35 +35,26 @@ signal start_pulse, pause_pulse	: std_logic;
 
 -- General component reset on game start
 signal reset : std_logic := '0';
+signal pipe_enable: std_logic := '0';
+signal ground					: std_logic := '0';
 
 --Component Signals
-signal ground							: std_logic := '0';
 signal mouse_x, mouse_y				: std_logic_vector(9 DOWNTO 0) := "0000000000"; 
 signal mouse_right, mouse_left	: std_logic;
 signal s_bird_on, s_pipe_on 		: std_logic;
 
+
 -- LIFE / COLLISIONS
-signal life_on: std_logic;
-signal zero_life: std_logic;
-
-signal collision : std_logic;
-signal collision_detected: std_logic;
-signal reset_collisions : std_logic;
-
+signal life_on, zero_life: std_logic;
+signal collision, collision_detected, reset_collisions : std_logic;
 signal invincible: std_logic;
 
 signal state_text_on : std_logic;
 
-signal score_on: std_logic;
-signal increase1: std_logic;
-signal score_on2: std_logic;
-signal increase2: std_logic;
-
-signal pipe_enable: std_logic := '0';
-
+-- SCORE
+signal score_on, score_on2: std_logic;
+signal increase1, increase2: std_logic;
 signal score_ten_count: std_logic_vector(3 downto 0);
-
---Signal Components
 
 component score IS
 	PORT
@@ -140,13 +131,11 @@ component MOUSE IS
 END component MOUSE;
 
 begin
-	--Signal assignments
+	-- State tracking
 	state <= s_state;
-	
 	LEDR(1 DOWNTO 0) <= s_state;
 	LEDR(3 DOWNTO 2) <= s_mode;
 
-	--Edge detection and pulse generation
 	process(clk)
 	begin 
 		if rising_edge(clk) then
@@ -159,7 +148,6 @@ begin
 	pause_pulse <= '1' when (PB(1) = '0' and pause_prev = '1') else '0';
 	
 	--Components
-	
 	score_display: score port map(
 		clk				=> clk,
 		increase_score => increase1,
@@ -177,6 +165,7 @@ begin
 		pixel_column	=> p_col,
 		score_on			=> score_on2
 	);
+
 	state_text: text port map(
 		clk				=> clk,	
 		state => s_state,
@@ -219,9 +208,7 @@ begin
 		mouse_cursor_column => mouse_y
 	);
 	
-	
-	
-	
+	-- Collisions/Life
 	timer1: invincibity_timer port map(
 		vert_sync => v_sync,
 		start => collision_detected,
@@ -247,11 +234,10 @@ begin
 	);
 	
 	collision <= (s_bird_on and s_pipe_on);
-	
 	reset_collisions <= not invincible;
 	
 	
-	--State controller
+	--State machine
 	process(clk)
 	begin
 		if (rising_edge(clk)) then
@@ -305,7 +291,6 @@ begin
 	
 	-- Display outputs
 	char_on <= state_text_on or life_on or score_on or score_on2;
-	
 	pipe_on <= s_pipe_on;
 	bird_on <= s_bird_on;
 	
