@@ -19,7 +19,7 @@ entity game_logic is
 	
 	--Outputs to System
 	state								: out std_logic_vector(1 downto 0) := "00";
-	char_on, bird_on, pipe_on	: out std_logic := '0';
+	char_on, bird_on, pipe_on, inv_on	: out std_logic := '0';
 	
 	Clk								: in std_logic
 	);
@@ -29,12 +29,12 @@ architecture behaviour of game_logic is
 
 --Game state signals
 signal s_state, s_mode				: std_logic_vector(1 downto 0) := "00";
---Input management signals
+--Input management signals=
 signal start_prev, pause_prev	 	: std_logic := '0';
 signal start_pulse, pause_pulse	: std_logic;
 
 -- General component reset on game start
-signal reset : std_logic;
+signal reset : std_logic := '0';
 
 --Component Signals
 signal ground							: std_logic := '0';
@@ -51,9 +51,10 @@ signal collision_detected: std_logic;
 signal reset_collisions : std_logic;
 
 signal invincible: std_logic;
-signal inv_on :std_logic;
 
+signal state_text_on : std_logic;
 
+--Signal Components
 component life is 
 	PORT
 		( clk, decrease_life, reset: IN std_logic;
@@ -77,17 +78,22 @@ component invincibity_timer is
     );
 end component invincibity_timer;
 
-
-
---Components
-signal state_text_on : std_logic;
-
 component text IS
 	PORT
 		( clk								: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  char_on						: out std_logic);		
 END component text;
+
+--object components
+
+component Pipe_Controller is
+	port(Clk, vert_sync		: in std_logic;
+		state, mode				: in std_logic_vector(1 downto 0); 
+		pixel_row, pixel_col	: in std_logic_vector(9 downto 0);
+		pipe_on					: out std_logic
+	);
+end component Pipe_Controller;
 
 component bird_controller IS
 	PORT
@@ -143,6 +149,16 @@ begin
 		bird_on => s_bird_on
 	);
 	
+	pipe : Pipe_Controller port map(
+		clk => clk,
+		vert_sync => v_sync,
+		state => s_state,
+		mode => s_mode,
+		pixel_row => p_row,
+		pixel_col => p_col,
+		pipe_on => s_pipe_on
+	);
+	
 	Mouse1: Mouse port map(
 		clock_25Mhz => clk,
 		reset => ground,
@@ -180,9 +196,6 @@ begin
 		zero_life		=> zero_life
 	);
 	
-	-- TEMP PIPE
-	s_pipe_on <= '1';
-	
 	collision <= (s_bird_on and s_pipe_on);
 	
 	reset_collisions <= not invincible;
@@ -201,22 +214,29 @@ begin
 					end case; 
 
                 if (start_pulse = '1') then
-                    s_state <= "01";
+                    s_state <= "01"; -- go to gameplay
                 end if;
                 
             when "01" => -- Gameplay
-                if (pause_pulse = '1') then
-                    s_state <= "10";
-                end if;
+					reset <= '0';
+					
+					if (pause_pulse = '1') then
+                    s_state <= "10"; -- go to pause
+               end if;
+					 
+					if (zero_life = '1') then -- game_over
+						s_state <= "11";
+					end if;
                 
             when "10" => -- Paused
                 if (pause_pulse = '1') then
-                    s_state <= "11";
+                    s_state <= "01"; -- go back to pause
                 end if;
                 
             when "11" => -- Game_over
                 if (start_pulse = '1') then
-                    s_state <= "00";
+                    s_state <= "00"; -- go to main menu
+						  reset <= '1';
                 end if;
 					 
 			  end case;

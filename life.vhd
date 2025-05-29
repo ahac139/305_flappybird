@@ -53,13 +53,13 @@ architecture behaviour of life is
 				prev_decrease_life <= decrease_life;
 				if (reset = '1') then
 					life_address <= "110011"; -- RESET TO 3
+					zero_life <= '0';
 					
 				elsif (prev_decrease_life = '0' and decrease_life = '1') then
 				
-					if (life_address /= "110000") then -- if life not 1
-					
+					if (life_address /= "110001") then -- if life not 1	
 						life_address <= life_address - "000001"; -- subtract life
-					
+						zero_life <= '0';
 					else 
 						life_address <= "110011"; -- TEMP RESET TO 3
 						zero_life <= '1'; -- game over

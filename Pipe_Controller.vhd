@@ -89,10 +89,9 @@ architecture behaviour of Pipe_Controller is
 		process(clk) 
 		begin
 			if(rising_edge(clk)) then
-			
-				if (state = "01") then
+				if (state = "10") then
 					pipe_x_motion <= to_unsigned(0,10);
-					
+				
 				elsif (mode = "01") then
 					pipe_x_motion <= to_unsigned(1,10);
 					
@@ -102,11 +101,13 @@ architecture behaviour of Pipe_Controller is
 				elsif (mode = "11") then 
 					pipe_x_motion <= to_unsigned(4,10);
 					
+				else
+					pipe_x_motion <= to_unsigned(1,10);
 				end if;
 			end if;
 		end process;
 		
-		pipe_on <= pipe_on1 or pipe_on2 or pipe_on3;
+		pipe_on <= '1' when ((pipe_on1 = '1') or (pipe_on2 = '1') or (pipe_on3 = '1')) and ((state = "01") or (state = "10")) else '0';
 		increase <= increase1 or increase2 or increase3;
 		
 		process(vert_sync)
