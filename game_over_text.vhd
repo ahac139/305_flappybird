@@ -19,21 +19,27 @@ end entity game_over_text;
 architecture behavior of game_over_text is
 
 --CONSTANTS (CHANGE INTEGER VALUES BY MULTIPLES OF 8 BY CHANGING INTEGER ON THE RIGHT)
-SIGNAL x_pos 	: integer := 8*3; -- CURRENTLY 3 out of 80
-SIGNAL y_pos	: integer := 8*3; -- CURRENTLY 3 out of 60
+SIGNAL x_pos 	: integer := 8*4; -- CURRENTLY 4 out of 80
+SIGNAL y_pos	: integer := 8*4; -- CURRENTLY 4 out of 60
 SIGNAL size		: integer := 8*2; -- each character is SIZE*8 by SIZE*8 (check font_row/font_col assignment matches)
 
 --LOGIC SIGNALS
 SIGNAL s_x_1, s_y, s_size			: std_logic_vector(9 DOWNTO 0); 
-SIGNAL s_x_2, s_x_3, s_x_4			: std_logic_vector(9 DOWNTO 0); --MAKE SURE THERE ARE N+1 s_x_n
+SIGNAL s_x_2, s_x_3, s_x_4, s_x_5, s_x_6, s_x_7, s_x_8, s_x_9, s_x_10 : std_logic_vector(9 DOWNTO 0); --MAKE SURE THERE ARE N+1 s_x_n
 SIGNAL in_y_range 					: std_logic := '0';
 
 --Char address signals
-SIGNAL active_char 		: std_logic_vector(5 downto 0) := "000000";
-SIGNAL char_space 		: std_logic_vector(5 downto 0) := "000000";
-SIGNAL char_H				: std_logic_vector(5 downto 0) := "001000";
-SIGNAL char_I				: std_logic_vector(5 downto 0) := "001001";
-SIGNAL char_J 				: std_logic_vector(5 downto 0) := "001010";
+SIGNAL active_char 		: std_logic_vector(5 downto 0) := "100000";
+SIGNAL char_space 		: std_logic_vector(5 downto 0) := "100000";
+
+SIGNAL char_G		: std_logic_vector(5 downto 0) := "000111";
+SIGNAL char_A		: std_logic_vector(5 downto 0) := "000001";
+SIGNAL char_M		: std_logic_vector(5 downto 0) := "001101";
+SIGNAL char_E		: std_logic_vector(5 downto 0) := "000101";
+SIGNAL char_O		: std_logic_vector(5 downto 0) := "001111";
+SIGNAL char_V		: std_logic_vector(5 downto 0) := "010110";
+SIGNAL char_R		: std_logic_vector(5 downto 0) := "010010";
+
 
 component char_rom IS
 	PORT
@@ -55,16 +61,28 @@ BEGIN
 	s_x_2		<= s_x_1 + s_size;
 	s_x_3		<= s_x_2 + s_size;
 	s_x_4		<= s_x_3 + s_size;
+	s_x_5		<= s_x_4 + s_size;
+	s_x_6		<= s_x_5 + s_size;
+	s_x_7		<= s_x_6 + s_size;
+	s_x_8		<= s_x_7 + s_size;
+	s_x_9		<= s_x_8 + s_size;
+	s_x_10	<= s_x_9 + s_size;
 	
 	--Assign active char depending on pixel_row and pixel_column (active char will go to space when out of range)
-	in_y_range <= '1' when (s_y <= pixel_column ) and (pixel_column <= s_y + s_size) else '0';
+	in_y_range <= '1' when (s_y < pixel_row ) and (pixel_row < s_y + s_size) else '0';
 	
-	active_char <= char_H when ((s_x_1 <= pixel_row ) and (pixel_row <= s_x_2) and (in_y_range = '1')) else
-						char_I when ((s_x_2 <= pixel_row ) and (pixel_row <= s_x_3) and (in_y_range = '1')) else
-						char_J when ((s_x_3 <= pixel_row ) and (pixel_row <= s_x_4) and (in_y_range = '1')) else
+	active_char <= char_G when ((s_x_1 < pixel_column ) and (pixel_column < s_x_2) and (in_y_range = '1')) else
+						char_A when ((s_x_2 < pixel_column ) and (pixel_column < s_x_3) and (in_y_range = '1')) else
+						char_M when ((s_x_3 < pixel_column ) and (pixel_column < s_x_4) and (in_y_range = '1')) else
+						char_E when ((s_x_4 < pixel_column ) and (pixel_column < s_x_5) and (in_y_range = '1')) else
+						char_space when ((s_x_5 < pixel_column ) and (pixel_column < s_x_6) and (in_y_range = '1')) else
+						char_O when ((s_x_6 < pixel_column ) and (pixel_column < s_x_7) and (in_y_range = '1')) else
+						char_V when ((s_x_7 < pixel_column ) and (pixel_column < s_x_8) and (in_y_range = '1')) else
+						char_E when ((s_x_8 < pixel_column ) and (pixel_column < s_x_9) and (in_y_range = '1')) else
+						char_R when ((s_x_9 < pixel_column ) and (pixel_column < s_x_10) and (in_y_range = '1')) else
 						char_space;
 
-	G_OVER_CHAR_ROM : char_rom port map(
+	PAUSE_CHAR_ROM : char_rom port map(
 		character_address 	=> active_char,
 		font_row 				=> pixel_row(3 downto 1),
 		font_col 				=> pixel_column(3 downto 1),
@@ -72,4 +90,5 @@ BEGIN
 		rom_mux_output 		=> char_on);
 
 END behavior;
+
 
