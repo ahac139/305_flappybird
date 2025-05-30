@@ -3,227 +3,227 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -9.818
-TNS   : -307.908
+Slack : -8.464
+TNS   : -292.209
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -7.371
-TNS   : -344.825
+Slack : -6.983
+TNS   : -400.056
 
 Type  : Slow 1100mV 85C Model Setup 'vga_sync:VSYN|vert_sync_out'
-Slack : -7.349
-TNS   : -920.330
+Slack : -6.895
+TNS   : -933.928
 
 Type  : Slow 1100mV 85C Model Setup 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -4.827
-TNS   : -161.039
+Slack : -5.136
+TNS   : -167.300
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.231
+Slack : 0.204
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 0.285
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'vga_sync:VSYN|vert_sync_out'
-Slack : 0.637
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.766
+Slack : 0.759
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'vga_sync:VSYN|vert_sync_out'
+Slack : 0.807
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -3.759
-TNS   : -59.267
+Slack : -3.824
+TNS   : -60.682
 
 Type  : Slow 1100mV 85C Model Removal 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 2.706
+Slack : 2.916
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.636
-TNS   : -271.124
+TNS   : -326.136
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga_sync:VSYN|vert_sync_out'
 Slack : -0.538
-TNS   : -155.500
+TNS   : -160.332
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
 Slack : -0.538
-TNS   : -57.873
+TNS   : -54.100
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
 Slack : -0.538
-TNS   : -28.333
+TNS   : -28.997
 
 Type  : Slow 1100mV 0C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -10.034
-TNS   : -305.134
+Slack : -8.771
+TNS   : -288.058
 
 Type  : Slow 1100mV 0C Model Setup 'vga_sync:VSYN|vert_sync_out'
-Slack : -7.537
-TNS   : -947.056
+Slack : -7.027
+TNS   : -955.804
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -7.370
-TNS   : -331.104
+Slack : -6.904
+TNS   : -375.602
 
 Type  : Slow 1100mV 0C Model Setup 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -4.914
-TNS   : -159.053
+Slack : -5.201
+TNS   : -165.544
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.080
-TNS   : -0.080
+Slack : -0.168
+TNS   : -0.168
 
 Type  : Slow 1100mV 0C Model Hold 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 0.315
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'vga_sync:VSYN|vert_sync_out'
-Slack : 0.603
+Slack : 0.466
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.710
+Slack : 0.750
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'vga_sync:VSYN|vert_sync_out'
+Slack : 0.818
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -3.789
-TNS   : -59.838
+Slack : -3.798
+TNS   : -60.426
 
 Type  : Slow 1100mV 0C Model Removal 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 2.884
+Slack : 3.034
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.636
-TNS   : -273.140
+TNS   : -328.183
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga_sync:VSYN|vert_sync_out'
 Slack : -0.538
-TNS   : -150.168
+TNS   : -155.454
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
 Slack : -0.538
-TNS   : -55.996
+TNS   : -53.560
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
 Slack : -0.538
-TNS   : -27.842
+TNS   : -28.281
 
 Type  : Fast 1100mV 85C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -4.823
-TNS   : -141.892
+Slack : -4.247
+TNS   : -136.892
 
 Type  : Fast 1100mV 85C Model Setup 'vga_sync:VSYN|vert_sync_out'
-Slack : -3.447
-TNS   : -414.792
+Slack : -3.277
+TNS   : -432.245
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.003
-TNS   : -141.871
+Slack : -3.044
+TNS   : -167.344
 
 Type  : Fast 1100mV 85C Model Setup 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -2.492
-TNS   : -77.786
+Slack : -2.608
+TNS   : -80.486
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -0.023
-TNS   : -0.078
+Slack : -0.217
+TNS   : -0.470
 
 Type  : Fast 1100mV 85C Model Hold 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 0.076
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'vga_sync:VSYN|vert_sync_out'
-Slack : 0.258
+Slack : 0.035
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.331
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'vga_sync:VSYN|vert_sync_out'
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -1.790
-TNS   : -28.194
+Slack : -1.871
+TNS   : -29.353
 
 Type  : Fast 1100mV 85C Model Removal 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 1.458
+Slack : 1.678
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -169.976
+TNS   : -213.183
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga_sync:VSYN|vert_sync_out'
-Slack : -0.139
-TNS   : -7.166
+Slack : -0.143
+TNS   : -10.174
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
-Slack : -0.105
-TNS   : -0.946
+Slack : -0.104
+TNS   : -1.183
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 0.011
+Slack : 0.031
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clock_divider:CDIV|temp_clk'
-Slack : -4.585
-TNS   : -126.939
+Slack : -4.036
+TNS   : -121.703
 
 Type  : Fast 1100mV 0C Model Setup 'vga_sync:VSYN|vert_sync_out'
-Slack : -3.240
-TNS   : -388.852
+Slack : -3.065
+TNS   : -401.183
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.585
-TNS   : -110.673
+Slack : -2.501
+TNS   : -128.337
 
 Type  : Fast 1100mV 0C Model Setup 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -2.381
-TNS   : -74.494
+Slack : -2.463
+TNS   : -77.071
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.161
-TNS   : -1.759
+Slack : -0.354
+TNS   : -4.335
 
 Type  : Fast 1100mV 0C Model Hold 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 0.086
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'vga_sync:VSYN|vert_sync_out'
-Slack : 0.233
+Slack : 0.079
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clock_divider:CDIV|temp_clk'
-Slack : 0.289
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'vga_sync:VSYN|vert_sync_out'
+Slack : 0.326
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : -1.744
-TNS   : -27.518
+Slack : -1.812
+TNS   : -28.519
 
 Type  : Fast 1100mV 0C Model Removal 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 1.478
+Slack : 1.659
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -170.076
+TNS   : -213.241
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga_sync:VSYN|vert_sync_out'
-Slack : -0.068
-TNS   : -1.397
+Slack : -0.075
+TNS   : -3.844
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:CDIV|temp_clk'
-Slack : -0.047
-TNS   : -0.233
+Slack : -0.040
+TNS   : -0.312
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'game_logic:GLOG|MOUSE:Mouse1|MOUSE_CLK_FILTER'
-Slack : 0.025
+Slack : 0.044
 TNS   : 0.000
 
 ------------------------------------------------------------
